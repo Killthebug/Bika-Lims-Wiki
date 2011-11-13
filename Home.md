@@ -11,17 +11,18 @@ http://plone.org/products/plone/releases
 
     wget http://launchpad.net/plone/4.1/4.1.2/+download/Plone-4.1.2-UnifiedInstaller.tgz
 
-## 3. Untar
+## 3. Expand the archive
 
     tar xzf Plone-4.1.2-UnifiedInstaller.tgz
 
-## 4. Run installer and point to new target directory
+## 4. Run installer.sh and point to new target directory
 
     sudo ./install.sh --target=/home/example standalone
 
 ## 5. Set up instance name on DNS (optional)
 
-While the installer is running, set up a name for bika Plone instance and add the apache webserver mapping on server,
+While the installer is running, set up a name for the Bika Plone instance
+ and add the apache webserver mapping on server,
 noting the new port used for the Zope instance.
 
 Edit the apache configuration and add a new virtual host
@@ -29,7 +30,7 @@ section
 
     sudo vim /etc/apache2/sites-enabled/000-default
 
-Add a Virtualhost section, ensuring an existing port is not conflicted:
+Add a Virtualhost section as below, ensuring an existing used port is not used again:
  
     <VirtualHost *:80>
         ServerName example.bikalabs.com
@@ -43,7 +44,7 @@ Add a Virtualhost section, ensuring an existing port is not conflicted:
     </VirtualHost>
 
 
-## 6. Verify successfull Plone installation
+## 6. Verify that Plone installation is successfull
 
 Note the output of the installer script:
 
@@ -60,13 +61,14 @@ Note the output of the installer script:
      Password: password
 
 The Plone installation can now be tested independently of the Bika build by starting it
- and adding a Plone site. Refer to the Plone site if this is not succesful.
+ and adding a Plone site. Refer to the Plone site if this build is not succesful.
 
 ## 7. Add Bika LIMS to the buildout
 
-Edit /home/example/zinstance/buildout.cfg and make the 4 changes to the 
-eggs, develop, instance, and environment variable sections, and 
-optionally the http-address, effective user, admin user and password sections as required.
+Edit /home/example/zinstance/buildout.cfg and make the 4 minimum changes to the 
+eggs, develop, instance, and environment variable sections, and the
+optional changes to the http-address, effective-user, admin user and password 
+directives as preferred.
 
 ### a. Find the eggs section. Add "bika.lims" to eggs:
 
@@ -81,20 +83,26 @@ optionally the http-address, effective user, admin user and password sections as
     develop =
         src/bika3
 
-### c. Change the port to the one used in the webserver rewrite rule above (8030)
 
-    http-address = 8030
+### c. Add the environment variable for ID-server
 
-### d. Change the effective user if not "plone". 
-
-If a different user will be used to run the instance, replace "effective-user = plone" 
-section with the new username. 
-
-### e. Add the environment variable for ID-server, matching the port number 
+Add a section under [instance], matching the port number 
 with that in the id-server shell script:
 
     [instance]
          environment-vars = IDServerURL http://localhost:8031
+
+
+### d. Match port to webserver rewrite rule above (8030)
+
+If remapping is required, note the port used for the Zope instance.
+
+    http-address = 8030
+
+### e. Change the effective user if not "plone". 
+
+If a different user will be used to run the instance, replace "effective-user = plone" 
+section with the new username. 
 
 ## 8. Check out the latest version of the Bika LIMS bika3 code:
 
