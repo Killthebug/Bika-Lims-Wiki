@@ -61,12 +61,12 @@ Note the output of the installer script:
      Password: password
 
 The Plone installation can now be tested independently of the Bika build by starting it
- and adding a Plone site. Refer to the Plone site if this build is not succesful.
+ and adding a Plone site. Refer to [Plone.org](http://plone.org) if the build fails.
 
 ## 7. Add Bika LIMS to buildout
 
 Edit /home/example/zinstance/buildout.cfg and make the changes to the 
-eggs, develop, and instance environment variable sections, and the
+eggs, develop, and instance environment variable sections, and 
 optional changes to the http-address and effective-user.
 
 ### a. Find the eggs section. Add "bika.lims" to eggs:
@@ -122,7 +122,7 @@ retrieve it, change into the instance directory and use either
 
     sudo svn co https://bika.svn.sourceforge.net/svnroot/bika/bika3 src/bika3
 
-## 9. Do the buildout of the instance
+## 9. Do the verbose buildout of the instance
 
     sudo bin/buildout -v
 
@@ -169,14 +169,15 @@ A "1" should appear, incrementing on reloads.
 
 ## 13. Test web server configuration and new instance DNS
 
-Ensure the configuration is valid
+Ensure the web server configuration is valid
+
     sudo apache2ctl configtest
 
 Ensure the DNS is active for the new instance name created
 
     dig example.bikalabs.com
 
-Reload the webserver configuration
+If all valid, reload the webserver configuration
 
     sudo apachectl graceful
 
@@ -186,7 +187,7 @@ Reload the webserver configuration
     sudo rm var/id.counter
     sudo su plone -c ./start-idserver.sh
 
-## 15. First test run of Bika instance
+## 15. First run of Bika instance
 
 The first test run is done in foreground, noting any error messages
 
@@ -196,7 +197,7 @@ If no problems occur during startup, the end of the output should say
 
     2011-11-13 12:06:07 INFO Zope Ready to handle requests
 
-## 16. Access the Bika LIMS instance via browser:
+## 16. Access Bika LIMS via browser
 
 From a remote browser, use the URL 
 
@@ -206,16 +207,18 @@ or, if on the same host
 
     http://admin:password@localhost:8030/manage
 
-## 17: Add a Bika site, noting instance name (the default is  "Plone"), and select the "Bika LIMS" option
+## 17: Add a Bika site
+
+Add a Plone site with the Bika extension, noting its instance name
+by selecting the "Bika LIMS" option.
 
 Click "Add Plone Site" in the top right of the Zope Management Interface. The dialog requires
 an instance name, which is "Plone" by default, and a number of options to be ticked below.
-Ensure that "Bika LIMS" option is selected.
 
 ## 18. Modify web server config to point to Bika instance root
 
-For public consumption, the instance root is presented at the site URL by changing the
-rewrite rule and adding in the instance name.
+For public consumption, the instance root maps to the site URL by changing the
+web server rewrite rule and adding in the instance URL in  name.
 
     #Comment out and replace original rule, adding instance name Plone
     #RewriteRule ^/(.*) http://localhost:8030/VirtualHostBase/http/example.bikalabs.com:80/VirtualHostRoot/$1 [L,P]
