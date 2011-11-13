@@ -95,7 +95,9 @@ with that in the id-server shell script:
 
 ### d. Match Plone port to webserver rewrite rule
 
-If remapping is required, note the port used for the Zope instance.
+If remapping is required, note the port used for the Zope instance
+should be unique (default is 8080). The server will not start if the
+port is already held by another process.
 
     http-address = 8030
 
@@ -107,7 +109,8 @@ section with the new username.
 ## 8. Check out the Bika LIMS bika3 code:
 
 The Bika code is available from Github and from SourceForge. To
-retrieve it, change into the instance directory and use git or svn.
+retrieve it, change into the instance directory and use either
+ git or svn.
 
     cd /home/example/zinstance
 
@@ -195,7 +198,12 @@ If no problems occur during startup, the end of the output should say
 
 ## 16. Access the Bika LIMS instance via browser:
 
-http://admin:password@example.bikalabs.com/manage or http://admin:password@localhost:8030/manage
+From a remote browser, use the URL 
+
+    http://admin:password@example.bikalabs.com/manage
+
+or, if on the same host  
+    http://admin:password@localhost:8030/manage
 
 ## 17: Add a Bika site, noting instance name (the default is  "Plone"), and tick the "Bika LIMS" option
 
