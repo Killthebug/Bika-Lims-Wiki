@@ -2,7 +2,7 @@
 
 The following describes how to install Bika LIMS version 3 on a Unix server.
 
-## 1. Get the latest Plone 
+## 1. Get the latest Plone 4
 
 Obtain the latest version of the Plone Unified Installer from
 http://plone.org/products/plone/releases 
@@ -44,7 +44,7 @@ Add a Virtualhost section as below, ensuring an existing used port is not used a
     </VirtualHost>
 
 
-## 6. Verify that Plone installation is successfull
+## 6. Verify successfull Plone installation
 
 Note the output of the installer script:
 
@@ -63,12 +63,11 @@ Note the output of the installer script:
 The Plone installation can now be tested independently of the Bika build by starting it
  and adding a Plone site. Refer to the Plone site if this build is not succesful.
 
-## 7. Add Bika LIMS to the buildout
+## 7. Add Bika LIMS to buildout
 
-Edit /home/example/zinstance/buildout.cfg and make the 4 minimum changes to the 
-eggs, develop, instance, and environment variable sections, and the
-optional changes to the http-address, effective-user, admin user and password 
-directives as preferred.
+Edit /home/example/zinstance/buildout.cfg and make the changes to the 
+eggs, develop, and instance environment variable sections, and the
+optional changes to the http-address and effective-user.
 
 ### a. Find the eggs section. Add "bika.lims" to eggs:
 
@@ -86,25 +85,26 @@ directives as preferred.
 
 ### c. Add the environment variable for ID-server
 
-Add a section under [instance], matching the port number 
+Add an [instance] section, containing the environment
+variable matching the port number 
 with that in the id-server shell script:
 
     [instance]
          environment-vars = IDServerURL http://localhost:8031
 
 
-### d. Match port to webserver rewrite rule above (8030)
+### d. Match Plone port to webserver rewrite rule
 
 If remapping is required, note the port used for the Zope instance.
 
     http-address = 8030
 
-### e. Change the effective user if not "plone". 
+### e. Change the effective user if not "plone"
 
 If a different user will be used to run the instance, replace "effective-user = plone" 
 section with the new username. 
 
-## 8. Check out the latest version of the Bika LIMS bika3 code:
+## 8. Check out the Bika LIMS bika3 code:
 
 The Bika code is available from Github and from SourceForge. To
 retrieve it, change into the instance directory and use git or svn.
@@ -123,7 +123,7 @@ retrieve it, change into the instance directory and use git or svn.
 
     sudo bin/buildout -v
 
-## 10. Create an idserver start script
+## 10. Create idserver.sh start script
 
 Use the python binary from the instance's bin/plonectl script and create
 a similar script to start the id-server, noting the port number.
@@ -145,7 +145,7 @@ a similar script to start the id-server, noting the port number.
         -l $LOG_FILE \
         -d $PID_FILE
 
-## 11. Make sart-idserver.sh executable and test
+## 11. Make start-idserver.sh executable and test
 
     sudo chmod +x start-idserver.sh
 
@@ -164,7 +164,7 @@ A "1" should appear, incrementing on reloads.
     #!/bin/sh
     kill `cat var/idserver.pid`
 
-## 13. Test web server configuration and new instance name DNS
+## 13. Test web server configuration and new instance DNS
 
 Ensure the configuration is valid
     sudo apache2ctl configtest
