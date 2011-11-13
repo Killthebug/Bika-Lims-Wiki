@@ -20,7 +20,7 @@ http://plone.org/products/plone/releases
 
 ## 5. Set up instance name on DNS (optional)
 
-Set up a name for bika Plone instance and add the apache webserver mapping on server,
+While the installer is running, set up a name for bika Plone instance and add the apache webserver mapping on server,
 noting the new port used for the Zope instance.
 
 Edit the apache configuration and add a new virtual host
@@ -58,14 +58,16 @@ Add a Virtualhost section, ensuring an existing port is not conflicted:
      Username: admin
      Password: password
 
-The Plone installation can now be tested independently of the Bika build by starting it and adding a Plone site.
+The Plone installation can now be tested independently of the Bika build by starting it,
+ and adding a Plone site.
 
-## 7. Edit /home/example/zinstance/buildout.cfg
+## 7. Add Bika LIMS to the buildout
 
-Add the following to buildout.cfg to buildout Bika LIMS 3.
+Edit /home/example/zinstance/buildout.cfg and make the changes to the 
+eggs, develop, instance, http-address, effective user, admin user and password, and 
+environment variable sections as required.
 
 ### a. Find the eggs section. Add "bika.lims" to eggs:
-
 
     eggs =
         Plone
@@ -78,15 +80,17 @@ Add the following to buildout.cfg to buildout Bika LIMS 3.
     develop =
         src/bika3
 
-### c. Change the port to the one used in Apache above (8030)
+### c. Change the port to the one used in the webserver rewrite rule above (8030)
 
     http-address = 8030
 
-### d. Change the effective user if different from "plone". 
+### d. Change the effective user if not "plone". 
 
-If a different user will be used to run the instance, replace "effective-user = plone" with the new username. 
+If a different user will be used to run the instance, replace "effective-user = plone" 
+section with the new username. 
 
-### e. Add the environment variable for ID-server, noting port number for the id-server shell script:
+### e. Add the environment variable for ID-server, matching the port number 
+with that in the id-server shell script:
 
     [instance]
          environment-vars = IDServerURL http://localhost:8031
