@@ -203,9 +203,10 @@ From a remote browser, use the URL
     http://admin:password@example.bikalabs.com/manage
 
 or, if on the same host  
+
     http://admin:password@localhost:8030/manage
 
-## 17: Add a Bika site, noting instance name (the default is  "Plone"), and tick the "Bika LIMS" option
+## 17: Add a Bika site, noting instance name (the default is  "Plone"), and select the "Bika LIMS" option
 
 Click "Add Plone Site" in the top right of the Zope Management Interface. The dialog requires
 an instance name, which is "Plone" by default, and a number of options to be ticked below.
