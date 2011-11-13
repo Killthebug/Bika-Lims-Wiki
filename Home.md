@@ -1,10 +1,11 @@
-# Installing Bika LIMS on a Debian Server
+# Installing Bika LIMS 3
 
-The following describes how to install Bika LIMS version 3 on a Debian Unix server.
+The following describes how to install Bika LIMS version 3 on a Unix server.
 
-## 1. Get the latest Plone Unified Installer 
+## 1. Get the latest Plone 
 
-http://plone.org/products/plone/releases
+Obtain the latest version of the Plone Unified Installer from
+http://plone.org/products/plone/releases 
 
 ## 2. Copy link, and download the file via wget:
 
@@ -42,9 +43,9 @@ Add a Virtualhost section, ensuring an existing port is not conflicted:
     </VirtualHost>
 
 
-## 6. Note the output of the installer script:
+## 6. Verify successfull Plone installation
 
-
+Note the output of the installer script:
 
     ###################### Installation Complete ######################
  
@@ -58,14 +59,14 @@ Add a Virtualhost section, ensuring an existing port is not conflicted:
      Username: admin
      Password: password
 
-The Plone installation can now be tested independently of the Bika build by starting it,
- and adding a Plone site.
+The Plone installation can now be tested independently of the Bika build by starting it
+ and adding a Plone site. Refer to the Plone site if this is not succesful.
 
 ## 7. Add Bika LIMS to the buildout
 
-Edit /home/example/zinstance/buildout.cfg and make the changes to the 
-eggs, develop, instance, http-address, effective user, admin user and password, and 
-environment variable sections as required.
+Edit /home/example/zinstance/buildout.cfg and make the 4 changes to the 
+eggs, develop, instance, and environment variable sections, and 
+optionally the http-address, effective user, admin user and password sections as required.
 
 ### a. Find the eggs section. Add "bika.lims" to eggs:
 
@@ -136,7 +137,7 @@ a similar script to start the id-server, noting the port number.
         -l $LOG_FILE \
         -d $PID_FILE
 
-## 11. Make it executable and test:
+## 11. Make sart-idserver.sh executable and test
 
     sudo chmod +x start-idserver.sh
 
@@ -155,32 +156,32 @@ A "1" should appear, incrementing on reloads.
     #!/bin/sh
     kill `cat var/idserver.pid`
 
-## 13. Test web server and DNS
+## 13. Test web server configuration and new instance name DNS
 
 Ensure the configuration is valid
     sudo apache2ctl configtest
 
-Ensure the DNS is active for the new instance
+Ensure the DNS is active for the new instance name created
+
     dig example.bikalabs.com
 
 Reload the webserver configuration
+
     sudo apachectl graceful
 
-## 14. Remove/edit the id.counter file to reset counter, and restart: (optional)
+## 14. Remove/edit the id.counter file to reset the counter if needed and restart: (optional)
 
     sudo ./stop-idserver.sh
     sudo rm var/id.counter
     sudo su plone -c ./start-idserver.sh
 
-## 15. First test run 
+## 15. First test run of Bika instance
 
-The first test run is done in foreground, noting error messages
-if any
+The first test run is done in foreground, noting any error messages
 
     sudo bin/plonectl fg
 
-If no problems occur during startup, the end of the output should be
-
+If no problems occur during startup, the end of the output should say
 
     2011-11-13 12:06:07 INFO Zope Ready to handle requests
 
@@ -188,7 +189,7 @@ If no problems occur during startup, the end of the output should be
 
 http://admin:password@example.bikalabs.com/manage or http://admin:password@localhost:8030/manage
 
-## 17: Add a Bika site, noting instance name (default Plone), and tick Bika LIMS option
+## 17: Add a Bika site, noting instance name (the default is  "Plone"), and tick the "Bika LIMS" option
 
 Click "Add Plone Site" in the top right of the Zope Management Interface. The dialog requires
 an instance name, which is "Plone" by default, and a number of options to be ticked below.
