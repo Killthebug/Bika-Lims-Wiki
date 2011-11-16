@@ -114,13 +114,10 @@ retrieve it, change into the instance directory and use either
 
     cd /home/example/zinstance
 
-### a. Clone from the Git repository
+Clone or pull from the Git repository
 
     git clone https://github.com/bikalabs/Bika-LIMS src/Bika-LIMS
 
-### b. From SourceForge with subversion
-
-    sudo svn co https://bika.svn.sourceforge.net/svnroot/bika/bika3 src/Bika-LIMS
 
 ## 9. Do the verbose buildout of the instance
 
