@@ -1,6 +1,6 @@
 # Installing Bika LIMS 3
 
-The following describes how to install Bika LIMS version 3 on a Unix server.
+The following describes how to install Bika LIMS version 3 on a Unix-like server. The script is also available at [GitHub](https://github.com/bikalabs/Bika-LIMS-Installer)
 
 ## 1. Get the latest Plone 4
 
