@@ -77,10 +77,10 @@ optional changes to the http-address and effective-user.
         lxml
         bika.lims
 
-### b. Find the "develop" section. Add src/bika3
+### b. Find the "develop" section. Add to the "develop" section
 
     develop =
-        src/bika3
+        src/BIKA-LIMS
 
 
 ### c. Add the environment variable for ID-server
@@ -116,11 +116,11 @@ retrieve it, change into the instance directory and use either
 
 ### a. Clone from the Git repository
 
-    git clone https://github.com/bikalabs/Bika-LIMS src/bika3
+    git clone https://github.com/bikalabs/Bika-LIMS src/Bika-LIMS
 
 ### b. From SourceForge with subversion
 
-    sudo svn co https://bika.svn.sourceforge.net/svnroot/bika/bika3 src/bika3
+    sudo svn co https://bika.svn.sourceforge.net/svnroot/bika/bika3 src/Bika-LIMS
 
 ## 9. Do the verbose buildout of the instance
 
@@ -132,7 +132,7 @@ Use the python binary from the instance's bin/plonectl script and create
 a similar script to start the id-server, noting the port number.
 
     #!/bin/sh
-    PYTHON=/home/exmple/Python-2.6/bin/python
+    PYTHON=/home/example/Python-2.6/bin/python
     BIKA_BASE=/home/example/zinstance
     COUNTER_FILE=$BIKA_BASE/var/id.counter
     LOG_FILE=$BIKA_BASE/var/log/idserver.log
@@ -140,7 +140,7 @@ a similar script to start the id-server, noting the port number.
 
     PORT=8031
 
-    SRC_DIR=src/bika3
+    SRC_DIR=src/Bika-LIMS
 
     exec $PYTHON $BIKA_BASE/$SRC_DIR/bika/lims/scripts/id-server.py \
         -f $COUNTER_FILE \
@@ -203,11 +203,11 @@ From a remote browser, use the URL
 
     http://admin:password@example.bikalabs.com/manage
 
-or, if on the same host  
+or, if your browser and server is on the same host  
 
     http://admin:password@localhost:8030/manage
 
-## 17: Add a Bika site
+## 17: Add a Plone site with Bika extensions
 
 Add a Plone site with the Bika extension, noting its instance name
 by selecting the "Bika LIMS" option.
@@ -244,4 +244,4 @@ Two commands should be added to startup scripts in eg. /etc/rc.local or equivale
 ## 20. Test Bika LIMS
 
 Test the LIMS on subdomain name URL as set up above by pointing
-your browser at http://example.bikalabs.com/ or http://localhost:8031/Plone
+your browser at http://example.bikalabs.com/ or http://localhost:8030/Plone
