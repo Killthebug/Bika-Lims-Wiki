@@ -82,7 +82,7 @@ optional changes to the http-address and effective-user.
 ### b. Find the "develop" section. Add to the "develop" section
 
     develop =
-        src/BIKA-LIMS
+        src/Bika-LIMS
 
 
 ### c. Add the environment variable for ID-server
