@@ -1,246 +1,165 @@
-# Installing Bika LIMS 3
+Bika LIMS
+============
+This document describes the installation of Bika LIMS 
+(Laboratory Information Management System) on a Unix server.
+The ID-Server is now by default automatically built
+and started as part of the Zope/Plone instance but can
+optionally still be deployed in a clustering setup. 
 
-The following describes how to manually install Bika LIMS version 3 on a Unix-like server. 
-An installer script for Bika 3 is also available at [GitHub](https://github.com/bikalabs/Bika-LIMS-Installer).
-A more comprehensive document on Plone installation is [Plone Installation For Professionals: Quick Start](https://docs.google.com/document/d/1WEqTdgUFtm7JNfdk_eRUbSdQY0kzY0foAWyt4WA66k8/edit?authkey=CK_F7MEM&hl=en_US&pli=1)
+See https://github.com/bikalabs for other install options, especially 
+https://github.com/bikalabs/Bika-3-Buildout which automates most
+of the steps below and also installs the /Bika Plone instance.
 
-## 1. Get the latest Plone 4
+Installation
+------------
+This document details the installation steps for Bika LIMS version 3 
+from the Plone Unified Installer package for Linux, as well as the 
+setup for Apache as web proxy to make the LIMS available on the 
+standard http port 80. The process should be similar for MacOSX and
+other Unix-type operating systems. The gcc compiler, python2.6, 
+the python-dev library and git is required and you could use that
+already installed on your operating system.
 
-Obtain the latest version of the Plone Unified Installer from
-http://plone.org/products/plone/releases 
+# Download the Unified Installer from plone.org::
 
-## 2. Copy link, and download the file via wget:
+    From http://plone.org/products/plone/releases copy the link for the
+    required version (tested on 4.1.2), and download it, eg. using wget
+    from http://launchpad.net/plone/4.1/4.1.2/+download/Plone-4.1.2-UnifiedInstaller.tgz
 
-    wget http://launchpad.net/plone/4.1/4.1.2/+download/Plone-4.1.2-UnifiedInstaller.tgz
-
-## 3. Expand the archive
+# Untar the archive an run the installer::
 
     tar xzf Plone-4.1.2-UnifiedInstaller.tgz
+    cd Plone-4.1.2-UnifiedInstaller
+    sudo ./install.sh --target=/home/example  standalone
 
-## 4. Run installer.sh and point to new target directory
+# (Optional) Set up a domain name::
 
-    sudo ./install.sh --target=/home/example standalone
+    Set up a domain name for the LIMS site URL and add the Apache mapping
+    noting the Zope server port used by the instance (default 8080) 
 
-## 5. Set up instance name on DNS (optional)
+    Edit the apache configuration, adding a new virtual host 
 
-While the installer is running, set up a name for the Bika Plone instance
- and add the apache webserver mapping on server,
-noting the new port used for the Zope instance.
+   ``sudo vim /etc/apache2/sites-enabled/000-default``
 
-Edit the apache configuration and add a new virtual host
-section 
+   Add directives, ensuring an existing port is not conflicted::
 
-    sudo vim /etc/apache2/sites-enabled/000-default
-
-Add a Virtualhost section as below, ensuring an existing used port is not used again:
- 
     <VirtualHost *:80>
-        ServerName example.bikalabs.com
-        ServerAdmin webmaster@bikalabs.com
-        ErrorLog /var/log/apache2/example.bikalabs.com.error.log
-        LogLevel warn
-        CustomLog /var/log/apache2/example.bikalabs.com.access.log combined
-        RewriteEngine On
-        RewriteRule ^/manage(.*) http://localhost:8030/VirtualHostBase/http/example.bikalabs.com:80/VirtualHostRoot/manage [L,P]
-        RewriteRule ^/(.*) http://localhost:8030/VirtualHostBase/http/example.bikalabs.com:80/VirtualHostRoot/ [L,P]
+      ServerName  example.bikalabs.com
+      ServerAdmin webmaster@bikalabs.com
+      ErrorLog /var/log/apache2/example.bikalabs.com.error.log
+      LogLevel warn
+      CustomLog /var/log/apache2/example.bikalabs.com.access.log combined
+      RewriteEngine On
+      RewriteRule ^/robots.txt -  [L]
+      RewriteRule ^/manage(.*) http://localhost:8080/VirtualHostBase/http/example.bikalabs.com:80 /VirtualHostRoot/manage$1 [L,P]
+      RewriteRule ^/(.\*) http://localhost:8080/VirtualHostBase/http/example.bikalabs.com:80/VirtualHostRoot/$1 [L,P]
     </VirtualHost>
 
+# Verify successful build from the output of the installer script. Refer to http://plone.org if installation fails::
 
-## 6. Verify successfull Plone installation
+    ######################  Installation Complete  ######################
 
-Note the output of the installer script:
-
-    ###################### Installation Complete ######################
- 
     Plone successfully installed at /home/example
     See /home/example/zinstance/README.html
     for startup instructions
- 
-     Use the account information below to log into the Zope Management Interface
-     The account has full 'Manager' privileges.
-  
-     Username: admin
-     Password: password
 
-The Plone installation can now be tested independently of the Bika build by starting it
- and adding a Plone site. Refer to [Plone.org](http://plone.org) if the build fails.
+    Use the account information below to log into the Zope Management Interface
+    The account has full 'Manager' privileges.
 
-## 7. Add Bika LIMS to buildout
+    Username: admin
+    Password: xyz
+    ...
 
-Edit /home/example/zinstance/buildout.cfg and make the changes to the 
-eggs, develop, and instance environment variable sections, and 
-optional changes to the http-address and effective-user.
+# Edit the buildout configuration, eg ``/home/example/zinstance/buildout.cfg``::
 
-### a. Find the eggs section. Add "bika.lims" to eggs:
+   a.) Find the ``eggs`` section.  Add ``bika.lims``::
 
-    eggs =
-        Plone
-        Pillow
-        lxml
-        bika.lims
+       eggs =
+           Plone
+           Pillow
+           bika.lims
 
-### b. Find the "develop" section. Add to the "develop" section
+   b.) Find the ``develop`` section. Add ``src/bika3``::
 
-    develop =
-        src/Bika-LIMS
+       develop =
+         src/bika3
 
+   c.) (Optional) Change the Zope instance port if the default 8080 is not used::
 
-### c. Add the environment variable for ID-server
+       http-address = 8080
 
-Add an [instance] section, containing the environment
-variable matching the port number 
-with that in the id-server shell script:
+   d.) (Optional) Change the ``effective-user`` if ``plone`` is not the one used. 
 
-    [instance]
-         environment-vars = IDServerURL http://localhost:8031
+   e.) Add the environment-vars entry for the ID-server, noting port number::
 
+       [instance]
+       environment-vars =
+           IDServerURL http://localhost:8081
 
-### d. Match Plone port to webserver rewrite rule
-
-If remapping is required, note the port used for the Zope instance
-should be unique (default is 8080). The server will not start if the
-port is already held by another process.
-
-    http-address = 8030
-
-### e. Change the effective user if not "plone"
-
-If a different user will be used to run the instance, replace "effective-user = plone" 
-section with the new username. 
-
-## 8. Check out the Bika LIMS bika3 code:
-
-The Bika code is available from Github and from SourceForge. To
-retrieve it, change into the instance directory and use either
- git or svn.
+   
+# Retrieve the bika3 source code::
 
     cd /home/example/zinstance
+    git clone https://github.com/bikalabs/Bika-LIMS src/bika3
 
-Clone or pull from the Git repository
-
-    git clone https://github.com/bikalabs/Bika-LIMS src/Bika-LIMS
-
-
-## 9. Do the verbose buildout of the instance
+# Do the (verbose, if needed) buildout of the instance::
 
     sudo bin/buildout -v
 
-## 10. Create idserver.sh start script
-
-Use the python binary from the instance's bin/plonectl script and create
-a similar script to start the id-server, noting the port number.
-
-    #!/bin/sh
-    PYTHON=/home/example/Python-2.6/bin/python
-    BIKA_BASE=/home/example/zinstance
-    COUNTER_FILE=$BIKA_BASE/var/id.counter
-    LOG_FILE=$BIKA_BASE/var/log/idserver.log
-    PID_FILE=$BIKA_BASE/var/idserver.pid
-
-    PORT=8031
-
-    SRC_DIR=src/Bika-LIMS
-
-    exec $PYTHON $BIKA_BASE/$SRC_DIR/bika/lims/scripts/id-server.py \
-        -f $COUNTER_FILE \
-        -p $PORT \
-        -l $LOG_FILE \
-        -d $PID_FILE
-
-## 11. Make start-idserver.sh executable and test
-
-    sudo chmod +x start-idserver.sh
-
-Start the id-server
-
-    sudo su plone -c "./start-idserver.sh"
-
-To test, use a text-mode browser 
-
-    lynx http://localhost:8031/
-
-A "1" should appear, incrementing on reloads. 
-
-### 12. Create the stop-idserver.sh script:
-
-    #!/bin/sh
-    kill `cat var/idserver.pid`
-
-## 13. Test web server configuration and new instance DNS
-
-Ensure the web server configuration is valid
+# (Optional) Test and reload apache config::
 
     sudo apache2ctl configtest
-
-Ensure the DNS is active for the new instance name created
-
     dig example.bikalabs.com
-
-If all valid, reload the webserver configuration
-
     sudo apachectl graceful
 
-## 14. Remove/edit the id.counter file to reset the counter if needed and restart: (optional)
-
-    sudo ./stop-idserver.sh
-    sudo rm var/id.counter
-    sudo su plone -c ./start-idserver.sh
-
-## 15. First run of Bika instance
-
-The first test run is done in foreground, noting any error messages
+# Test run in foreground, noting error messages if any and taking corrective action if so::
 
     sudo bin/plonectl fg
 
-If no problems occur during startup, the end of the output should say
+    ...
 
     2011-11-13 12:06:07 INFO Zope Ready to handle requests
 
-## 16. Access Bika LIMS via browser
 
-From a remote browser, use the URL 
+# Access the Zope instance::
 
-    http://admin:password@example.bikalabs.com/manage
+   a.) via a web browser on public URL http://admin:admin@example.bikalabs.com/manage/ ::
 
-or, if your browser and server is on the same host  
+   b.) or if on localhost at  http://admin:admin@localhost:8080/manage/ ::
 
-    http://admin:password@localhost:8030/manage
+# Add the Plone instance with Bika LIMS extensions::
 
-## 17: Add a Plone site with Bika extensions
+    If not automatically created by the buildout process yet, add a Plone instance,
+    noting the instance name (default Plone, or Bika) and ensure that the Bika LIMS option is ticked.
 
-Add a Plone site with the Bika extension, noting its instance name
-by selecting the "Bika LIMS" option.
 
-Click "Add Plone Site" in the top right of the Zope Management Interface. The dialog requires
-an instance name, which is "Plone" by default, and a number of options to be ticked below.
 
-## 18. Modify web server config to point to Bika instance root
+# (Optional) Modify Apache web server configuration to point to instance root::
 
-For public consumption, the instance root maps to the site URL by changing the
-web server rewrite rule and adding in the instance URL in  name.
+    Point to the instance "Plone" or "Bika" root instead of Zope root if required
+    by changing the Apache rewrite rule::
 
-    #Comment out and replace original rule, adding instance name Plone
-    #RewriteRule ^/(.*) http://localhost:8030/VirtualHostBase/http/example.bikalabs.com:80/VirtualHostRoot/$1 [L,P]
+    #RewriteRule ^/(.*) http://localhost:8080/VirtualHostBase/http/example.bikalabs.com:80/VirtualHostRoot/$1 [L,P]
+    RewriteRule ^/(.*) http://localhost:8080/VirtualHostBase/http/example.bikalabs.com:80/Bika/VirtualHostRoot/$1 [L,P]
 
-    RewriteRule ^/(.*) http://localhost:8030/VirtualHostBase/http/example.bikalabs.com:80/Plone/VirtualHostRoot/$1 [L,P]
+     Reload the Apache webserver's configuration::
 
-Reload the webserver configuration:
+     sudo apache2ctl graceful
 
-    sudo apache2ctl graceful
-
-## 19. Stop foreground instance (Control C), start as process 
-
-The foreground process can be stopped by typing Control-C. Then, restart the
- Plone instance as background process and optionally add it to the server startup scripts.
+# (Optional) Stop the foreground instance (Control C), and restart it as a background process. 
+    Add it to server startup scripts to start Plone on reboot::
 
     sudo bin/plonectl start
 
-Two commands should be added to startup scripts in eg. /etc/rc.local or equivalent:
+    Add similar as below to ``/etc/rc.local`` or equivalent::
 
-    su plone -c /home/example/zinstance/start-idserver.sh
     /home/example/zinstance/bin/plonectl start
 
-## 20. Test Bika LIMS
+# To update the Bika source code from the GitHub repository::
 
-Test the LIMS on subdomain name URL as set up above by pointing
-your browser at http://example.bikalabs.com/ or http://localhost:8030/Plone
+    Rename (or move) the src/bika3 directory or rerun the ``git clone`` or ``git pull`` command in 
+    the source directory src/bika3, then re-run bin/buildout.
+
+# To start with a completely fresh instance::
+
+    Rename/move the Data.fs.* files in var/filestorage (after stopping instance). 
