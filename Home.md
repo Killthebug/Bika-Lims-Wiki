@@ -79,10 +79,10 @@ already installed on your operating system.
            Pillow
            bika.lims
 
-   b.) Find the ``develop`` section. Add ``src/bika3``::
+   b.) Find the ``develop`` section. Add ``src/bika.lims``::
 
        develop =
-         src/bika3
+         src/bika.lims
 
    c.) (Optional) Change the Zope instance port if the default 8080 is not used::
 
@@ -90,7 +90,8 @@ already installed on your operating system.
 
    d.) (Optional) Change the ``effective-user`` if ``plone`` is not the one used. 
 
-   e.) Add the environment-vars entry for the ID-server, noting port number::
+   e.) (Optional) Add the environment-vars entry for the ID-server for multiple-client
+       installations, noting port number::
 
        [instance]
        environment-vars =
@@ -100,7 +101,7 @@ already installed on your operating system.
 # Retrieve the bika3 source code::
 
     cd /home/example/zinstance
-    git clone https://github.com/bikalabs/Bika-LIMS src/bika3
+    git clone https://github.com/bikalabs/Bika-LIMS src/bika.lims
 
 # Do the (verbose, if needed) buildout of the instance::
 
@@ -157,8 +158,8 @@ already installed on your operating system.
 
 # To update the Bika source code from the GitHub repository::
 
-    Rename (or move) the src/bika3 directory or rerun the ``git clone`` or ``git pull`` command in 
-    the source directory src/bika3, then re-run bin/buildout.
+    Rename (or move) the src/bika.lims directory or rerun the ``git clone`` or ``git pull`` or
+    switch branches on the command line in the source directory src/bika.lims, then re-run bin/buildout.
 
 # To start with a completely fresh instance::
 
