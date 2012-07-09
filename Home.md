@@ -16,8 +16,8 @@ This document details the installation steps for Bika LIMS version 3
 from the Plone Unified Installer package for Linux, as well as the 
 setup for Apache as web proxy to make the LIMS available on the 
 standard http port 80. The process should be similar for MacOSX and
-other Unix-type operating systems. The gcc compiler, python2.6, 
-the python-dev library and git is required and you could use that
+other Unix-type operating systems. The **gcc compiler**, **python2.6**, 
+the **python-dev library** and **git** are all required,  you may use that
 already installed on your operating system.
 
 # Download the Unified Installer from plone.org::
