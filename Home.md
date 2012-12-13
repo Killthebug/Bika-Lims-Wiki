@@ -7,8 +7,10 @@ and started as part of the Zope/Plone instance but can
 optionally still be deployed in a clustering setup. 
 
 See https://github.com/bikalabs for other install options, especially 
-https://github.com/bikalabs/Bika-3-Buildout which automates most
-of the steps below and also installs the /Bika Plone instance.
+the installation document at
+ https://github.com/bikalabs/Bika-LIMS/blob/master/docs/installation.txt
+that may be run as a bash script which automates most
+of the steps below and also installs a Bika customised Plone instance.
 
 Installation
 ------------
