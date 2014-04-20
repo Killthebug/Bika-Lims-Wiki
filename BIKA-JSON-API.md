@@ -13,8 +13,7 @@ The return value will always contain the following keys:
 
 Read more about the jsonapi at https://github.com/ramonski/plone.jsonapi.core
 
-Authentication
-==============
+## Authentication
 
 Accessing the jsonapi URLs requires authentication.  The following python code demonstrates authenticating as the admin user, using cookies to store auth token:
 
@@ -38,8 +37,7 @@ Accessing the jsonapi URLs requires authentication.  The following python code d
     f = opener.open("http://localhost:8080/Plone/@@API/read?portal_type=Client")
     data = json.loads(f.read())
 
-Querying objects
-================
+## Querying objects
 
 URL: @@API/read
 
@@ -94,8 +92,7 @@ If the query executes successfully, the response object will contain additional 
     The list of objects, as JSON values
 
 
-Example: Get Samples in sample_received state
----------------------------------------------
+### Example: Get Samples in sample_received state
 
 Request:
 
@@ -130,13 +127,11 @@ Response:
 
 The batching machine has returned only the first ten results.
 
-Querying Analysis Requests
-==========================
+## Querying Analysis Requests
 
 When the query specifies a portal_type of AnalysisRequest, the response is modified to include all the Analyses contained in the AR, in a field called 'Analyses'.  This includes rejected/retested analyses, and their results.  The Analyses field is populated if 'Analyses' is included in the include_fields parameter, or if the include_fields parameter is not supplied.
 
-Creating new objects
-====================
+## Creating new objects
 
 URL: @@API/create
 
@@ -152,8 +147,7 @@ Required parameters:
 
 All other request parameters are assumed to be field name/value pairs, and if the corrosponding fields are found on the new object's schema, they will be set accordingly.
 
-Example: Create a new AR Batch
-------------------------------
+### Example: Create a new AR Batch
 
 Request:
 
@@ -172,8 +166,7 @@ Response:
         "error":false
     }
 
-Updating existing objects
-=========================
+## Updating existing objects
 
 URL: @@API/update
 
@@ -185,8 +178,7 @@ Required parameters:
 
 All other request parameters are assumed to be field name/value pairs, and if the corrosponding fields are found on the new object's schema, they will be set accordingly.
 
-Example: Set result of a specific analysis
-------------------------------------------
+### Example: Set result of a specific analysis
 
 In the case of an analysis, the obj_path includes the Client ID, AR ID, and Analysis Service keyword for the specific analysis.  To set the Zinc value on a particular AR:
 
@@ -214,15 +206,13 @@ Multiple updates can be executed in a single http request, by using the 'update_
 
 The result of the request will be a list of return values from the update method.
 
-Reference Fields
-================
+## Reference Fields
 
 When using the read method, reference values are passed back as object UIDs.
 
 When using update method, there is a simple encoded-string query format used to specify the target object (or list of objects, if field has multiValued=True) to be set as the reference field's value.  It consists of key:value pairs, separated with "|", and these values are passed directly to the catalog.
 
-Example: Assigning an AR to a batch
------------------------------------
+### Example: Assigning an AR to a batch
 
 Request:
 
@@ -239,8 +229,7 @@ Response:
         "error": "Can't resolve reference: Batch"}
     }
 
-Doing workflow transitions
-==========================
+## Doing workflow transitions
 
 The doActionFor method allows items to be transitioned between workflow states.  The request works the same as a 'read' request, but an extra parameter is required in the request:
 
