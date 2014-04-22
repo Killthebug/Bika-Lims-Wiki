@@ -26,3 +26,15 @@ Guides, manuals and information for Plone developers.
 
 #### Extending Bika LIMS
 Guides, manuals and tips on how to extend Bika LIMS.
+
+***
+
+### Partners
+
+**[Bika Lab Systems](http://bikalabs.com)**
+
+Bika Lab Systems was established in 2002 (incorporated 2005), identifying a need for affordable and easy to use information systems and instrument interfaces for small and medium size laboratories, customised to requirement. Bika Lab Systems sponsors and co-ordinates the Bika open source LIMS project, committed to keep the Bika code free and available and to maintain effective organisational support.
+
+**[Naralabs](http://naralabs.com)**
+
+Naralabs is a company based on Barcelona (Spain), specialized in Laboratory Information Management Systems (LIMS) and offers professional technology services and engineering, such as consulting, implementation, training, system maintenance and technical support. 
