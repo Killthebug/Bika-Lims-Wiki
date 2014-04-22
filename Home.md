@@ -8,6 +8,8 @@ The 'generic' Bika LIMS users guide.
 #### [Community](https://github.com/bikalabs/Bika-LIMS/wiki/Community)
 Bika LIMS Community users lists, help and other communication channels.
 
+#### Contribute
+Request demo access and contribute to Bika LIMS testing and new functionalities requests.
 ***
 
 ### Administrator/Hosting Documentation
