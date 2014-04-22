@@ -20,7 +20,7 @@ Bika LIMS can be installed on Windows, Mac OS X, Linux, BSD and other platforms.
 Tips on hosting, security, setup, caching.
 
 ***
-### Development
+### Development documentation
 #### [Bika LIMS for developers](https://github.com/bikalabs/Bika-LIMS/wiki/Bika-LIMS-for-developers)
 Guides, manuals and information for Plone developers.
 
