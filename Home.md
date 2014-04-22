@@ -21,7 +21,7 @@ Tips on hosting, security, setup, caching.
 
 ***
 ### Development documentation
-#### [Bika LIMS for developers](https://github.com/bikalabs/Bika-LIMS/wiki/Bika-LIMS-for-developers)
+#### [Developing Bika LIMS](https://github.com/bikalabs/Bika-LIMS/wiki/Bika-LIMS-for-developers)
 Guides, manuals and information for Plone developers.
 
 #### [Connecting Bika LIMS](https://github.com/bikalabs/Bika-LIMS/wiki/BIKA-JSON-API)
