@@ -8,7 +8,7 @@ The 'generic' Bika LIMS users guide.
 #### [Community](https://github.com/bikalabs/Bika-LIMS/wiki/Community)
 Bika LIMS Community users lists, help and other communication channels.
 
-#### Contribute
+#### [Contribute](https://github.com/bikalabs/Bika-LIMS/wiki/Contribute)
 Request demo access and contribute to Bika LIMS testing and new functionalities requests.
 ***
 
@@ -21,7 +21,7 @@ Tips on hosting, security, setup, caching.
 
 ***
 ### Development
-#### Bika LIMS for developers
+#### [Bika LIMS for developers](https://github.com/bikalabs/Bika-LIMS/wiki/Bika-LIMS-for-developers)
 Guides, manuals and information for Plone developers.
 
 #### Extending Bika LIMS
