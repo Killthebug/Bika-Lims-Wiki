@@ -29,7 +29,8 @@ Guides, manuals and tips on how to extend Bika LIMS.
 
 ***
 
-### Partners
+### Service providers
+**If you need assistance with your Bika LIMS implementation or professional advice.**
 
 **[Bika Lab Systems](http://bikalabs.com)**
 
