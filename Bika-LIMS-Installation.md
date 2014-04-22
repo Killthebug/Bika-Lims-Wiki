@@ -1,3 +1,5 @@
+You are here: [Home](https://github.com/bikalabs/Bika-LIMS/wiki) · Bika LIMS Installation
+***
 This document describes the installation of Bika LIMS 
 (Laboratory Information Management System) on a Unix server.
 The ID-Server is now by default automatically built
