@@ -11,7 +11,7 @@ Bika LIMS Community users lists, help and other communication channels.
 ***
 
 ### Administrator/Hosting Documentation
-#### Installing Bika LIMS
+#### [Installing Bika LIMS](https://github.com/bikalabs/Bika-LIMS/wiki/Bika-LIMS-Installation)
 Bika LIMS can be installed on Windows, Mac OS X, Linux, BSD and other platforms.
 
 #### Using Bika LIMS in production
