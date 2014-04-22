@@ -1,4 +1,5 @@
-[Home](https://github.com/bikalabs/Bika-LIMS/wiki) · Community
+You are here: [Home](https://github.com/bikalabs/Bika-LIMS/wiki) · Community
+***
 
 ### Community help
 
