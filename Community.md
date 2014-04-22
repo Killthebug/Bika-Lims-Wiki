@@ -21,6 +21,7 @@ The members of the Bika project help everybody who needs assistance, through the
 
 * [Bika LIMS source code](http://github.com/bikalabs/Bika-LIMS): Source code repos of Bika LIMS.
 * [Bika Health source code](http://github.com/bikalabs/bika.health): Source code repos of Bika Health.
+* [Multi-lingual repos](https://www.transifex.com/projects/p/bika-lims/resource/bika): Currently available translations.
 * [Issues](http://github.com/bikalabs/Bika-LIMS/issues): Issue Tracking System (IST).
 
 
