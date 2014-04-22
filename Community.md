@@ -1,3 +1,5 @@
+[Home](https://github.com/bikalabs/Bika-LIMS/wiki) · Community
+
 ### Community help
 
 The members of the Bika project help everybody who needs assistance, through the Project distribution lists, the [issue tracker](http://github.com/bikalabs/Bika-LIMS/issues) or directly through the [IRC Channel](irc://freenode/bika). Everybody is welcome but you have to consider that the help provided is coming from other community members who are volunteering their time and effort to try to help you:
