@@ -22,7 +22,7 @@ Tips on hosting, security, setup, caching.
 ***
 ### Development documentation
 #### [Developing Bika LIMS](https://github.com/bikalabs/Bika-LIMS/wiki/Developing-Bika-LIMS)
-Guides, manuals and information for Plone developers.
+Guides, manuals and information for Bika LIMS developers.
 
 #### [Connecting Bika LIMS](https://github.com/bikalabs/Bika-LIMS/wiki/BIKA-JSON-API)
 Bika includes plone.jsonapi for reading, updating, and creating and deleting objects. The JSON API is used internally for many AJAX requests, and also for implementing alternative interfaces.
