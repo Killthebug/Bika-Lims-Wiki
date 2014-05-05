@@ -1,3 +1,6 @@
+You are here: [Home](https://github.com/bikalabs/Bika-LIMS/wiki) · Connecting Bika LIMS
+***
+
 Bika includes plone.jsonapi for reading, updating, and creating and deleting objects.  The JSON API is used internally for many AJAX requests, and also for implementing alternative interfaces.
 
 A request is made to the '''/@@API''' url with certain parameters, and the server will return a JSON string, indicating success or failure, details about the call, and query results.
