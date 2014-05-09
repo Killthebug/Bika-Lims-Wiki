@@ -46,9 +46,24 @@ All the instrument import logic and related classes are under the [```bika.lims.
 
 In fact, most of the import interfaces can be done easily by adding two classes (the controller and the template).
 
-
 ### Creating the template
-[TO BE COMPLETED]
+TAL is template language used Plone. TAL is XML based language, which puts programming logic to XML attributes. The [TAL Reference Guide](http://www.owlfish.com/software/simpleTAL/tal-guide.html) is a good starting point to know how works. Also, you might check the [Plone's Templates Basics](http://docs.simplesconsultoria.com.br/developermanual/templates_css_and_javascripts/template_basics.html) for further information.
+
+Even though, the templates used for instrument import forms are quite easy and basic HTML knowledge would be enough to develop your own interface. The following image shows how the template for FOSS Winescan Auto results import form looks like:
+
+![FOSS Winescan Auto results import form](https://raw.githubusercontent.com/bikalabs/Bika-LIMS/develop/docs/screenshots/instrument_import_view.png)
+
+The following are the basic fields an instrument import template might have:
+
+- **File**: the input type element for the results file upload.
+
+- **Format**: the file formats and file versions that Bika LIMS accepts for this instrument and model. If the results file specs changes in future, the new version might be added here, so for a given instrument, more than one formats will be available (i.e. CSV v0.93, CSV v1.0, CSV v1.2, etc.)
+
+- **Analyisis Requests state**: allows the user to set if the results must only be saved if their Analysis Request has the state *Received* or *Received and to be verified*
+
+- **Results override**: allows the user to set the rules the importer will follow if a result has already been set in the system.
+
+- **Instrument**: allows the user to set the instrument to which the results will be linked if the file contains calibration tests (the identifiers are Reference Sample IDs).
 
 ### Creating the controller
 - Generic parsers: ```InstrumentResultsFileParser``` and ```InstrumentCSVResultsFileParser```
