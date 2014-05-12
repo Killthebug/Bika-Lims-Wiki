@@ -83,13 +83,13 @@ In most of cases, the overriding the method [```_parseline(self, line)```](https
 
 ```python
 def _parseline(self, line):
-        """ Parses a line from the input CSV file and populates rawresults
-            (look at getRawResults comment)
-            returns -1 if critical error found and parser must end
-            returns the number of lines to be jumped in next read. If 0, the
-            parser reads the next line as usual
-        """
-        raise NotImplementedError
+    """ Parses a line from the input CSV file and populates rawresults
+        (look at getRawResults comment)
+        returns -1 if critical error found and parser must end
+        returns the number of lines to be jumped in next read. If 0, the
+        parser reads the next line as usual
+    """
+    raise NotImplementedError
 ```
 
 The method will be called by the parent class every time a new line is reached. The logic to be implemented in this method must achieve the following:
@@ -121,7 +121,7 @@ The method will be called by the parent class every time a new line is reached. 
 **b) Add the previous dictionary to 'rawresults'** by using the method [```_addRawResult(self, resid, values={}, override=False)```](https://github.com/bikalabs/Bika-LIMS/blob/develop/bika/lims/exportimport/instruments/resultsimport.py#L57):
 
 ```
-    self._addRawResult('QC13-0002-001', rawdict, False)
+  self._addRawResult('QC13-0002-001', rawdict, False)
 ```
 
 where:
@@ -138,78 +138,78 @@ where:
 
 Excerpt of [```WinescanCSVParser```](https://github.com/bikalabs/Bika-LIMS/blob/develop/bika/lims/exportimport/instruments/foss/winescan/__init__.py)
 ```python
-    def _parseline(self, line):
-        # Sample Id,,,Ash,Ca,Ethanol,ReducingSugar,VolatileAcid,TotalAcid
-        if line.startswith('Sample Id'):
-            self.currentheader = [token.strip() for token in line.split(',')]
-            return 0
+def _parseline(self, line):
+    # Sample Id,,,Ash,Ca,Ethanol,ReducingSugar,VolatileAcid,TotalAcid
+    if line.startswith('Sample Id'):
+        self.currentheader = [token.strip() for token in line.split(',')]
+        return 0
 
-        if self.currentheader:
-            # AR-01177-01,,,0.9905,22.31,14.11,2.95,0.25,5.11,3.54,3.26,-0.36
-            splitted = [token.strip() for token in line.split(',')]
-            resid = splitted[0]
-            if not resid:
-                self.err(_("No Sample ID found, line %s") % self._numline)
-                self.currentHeader = None
-                return 0
-
-            duplicated = []
-            values = {}
-            remarks = ''
-            for idx, result in enumerate(splitted):
-                if idx == 0:
-                    continue
-
-                if len(self.currentheader) <= idx:
-                    self.err(_("Orphan value in column %s, line %s") \
-                             % (str(idx + 1), self._numline))
-                    continue
-
-                keyword = self.currentheader[idx]
-
-                if not result and not keyword:
-                    continue
-
-                if result and not keyword:
-                    self.err(_("Orphan value in column %s, line %s") \
-                             % (str(idx + 1), self._numline))
-                    continue
-
-                # Allow Bika to manage the Remark as an analysis Remark instead
-                # of a regular result. Remarks field will be set for all
-                # Analysis keywords.
-                if keyword == 'Remark':
-                    remarks = result
-                    continue
-
-                if not result:
-                    self.warn(_("Empty result for %s, column %s, line %s") % \
-                              (keyword, str(idx + 1), self._numline))
-
-                if keyword in values.keys():
-                    self.err(_("Duplicated result for '%s', line %s") \
-                             % (keyword, self._numline))
-                    duplicated.append(keyword)
-                    continue
-
-                values[keyword] = {'DefaultResult': keyword,
-                                   'Remarks': remarks,
-                                   keyword: result}
-
-            # Remove duplicated results
-            outvals = {key: value for key, value in values.items() \
-                       if key not in duplicated}
-
-            # add result
-            self._addRawResult(resid, outvals, True)
+    if self.currentheader:
+        # AR-01177-01,,,0.9905,22.31,14.11,2.95,0.25,5.11,3.54,3.26,-0.36
+        splitted = [token.strip() for token in line.split(',')]
+        resid = splitted[0]
+        if not resid:
+            self.err(_("No Sample ID found, line %s") % self._numline)
             self.currentHeader = None
             return 0
 
-        self.err(_("No header found"))
+        duplicated = []
+        values = {}
+        remarks = ''
+        for idx, result in enumerate(splitted):
+            if idx == 0:
+                continue
+
+            if len(self.currentheader) <= idx:
+                self.err(_("Orphan value in column %s, line %s") \
+                         % (str(idx + 1), self._numline))
+                continue
+
+            keyword = self.currentheader[idx]
+
+            if not result and not keyword:
+                continue
+
+            if result and not keyword:
+                self.err(_("Orphan value in column %s, line %s") \
+                         % (str(idx + 1), self._numline))
+                continue
+
+            # Allow Bika to manage the Remark as an analysis Remark instead
+            # of a regular result. Remarks field will be set for all
+            # Analysis keywords.
+            if keyword == 'Remark':
+                remarks = result
+                continue
+
+            if not result:
+                self.warn(_("Empty result for %s, column %s, line %s") % \
+                          (keyword, str(idx + 1), self._numline))
+
+            if keyword in values.keys():
+                self.err(_("Duplicated result for '%s', line %s") \
+                         % (keyword, self._numline))
+                duplicated.append(keyword)
+                continue
+
+            values[keyword] = {'DefaultResult': keyword,
+                               'Remarks': remarks,
+                               keyword: result}
+
+        # Remove duplicated results
+        outvals = {key: value for key, value in values.items() \
+                   if key not in duplicated}
+
+        # add result
+        self._addRawResult(resid, outvals, True)
+        self.currentHeader = None
         return 0
+
+    self.err(_("No header found"))
+    return 0
 ```
 
-You may notice that in this case, some additional data checks are performed: detection of duplicate records, empty results, orphan values, etc. The [Logger](https://github.com/bikalabs/Bika-LIMS/blob/develop/bika/lims/exportimport/instruments/logger.py) top-level class in the hierarchy also provides some useful methods:
+You may notice that in this case, some additional data checks are performed: detection of duplicate records, empty results, orphan values, etc. The [```Logger```](https://github.com/bikalabs/Bika-LIMS/blob/develop/bika/lims/exportimport/instruments/logger.py) top-level class in the hierarchy also provides some useful methods:
 
 ```
  err(self, msg, numline=None, line=None)
