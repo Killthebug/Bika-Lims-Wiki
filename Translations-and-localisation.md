@@ -84,9 +84,9 @@ To override translations, use the plone-manual.pot and plone-bika.pot files, res
 
 In order to rebuild the translation catalogs, you will need the following requirements:
 
-- the gettext package must be installed
-- the [update_translatins] and [i18ndude] parts must be copied from [buildout.cfg](https://github.com/bikalabs/Bika-LIMS/blob/develop/buildout.cfg)
-- In order to make a set of translations that may be pushed directly to bika.lims repository, the transifex client must be correctly installed, and your transifex login name and password must be configured.  If this is not the case, then you'll need to comment out the 'tx push' and 'tx pull' lines in buildout.cfg or bin/update_translations files.
+1) The gettext package must be installed
+2) The [update_translatins] and [i18ndude] parts must be copied from [buildout.cfg](https://github.com/bikalabs/Bika-LIMS/blob/develop/buildout.cfg) into your local buildout.cfg
+3) In order to receive the latest translations, or if you want to make a set of translation catalogs to push to git, the transifex client must be correctly installed, and your transifex login name and password must be configured.  If you want to use transifex, uncomment 'tx pull' and 'tx push' in bin/buildout.cfg
 
 ```
 1) run bin/buildout
