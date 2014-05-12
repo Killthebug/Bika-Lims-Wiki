@@ -51,13 +51,13 @@ Bika LIMS makes easy to develop parsers for those file types thanks to built-in 
 
 All the instrument import logic and related classes are under the [```bika.lims.exportimport.instruments```](https://github.com/bikalabs/Bika-LIMS/blob/develop/bika/lims/exportimport/instruments) package. Inside this package, [```__init__.py```](https://github.com/bikalabs/Bika-LIMS/blob/develop/bika/lims/exportimport/instruments/__init__.py) and [```resultsimport.py```](https://github.com/bikalabs/Bika-LIMS/blob/develop/bika/lims/exportimport/instruments/resultsimport.py) are the most important classes involved in parsing and importing the results. Besides, a hierarchy of packages following the ```<manufacturer>.<instrument_model>``` rule are placed here and contains both the controller classes for the instrument-specific results import forms and the form template. As an example, the import interface for Agilent's Masshunter quantitative results file comprises the following classes:
 
-- The template: [```bika.lims.exportimport.instruments.agilent.masshunter.quantitative_import.pt```](https://github.com/bikalabs/Bika-LIMS/blob/develop/bika/lims/exportimport/instruments/agilent/masshunter/quantitative_import.pt)
+- [The template](https://github.com/bikalabs/Bika-LIMS/blob/develop/bika/lims/exportimport/instruments/agilent/masshunter/quantitative_import.pt)
 
-- The parser: [```bika.lims.exportimport.instruments.agilent.masshunter.__init__py```](https://github.com/bikalabs/Bika-LIMS/blob/develop/bika/lims/exportimport/instruments/agilent/masshunter/quantitative.py#L101)
+- [The parser](https://github.com/bikalabs/Bika-LIMS/blob/develop/bika/lims/exportimport/instruments/agilent/masshunter/quantitative.py#L101)
 
-- The controller: [```bika.lims.exportimport.instruments.agilent.masshunter.quantitative.py```](https://github.com/bikalabs/Bika-LIMS/blob/develop/bika/lims/exportimport/instruments/agilent/masshunter/quantitative.py)
+- [The controller](https://github.com/bikalabs/Bika-LIMS/blob/develop/bika/lims/exportimport/instruments/agilent/masshunter/quantitative.py)
 
-In fact, most of the import interfaces can be done easily by adding these three classes (the template, the parser and the controller).
+In fact, most of the import interfaces can be done easily by adding these three classes.
 
 ### Creating the template
 TAL is template language used Plone. TAL is XML based language, which puts programming logic to XML attributes. The [TAL Reference Guide](http://www.owlfish.com/software/simpleTAL/tal-guide.html) is a good starting point to know how works. Also, you might check the [Plone's Templates Basics](http://docs.simplesconsultoria.com.br/developermanual/templates_css_and_javascripts/template_basics.html) for further information.
