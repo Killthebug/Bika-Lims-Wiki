@@ -125,7 +125,7 @@ where:
   - -1: If the parser failed due to a critical error. The import will be aborted.
 
 
-Excerpt of [WinescanCSVParser](https://github.com/bikalabs/Bika-LIMS/blob/develop/bika/lims/exportimport/instruments/foss/winescan/__init__.py)
+Excerpt of [```WinescanCSVParser```](https://github.com/bikalabs/Bika-LIMS/blob/develop/bika/lims/exportimport/instruments/foss/winescan/__init__.py)
 ```python
     def _parseline(self, line):
         # Sample Id,,,Ash,Ca,Ethanol,ReducingSugar,VolatileAcid,TotalAcid
@@ -198,17 +198,82 @@ Excerpt of [WinescanCSVParser](https://github.com/bikalabs/Bika-LIMS/blob/develo
         return 0
 ```
 
+You may notice that in this case, some additional data checks are performed: detection of duplicate records, empty results, orphan values, etc. The [Logger](https://github.com/bikalabs/Bika-LIMS/blob/develop/bika/lims/exportimport/instruments/logger.py) top-level class in the hierarchy also provides some useful methods:
 
+```
+ err(self, msg, numline=None, line=None)
+ warn(self, msg, numline=None, line=None) 
+ log(self, msg, numline=None, line=None)
+```
+where:
+- *msg*: the message to be displayed
+- *numline*: the affected number of line from the file being parsed
+- *line*: the line string itself
+
+All this information is displayed in the web page after the submission being done.
+
+#### Where does the parser must be placed?
+As mentioned above a package following the rule ```bika.lims.exportimport.instruments.<manufacturer>.<model>``` should be created. The parser classes are usually defined inside the ```__init__.py``` file from that package. See [```WinescanCSVParser```](https://github.com/bikalabs/Bika-LIMS/blob/develop/bika/lims/exportimport/instruments/foss/winescan/__init__.py) how looks like.
 
 ### Creating the controller
-The controller manages the submit of the template, initializes the parser to be used for the specified file and executes the importer.
+The controller manages the submit of the template, acquires the request values, initializes the parser to be used for the specified file and executes the importer.
 
-- Generic parsers: ```InstrumentResultsFileParser``` and ```InstrumentCSVResultsFileParser```
-- Generic importer: ```AnalysisResultsImporter```
-[TO BE COMPLETED]
+The controller consists of an ```Import(context, request)``` method. This is the method that will be fired when the user submits the form. Besides, a global variable called title must be declared. Its value will be used on the 'Instruments' selection list for the specific form being rendered on the fly.
+
+Below, the main logic to be implemented in the controller:
+
+```python
+from bika.lims.exportimport.instruments.resultsimport import AnalysisResultsImporter
+import json
+import traceback
+
+# Declare the title to be used in the 'Instrument' selector for the
+# template being rendered on the fly
+title = "<Manufacturer> - <Model> - Your awesome importer interface"
+
+def Import(context, request):
+    # Some logic here to retrieve the request values and the inputfile
+    # [....]
+    infile = request.form['file-to-submit']
+
+    # Creates the specific-parser
+    parser = YourOwnFileParser(infile)
+
+    # Fire the import process
+    importer = AnalysisResultsImporter(parser, context)
+    try:
+        importer.process()
+    except:
+        tbex = traceback.format_exc()
+    errors = importer.errors
+    logs = importer.logs
+    warns = importer.warns
+    if tbex:
+        errors.append(tbex)
+
+    # Display the results
+    results = {'errors': errors, 'log': logs, 'warns': warns}
+    return json.dumps(results)
+```
+
+And thats all!
+
+The ```importer.process()``` does all the job: runs the parser and saves the data retrieved into Bika LIMS.
+
+Notice that you can also use an specific Importer instead of the generic [```AnalysisResultsImporter```](https://github.com/bikalabs/Bika-LIMS/blob/develop/bika/lims/exportimport/instruments/resultsimport.py#L230), but not recommended unless you need very special features not already provided by this. 
 
 ### Registering the new interface into the system
-[TO BE COMPLETED]
+The last step is to register the interface in the system, for which you only need to add the path to your new package in [```bika.lims.exportimport.instruments.__init__.py```](https://github.com/bikalabs/Bika-LIMS/blob/develop/bika/lims/exportimport/instruments/__init__.py):
 
-### Testing
-[TO BE COMPLETED]
+```python
+from <manufacturer>.<model> import <your_awesome_importer_interface>
+
+__all__ = ['generic.xml',
+           'agilent.masshunter.quantitative',
+           'foss.fiastar.fiastar',
+           'foss.winescan.auto',
+           'foss.winescan.ft120',
+           'thermoscientific.gallery.Ts9861x',
+           '<manufacturer>.<model>.<your_awesome_importer_interface>']
+
+```
