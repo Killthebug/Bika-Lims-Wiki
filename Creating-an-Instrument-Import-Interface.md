@@ -107,7 +107,7 @@ The method will be called by the parent class every time a new line is reached. 
 ```
   Where ```D2``` is an Analysis Service Keyword and the keys from the inner dictionary are the result and values to be saved for that Analysis. By the default, the importer will use the field specified by the 'DefaultResult' key as the default value for the analyses. Nevertheless, the importer will look for the rest of values to find matches with interim fields (if exist for that Analysis Service).
 
-**b) Add the previous dictionary to 'rawresults'** by using the method [_addRawResult(self, resid, values={}, override=False)](https://github.com/bikalabs/Bika-LIMS/blob/develop/bika/lims/exportimport/instruments/resultsimport.py#L57):
+**b) Add the previous dictionary to 'rawresults'** by using the method [```_addRawResult(self, resid, values={}, override=False)```](https://github.com/bikalabs/Bika-LIMS/blob/develop/bika/lims/exportimport/instruments/resultsimport.py#L57):
 
 ```
     self._addRawResult('QC13-0002-001', rawdict, False)
