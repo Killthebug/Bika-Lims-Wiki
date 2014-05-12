@@ -18,3 +18,5 @@ You are here: [Home](https://github.com/bikalabs/Bika-LIMS/wiki) · Developing B
 - ##### Modifying the results report
 
     The results report appearance can be modified easily modifying its template and by using TAL expressions.
+
+- #### Translations and localisation](https://github.com/bikalabs/Bika-LIMS/wiki/Translations-and-localisation)
