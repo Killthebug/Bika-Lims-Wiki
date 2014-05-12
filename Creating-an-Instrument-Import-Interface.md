@@ -112,25 +112,20 @@ The method will be called by the parent class every time a new line is reached. 
 ```
     self._addRawResult('QC13-0002-001', rawdict, False)
 ```
-  where:
 
-    - resid is the Identifier of the Analysis Request, Sample, Reference Sample, etc.
-
-    - rawdict is the dictionary of values created in the first step
-
-    - override: action to take if another rawresult has been already added for the same resid and analysis.
+where:
+  - *resid*: is the Identifier of the Analysis Request, Sample, Reference Sample, etc.
+  - *rawdict*: is the dictionary of values created in the first step
+  - *override*: action to take if another rawresult has been already added for the same resid and analysis.
 
 
 **c) Return an integer value**:
-
-  ```0```: If the parser should follow the next line.
-
-  ```1..n```: If the parser should jump n lines before calling _parseline again.
-
-  ```-1```: If the parser failed due to a critical error. The import will be aborted.
+  - 0: If the parser should follow the next line.
+  - 1..n: If the parser should jump n lines before calling _parseline again.
+  - -1: If the parser failed due to a critical error. The import will be aborted.
 
 
-Example from [WinescanCSVParser](https://github.com/bikalabs/Bika-LIMS/blob/develop/bika/lims/exportimport/instruments/foss/winescan/__init__.py)
+Excerpt of [WinescanCSVParser](https://github.com/bikalabs/Bika-LIMS/blob/develop/bika/lims/exportimport/instruments/foss/winescan/__init__.py)
 ```python
     def _parseline(self, line):
         # Sample Id,,,Ash,Ca,Ethanol,ReducingSugar,VolatileAcid,TotalAcid
