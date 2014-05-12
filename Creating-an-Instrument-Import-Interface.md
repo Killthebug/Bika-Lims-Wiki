@@ -65,7 +65,149 @@ The following are the basic fields an instrument import template might have:
 
 - **Instrument**: allows the user to set the instrument to which the results will be linked if the file contains calibration tests (the identifiers are Reference Sample IDs).
 
+### Creating the parser
+The parser is the class responsible of parsing the results file. Any parser must inherit from [```InstrumentResultsFileParser```](https://github.com/bikalabs/Bika-LIMS/blob/develop/bika/lims/exportimport/instruments/resultsimport.py#L14) or from any of its child classes and override its methods. [```InstrumentCSVResultsFileParser```](https://github.com/bikalabs/Bika-LIMS/blob/develop/bika/lims/exportimport/instruments/resultsimport.py#L187) is the most commonly used class to be inherited from, which is a child from ```InstrumentFileParser```. As the name indicates, this class provides methods to read and parse CSV-type files.
+
+In most of cases, the overriding the method [```_parseline(self, line)```](https://github.com/bikalabs/Bika-LIMS/blob/develop/bika/lims/exportimport/instruments/resultsimport.py#L220) would be enough for a fully functional importer interface:
+
+```python
+def _parseline(self, line):
+        """ Parses a line from the input CSV file and populates rawresults
+            (look at getRawResults comment)
+            returns -1 if critical error found and parser must end
+            returns the number of lines to be jumped in next read. If 0, the
+            parser reads the next line as usual
+        """
+        raise NotImplementedError
+```
+
+The method will be called by the parent class every time a new line is reached. The logic to be implemented in this method must achieve the following:
+
+**a) Split the line, retrieve the data and fill a key,value dictionary**.
+
+  As an example, for a line
+
+```
+    QC13-0002-001.d,D2,274638,0.0212,0.914,1.9531,98.19,,
+```
+  with header
+```
+    Data File,Compound,ISTD Resp,Resp Ratio, Final Conc,Exp Conc,Accuracy,Remarks
+```
+  a dictionary might be created as follows:
+```
+    {'D2': {'DefaultResult': 'Final Conc',
+            'Remarks': '',
+            'Resp': '5816',
+            'ISTD Resp': '274638',
+            'Resp Ratio': '0.0212',
+            'Final Conc': '0.9145',
+            'Exp Conc': '1.9531',
+            'Accuracy': '98.19' }}
+```
+  Where ```D2``` is an Analysis Service Keyword and the keys from the inner dictionary are the result and values to be saved for that Analysis. By the default, the importer will use the field specified by the 'DefaultResult' key as the default value for the analyses. Nevertheless, the importer will look for the rest of values to find matches with interim fields (if exist for that Analysis Service).
+
+**b) Add the previous dictionary to 'rawresults'** by using the method [_addRawResult(self, resid, values={}, override=False)](https://github.com/bikalabs/Bika-LIMS/blob/develop/bika/lims/exportimport/instruments/resultsimport.py#L57):
+
+```
+    self._addRawResult('QC13-0002-001', rawdict, False)
+```
+  where:
+
+    - resid is the Identifier of the Analysis Request, Sample, Reference Sample, etc.
+
+    - rawdict is the dictionary of values created in the first step
+
+    - override: action to take if another rawresult has been already added for the same resid and analysis.
+
+
+**c) Return an integer value**:
+
+  ```0```: If the parser should follow the next line.
+
+  ```1..n```: If the parser should jump n lines before calling _parseline again.
+
+  ```-1```: If the parser failed due to a critical error. The import will be aborted.
+
+
+Example from [WinescanCSVParser](https://github.com/bikalabs/Bika-LIMS/blob/develop/bika/lims/exportimport/instruments/foss/winescan/__init__.py)
+```python
+    def _parseline(self, line):
+        # Sample Id,,,Ash,Ca,Ethanol,ReducingSugar,VolatileAcid,TotalAcid
+        if line.startswith('Sample Id'):
+            self.currentheader = [token.strip() for token in line.split(',')]
+            return 0
+
+        if self.currentheader:
+            # AR-01177-01,,,0.9905,22.31,14.11,2.95,0.25,5.11,3.54,3.26,-0.36
+            splitted = [token.strip() for token in line.split(',')]
+            resid = splitted[0]
+            if not resid:
+                self.err(_("No Sample ID found, line %s") % self._numline)
+                self.currentHeader = None
+                return 0
+
+            duplicated = []
+            values = {}
+            remarks = ''
+            for idx, result in enumerate(splitted):
+                if idx == 0:
+                    continue
+
+                if len(self.currentheader) <= idx:
+                    self.err(_("Orphan value in column %s, line %s") \
+                             % (str(idx + 1), self._numline))
+                    continue
+
+                keyword = self.currentheader[idx]
+
+                if not result and not keyword:
+                    continue
+
+                if result and not keyword:
+                    self.err(_("Orphan value in column %s, line %s") \
+                             % (str(idx + 1), self._numline))
+                    continue
+
+                # Allow Bika to manage the Remark as an analysis Remark instead
+                # of a regular result. Remarks field will be set for all
+                # Analysis keywords.
+                if keyword == 'Remark':
+                    remarks = result
+                    continue
+
+                if not result:
+                    self.warn(_("Empty result for %s, column %s, line %s") % \
+                              (keyword, str(idx + 1), self._numline))
+
+                if keyword in values.keys():
+                    self.err(_("Duplicated result for '%s', line %s") \
+                             % (keyword, self._numline))
+                    duplicated.append(keyword)
+                    continue
+
+                values[keyword] = {'DefaultResult': keyword,
+                                   'Remarks': remarks,
+                                   keyword: result}
+
+            # Remove duplicated results
+            outvals = {key: value for key, value in values.items() \
+                       if key not in duplicated}
+
+            # add result
+            self._addRawResult(resid, outvals, True)
+            self.currentHeader = None
+            return 0
+
+        self.err(_("No header found"))
+        return 0
+```
+
+
+
 ### Creating the controller
+The controller manages the submit of the template, initializes the parser to be used for the specified file and executes the importer.
+
 - Generic parsers: ```InstrumentResultsFileParser``` and ```InstrumentCSVResultsFileParser```
 - Generic importer: ```AnalysisResultsImporter```
 [TO BE COMPLETED]
