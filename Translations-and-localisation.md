@@ -88,7 +88,9 @@ In order to rebuild the translation catalogs, you will need the following requir
 - the [update_translatins] and [i18ndude] parts must be copied from [buildout.cfg](https://github.com/bikalabs/Bika-LIMS/blob/develop/buildout.cfg)
 - In order to make a set of translations that may be pushed directly to bika.lims repository, the transifex client must be correctly installed, and your transifex login name and password must be configured.  If this is not the case, then you'll need to comment out the 'tx push' and 'tx pull' lines in buildout.cfg or bin/update_translations files.
 
+```
 1) run bin/buildout
 2) run bin/update_translations
+```
 
 Done.
