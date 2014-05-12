@@ -1,5 +1,16 @@
 You are here: [Home](https://github.com/bikalabs/Bika-LIMS/wiki) · [Developing Bika LIMS](https://github.com/bikalabs/Bika-LIMS/wiki/Developing-Bika-LIMS) · Creating an Instrument Import Interface
 ***
+### Table of Contents
+1. [Introduction](#introduction)
+2. [File formats and structure](#file_formats_and_structure)
+3. [Architecture concepts](#architecture_concepts)
+4. [Creating the template](#creating_the_template)
+5. [Creating the parser](#creating_the_parser)
+6. [Creating the controller](#creating_the_controller)
+7. [Registering the new interface into the system](#registering_the_new_interface_into_the_system)
+
+***
+
 ### Introduction
 
 The introduction of analyses results into Bika LIMS can be performed manually, but also automatically by using the results files generated directly by equipment or middleware software. An **instrument results file import interface** is a small part of code that parses and imports the results from those instrument-specific files into Bika LIMS. That prevents from results being entered manually by the user.
