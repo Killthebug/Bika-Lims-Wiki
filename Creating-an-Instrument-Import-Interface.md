@@ -2,12 +2,12 @@ You are here: [Home](https://github.com/bikalabs/Bika-LIMS/wiki) · [Developing 
 ***
 ### Table of Contents
 1. [Introduction](#introduction)
-2. [File formats and structure](#file_formats_and_structure)
-3. [Architecture concepts](#architecture_concepts)
-4. [Creating the template](#creating_the_template)
-5. [Creating the parser](#creating_the_parser)
-6. [Creating the controller](#creating_the_controller)
-7. [Registering the new interface into the system](#registering_the_new_interface_into_the_system)
+2. [File formats and structure](#file-formats-and-structure)
+3. [Architecture concepts](#architecture-concepts)
+4. [Creating the template](#creating-the-template)
+5. [Creating the parser](#creating-the-parser)
+6. [Creating the controller](#creating-the-controller)
+7. [Registering the new interface into the system](#registering-the-new-interface-into-the-system)
 
 ***
 
