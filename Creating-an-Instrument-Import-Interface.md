@@ -229,7 +229,7 @@ As mentioned above a package following the rule ```bika.lims.exportimport.instru
 ### Creating the controller
 The controller manages the submission of the template, acquires the request values, initializes the parser to be used for the specified file and executes the importer.
 
-The controller consists of an ```Import(context, request)``` method. This is the method that will be fired when the user submits the form. Besides, a global variable called ```title```` must be declared. Its value will be used on the 'Instruments' selection list for the specific form being rendered on the fly.
+The controller consists of an ```Import(context, request)``` method. This is the method that will be fired when the user submits the form. Besides, a global variable called ```title``` must be declared. Its value will be used on the 'Instruments' selection list for the specific form being rendered on the fly.
 
 Below, the main logic to be implemented in the controller:
 
