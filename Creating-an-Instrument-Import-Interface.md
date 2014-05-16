@@ -58,9 +58,9 @@ All the instrument import logic and related classes are under the [```bika.lims.
 In fact, most of the import interfaces can be done easily by adding these three classes.
 
 ### Creating the template
-TAL is template language used Plone. TAL is XML based language, which puts programming logic to XML attributes. The [TAL Reference Guide](http://www.owlfish.com/software/simpleTAL/tal-guide.html) is a good starting point to know how works. Also, you might check the [Plone's Templates Basics](http://docs.simplesconsultoria.com.br/developermanual/templates_css_and_javascripts/template_basics.html) for further information.
+TAL is the template language used Plone. TAL is an XML-based language, which adds programming logic to XML attributes. The [TAL Reference Guide](http://www.owlfish.com/software/simpleTAL/tal-guide.html) is a good starting point to know how it works. Also, you might check [Plone's Templates Basics](http://docs.simplesconsultoria.com.br/developermanual/templates_css_and_javascripts/template_basics.html) for further information.
 
-Even though, the templates used for instrument import forms are quite easy and basic HTML knowledge would be enough to develop your own interface. The following image shows how the template for FOSS Winescan Auto results import form looks like:
+Even though it may seem complex, the templates used for instrument import forms are quite easy and basic HTML knowledge would be enough to develop your own interface. The following image shows what the template for the FOSS Winescan Auto results import form looks like:
 
 ![FOSS Winescan Auto results import form](https://raw.githubusercontent.com/bikalabs/Bika-LIMS/develop/docs/screenshots/instrument_import_view.png)
 
@@ -68,7 +68,7 @@ The following are the basic fields an instrument import template might have:
 
 - **File**: the input type element for the results file upload.
 
-- **Format**: the file formats and file versions that Bika LIMS accepts for this instrument and model. If the results file specs changes in future, the new version might be added here, so for a given instrument, more than one formats will be available (i.e. CSV v0.93, CSV v1.0, CSV v1.2, etc.)
+- **Format**: the file formats and file versions that Bika LIMS accepts for this instrument and model. If the results file specs change in future, the new version might be added here, so for a given instrument, more than one format will be available (i.e. CSV v0.93, CSV v1.0, CSV v1.2, etc.)
 
 - **Analyisis Requests state**: allows the user to set if the results must only be saved if their Analysis Request has the state *Received* or *Received and to be verified*
 
@@ -77,9 +77,9 @@ The following are the basic fields an instrument import template might have:
 - **Instrument**: allows the user to set the instrument to which the results will be linked if the file contains calibration tests (the identifiers are Reference Sample IDs).
 
 ### Creating the parser
-The parser is the class responsible of parsing the results file. Any parser must inherit from [```InstrumentResultsFileParser```](https://github.com/bikalabs/Bika-LIMS/blob/develop/bika/lims/exportimport/instruments/resultsimport.py#L14) or from any of its child classes and override its methods. [```InstrumentCSVResultsFileParser```](https://github.com/bikalabs/Bika-LIMS/blob/develop/bika/lims/exportimport/instruments/resultsimport.py#L187) is the most commonly used class to be inherited from, which is a child from ```InstrumentFileParser```. As the name indicates, this class provides methods to read and parse CSV-type files.
+The parser is the class responsible for parsing the results file. Any parser must inherit from [```InstrumentResultsFileParser```](https://github.com/bikalabs/Bika-LIMS/blob/develop/bika/lims/exportimport/instruments/resultsimport.py#L14) or from any of its child classes and override its methods. [```InstrumentCSVResultsFileParser```](https://github.com/bikalabs/Bika-LIMS/blob/develop/bika/lims/exportimport/instruments/resultsimport.py#L187) is the most commonly used class to be inherited from, which is a child from ```InstrumentFileParser```. As the name indicates, this class provides methods to read and parse CSV-type files.
 
-In most of cases, the overriding the method [```_parseline(self, line)```](https://github.com/bikalabs/Bika-LIMS/blob/develop/bika/lims/exportimport/instruments/resultsimport.py#L220) would be enough for a fully functional importer interface:
+In most cases, overriding the method [```_parseline(self, line)```](https://github.com/bikalabs/Bika-LIMS/blob/develop/bika/lims/exportimport/instruments/resultsimport.py#L220) would be enough for a fully functional importer interface:
 
 ```python
 def _parseline(self, line):
@@ -221,15 +221,15 @@ where:
 - *numline*: the affected number of line from the file being parsed
 - *line*: the line string itself
 
-All this information is displayed in the web page after the submission being done.
+All this information is displayed in the web page after the submission is done.
 
-#### Where does the parser must be placed?
-As mentioned above a package following the rule ```bika.lims.exportimport.instruments.<manufacturer>.<model>``` should be created. The parser classes are usually defined inside the ```__init__.py``` file from that package. See [```WinescanCSVParser```](https://github.com/bikalabs/Bika-LIMS/blob/develop/bika/lims/exportimport/instruments/foss/winescan/__init__.py) how looks like.
+#### Where should the parser be placed?
+As mentioned above a package following the rule ```bika.lims.exportimport.instruments.<manufacturer>.<model>``` should be created. The parser classes are usually defined inside the ```__init__.py``` file from that package. See [```WinescanCSVParser```](https://github.com/bikalabs/Bika-LIMS/blob/develop/bika/lims/exportimport/instruments/foss/winescan/__init__.py) to see what it looks like.
 
 ### Creating the controller
-The controller manages the submit of the template, acquires the request values, initializes the parser to be used for the specified file and executes the importer.
+The controller manages the submission of the template, acquires the request values, initializes the parser to be used for the specified file and executes the importer.
 
-The controller consists of an ```Import(context, request)``` method. This is the method that will be fired when the user submits the form. Besides, a global variable called title must be declared. Its value will be used on the 'Instruments' selection list for the specific form being rendered on the fly.
+The controller consists of an ```Import(context, request)``` method. This is the method that will be fired when the user submits the form. Besides, a global variable called ```title```` must be declared. Its value will be used on the 'Instruments' selection list for the specific form being rendered on the fly.
 
 Below, the main logic to be implemented in the controller:
 
@@ -269,9 +269,9 @@ def Import(context, request):
 
 And thats all!
 
-The ```importer.process()``` does all the job: runs the parser and saves the data retrieved into Bika LIMS.
+The ```importer.process()``` does all the work: it runs the parser and saves the data retrieved into Bika LIMS.
 
-Notice that you can also use an specific Importer instead of the generic [```AnalysisResultsImporter```](https://github.com/bikalabs/Bika-LIMS/blob/develop/bika/lims/exportimport/instruments/resultsimport.py#L230), but not recommended unless you need very special features not already provided by this. 
+Notice that you can also use an specific Importer instead of the generic [```AnalysisResultsImporter```](https://github.com/bikalabs/Bika-LIMS/blob/develop/bika/lims/exportimport/instruments/resultsimport.py#L230), but it's not recommended unless you need very special features not already provided by this. 
 
 ### Registering the new interface into the system
 The last step is to register the interface in the system, for which you only need to add the path to your new package in [```bika.lims.exportimport.instruments.__init__.py```](https://github.com/bikalabs/Bika-LIMS/blob/develop/bika/lims/exportimport/instruments/__init__.py):
