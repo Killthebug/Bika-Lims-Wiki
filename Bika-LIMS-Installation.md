@@ -161,6 +161,7 @@ $ cat adminPassword.txt
 $ bin/plonectl fg
 ...
 2011-11-13 12:06:07 INFO Zope Ready to handle requests
+```
 
 #### 9. Add the Plone instance with Bika LIMS extension
 Open a browser and type http://localhost:8080/
