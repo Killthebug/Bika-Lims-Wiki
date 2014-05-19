@@ -1,63 +1,51 @@
 You are here: [Home](https://github.com/bikalabs/Bika-LIMS/wiki) · Bika LIMS Installation
 ***
-This document describes the installation of Bika LIMS 
-(Laboratory Information Management System) on a Unix server.
-The ID-Server is now by default automatically built
-and started as part of the Zope/Plone instance but can
-optionally still be deployed in a clustering setup. 
+### Table of Contents
+1. [Introduction](#introduction)
+2. [Step-by-step Installation](#step-by-step-installation)
+3. [Extras](#extras)
 
-See https://github.com/bikalabs for other install options, especially 
-the installation document at
- https://github.com/bikalabs/Bika-LIMS/blob/master/docs/installation.txt
-that may be run as a bash script which automates most
-of the steps below and also installs a Bika customised Plone instance.
+***
 
-Installation
-------------
-This document details the installation steps for Bika LIMS version 3 
-from the Plone Unified Installer package for Linux, as well as the 
-setup for Apache as web proxy to make the LIMS available on the 
-standard http port 80. The process should be similar for MacOSX and
-other Unix-type operating systems. The **gcc compiler**, **python**, 
-the **python-dev library** and **git** are all required,  you may use those
-already installed on your operating system.
+### Introduction
+This document details the installation steps for Bika LIMS version 3.1 from the Plone Unified Installer package for Linux, as well as the setup for Apache as web proxy to make the LIMS available on the standard http port 80. The process should be similar for MacOSX and other Unix-type operating systems. The **gcc compiler**, **python**, the **python-dev library** and **git** are all required,  you may use those already installed on your operating system. Basic skills with GNU/Linux terminal are required.
 
-# Download the Unified Installer from plone.org::
+***
+### Step-by-step Installation
 
-    From http://plone.org/products/plone/releases copy the link for the
-    required version (tested on 4.1.2), and download it, eg. using wget
-    from http://launchpad.net/plone/4.1/4.1.2/+download/Plone-4.1.2-UnifiedInstaller.tgz
+#### 1. Creating your Bika LIMS root directory
+Create the directory where you want to place your LIMS instance and call it 'bika'. In this recipe, we'll place bika inside a /home/user directory, but ask to your system admin about the best place in your case.
+```bash
+$ cd /home/user
+$ mkdir bika
+```
+#### 2. Installing required system packages
+```bash
+sudo apt-get install gcc zlib1g-dev libssl-dev gnuplot git-core
+```
+Bika LIMS uses the [WeasyPrint](http://weasyprint.org) module for pdf creation, so some other packages will be needed. For Debian 7.0 Wheezy or newer, Ubuntu 11.10 Oneiric or newer:
 
-# Untar the archive an run the installer::
+```bash
+$ sudo apt-get install libcairo2 libpango1.0-0 libgdk-pixbuf2.0-0
+```
 
-    tar xzf Plone-4.1.2-UnifiedInstaller.tgz
-    cd Plone-4.1.2-UnifiedInstaller
-    sudo ./install.sh --target=/home/example  standalone
+For WeasyPrint depencies on other OSes, check the full list here: http://weasyprint.org/docs/install/
 
-# (Optional) Set up a domain name::
+#### 3. Installing Plone 4.3.2
 
-    Set up a domain name for the LIMS site URL and add the Apache mapping
-    noting the Zope server port used by the instance (default 8080) 
+```bash
+$ wget -nc http://launchpad.net/plone/4.3/4.3.2/+download/Plone-4.3.2-UnifiedInstaller.tgz
+```
 
-    Edit the apache configuration, adding a new virtual host 
+Untar the archive and run the installer:
 
-   ``sudo vim /etc/apache2/sites-enabled/000-default``
+```bash
+$ tar xzf Plone-4.3.2-UnifiedInstaller.tgz
+$ cd Plone-4.3.2-UnifiedInstaller/
+$ ./install.sh --build-python --static-lxml=yes --target=../bika standalone
+```
 
-   Add directives, ensuring an existing port is not conflicted::
-
-    <VirtualHost *:80>
-      ServerName  example.bikalabs.com
-      ServerAdmin webmaster@bikalabs.com
-      ErrorLog /var/log/apache2/example.bikalabs.com.error.log
-      LogLevel warn
-      CustomLog /var/log/apache2/example.bikalabs.com.access.log combined
-      RewriteEngine On
-      RewriteRule ^/robots.txt -  [L]
-      RewriteRule ^/manage(.*) http://localhost:8080/VirtualHostBase/http/example.bikalabs.com:80 /VirtualHostRoot/manage$1 [L,P]
-      RewriteRule ^/(.\*) http://localhost:8080/VirtualHostBase/http/example.bikalabs.com:80/VirtualHostRoot/$1 [L,P]
-    </VirtualHost>
-
-# Verify successful build from the output of the installer script. Refer to http://plone.org if installation fails::
+This takes a while and some warnings might appear, omit them. Verify successful build from the output of the installer script. Refer to [Plone's installation documentation](http://plone.org/documentation/topic/Installation) if installation fails:
 
     ######################  Installation Complete  ######################
 
@@ -72,97 +60,131 @@ already installed on your operating system.
     Password: xyz
     ...
 
-# Edit the buildout configuration, eg ``/home/example/zinstance/buildout.cfg``::
 
-   a.) Find the ``eggs`` section.  Add ``bika.lims``::
+#### 4. Downloading Bika LIMS
+
+```bash
+$ cd ../bika/zinstance
+$ git clone -b release/3.1 http://github.com/bikalabs/Bika-LIMS.git src/bika.lims
+```
+
+In this recipe, the Bika LIMS 3.1 release is used, which is the preferred version for production environments. Change ```release/3.1``` to ```develop``` if you want to use the latest Bika LIMS at your own risk. Refer to [git documentation](http://git-scm.com/documentation) for further information about how to update the source code or change to another branch from the repository. 
+
+#### 5. Edit the buildout.cfg
+Open the ``buildout.cfg`` (in ``bika/zinstance dir``):
+
+```bash
+$ nano buildout.cfg
+```
+
+  a) Find the ``eggs`` section.  Add ``bika.lims`` and ``WeasyPrint``:
 
        eggs =
            Plone
-           Pillow
+           PillowW
            bika.lims
+           WeasyPrint
 
-   b.) Find the ``develop`` section. Add ``src/bika.lims``::
+   b) Find the ``develop`` section. Add ``src/bika.lims``:
 
        develop =
-         src/bika.lims
+           src/bika.lims
+   
+   c) Find the ``versions`` section. Add ``WeasyPrint = 0.19.2``
 
-   c.) (Optional) Change the Zope instance port if the default 8080 is not used::
+       [versions]
+       WeasyPrint = 0.19.2
+
+   c) (Optional) Change the Zope instance port if the default 8080 is not used::
 
        http-address = 8080
 
-   d.) (Optional) Change the ``effective-user`` if ``plone`` is not the one used. 
+   d) (Optional) Change the ``effective-user`` if ``plone`` is not the one used. 
 
-   e.) (Optional) Add the environment-vars entry for the ID-server for multiple-client
+   e) (Optional) Add the environment-vars entry for the ID-server for multiple-client
        installations, noting port number::
 
        [instance]
        environment-vars =
            IDServerURL http://localhost:8081
 
-   
-# Retrieve the bika3 source code::
 
-    cd /home/example/zinstance
-    git clone https://github.com/bikalabs/Bika-LIMS src/bika.lims
+#### 6. Execute the buildout
+Do the (verbose, if needed) buildout of the instance::
 
-# Do the (verbose, if needed) buildout of the instance::
+```bash
+$ bin/buildout -v
+```
 
-    sudo bin/buildout -v
+This takes a while and some warnings might appear. Verify successful build from the output of the installer script. Refer to [Plone's installation documentation](http://plone.org/documentation/topic/Installation) if installation fails:
+```
+*************** PICKED VERSIONS ****************
+[versions]
+CairoSVG = 1.0.7
+Products.ATExtensions = 1.1
+bika.lims = 3.0
+cairocffi = 0.5.3
+cffi = 0.8.2
+cssselect = 0.9.1
 
-# (Optional) Test and reload apache config::
+#Required by:
+#bika.lims 3.0
+Products.AdvancedQuery = 3.0.3
 
-    sudo apache2ctl configtest
-    dig example.bikalabs.com
-    sudo apachectl graceful
+#Required by:
+#WeasyPrint 0.19.2
+Pyphen = 0.9.1
 
-# Test run in foreground, noting error messages if any and taking corrective action if so::
+#Required by:
+#bika.lims 3.0
+gpw = 0.2
 
-    sudo bin/plonectl fg
+#Required by:
+#bika.lims 3.0
+magnitude = 0.9.3
 
-    ...
+#Required by:
+#cffi 0.8.2
+pycparser = 2.10
 
-    2011-11-13 12:06:07 INFO Zope Ready to handle requests
+*************** /PICKED VERSIONS ***************
+```
 
+#### 7. Get the admin's password
+If the buildout finished successfully, an 'adminPassword.txt' have been created automatically inside zinstance directory. That file contains the super-user credentials you'll need to create the Bika site.
+```bash
+$ cat adminPassword.txt
+```
 
-# Access the Zope instance::
+#### 8. Test run in foreground, noting error messages if any and taking corrective action if so:
+```bash
+$ bin/plonectl fg
+...
+2011-11-13 12:06:07 INFO Zope Ready to handle requests
 
-   a.) via a web browser on public URL http://admin:admin@example.bikalabs.com/manage/ ::
+#### 9. Add the Plone instance with Bika LIMS extension
+Open a browser and type http://localhost:8080/
 
-   b.) or if on localhost at  http://admin:admin@localhost:8080/manage/ ::
+Set 'Plone' as identifier and ensure that the Bika LIMS option is ticked.
+If your server has no GUI installed, you can use a terminal line browser like ``lynx``:
+```bash
+$ lynx http://localhost:8080/
+```
 
-# Add the Plone instance with Bika LIMS extensions::
+#### 10. Start working with Bika LIMS
+```bash
+$ bin/plonectl start
+```
+Open a browser and go to your Bika LIMS instance: http://localhost:8080/Plone
 
-    If not automatically created by the buildout process yet, add a Plone instance,
-    noting the instance name (default Plone, or Bika) and ensure that the Bika LIMS option is ticked.
+***
+### Extras
+#### Using apache to redirect http requests to Bika LIMS
+Set up a domain name for the LIMS site URL and add the Apache mapping noting the Zope server port used by the instance (default 8080).
+Follow the instructions here: https://github.com/bikalabs/Bika-LIMS/blob/3.01a/docs/APACHE.md
 
+#### Update the Bika source code from the GitHub repository
+Rename (or move) the src/bika.lims directory or rerun the ``git clone`` or ``git pull`` or switch branches on the command line in the source directory src/bika.lims, then re-run bin/buildout.
 
-
-# (Optional) Modify Apache web server configuration to point to instance root::
-
-    Point to the instance "Plone" or "Bika" root instead of Zope root if required
-    by changing the Apache rewrite rule::
-
-    #RewriteRule ^/(.*) http://localhost:8080/VirtualHostBase/http/example.bikalabs.com:80/VirtualHostRoot/$1 [L,P]
-    RewriteRule ^/(.*) http://localhost:8080/VirtualHostBase/http/example.bikalabs.com:80/Bika/VirtualHostRoot/$1 [L,P]
-
-     Reload the Apache webserver's configuration::
-
-     sudo apache2ctl graceful
-
-# (Optional) Stop the foreground instance (Control C), and restart it as a background process. 
-    Add it to server startup scripts to start Plone on reboot::
-
-    sudo bin/plonectl start
-
-    Add similar as below to ``/etc/rc.local`` or equivalent::
-
-    /home/example/zinstance/bin/plonectl start
-
-# To update the Bika source code from the GitHub repository::
-
-    Rename (or move) the src/bika.lims directory or rerun the ``git clone`` or ``git pull`` or
-    switch branches on the command line in the source directory src/bika.lims, then re-run bin/buildout.
-
-# To start with a completely fresh instance::
-
-    Rename/move the Data.fs.* files in var/filestorage (after stopping instance). 
+#### Start with a completely fresh instance::
+Rename/move the Data.fs.* files in var/filestorage (after stopping instance). 
