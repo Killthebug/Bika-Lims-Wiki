@@ -81,7 +81,7 @@ $ nano buildout.cfg
 
        eggs =
            Plone
-           PillowW
+           Pillow
            bika.lims
            WeasyPrint
 
