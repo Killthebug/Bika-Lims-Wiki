@@ -21,7 +21,7 @@ $ mkdir bika
 ```
 #### 2. Installing required system packages
 ```bash
-sudo apt-get install gcc zlib1g-dev libssl-dev gnuplot git-core
+$ sudo apt-get install gcc zlib1g-dev libssl-dev gnuplot git-core
 ```
 Bika LIMS uses the [WeasyPrint](http://weasyprint.org) module for pdf creation, so some other packages will be needed. For Debian 7.0 Wheezy or newer, Ubuntu 11.10 Oneiric or newer:
 
