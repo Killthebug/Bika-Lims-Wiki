@@ -97,23 +97,30 @@ Parameters:
 
 - catalog_name
 
-    If the objects to be located are indexed in a catalog other than the Plone default, specify it's name here.  (default='portal_catalog').
+    If the objects to be located are indexed in a catalog other than the Plone
+    default, specify it's name here.
+    (default='portal_catalog').
 
 - limit
 
-    This is the sort_limit parameter, passed to the catalog in contentFilter.  (default=none)
+    This is the sort_limit parameter, passed to the catalog in contentFilter.
+    (default=none)
 
 - sort_on
 
-    This is the sort_on index name, placed into contentFilter verbatim.  (default=id)
+    This is the sort_on index name, placed into contentFilter verbatim.
+    (default=id)
 
 - sort_order
 
-    set to 'reverse' or 'descending' to reverse sort order.  (default="ascending")
+    set to 'reverse' or 'descending' to reverse sort order.
+    (default="ascending")
 
 - include_fields
 
-    The objects, if any are found, will have only these fields' values returned.  (default=not specified, show all.  Using the default is not recommended, as responses can grow quite large.)
+    The objects, if any are found, will have only these fields' values returned.
+    (default=not specified, show all.  Using the default is not recommended, as
+     responses can grow quite large.)
 
 - page_nr
 
@@ -191,7 +198,9 @@ Required parameters:
 
 - obj_path
 
-    The full database path of the parent folder inside which the new object will be created.  This can be discovered by looking at the 'path' entry in the result from a call to the read method.
+    The full database path of the parent folder inside which the new object will 
+    be created.  This can be discovered by looking at the 'path' entry in the 
+    result from a call to the read method.
 
 - obj_type
 
@@ -199,7 +208,9 @@ Required parameters:
 
 - All other request fields
 
-    All other request parameters are assumed to be field name/value pairs, and if the corrosponding fields are found on the new object's schema, they will be set accordingly.  Any required fields must be present here.
+    All other request parameters are assumed to be field name/value pairs, and 
+    if the corrosponding fields are found on the new object's schema, they will
+    be set accordingly.  Any required fields must be present here.
 ```
 
 ### Example: Create a new AR Batch
@@ -247,7 +258,8 @@ Required parameters:
 
 - obj_path
 
-    The path of the object to be modified.  (relative to the site root, without leading slash)
+    The path of the object to be modified.  (relative to the site root, 
+    without leading slash)
 ```
 
 All other request parameters are assumed to be field name/value pairs, and if the corrosponding fields are found on the new object's schema, they will be set accordingly.
