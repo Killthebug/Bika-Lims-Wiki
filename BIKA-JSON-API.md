@@ -8,9 +8,9 @@ A request is made to the '''/@@API''' url with certain parameters, and the serve
 The return value will always contain the following keys:
 
     {
-        "url": The fully qualified url that was used to locate the method, 
-        "_runtime": Time taken to execute request, 
-        "success": true if success, 
+        "url": The fully qualified url that was used to locate the method,
+        "_runtime": Time taken to execute request,
+        "success": true if success,
         "error": true if failure
     }
 
@@ -18,99 +18,101 @@ Read more about the jsonapi at https://github.com/ramonski/plone.jsonapi.core
 
 ## Authentication
 
-Accessing the jsonapi URLs requires authentication.  The following python code demonstrates authenticating as the admin user, using cookies to store auth token:
+Accessing the jsonapi URLs requires authentication.  The following python code logs in as the admin user.
 
-    top_level_url = ""
-    username = "admin"
-    password = "secret"
-    opener = urllib2.build_opener(urllib2.HTTPCookieProcessor())
-    params = urllib.urlencode({
-        "form.submitted": 1,
-        "pwd_empty": 0,
-        "__ac_name": username,
-        "__ac_password": password,
-        "submit": "Log in"
-    })
-    f = opener.open('http://localhost:8080/Plone/login_form', params)
-    data = f.read()
-    f.close()
+```
+top_level_url = ""
+username = "admin"
+password = "secret"
+opener = urllib2.build_opener(urllib2.HTTPCookieProcessor())
+params = urllib.urlencode({
+    "form.submitted": 1,
+    "pwd_empty": 0,
+    "__ac_name": username,
+    "__ac_password": password,
+    "submit": "Log in"
+})
+f = opener.open('http://localhost:8080/Plone/login_form', params)
+data = f.read()
+f.close()
+```
 
-    # From this point on, methods can be called using opener:
+From this point on, all methods are called with admin rights.
 
-    f = opener.open("http://localhost:8080/Plone/@@API/read?portal_type=Client")
-    data = json.loads(f.read())
+```
+f = opener.open("http://localhost:8080/Plone/@@API/read?portal_type=Client")
+data = json.loads(f.read())
+```
 
-## Querying objects
-
-URL: @@API/read
+## Querying objects with @@API/read
 
 There are some special request parameters used for querying objects:
 
-- catalog_name 
+```
+- catalog_name
 
-    If the objects to be located are indexed in another catalog, specify it's name here.  (default='portal_catalog')
+    If the objects to be located are indexed in a catalog other than the Plone default, specify it's name here.  (default='portal_catalog').
 
-- limit 
+- limit
 
     This is the sort_limit parameter, passed to the catalog in contentFilter.  (default=none)
 
-- sort_on 
+- sort_on
 
     This is the sort_on index name, placed into contentFilter verbatim.  (default=id)
 
-- sort_order 
+- sort_order
 
     set to 'reverse' or 'descending' to reverse sort order.  (default="ascending")
 
-- include_fields 
+- include_fields
 
     The objects, if any are found, will have only these fields' values returned.  (default=not specified, show all.  Using the default is not recommended, as responses can grow quite large.)
 
-- page_nr 
+- page_nr
 
     (default=0)
 
-- page_size 
+- page_size
 
     (default=10)
+```
 
 All other parameters placed in the request will be passed directly to the catalog query, inside the contentFilter argument.  This allows searching on any indexes defined in the catalog.  For more information on querying the catalogs, read http://developer.plone.org/searching_and_indexing/query.html
 
 If the query executes successfully, the response object will contain additional attributes:
 
-- total_objects   
+```
+- total_objects
 
     The number of objects matched by the query
 
-- first_object_nr 
+- first_object_nr
 
     The first object that was returned
 
-- last_object_nr  
+- last_object_nr
 
     The last object that was returned
 
-- objects         
+- objects
 
     The list of objects, as JSON values
-
+```
 
 ### Example: Get Samples in sample_received state
 
 Request:
 
     http://localhost:8080/Plone/@@API/read
-        ?portal_type=Sample[[br]]
-        &review_state=sample_received[[br]]
+        ?portal_type=Sample
+        &review_state=sample_received
         &include_fields=getPhysicalPath
 
 Response:
 
     {
-      "url":"http://localhost:8080/Plone/@@API/read",
-      "success":true,
-      "error":false,
-      "_runtime":0.004884958267211914
+      ...,
       "total_objects":35,
       "first_object_nr":0,
       "last_object_nr":10,
@@ -130,54 +132,85 @@ Response:
 
 The batching machine has returned only the first ten results.
 
-## Querying Analysis Requests
+### Querying Analysis Requests
 
 When the query specifies a portal_type of AnalysisRequest, the response is modified to include all the Analyses contained in the AR, in a field called 'Analyses'.  This includes rejected/retested analyses, and their results.  The Analyses field is populated if 'Analyses' is included in the include_fields parameter, or if the include_fields parameter is not supplied.
 
-## Creating new objects
+## Object lookup query syntax for reference fields
 
-URL: @@API/create
+For a more basic field, simple values are used: `&title=Test%20Object`.  When updating or creating objects, there is a simple syntax for specifying the target objects of Reference Fields.  Request values for ReferenceFields are parsed to extract arguments which will be passed directly to the catalog search function.
 
+### Example: Set the primary contact of an existing AR
+
+Request:
+
+    http://localhost:8080/Plone/@@API/update
+        ?obj_path=/Plone/clients/client-1/W13-0001-R01
+        &Contact=portal_type:Contact|getFullname:Sarel Seemonster    
+
+## Creating new objects with @@API/create
+
+```
 Required parameters:
 
 - obj_path
 
-    The path of the parent folder inside which the new object will be created
+    The full database path of the parent folder inside which the new object will be created.  This can be discovered by looking at the 'path' entry in the result from a call to the read method.
 
 - obj_type
 
-    The portal_type of the new object
+    The portal_type of the new object to be created.
 
-All other request parameters are assumed to be field name/value pairs, and if the corrosponding fields are found on the new object's schema, they will be set accordingly.
+- All other request fields
+
+    All other request parameters are assumed to be field name/value pairs, and if the corrosponding fields are found on the new object's schema, they will be set accordingly.  Any required fields must be present here.
+```
 
 ### Example: Create a new AR Batch
 
 Request:
 
     http://localhost:8080/Plone/@@API/create
-        ?obj_path=/batches[[br]]
-        &obj_type=Batch[[br]]
+        ?obj_path=/Plone/batches
+        &obj_type=Batch
         &title=ATestBatch
 
-Response:
+### Example: Create a new Analysis in an existing AR
 
-    {
-        "url":"http://localhost:8080/Plone/@@API/create",
-        "_runtime":0.13148093223571777,
-        "obj_id":"B-003",
-        "success":true,
-        "error":false
-    }
+    http://localhost:8080/Plone/@@API/create
+        ?obj_path=/Plone/clients/client-1/AP1-0001-R01
+        &obj_type=Analysis
+        &Service=portal_type:AnalysisService|title:Calcium
 
-## Updating existing objects
+### Example: Create an AnalysisRequest
 
-URL: @@API/update
+When an obj_type of AnalysisRequest is specified, the rules are slightly different, and the created objects include AnalysisRequest, Analysis, Sample, and SamplePartition.
 
+- the obj_path field should be omitted.
+- the Client field becomes a required field.
+
+Request:
+
+    http://localhost:8080/Plone/@@API/create
+        ?obj_path=/Plone/clients/client-1/AP1-0001-R01
+        &obj_type=AnalysisRequest
+        &Client=portal_type:Client|id:client-1
+        &Services:list=portal_type:AnalysisService|title:Calcium
+        &Services:list=portal_type:AnalysisService|title:Copper
+        &Services:list=portal_type:AnalysisService|title:Magnesium
+        &SampleType=portal_type:SampleType|title:Apple Pulp
+        &Contact=portal_type:Contact|getFullname:Rita Mohale
+        &SamplingDate=2013-09-29
+
+## Updating existing objects with @@API/update
+
+```
 Required parameters:
 
 - obj_path
 
     The path of the object to be modified.  (relative to the site root, without leading slash)
+```
 
 All other request parameters are assumed to be field name/value pairs, and if the corrosponding fields are found on the new object's schema, they will be set accordingly.
 
@@ -188,23 +221,13 @@ In the case of an analysis, the obj_path includes the Client ID, AR ID, and Anal
 Request:
 
     http://localhost:8080/Plone/@@API/update
-        ?obj_path=clients/client-3/CN-0001-R01/Zn[[br]]
+        ?obj_path=Plone/clients/client-3/CN-0001-R01/Zn
         &Result=10
-
-Response:
-
-    {
-        "url": "http://localhost:8080/Plone/@@API/update", 
-        "_runtime": 0.10121297836303711,
-        "objects": [], 
-        "success": true,
-        "error": false
-    }
 
 Multiple updates can be executed in a single http request, by using the 'update_many' method.  This is a wrapper around the update method.  This function takes one parameter, called 'input_values', which is a json-encoded dictionary.  Each key is an obj_path, and each value is a dictionary containing key/value pairs to be set on the object.  The following input_values parameter will update two results:
 
     input_values={"/Plone/clients/client-5/BAR-0014-R01/DM": {"Result": 57},
-                  "/Plone/clients/client-5/BAR-0014-R01/CaCO3": {"Result": 76}, 
+                  "/Plone/clients/client-5/BAR-0014-R01/CaCO3": {"Result": 76},
                   "/Plone/clients/client-5/BAR-0014-R01/Moist": {"Result": 83}}
 
 The result of the request will be a list of return values from the update method.
@@ -220,15 +243,15 @@ When using update method, there is a simple encoded-string query format used to 
 Request:
 
     http://localhost:8080/Plone/@@API/update
-        ?obj_type=AnalysisRequest[[br]]
-        &id=H2O-0003-R01[[br]]
+        ?obj_type=AnalysisRequest
+        &id=H2O-0003-R01
         &Batch=portal_type:Batch,title:A non-existent batch
 
 Response:
 
     {
-        "_runtime": 0.008334875106811523, 
-        "success": false, 
+        "_runtime": 0.008334875106811523,
+        "success": false,
         "error": "Can't resolve reference: Batch"}
     }
 
