@@ -31,6 +31,8 @@ The return value will always contain the following keys:
 
 Read more about the jsonapi at https://github.com/ramonski/plone.jsonapi.core
 
+For more information on querying Plone's catalogs, read http://docs.plone.org/develop/plone/searching_and_indexing/query.html
+
 ### Authentication
 
 Accessing the jsonapi URLs requires authentication.  The following python code logs in as the admin user.
@@ -132,7 +134,7 @@ Parameters:
     (default=10)
 ```
 
-All other parameters placed in the request will be passed directly to the catalog query, inside the contentFilter argument.  This allows searching on any indexes defined in the catalog.  For more information on querying the catalogs, read http://developer.plone.org/searching_and_indexing/query.html
+All other parameters placed in the request will be passed directly to the catalog query, inside the contentFilter argument.  This allows searching on any indexes defined in the catalog.
 
 If the query executes successfully, the response object will contain additional attributes:
 
@@ -199,8 +201,8 @@ Required parameters:
 
 - obj_path
 
-    The full database path of the parent folder inside which the new object will 
-    be created.  This can be discovered by looking at the 'path' entry in the 
+    The full database path of the parent folder inside which the new object will
+    be created.  This can be discovered by looking at the 'path' entry in the
     result from a call to the read method.
 
 - obj_type
@@ -209,7 +211,7 @@ Required parameters:
 
 - All other request fields
 
-    All other request parameters are assumed to be field name/value pairs, and 
+    All other request parameters are assumed to be field name/value pairs, and
     if the corrosponding fields are found on the new object's schema, they will
     be set accordingly.  Any required fields must be present here.
 ```
@@ -259,7 +261,7 @@ Required parameters:
 
 - obj_path
 
-    The path of the object to be modified.  (relative to the site root, 
+    The path of the object to be modified.  (relative to the site root,
     without leading slash)
 ```
 
