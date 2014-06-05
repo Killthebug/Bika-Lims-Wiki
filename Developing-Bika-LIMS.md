@@ -19,6 +19,8 @@ You are here: [Home](https://github.com/bikalabs/Bika-LIMS/wiki) · Developing B
 
     The results report appearance can be modified easily modifying its template and by using TAL expressions.
 
+#### Other resources
+
 - ##### [Translations and localisation](https://github.com/bikalabs/Bika-LIMS/wiki/Translations-and-localisation)
 
     Bika uses zope.i18n and gettext to translate strings. This is the Plone standard, and the process is adapted from several plone addons.
