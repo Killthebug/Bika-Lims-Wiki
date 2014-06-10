@@ -102,12 +102,11 @@ $ nano buildout.cfg
    d) (Optional) Change the ``effective-user`` if ``plone`` is not the one used. 
 
    e) (Optional) Add the environment-vars entry for the ID-server for multiple-client
-       installations, noting port number::
+       installations, noting port number. Refer to [External ID Server documentation](https://github.com/bikalabs/Bika-LIMS/wiki/External-ID-server) for further information.
 
        [instance]
        environment-vars =
            IDServerURL http://localhost:8081
-
 
 #### 6. Execute the buildout
 Do the (verbose, if needed) buildout of the instance::
