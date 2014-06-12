@@ -1,17 +1,17 @@
 You are here: [Home](https://github.com/bikalabs/Bika-LIMS/wiki) · Bika LIMS Installation
 ***
 ### Table of Contents
-1. [Introduction](#introduction)
-2. [Step-by-step Installation](#step-by-step-installation)
-3. [Extras](#extras)
+1. [Introduction](#introduction)  
+2. [Linux Installation Steps](#linux-installation-steps)  
+3. [Windows Installation Steps](#windows-installation-steps)  
+4. [Extras](#extras)  
 
 ***
-
 ### Introduction
 This document details the installation steps for Bika LIMS version 3.1 from the Plone Unified Installer package for Linux, as well as the setup for Apache as web proxy to make the LIMS available on the standard http port 80. The process should be similar for MacOSX and other Unix-type operating systems. The **gcc compiler**, **python**, the **python-dev library** and **git** are all required,  you may use those already installed on your operating system. Basic skills with GNU/Linux terminal are required.
 
 ***
-### Step-by-step Installation
+### Linux Installation Steps
 
 #### 1. Creating your Bika LIMS root directory
 Create the directory where you want to place your LIMS instance and call it 'bika'. In this recipe, we'll place bika inside a /home/user directory, but ask to your system admin about the best place in your case.
@@ -30,8 +30,6 @@ Bika LIMS uses the [WeasyPrint](http://weasyprint.org) module for pdf creation, 
 ```bash
 $ sudo apt-get install libcairo2 libpango1.0-0 libgdk-pixbuf2.0-0
 ```
-
-For WeasyPrint depencies on other OSes, check the full list here: http://weasyprint.org/docs/install/
 
 #### 3. Installing Plone 4.3.2
 
@@ -180,7 +178,120 @@ $ bin/plonectl start
 Open a browser and go to your Bika LIMS instance: http://localhost:8080/Plone
 
 ***
+### Windows Installation Steps
+
+#### 1. Download and Install Plone
+Currently Bika LIMS for Windows is only compatible with Plone 4.3.1
+
+* Download the Windows Installer from http://plone.org/products/plone/releases/4.3.1
+* Execute the installer and follow through the steps
+
+For this guide we will assume the default location of `C:\Plone43`  
+For more information visit: http://docs.plone.org/manage/installing/index.html  
+  
+#### 3. Installing Bika LIMS
+* Open `C:\Plone43\buildout.cfg` in a text editor
+* Add **bika.lims** to the **eggs**
+```
+eggs =
+    Plone
+    Pillow
+    Products.PloneHotfix20130618
+    bika.lims
+```
+
+* Run __buildout__ from cmd **(** `⊞ Win` **>>** _type:_ `cmd` **>>** `↵ Enter` **)**  
+```
+cd C:\Plone43
+bin\buildout.exe
+```  
+* A __successful__ buildout should output:
+```
+Updating run-instance.
+Updating service.
+*************** PICKED VERSIONS ****************
+[versions]
+bika.lims = 3.0
+cairocffi = 0.5.4
+cairosvg = 1.0.7
+cssselect = 0.9.1
+gpw = 0.2
+magnitude = 0.9.3
+products.advancedquery = 3.0.3
+products.atextensions = 1.1
+pycparser = 2.10
+pyphen = 0.9.1
+
+*************** /PICKED VERSIONS ***************
+```
+
+_If you see the following error:_ `Error: Couldn't install: cffi 0.8.2`  
+Refer to: [Troubleshooting: A) Dependencies](#7-troubleshooting)  
+
+_If you see the following error:_ `Error 5: Access is denied`  
+Refer to: [Troubleshooting: B) Privileges](#7-troubleshooting)  
+
+#### 4. Setting up Plone Services
+* Run cmd as Administrator **(** `⊞ Win` **>>** _type:_ `cmd` **>>** `CTRL`+`⇧ Shift`+`↵ Enter` **)**  
+* Navigate to the Plone root directory
+```
+cd C:\Plone43
+```
+* Install, Start and bring your newly created instance to the Foreground  
+_this should stop the default Plone 4.3 Service_
+```
+bin\instance.exe install
+bin\instance.exe start
+bin\instance.exe fg
+```  
+_If you see the following error:_ `OSError: cannot load library libcairo.so.2`  
+Refer to: [Troubleshooting: A) Dependencies](#7-troubleshooting)  
+
+* If you see `INFO Zope Ready to handle requests` then the server is running
+* Point your web browser at __http://localhost:8080__  
+Congradulations!! you have a successful build of Bika LIMS 3.0 on Plone 3.4.1  
+You can now create a site
+
+#### 5. Upgrading
+Please refer to [4. Downloading Bika LIMS](#4-downloading-bika-lims) in the [Linux Installation Steps](#linux-installation-steps)  
+
+#### 6. Notes
+* If you are having trouble starting `bin\instance.exe fg` as follows:
+```
+The program seems already to be running. If you believe not,  
+check for dangling .pid and .lock files in var/.  
+```
+* You can try the following steps:  
+```
+-Find the running process id by opening the .pid file within your instance's var/ directory.  
+-Open the Windows Task Manager and stop the running process with the above identifier.  
+-Delete all .pid and .lock files in your instance's var/ directory.  
+-Start your instance.  
+```
+__OR__
+```
+-Run services.msc
+-Search for Plone 4.3
+-Try Starting or Stopping it along with your instance
+```
+
+#### 7. Troubleshooting
+
+A) __Dependencies__  
+You need to install some dependencies manually  
+Download and install __bika_dependencies(Plone 4.3.1).exe__ from https://github.com/zylinx/bika.dependencies  
+This fixes the fact that Plone's buildout cannot compile the libraries required by weasyprint.  
+It installs the pre-compiled binaries into System32 and Plone's installation folder instead.  
+
+B) __Privileges__  
+Open `Explorer` __>>__ Navigate to `C:\` __>>__ Right-Click on the `Plone43` directory __>>__ select `Properties`  
+Select the `Security` Tab __>>__  Click `Edit`  __>>__ Check `Full Control` Allow for necessary User / Group  
+Click  `Apply`
+
+
+***
 ### Extras
+
 #### Using apache to redirect http requests to Bika LIMS
 Set up a domain name for the LIMS site URL and add the Apache mapping noting the Zope server port used by the instance (default 8080).
 Follow the instructions here: https://github.com/bikalabs/Bika-LIMS/blob/3.01a/docs/APACHE.md
