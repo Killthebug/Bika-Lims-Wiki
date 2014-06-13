@@ -83,17 +83,12 @@ $ nano buildout.cfg
            Plone
            Pillow
            bika.lims
-           WeasyPrint
 
    b) Find the ``develop`` section. Add ``src/bika.lims``:
 
        develop =
            src/bika.lims
    
-   c) Find the ``versions`` section. Add ``WeasyPrint = 0.19.2``
-
-       [versions]
-       WeasyPrint = 0.19.2
 
    c) (Optional) Change the Zope instance port if the default 8080 is not used::
 
@@ -252,7 +247,7 @@ Refer to: [Troubleshooting: A) Dependencies](#7-troubleshooting)
 Congradulations!! you have a successful build of Bika LIMS 3.0 on Plone 3.4.1  
 You can now create a site
 
-#### 5. Upgrading
+#### 5. Upgrading Bika LIMS
 Please refer to [4. Downloading Bika LIMS](#4-downloading-bika-lims) in the [Linux Installation Steps](#linux-installation-steps)  
 
 #### 6. Notes
