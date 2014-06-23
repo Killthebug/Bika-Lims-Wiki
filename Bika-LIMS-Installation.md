@@ -1,14 +1,23 @@
 You are here: [Home](https://github.com/bikalabs/Bika-LIMS/wiki) · Bika LIMS Installation
 ***
 ### Table of Contents
-1. [Introduction](#introduction)  
-2. [Linux Installation Steps](#linux-installation-steps)  
-3. [Windows Installation Steps](#windows-installation-steps)  
-4. [Extras](#extras)  
+1. [Introduction](#introduction)
+2. [Linux Installer Script](#linux-installer-script)
+3. [Linux Installation Steps](#linux-installation-steps)
+4. [Windows Installation Steps](#windows-installation-steps)
+5. [Extras](#extras)
 
 ***
 ### Introduction
 This document details the installation steps for Bika LIMS version 3.1 from the Plone Unified Installer package for Linux, as well as the setup for Apache as web proxy to make the LIMS available on the standard http port 80. The process should be similar for MacOSX and other Unix-type operating systems. The **gcc compiler**, **python**, the **python-dev library** and **git** are all required,  you may use those already installed on your operating system. Basic skills with GNU/Linux terminal are required.
+
+***
+### Linux Installer Script
+For unix-like systems, download and run the script that should install the prerequisite Plone and Bika LIMS in /home/bika and start the server in foreground on port 8080, by running the following commands:
+
+    $ wget -nc --no-check-certificate https://raw.githubusercontent.com/bikalabs/Bika-LIMS/develop/install.sh
+    $ chmod +x install.sh
+    $ sudo ./install.sh
 
 ***
 ### Linux Installation Steps
