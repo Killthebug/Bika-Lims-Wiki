@@ -4,8 +4,9 @@ You are here: [Home](https://github.com/bikalabs/Bika-LIMS/wiki) · Bika LIMS In
 1. [Introduction](#introduction)
 2. [Linux Installer Script](#linux-installer-script)
 3. [Linux Installation Steps](#linux-installation-steps)
-4. [Windows Installation Steps](#windows-installation-steps)
-5. [Extras](#extras)
+4. [Upgrading Bika LIMS](#upgrading-bika-lims)
+5. [Windows Installation Steps](#windows-installation-steps)
+6. [Extras](#extras)
 
 ***
 ### Introduction
@@ -96,6 +97,25 @@ Open a browser and go to http://localhost:8080/.  Select "Add Plone Site", and e
     $ bin/plonectl start
 
 Open a browser and go to your Bika LIMS instance: http://localhost:8080/Plone
+
+***
+### Upgrading Bika LIMS
+
+If a new release of the LIMS is made available, the following procedure will upgrade your existing installation to use the new packages.
+
+#### 1. Backup
+
+Stop Plone, and make a full backup of your instance before continuing.
+
+#### 2. Buildout
+
+Run buildout with the "-n" option, to retreive the latest version of Bika LIMS and it's dependencies.
+
+    $ bin/buildout -n
+
+#### 3. Migrate
+
+Start Plone and login to your site as the admin user.  Go to site-setup, and click `Add-ons`.  Find Bika LIMS in the list of activated addons, and click the "bika.lims" upgrade button.
 
 ***
 ### Windows Installation Steps
