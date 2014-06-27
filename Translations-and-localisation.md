@@ -3,21 +3,15 @@ You are here: [Home](https://github.com/bikalabs/Bika-LIMS/wiki) · [Developing 
 ***
 
 ### Table of Contents
-1. [Introduction](#introduction)
-2. [Translating strings in Python code](#translating-strings-in-python-code)
-3. [Translating strings in javascript code](#translating-strings-in-javascript-code)
-4. [Dates and Times](#dates-and-times)
-5. [Overriding translations](#overriding-translations)
-6. [Updating translations](#updating-translations)
+1. [Translating strings in Python code](#translating-strings-in-python-code)
+2. [Translating strings in javascript code](#translating-strings-in-javascript-code)
+3. [Dates and Times](#dates-and-times)
+4. [Overriding translations](#overriding-translations)
+5. [Variable Substitutions](#variable-substitutions)
 
 ***
 
-### Introduction
-
-Bika uses zope.i18n and gettext to translate strings.  This is the Plone standard, and the process is adapted from several plone addons.  Before going any further here, make sure to read:
-
-- [Translating Plone Strings](Translating text strings) in the Plone documentation.
-- [Internationalization in Plone 3.3 and 4.0](http://maurits.vanrees.org/weblog/archive/2010/10/i18n-plone-4)
+- The excellent [Plone documentation](http://docs.plone.org/develop/plone/i18n/internationalisation.html).
 
 ### Translating strings in Python code
 
@@ -80,17 +74,20 @@ msgstr "yy-mm-dd"
 
 To override translations, use the plone-manual.pot and plone-bika.pot files, respectively.  Any translation which cannot be automatically discovered during update, or translations which should override the defaults (for example, in packages that extend bika).  The references mentioned above make clear which domain contains which type of message, though there are some unavoidable duplications. 
 
-### Updating translations
+### Variable Substitutions
 
-In order to rebuild the translation catalogs, you will need the following requirements:
+Variable substitutions in messages that passed to the _() calls (in both Python and Javascript), are done with the gettext-style ${} substitution.  Don't use string concatenation, "%s" or "".format to create these strings, the message translation will not work.
 
-1) The gettext package must be installed
-2) The [update_translatins] and [i18ndude] parts must be copied from [buildout.cfg](https://github.com/bikalabs/Bika-LIMS/blob/develop/buildout.cfg) into your local buildout.cfg
-3) In order to receive the latest translations, or if you want to make a set of translation catalogs to push to git, the transifex client must be correctly installed, and your transifex login name and password must be configured.  If you want to use transifex, uncomment 'tx pull' and 'tx push' in bin/buildout.cfg
+Python:
 
-```
-1) run bin/buildout
-2) run bin/update_translations
-```
+    from bika.lims import bikaMessageFactory as _
+    from bika.lims.utils import t
+    mapping = {"number": 5}
+    final = t(_("There are ${number} things.", mapping=mapping)
 
-Done.
+Javascript:
+
+    window.jarn.i18n.loadCatalog("bika");
+    var _ = window.jarn.i18n.MessageFactory("bika");   
+    var mapping = {number: 5};
+    var final = _("There are ${number} things.", mapping);
