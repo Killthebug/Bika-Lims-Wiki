@@ -34,7 +34,9 @@ print value  # translated according to browser headers
 
 ### Translating strings in javascript code
 
-Bika uses [jarn.jsi18n](https://github.com/ggozad/jarn.jsi18n) to translate values in javascript files.  Other than initialising the domain catalogs as instructed in the jarn.jsi18n readme, nothing is required.  
+Bika uses [jarn.jsi18n](https://github.com/ggozad/jarn.jsi18n) to translate values in javascript files.
+
+> Strings from Javascript files need to be added in bika-custom.pot - they will not be recognised automatically by i18ndude's scanner.
 
 ### Dates and Times
 
