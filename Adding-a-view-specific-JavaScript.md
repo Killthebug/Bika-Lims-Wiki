@@ -13,7 +13,9 @@ You are here: [Home](https://github.com/bikalabs/Bika-LIMS/wiki) · [Developing 
 
 If you want to add some new JavaScript functionalities in a specific View page, write the actions and functions inside a generic JavaScript file, provably, is going to cause problems.
 
-It is due because a generic file would be loaded for every opened page...
+It is due because a generic file would be loaded for every opened page and they could rewrite methods defined before.
+
+The best solution is to write a specific JavaScript file which only could be loaded with their own view, avoiding to modify other views.
 
 ### Create Specific JavaScript Files
 
