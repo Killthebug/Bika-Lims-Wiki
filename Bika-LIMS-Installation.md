@@ -234,4 +234,30 @@ Set up a domain name for the LIMS site URL and add the Apache mapping noting the
 Follow the instructions here: https://github.com/bikalabs/Bika-LIMS/blob/3.01a/docs/APACHE.md
 
 #### Start with a completely fresh instance::
-Rename/move the Data.fs.* files in var/filestorage (after stopping instance).
+Rename/move the Data.fs.* files in var/filestorage (after stopping instance).  Running buildout again will regenerate these files.
+
+#### Report errors directly to Bika Lab Systems:
+
+Add raven to your buildout.cfg in the eggs= section
+
+    eggs = 
+        ...
+        raven
+
+Then add the following snippet to your [instance] section.  If you are using a ZEO configuration, add this to all [clientX] sections:
+
+event-log-custom =
+    %import raven.contrib.zope
+    <logfile>
+      path ${buildout:directory}/var/client1/event.log
+      level INFO
+      max-size 5 MB
+      old-files 5
+    </logfile>
+    <sentry>
+      dsn http://90723864025d4520b084acee225ddb8a:f9f7dd0163a74fbeac4e24a5123b3d39@sentry.bikalabs.com/2
+      level ERROR
+    </sentry>
+
+
+Run bin/buildout, and restart Plone.
