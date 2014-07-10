@@ -246,6 +246,7 @@ Add raven to your buildout.cfg in the eggs= section
 
 Then add the following snippet to your [instance] section.  If you are using a ZEO configuration, add this to all [clientX] sections:
 
+```
 event-log-custom =
     %import raven.contrib.zope
     <logfile>
@@ -258,6 +259,6 @@ event-log-custom =
       dsn http://90723864025d4520b084acee225ddb8a:f9f7dd0163a74fbeac4e24a5123b3d39@sentry.bikalabs.com/2
       level ERROR
     </sentry>
-
+```
 
 Run bin/buildout, and restart Plone.
