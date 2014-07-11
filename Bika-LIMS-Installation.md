@@ -16,9 +16,10 @@ This document details the installation steps for Bika LIMS version 3.1.
 ### Linux Installer Script
 For unix-like systems, you can download and run an installer script.  This should install the prerequisites, Plone and Bika LIMS in /home/bika and start the server in foreground on port 8080.  You can obtain and run the script by running the following commands:
 
-    $ wget -nc --no-check-certificate https://raw.githubusercontent.com/bikalabs/Bika-LIMS/develop/install.sh
-    $ chmod +x install.sh
-    $ sudo ./install.sh
+```bash
+wget -nc --no-check-certificate https://raw.githubusercontent.com/bikalabs/Bika-LIMS/develop/install.sh
+chmod +x install.sh
+sudo ./install.sh
 
 ***
 ### Linux Installation Steps
@@ -27,10 +28,12 @@ The process should be similar for all systems on which Plone is supported.
 
 #### 1. Install the following required system packages
 
-    $ sudo apt-get install python-dev build-essential libffi-dev libpcre3-dev
-    $ sudo apt-get install gcc autoconf libtool pkg-config zlib1g-dev git-core
-    $ sudo apt-get install libssl-dev libexpat1-dev libxslt1.1 gnuplot libpcre3
-    $ sudo apt-get install libcairo2 libpango1.0-0 libgdk-pixbuf2.0-0
+```bash
+sudo apt-get install python-dev build-essential libffi-dev libpcre3-dev
+sudo apt-get install gcc autoconf libtool pkg-config zlib1g-dev git-core
+sudo apt-get install libssl-dev libexpat1-dev libxslt1.1 gnuplot libpcre3
+sudo apt-get install libcairo2 libpango1.0-0 libgdk-pixbuf2.0-0
+```
 
 > The version numbers of dependencies are valid for Ubuntu 12.04.  If you use a different distribution or version, you may need to find the versions of these packages which are provided with your system.
 
@@ -86,7 +89,9 @@ If the buildout finished successfully, an 'adminPassword.txt' will have been cre
 
 #### 4. Test run in foreground, noting error messages if any and taking corrective action if so:
 
-    $ bin/plonectl fg
+```bash
+bin/plonectl fg
+```
 
 #### 5. Add the Plone instance with Bika LIMS extension
 
@@ -94,7 +99,9 @@ Open a browser and go to http://localhost:8080/.  Select "Add Plone Site", and e
 
 #### 6. Start working with Bika LIMS
 
-    $ bin/plonectl start
+```bash
+bin/plonectl start
+```
 
 Open a browser and go to your Bika LIMS instance: http://localhost:8080/Plone
 
@@ -111,7 +118,9 @@ Stop Plone, and make a full backup of your instance before continuing.
 
 Run buildout with the "-n" option, to retreive the latest version of Bika LIMS and it's dependencies.
 
-    $ bin/buildout -n
+```bash
+bin/buildout -n
+```
 
 #### 3. Migrate
 
