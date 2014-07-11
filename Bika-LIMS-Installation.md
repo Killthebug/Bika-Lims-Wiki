@@ -20,6 +20,7 @@ For unix-like systems, you can download and run an installer script.  This shoul
 wget -nc --no-check-certificate https://raw.githubusercontent.com/bikalabs/Bika-LIMS/develop/install.sh
 chmod +x install.sh
 sudo ./install.sh
+````
 
 ***
 ### Linux Installation Steps
