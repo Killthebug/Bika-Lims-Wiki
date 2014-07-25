@@ -15,22 +15,25 @@ The excellent [Plone documentation](http://docs.plone.org/develop/plone/i18n/int
 
 ### Translating strings in Python code
 
-Using _() to return a zope messageid is sufficient if the message is to be printed using TAL or a Plone utility such as plone_utils.addPortalMessage().  In the case of constructed strings, or views which output HTML directly to the browser, UnicodeDecodeError is often encountered.  To obtain translated values, and prevent encoding errors, the following must always be considered:
+In most python code, just using a MessageFactory is sufficient:
 
-- Any string values in the mapping parameter dictionary passed to the _() message factory, must be encoded as UTF-8: `new_msg = _("The title is: ${title}", mapping={"title":to_utf8(value)})`
+    message = _("Some string to be translated")
 
-- TAL and friends usually pass the string through translate(), but in python scripts this must be done manually: `translated_msg = context.translate(new_msg)`.  This can be done directly with zope.i18n.translate, if it is convienient.
+The MessageFactory does not actually translate anything though.  That is normally handled by TAL, or some other utility such as plone_utils.addPortalMessage().
 
-- The resulting value must be UTF-8!
+In the case of strings that are being rendered by code outside of Plone (eg, sending an email, writing a text file), the translation must be done manually:
 
-There is a small utility `t` in the bika.lims.utils package for obtaining correctly translated strings:
+    translated_string = context.translate(message)
+    
+To prevent encoding errors, all values in the mapping parameter passed to the MessageFactory must be encoded as UTF-8: 
 
-```
-from bika.lims.utils import t
-mapping = {"string_value": "hello world"}
-value = t(_("Some english string: ${string_value}", mapping=mapping))
-print value  # translated according to browser headers 
-```
+    title = to_utf8(value)
+    message = _("The title is: ${title}", mapping={"title":title})
+
+There is a small utility `t` in the bika.lims.utils package for obtaining correctly translated, utf-8 encooded strings:
+
+    from bika.lims.utils import t
+    translated = t(_("Some english string"))
 
 ### Translating strings in javascript code
 
