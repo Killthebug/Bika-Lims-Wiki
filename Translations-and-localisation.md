@@ -128,7 +128,7 @@ You can edit the files with a normal text editor.  I use poedit:
 
 ##### 5. Add the required zcml snippet
 
-- in `test.package/test/package/configure.zcml`:
+In `test.package/test/package/configure.zcml`:
 
 ```
 <configure xmlns:i18n="http://namespaces.zope.org/i18n"
@@ -137,15 +137,7 @@ You can edit the files with a normal text editor.  I use poedit:
 </configure>
 ```
 
-- A trick:
-
-In your buildout.cfg, add:
-
-    zcml = test.package
-
-to force your translations to load first.
-
-##### 6. Add new product to buildout:
+##### 6. Add test.package to the eggs, develop and zcml parts of buildout.cfg
 
 My entire buildout.cfg looks like this so far:
 
@@ -158,13 +150,12 @@ My entire buildout.cfg looks like this so far:
         test.package
 
     develop +=
-        src/test.package
+        src/test.packagen
 
     zcml += 
         test.package
 
-##### 7. Run buildout, and we're done!
+##### 7. Run buildout, and we're done.
 
     bin/buildout
     bin/plonectl restart
-
