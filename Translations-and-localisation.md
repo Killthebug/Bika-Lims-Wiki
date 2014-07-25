@@ -98,7 +98,9 @@ Simple instructions for changing defaults or overriding translations for text st
 
 You will also need to install some or all of the dependencies listed in the bika installation guide, depending on what you are going to get up to.
 
-##### 2. Run `bin/buildout -c develop.cfg`.
+##### 2. Run development buildout
+
+    bin/buildout -c develop.cfg
 
 In Plone-4.3.2 I had to add 'ExtensionClass >= 4.1a1' to [versions], because buildout
 will not automatically download versions that look like pre-releases, seemingly even
@@ -109,7 +111,9 @@ when a package depends on this version.
     cd src/
     ../bin/zopeskel basic_namespace test.package
 
-##### 4. Create message catalog (*.po) files
+##### 4. Create translation content
+
+Add language folders for all languages that you want to override.
 
     mkdir -p test.package/test/package/locales/en/LC_MESSAGES
 
