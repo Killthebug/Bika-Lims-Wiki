@@ -58,6 +58,8 @@ The jsi18n function works just like a zope MessageFactory, substituting mapping 
     var mapping = {number: 5};
     var final = _("There are ${number} things.", mapping);
 
+***
+
 ### Dates and Times
 
 There are four msgid's in the that need to be overridden to set the Date and Time formats: These messages most probably should be kept translated uniformly across the plone and bika domains.
@@ -91,6 +93,8 @@ msgstr "${I}:${M} ${p}"
 msgid "date_format_short_datepicker"
 msgstr "yy-mm-dd"
 ```
+
+***
 
 ### Overriding translations
 
