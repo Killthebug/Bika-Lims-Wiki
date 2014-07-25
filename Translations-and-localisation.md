@@ -13,6 +13,8 @@ You are here: [Home](https://github.com/bikalabs/Bika-LIMS/wiki) · [Developing 
 
 The excellent [Plone documentation](http://docs.plone.org/develop/plone/i18n/internationalisation.html).
 
+***
+
 ### Translating strings in Python code
 
 In most python code, just using a MessageFactory is sufficient:
