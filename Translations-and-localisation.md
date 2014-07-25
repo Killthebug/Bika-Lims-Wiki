@@ -6,8 +6,8 @@ You are here: [Home](https://github.com/bikalabs/Bika-LIMS/wiki) · [Developing 
 1. [Translating strings in Python code](#translating-strings-in-python-code)
 2. [Translating strings in javascript code](#translating-strings-in-javascript-code)
 3. [Dates and Times](#dates-and-times)
-4. [Overriding translations](#overriding-translations)
-5. [Variable Substitutions](#variable-substitutions)
+4. [Variable Substitutions](#variable-substitutions)
+5. [Overriding Translations](#overriding-translations)
 
 ***
 
@@ -72,10 +72,6 @@ msgid "date_format_short_datepicker"
 msgstr "yy-mm-dd"
 ```
 
-### Overriding translations
-
-To override translations, use the plone-manual.pot and plone-bika.pot files, respectively.  Any translation which cannot be automatically discovered during update, or translations which should override the defaults (for example, in packages that extend bika).  The references mentioned above make clear which domain contains which type of message, though there are some unavoidable duplications. 
-
 ### Variable Substitutions
 
 Variable substitutions in messages that passed to the _() calls (in both Python and Javascript), are done with the gettext-style ${} substitution.  Don't use string concatenation, "%s" or "".format to create these strings, the message translation will not work.
@@ -93,3 +89,78 @@ Javascript:
     var _ = window.jarn.i18n.MessageFactory("bika");   
     var mapping = {number: 5};
     var final = _("There are ${number} things.", mapping);
+
+### Overriding translations
+
+Simple instructions for changing defaults or overriding translations for text strings.  This is documented lots elsewhere, but simple step-by-step instructions are also good.
+
+If you are fixing something you think could be improved in the core translations, please consider opening a bug report or pull request instead.
+
+1. Install Plone.
+
+You will also need to install some or all of the dependencies listed in the 
+bika installation guide, depending on what you are going to get up to.
+
+2. Run `bin/buildout -c develop.cfg`.
+
+In Plone-4.3.2 I had to add 'ExtensionClass >= 4.1a1' to [versions], because buildout
+will not automatically download versions that look like pre-releases, seemingly even
+when a package depends on this version.
+
+3. Create a new python package
+
+    cd src/
+    ../bin/zopeskel basic_namespace test.package
+
+4. Create message catalog (*.po) files
+
+    mkdir -p test.package/test/package/locales/en/LC_MESSAGES
+
+You should download the relevant po files from [Github](https://github.com/bikalabs/Bika-LIMS/tree/master/bika/lims/locales) and place it inside your new language folders.
+
+Some strings are translated in the bika domain, some strings are translated in the plone domain, and others are actually present in both, so as to be translated in different areas of the site.
+
+I use poedit to edit the po files locally:
+
+    sudo apt-get install poedit
+    poedit test.package/test/package/locales/en/LC_MESSAGES/bika.po
+
+5. Add the required zcml snippet
+
+- in `test.package/test/package/configure.zcml`:
+
+```
+<configure xmlns:i18n="http://namespaces.zope.org/i18n"
+           i18n_domain="my.package">
+    <i18n:registerTranslations directory="locales" />
+</configure>
+```
+
+- A trick:
+
+In your buildout.cfg, add:
+
+    zcml = test.package
+
+to force your translations to load first.
+
+6. Add new product to buildout:
+
+My entire buildout.cfg looks like this so far:
+
+    [extends]
+
+    buildout-original.cfg
+
+    eggs +=
+        bika.lims
+        test.package
+
+    develop +=
+        src/test.package
+
+    zcml +=
+        test.package
+
+
+
