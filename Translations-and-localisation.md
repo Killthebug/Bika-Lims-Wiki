@@ -92,40 +92,37 @@ Javascript:
 
 ### Overriding translations
 
-Simple instructions for changing defaults or overriding translations for text strings.  This is documented lots elsewhere, but simple step-by-step instructions are also good.
+Simple instructions for changing defaults or overriding translations for text strings.  This is documented lots elsewhere, but simple step-by-step instructions are also good.  If you are fixing something you think could be improved in the core translations, please consider opening a bug report or pull request instead.
 
-If you are fixing something you think could be improved in the core translations, please consider opening a bug report or pull request instead.
+#### 1: Install Plone.
 
-1. Install Plone.
+You will also need to install some or all of the dependencies listed in the bika installation guide, depending on what you are going to get up to.
 
-You will also need to install some or all of the dependencies listed in the 
-bika installation guide, depending on what you are going to get up to.
-
-2. Run `bin/buildout -c develop.cfg`.
+#### 2. Run `bin/buildout -c develop.cfg`.
 
 In Plone-4.3.2 I had to add 'ExtensionClass >= 4.1a1' to [versions], because buildout
 will not automatically download versions that look like pre-releases, seemingly even
 when a package depends on this version.
 
-3. Create a new python package
+#### 3. Create a new python package
 
     cd src/
     ../bin/zopeskel basic_namespace test.package
 
-4. Create message catalog (*.po) files
+#### 4. Create message catalog (*.po) files
 
     mkdir -p test.package/test/package/locales/en/LC_MESSAGES
 
 You should download the relevant po files from [Github](https://github.com/bikalabs/Bika-LIMS/tree/master/bika/lims/locales) and place it inside your new language folders.
 
-Some strings are translated in the bika domain, some strings are translated in the plone domain, and others are actually present in both, so as to be translated in different areas of the site.
+> Some strings are translated in the bika domain, some strings are translated in the plone domain, and others are actually present in both, so as to be translated in different areas of the site.
 
 I use poedit to edit the po files locally:
 
     sudo apt-get install poedit
     poedit test.package/test/package/locales/en/LC_MESSAGES/bika.po
 
-5. Add the required zcml snippet
+#### 5. Add the required zcml snippet
 
 - in `test.package/test/package/configure.zcml`:
 
@@ -144,7 +141,7 @@ In your buildout.cfg, add:
 
 to force your translations to load first.
 
-6. Add new product to buildout:
+#### 6. Add new product to buildout:
 
 My entire buildout.cfg looks like this so far:
 
@@ -159,8 +156,11 @@ My entire buildout.cfg looks like this so far:
     develop +=
         src/test.package
 
-    zcml +=
+    zcml += 
         test.package
 
+#### 7. Run buildout, and we're done!
 
+    bin/buildout
+    bin/plonectl restart
 
