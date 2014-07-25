@@ -26,22 +26,37 @@ The MessageFactory does not actually translate anything though.  That is normall
 In the case of strings that are being rendered by code outside of Plone (eg, sending an email, writing a text file), the translation must be done manually:
 
     translated_string = context.translate(message)
-    
-To prevent encoding errors, all values in the mapping parameter passed to the MessageFactory must be encoded as UTF-8: 
-
-    title = to_utf8(value)
-    message = _("The title is: ${title}", mapping={"title":title})
 
 There is a small utility `t` in the bika.lims.utils package for obtaining correctly translated, utf-8 encooded strings:
 
     from bika.lims.utils import t
     translated = t(_("Some english string"))
 
+The MessageFactory substitutes mapping keys with gettext-style ${} syntax.  Don't use regular string concatenation to create these strings, the message translation will not work.
+
+    from bika.lims.utils import t
+    mapping = {"number": 5}
+    final = t(_("There are ${number} things.", mapping=mapping)
+
+To prevent encoding errors, all string values in the mapping parameter passed to the MessageFactory must be encoded as UTF-8!
+
+    title = to_utf8(value)
+    message = _("The title is: ${title}", mapping={"title":title})
+
+***
+
 ### Translating strings in javascript code
 
 Bika uses [jarn.jsi18n](https://github.com/ggozad/jarn.jsi18n) to translate values in javascript files.
 
 > Strings from Javascript files need to be added in bika-custom.pot - they will not be recognised automatically by i18ndude's scanner.
+
+The jsi18n function works just like a zope MessageFactory, substituting mapping keys with gettext-style ${} syntax.  Don't use regular string concatenation to create these strings, the message translation will not work:
+
+    window.jarn.i18n.loadCatalog("bika");
+    var _ = window.jarn.i18n.MessageFactory("bika");   
+    var mapping = {number: 5};
+    var final = _("There are ${number} things.", mapping);
 
 ### Dates and Times
 
@@ -76,24 +91,6 @@ msgstr "${I}:${M} ${p}"
 msgid "date_format_short_datepicker"
 msgstr "yy-mm-dd"
 ```
-
-### Variable Substitutions
-
-Variable substitutions in messages that passed to the _() calls (in both Python and Javascript), are done with the gettext-style ${} substitution.  Don't use string concatenation, "%s" or "".format to create these strings, the message translation will not work.
-
-Python:
-
-    from bika.lims import bikaMessageFactory as _
-    from bika.lims.utils import t
-    mapping = {"number": 5}
-    final = t(_("There are ${number} things.", mapping=mapping)
-
-Javascript:
-
-    window.jarn.i18n.loadCatalog("bika");
-    var _ = window.jarn.i18n.MessageFactory("bika");   
-    var mapping = {number: 5};
-    var final = _("There are ${number} things.", mapping);
 
 ### Overriding translations
 
