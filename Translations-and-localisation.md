@@ -27,7 +27,7 @@ In the case of strings that are being rendered by code outside of Plone (eg, sen
 
     translated_string = context.translate(message)
 
-There is a small utility `t` in the bika.lims.utils package for obtaining correctly translated, utf-8 encooded strings:
+There is a small utility `t` in the bika.lims.utils package for obtaining correctly translated, utf-8 encoded strings:
 
     from bika.lims.utils import t
     translated = t(_("Some english string"))
