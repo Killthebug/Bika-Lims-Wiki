@@ -96,7 +96,7 @@ Simple instructions for changing defaults or overriding translations for text st
 
 ##### 1: Install Plone.
 
-You will also need to install some or all of the dependencies listed in the bika installation guide, depending on what you are going to get up to.
+You will also need to install some or all of the dependencies listed in the [Bika installation guide](https://github.com/bikalabs/Bika-LIMS/wiki/Bika-LIMS-Installation), depending on what you are going to get up to.
 
 ##### 2. Run development buildout
 
@@ -121,7 +121,7 @@ You should download the relevant po files from [Github](https://github.com/bikal
 
 > Some strings are translated in the bika domain, some strings are translated in the plone domain, and others are actually present in both, so as to be translated in different areas of the site.
 
-I use poedit to edit the po files locally:
+You can edit the files with a normal text editor.  I use poedit:
 
     sudo apt-get install poedit
     poedit test.package/test/package/locales/en/LC_MESSAGES/bika.po
