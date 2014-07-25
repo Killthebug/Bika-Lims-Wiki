@@ -15,7 +15,7 @@ You are here: [Home](https://github.com/bikalabs/Bika-LIMS/wiki) · Developing B
 
 #### Customization of report templates
 
-- ##### Modifying the results report
+- ##### [Creating new report templates](https://github.com/bikalabs/Bika-LIMS/wiki/Creating-new-report-templates)
 
     The results report appearance can be modified easily modifying its template and by using TAL expressions.
 
