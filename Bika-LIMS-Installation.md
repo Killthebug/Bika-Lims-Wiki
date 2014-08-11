@@ -30,21 +30,26 @@ The process should be similar for all systems on which Plone is supported.
 #### 1. Install the following required system packages
 
 ```bash
-sudo apt-get install python-dev build-essential libffi-dev libpcre3-dev
-sudo apt-get install gcc autoconf libtool pkg-config zlib1g-dev git-core
-sudo apt-get install libssl-dev libexpat1-dev libxslt1.1 gnuplot libpcre3
-sudo apt-get install libcairo2 libpango1.0-0 libgdk-pixbuf2.0-0
+sudo apt-get install python-dev build-essential libffi-dev libpcre3-dev gcc autoconf libtool pkg-config zlib1g-dev git-core libssl-dev libexpat1-dev libxslt1.1 gnuplot libpcre3 libcairo2 libpango1.0-0 libgdk-pixbuf2.0-0
 ```
 
 > The version numbers of dependencies are valid for Ubuntu 12.04.  If you use a different distribution or version, you may need to find the versions of these packages which are provided with your system.
 
 #### 2. Install Plone
 
-Refer to the [Plone Installation Documentation](http://docs.plone.org/manage/installing/index.html)
+Download the latest stable release of the Plone Unified Installer from http://plone.org/products/plone/releases and unpack the file.
+
+The basic command for installing a development environment in Linux:
+
+    ./install.sh --target=/path/to/Plone --build-python --static-lxml zeo
+
+Refer to the [Plone Installation Documentation](http://docs.plone.org/manage/installing/index.html).
 
 #### 3. Add Bika LIMS to your buildout.cfg
 
-Go to your new Plone instance, and edit buildout.cfg.  Find the section beginning with `eggs=`, and add `bika.lims` to the existing entries.
+In your new Plone folder, you will see an instance folder called either "zinstance" or "zeocluster".  Change directory into this folder, and edit `buildout.cfg`.
+
+Find the section beginning with `eggs=`, and add `bika.lims` to the existing entries.
 
     eggs =
         Plone
