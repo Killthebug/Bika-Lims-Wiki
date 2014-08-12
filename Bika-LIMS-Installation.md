@@ -23,7 +23,7 @@ The process should be similar for all systems on which Plone is supported.
 sudo apt-get install python-dev build-essential libffi-dev libpcre3-dev gcc autoconf libtool pkg-config zlib1g-dev git-core libssl-dev libexpat1-dev libxslt1.1 gnuplot libpcre3 libcairo2 libpango1.0-0 libgdk-pixbuf2.0-0
 ```
 
-> The version numbers of dependencies are valid for Ubuntu 12.04.  If you use a different distribution or version, you may need to find the versions of these packages which are provided with your system.
+> The version numbers of dependencies are valid for Ubuntu 14.04.  If you use a different distribution or version, you may need to find the versions of these packages which are provided with your system.
 
 #### 2. Install Plone
 
