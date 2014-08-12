@@ -2,8 +2,8 @@ You are here: [Home](https://github.com/bikalabs/Bika-LIMS/wiki) · Bika LIMS In
 ***
 ### Table of Contents
 1. [Introduction](#introduction)
-2. [Linux Installer Script](#linux-installer-script)
-3. [Linux Installation Steps](#linux-installation-steps)
+2. [Linux Installation Steps](#linux-installation-steps)
+3. [Linux Installer Script](#linux-installer-script)
 4. [Upgrading Bika LIMS](#upgrading-bika-lims)
 5. [Windows Installation Steps](#windows-installation-steps)
 6. [Extras](#extras)
@@ -11,16 +11,6 @@ You are here: [Home](https://github.com/bikalabs/Bika-LIMS/wiki) · Bika LIMS In
 ***
 ### Introduction
 This document details the installation steps for Bika LIMS version 3.1.
-
-***
-### Linux Installer Script
-For unix-like systems, you can download and run an installer script.  This should install the prerequisites, Plone and Bika LIMS in /home/bika and start the server in foreground on port 8080.  You can obtain and run the script by running the following commands:
-
-```bash
-wget -nc --no-check-certificate https://raw.githubusercontent.com/bikalabs/Bika-LIMS/develop/install.sh
-chmod +x install.sh
-sudo ./install.sh
-````
 
 ***
 ### Linux Installation Steps
@@ -110,6 +100,16 @@ bin/plonectl start
 ```
 
 Open a browser and go to your Bika LIMS instance: http://localhost:8080/Plone
+
+***
+### Linux Installer Script
+For unix-like systems, you can download and run an installer script.  This should install the prerequisites, Plone and Bika LIMS in /home/bika and start the server in foreground on port 8080.  You can obtain and run the script by running the following commands:
+
+```bash
+wget -nc --no-check-certificate https://raw.githubusercontent.com/bikalabs/Bika-LIMS/develop/install.sh
+chmod +x install.sh
+sudo ./install.sh
+````
 
 ***
 ### Upgrading Bika LIMS
