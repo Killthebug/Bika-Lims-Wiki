@@ -32,3 +32,5 @@ You are here: [Home](https://github.com/bikalabs/Bika-LIMS/wiki) · Developing B
 - ##### [Adding a view-specific JavaScript](https://github.com/bikalabs/Bika-LIMS/wiki/Adding-a-view-specific-JavaScript)
 
    If you want to create a new JavaScript feature for a specific view, is better to use an specific JS file for each one avoiding to modify other views.
+
+- ##### [Top level Entity Relationship Diagram (ERD)](https://github.com/bikalabs/Bika-LIMS/wiki/Top-level-ERD)
