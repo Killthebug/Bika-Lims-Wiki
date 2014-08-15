@@ -12,7 +12,7 @@ Bulk AR Import, Generic results import.
 Bika LIMS Community users lists, help and other communication channels.
 
 #### [Contribute](https://github.com/bikalabs/Bika-LIMS/wiki/Contribute)
-Request demo access and contribute to Bika LIMS testing and new functionalities requests.
+[Request demo access](http://demo.bikalabs.com/) and take part in testing, identifying new features. [Log bug reports and feature requests](https://jira.bikalabs.com/secure/Dashboard.jspa?selectPageId=10200). [Contribute to translations](http://demo.bikalabs.com/knowledge-centre/manual/bika-3-user-manual/house-keeping/how-to-translate-gaob-bika-3) in your home language.
 ***
 
 ### Administrator/Hosting Documentation
