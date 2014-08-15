@@ -1,4 +1,5 @@
-### Bulk AR Import form spreadsheet - Manual, [Bulk AR Creation](http://demo.bikalabs.com/knowledge-centre/manual/bika-3-user-manual/samples.-analyses.-analysis-requests/creating-analysis-requests-ars-column/bulk-ar-creation)
+### Bulk AR Import form spreadsheet
+Manual, [Bulk AR Creation](http://demo.bikalabs.com/knowledge-centre/manual/bika-3-user-manual/samples.-analyses.-analysis-requests/creating-analysis-requests-ars-column/bulk-ar-creation)
 
 **Examples** 
 
