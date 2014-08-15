@@ -3,7 +3,9 @@ Manual, [Bulk AR Creation](http://demo.bikalabs.com/knowledge-centre/manual/bika
 
 _There are 2 types of AR Import templates, Classic and Profile. In the Classic template, you must indicate which analyses are required for each sample. In the Profile template, you must indicate which profiles are required for each sample_
 
-**Examples** 
+Be sure that the **Analysis Service and Profile keywords** you use in the CSV to be imported, corresponds to those in the system.
+
+**Examples**
 
 Using demonstration data:
 
