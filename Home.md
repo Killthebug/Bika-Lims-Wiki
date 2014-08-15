@@ -5,7 +5,7 @@ Bika LIMS is a high quality product that leverages the power and technical simpl
 #### [Bika LIMS User Manual](http://bika3.bikalabs.com/knowledge-centre/manual/bika-3-user-manual)
 The 'generic' Bika LIMS users guide.
 
-#### [Import Export file Templates](https://github.com/bikalabs/Bika-LIMS/wiki/Import--Export-file-formats)
+#### [Import Export Templates](https://github.com/bikalabs/Bika-LIMS/wiki/Import-Export-Templates)
 Bulk AR Import, Generic results import.
 
 #### [Community](https://github.com/bikalabs/Bika-LIMS/wiki/Community)
