@@ -1,4 +1,4 @@
-### Bulk AR Import form spreadsheet
+### Bulk AR Import from spreadsheet
 Manual, [Bulk AR Creation](http://demo.bikalabs.com/knowledge-centre/manual/bika-3-user-manual/samples.-analyses.-analysis-requests/creating-analysis-requests-ars-column/bulk-ar-creation)
 
 _There are 2 types of AR Import templates, Classic and Profile. In the Classic template, you must indicate which analyses are required for each sample. In the Profile template, you must indicate which profiles are required for each sample_
