@@ -20,5 +20,5 @@ Using Analysis Services
 **[Profiles](https://gist.github.com/lemoene/d56a518a818fa7ea9f3a/raw/9896fd385d478adbb71db27e432dfce74bf08792/ARImportProfiles201406.csv)**
 Using Analysis Profiles
 
-### Results Import from spreadsheet
+### [Results Import from spreadsheet](https://github.com/bikalabs/Bika-LIMS/wiki/Results-import-from-spreadsheet)
 Lab's often calculate results in spreadsheets and upload them into Bika via the import facility designed for importing instrument results. If proper version control is applied on the spreadsheet before uploading as attachments to the LIMS, the procedure seems to satisfy ISO 17025 auditors
