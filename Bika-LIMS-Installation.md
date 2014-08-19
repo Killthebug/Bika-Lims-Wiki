@@ -275,5 +275,10 @@ event-log-custom =
       level ERROR
     </sentry>
 ```
+Add raven 4.0.4 into [versions] section
+
+    [versions] 
+        ...
+        raven = 4.0.4
 
 Run bin/buildout, and restart Plone.
