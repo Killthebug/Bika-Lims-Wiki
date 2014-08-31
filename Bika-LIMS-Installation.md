@@ -1,5 +1,4 @@
-You are here: [Home](https://github.com/bikalabs/Bika-LIMS/wiki) · Bika LIMS Installation
-***
+
 ### Table of Contents
 1. [Introduction](#introduction)
 2. [Linux Installation Steps](#linux-installation-steps)
