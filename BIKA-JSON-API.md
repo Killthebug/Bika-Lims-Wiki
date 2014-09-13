@@ -1,4 +1,4 @@
-You are here: [Home](https://github.com/bikalabs/Bika-LIMS/wiki) · Connecting Bika LIMS
+You are here: [Home](https://github.com/bikalabs/Bika-LIMS/wiki) · Connecting Bika LIMS😷
 
 ***
 
