@@ -5,11 +5,11 @@ You are here: [Home](https://github.com/bikalabs/Bika-LIMS/wiki) · Connecting B
 ### Table of Contents
 1. [Introduction](#introduction)
 2. [Authentication](#authentication)
-3. [Querying Objects](#querying-objects)
-4. [Creating Objects](#creating-objects)
-5. [Updating Objects](#updating-objects)
-6. [Removing Objects](#removing-objects)
-7. [Reference Fields](#reference-fields)
+3. [Reference Fields](#reference-fields)
+4. [Querying Objects](#querying-objects)
+5. [Creating Objects](#creating-objects)
+6. [Updating Objects](#updating-objects)
+7. [Removing Objects](#removing-objects)
 8. [Workflow](#workflow)
 9. [Catalogs](#catalogs)
 
