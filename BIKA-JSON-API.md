@@ -8,9 +8,10 @@ You are here: [Home](https://github.com/bikalabs/Bika-LIMS/wiki) · Connecting B
 3. [Querying Objects](#querying-objects)
 4. [Creating Objects](#creating-objects)
 5. [Updating Objects](#updating-objects)
-6. [Reference Fields](#reference-fields)
-7. [Workflow](#workflow)
-8. [Catalogs](#catalogs)
+6. [Removing Objects](#removing-objects)
+7. [Reference Fields](#reference-fields)
+8. [Workflow](#workflow)
+9. [Catalogs](#catalogs)
 
 ***
 
