@@ -294,6 +294,18 @@ Multiple updates can be executed in a single http request, by using the 'update_
 
 The result of the request will be a list of return values from the update method.
 
+### Removing objects
+
+```
+URL: @@API/remove
+
+Required parameters:
+
+- UID
+
+    The UID of the object to be removed.
+    UID:list parameter key can be used multiple times for a list of UIDs.
+```
 ### Workflow
 
 In each call to the read method, the returned objects will have a 'review_state' value.  This is the state the object is in, on it's default workflow.  In the case that the object has several workflows attached, additional keys will appear for each workstate.  For example an AnalysisRequest object will contain 'review_state', 'cancelled_state', and 'worksheetanalysis_review_state' values.
