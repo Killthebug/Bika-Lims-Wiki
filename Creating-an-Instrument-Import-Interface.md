@@ -288,3 +288,5 @@ __all__ = ['generic.xml',
            '<manufacturer>.<model>.<your_awesome_importer_interface>']
 
 ```
+### Share your interface
+Bika LIMS is an Open Source project and your contributions are welcome. Do a [pull request](https://github.com/bikalabs/Bika-LIMS/pulls) of your code and benefit all the community of users. If you don't know how to do this, you can either send your code to the [developers list](http://lists.sourceforge.net/lists/listinfo/bika-developers).
