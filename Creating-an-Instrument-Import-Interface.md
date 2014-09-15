@@ -8,6 +8,7 @@ You are here: [Home](https://github.com/bikalabs/Bika-LIMS/wiki) · [Developing 
 5. [Creating the parser](#creating-the-parser)
 6. [Creating the controller](#creating-the-controller)
 7. [Registering the new interface into the system](#registering-the-new-interface-into-the-system)
+8. [Share your interface](#share-your-interface)
 
 ***
 
