@@ -13,7 +13,7 @@ The members of the Bika project help everybody who needs assistance, through the
 ### Distribution lists
 
 * [Users](https://lists.sourceforge.net/lists/listinfo/bika-users): Distribution list for Bika users. News about new Bika versions, assistance in finding solutions for technical problems, Bika installation, etc.
-* [Developers](http://lists.sourceforge.net/lists/listinfo/bika-developers): Discussions of topics related to sofware development and arquitecture design of source code.
+* [Developers](http://lists.sourceforge.net/lists/listinfo/bika-developers): Discussions of topics related to software development and architecture design of source code.
 * [Analysis and design](http://groups.google.com/forum/?hl=en#!forum/bika-design): Distribution list for the discussion of topics related to LIMS design and analysis, for example discussions about lab workflow depending on type of lab, requirement needs analysis, etc.
 * [Bika Health](http://groups.google.com/forum/?hl=en#!forum/bika-health): Specific distribution list for Bika LIMS 'Health' version.
 
