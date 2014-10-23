@@ -34,3 +34,7 @@ You are here: [Home](https://github.com/bikalabs/Bika-LIMS/wiki) · Developing B
    If you want to create a new JavaScript feature for a specific view, is better to use an specific JS file for each one avoiding to modify other views.
 
 - ##### [Top level Entity Relationship Diagram (ERD)](https://github.com/bikalabs/Bika-LIMS/wiki/Top-level-ERD)
+
+#### How To's
+
+- ##### [Choos a WebBrowser to Test](https://github.com/bikalabs/Bika-LIMS/wiki/Choos-a-WebBrowser-to-Test)
