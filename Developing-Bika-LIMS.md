@@ -37,4 +37,6 @@ You are here: [Home](https://github.com/bikalabs/Bika-LIMS/wiki) · Developing B
 
 #### How To's
 
-- [Choos a WebBrowser to Test](https://github.com/bikalabs/Bika-LIMS/wiki/Choos-a-WebBrowser-to-Test)
+- ##### [Choos a WebBrowser to Test](https://github.com/bikalabs/Bika-LIMS/wiki/Choos-a-WebBrowser-to-Test)
+
+   How to test with your prefered browser.
