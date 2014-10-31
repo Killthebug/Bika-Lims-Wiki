@@ -8,9 +8,6 @@ The 'generic' Bika LIMS users guide.
 #### [Import Export Templates](https://github.com/bikalabs/Bika-LIMS/wiki/Import-Export-Templates)
 Bulk AR Import, Generic results import.
 
-#### [Releases life-cycle](https://github.com/bikalabs/Bika-LIMS/wiki/Releases-life-cycle)
-Bika LIMS project developers are committed with [release early, release often (RERO)](http://en.wikipedia.org/wiki/Release_early,_release_often) philosophy in order to get more feedback from the users community and thus increase the quality of the system, both from technically and functional standpoints.
-
 #### [Community](https://github.com/bikalabs/Bika-LIMS/wiki/Community)
 Bika LIMS Community users lists, help and other communication channels.
 
@@ -34,6 +31,10 @@ Because Bika LIMS is a collaborative project, adhering to consistent development
 #### [Developing Bika LIMS](https://github.com/bikalabs/Bika-LIMS/wiki/Developing-Bika-LIMS)
 Guides, manuals and information for Bika LIMS developers.
 [**Instrument interfacing**](https://github.com/bikalabs/Bika-LIMS/wiki/creating-an-instrument-import-interface).
+
+
+#### [Releases life-cycle](https://github.com/bikalabs/Bika-LIMS/wiki/Releases-life-cycle)
+Bika LIMS project developers are committed with [release early, release often (RERO)](http://en.wikipedia.org/wiki/Release_early,_release_often) philosophy in order to get more feedback from the users community and thus increase the quality of the system, both from technically and functional standpoints.
 
 #### [Connecting Bika LIMS](https://github.com/bikalabs/Bika-LIMS/wiki/BIKA-JSON-API)
 Bika includes plone.jsonapi for reading, updating, and creating and deleting objects. The JSON API is used internally for many AJAX requests, and also for implementing alternative interfaces.
