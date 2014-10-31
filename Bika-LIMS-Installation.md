@@ -1,4 +1,3 @@
-
 ### Table of Contents
 1. [Introduction](#introduction)
 2. [Linux Installation Steps](#linux-installation-steps)
@@ -112,6 +111,8 @@ sudo ./install.sh
 
 ***
 ### Upgrading Bika LIMS
+
+**Please, take a look at [Releases life-cycle](https://github.com/bikalabs/Bika-LIMS/wiki/Releases-life-cycle) documentation before upgrading your Bika LIMS instance.**
 
 If a new release of the LIMS is made available, the following procedure will upgrade your existing installation to use the new packages.
 
