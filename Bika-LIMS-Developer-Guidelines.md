@@ -24,6 +24,8 @@ Bika LIMS project developers are committed with [release early, release often (R
 
 Bika LIMS software development is based on Branch-per-feature approach. Before going further, please take your time to read thoroughly the [*A successful Git branching model, Vincent Driessen, 2010*](http://nvie.com/posts/a-successful-git-branching-model/), [*Branch-per-feature post, Adam Dimirtuk's, 2012*](http://dymitruk.com/blog/2012/02/05/branch-per-feature/) and [*A pragmatic guide to the Branch Per Feature git branching strategy, Katherine Bailey, 2013*](https://www.acquia.com/blog/pragmatic-guide-branch-feature-git-branching-strategy) posts.
 
+**TO BE COMPLETED**
+
 #### hotfix/next branch
 
 Only bug fixes and very small enhancements are allowed to hotfix/next branch. This branch is only used for updates (minor releases) and is regularly merged to develop. If you want to fix a bug, create a fork from hotfix/next and fix the bug there. When finished, you can do a pull request to bikalabs' hotfix/next, including the JIRA's ID issue number, a deescription of the fix and the full log obtained after running the bika.lims Robot Tests. Remember also to update the CHANGELOG.txt. 
