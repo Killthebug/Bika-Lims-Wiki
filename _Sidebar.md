@@ -5,4 +5,5 @@
 * [Contribute](https://github.com/bikalabs/Bika-LIMS/wiki/Contribute)
 * [Installing Bika LIMS](https://github.com/bikalabs/Bika-LIMS/wiki/Bika-LIMS-Installation)
 * [Connecting Bika LIMS](https://github.com/bikalabs/Bika-LIMS/wiki/BIKA-JSON-API)
+* [Bika LIMS Developer Guidelines](https://github.com/bikalabs/Bika-LIMS/wiki/Bika-LIMS-Developer-Guidelines)
 * [Developing Bika LIMS](https://github.com/bikalabs/Bika-LIMS/wiki/Developing-Bika-LIMS)
