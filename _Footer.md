@@ -1,1 +1,1 @@
-[Bika LIMS Wiki](https://github.com/bikalabs/Bika-LIMS/wiki) · [Bika LIMS Repos](https://github.com/bikalabs/Bika-LIMS) · [Bika LIMS Issue Tracker](https://jira.bikalabs.com/secure/Dashboard.jspa) · [Community](https://github.com/bikalabs/Bika-LIMS/wiki/Community)
+[Wiki](https://github.com/bikalabs/Bika-LIMS/wiki) · [Repos](https://github.com/bikalabs/Bika-LIMS) · [Issue Tracker](https://jira.bikalabs.com/secure/Dashboard.jspa) · [Community](https://github.com/bikalabs/Bika-LIMS/wiki/Community)
