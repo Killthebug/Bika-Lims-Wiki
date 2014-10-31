@@ -18,7 +18,7 @@ If you haven't done yet, please review the information about the community chann
 
 ### Releases life-cycle
 
-Bika LIMS project developers are committed with release early, release often (RERO) philosophy in order to get more feedback from the users community and thus increase the quality of the system, both from technically and functional standpoints. Please read [Releases life-cycle](https://github.com/bikalabs/Bika-LIMS/wiki/Releases-life-cycle) to know how it works and pay special attention to section [Releases and Branches](https://github.com/bikalabs/Bika-LIMS/wiki/Releases-life-cycle#releases-and-branches) from the same document.
+Bika LIMS project developers are committed with [release early, release often (RERO)](http://en.wikipedia.org/wiki/Release_early,_release_often) philosophy in order to get more feedback from the users community and thus increase the quality of the system, both from technically and functional standpoints. Please read [Releases life-cycle](https://github.com/bikalabs/Bika-LIMS/wiki/Releases-life-cycle) to know how it works and pay special attention to section [Releases and Branches](https://github.com/bikalabs/Bika-LIMS/wiki/Releases-life-cycle#releases-and-branches) from the same document.
 
 ### Branches and Branch-per-feature (BPF) approach
 
