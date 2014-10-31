@@ -8,11 +8,15 @@ The 'generic' Bika LIMS users guide.
 #### [Import Export Templates](https://github.com/bikalabs/Bika-LIMS/wiki/Import-Export-Templates)
 Bulk AR Import, Generic results import.
 
+#### [Releases life-cycle](https://github.com/bikalabs/Bika-LIMS/wiki/Releases-life-cycle)
+Bika LIMS project developers are committed with [release early, release often (RERO)](http://en.wikipedia.org/wiki/Release_early,_release_often) philosophy in order to get more feedback from the users community and thus increase the quality of the system, both from technically and functional standpoints.
+
 #### [Community](https://github.com/bikalabs/Bika-LIMS/wiki/Community)
 Bika LIMS Community users lists, help and other communication channels.
 
 #### [Contribute](https://github.com/bikalabs/Bika-LIMS/wiki/Contribute)
 [Request demo access](http://demo.bikalabs.com/) and take part in testing, identifying new features. [Log bug reports and feature requests](https://jira.bikalabs.com/secure/Dashboard.jspa?selectPageId=10200). [Contribute to translations](http://demo.bikalabs.com/knowledge-centre/manual/bika-3-user-manual/house-keeping/how-to-translate-gaob-bika-3) in your home language.
+
 ***
 
 ### Administrator/Hosting Documentation
