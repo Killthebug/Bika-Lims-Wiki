@@ -14,6 +14,8 @@ Because Bika LIMS is a collaborative project, adhering to consistent development
 
 Software development conventions are important in a multi-developer project, and help developers read and understand each other's code. Please try to follow the guidelines described here. Your cooperation will improve the effectiveness of the collaboration.
 
+If you haven't done yet, please review the information about the community channels available and how to ask for help at the [Community](https://github.com/bikalabs/Bika-LIMS/wiki/Community) page.
+
 ### Releases life-cycle
 
 Bika LIMS project developers are committed with release early, release often (RERO) philosophy in order to get more feedback from the users community and thus increase the quality of the system, both from technically and functional standpoints. Please read [Releases life-cycle](https://github.com/bikalabs/Bika-LIMS/wiki/Releases-life-cycle) to know how it works and pay special attention to section [Releases and Branches](https://github.com/bikalabs/Bika-LIMS/wiki/Releases-life-cycle#releases-and-branches) from the same document.
