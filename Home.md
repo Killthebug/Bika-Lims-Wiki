@@ -54,3 +54,4 @@ Bika Lab Systems was established in 2002 (incorporated 2005), identifying a need
 **[Naralabs](http://naralabs.com)**
 
 Naralabs is a company based on Barcelona (Spain), specialized in Laboratory Information Management Systems (LIMS) and offers professional technology services and engineering, such as consulting, implementation, training, system maintenance and technical support. 
+x
