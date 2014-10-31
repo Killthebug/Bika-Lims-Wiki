@@ -10,15 +10,15 @@ You are here: [Home](https://github.com/bikalabs/Bika-LIMS/wiki) · Bika LIMS De
 
 ### Introduction
 
-Because Bika LIMS is a collaborative project, adhering to consistent development rules, code formatting, and naming conventions is especially important. Please review the guidelines for information about best practices.
+Because Bika LIMS is a collaborative project, adhering to consistent development rules. Code formatting, and naming conventions are especially important. Please review the guidelines for information about best practices.
 
-Software development conventions are important in a multi-developer project, and help developers read and understand each other's code. Please try to follow the guidelines described here. Your cooperation will improve the effectiveness of the collaboration.
+Software development conventions are important in a multi-developer project,and help developers read and understand each other's code. Please try to follow the guidelines described here. Your cooperation improves the effectiveness of the collaboration.
 
-If you haven't done yet, please review the information about the community channels available and how to ask for help at the [Community](https://github.com/bikalabs/Bika-LIMS/wiki/Community) page.
+If you haven't done so yet, please review the information about the community channels available and how to ask for help at the [Community](https://github.com/bikalabs/Bika-LIMS/wiki/Community) page.
 
 ### Releases life-cycle
 
-Bika LIMS project developers are committed with [release early, release often (RERO)](http://en.wikipedia.org/wiki/Release_early,_release_often) philosophy in order to get more feedback from the users community and thus increase the quality of the system, both from technically and functional standpoints. Please read [Releases life-cycle](https://github.com/bikalabs/Bika-LIMS/wiki/Releases-life-cycle) to know how it works and pay special attention to section [Releases and Branches](https://github.com/bikalabs/Bika-LIMS/wiki/Releases-life-cycle#releases-and-branches) from the same document.
+Bika LIMS project developers are committed to [release early, release often (RERO)](http://en.wikipedia.org/wiki/Release_early,_release_often) philosophy in order to get more feedback from the users community and thus increase the quality of the system, both from technically and functional standpoints. Please read [Releases life-cycle](https://github.com/bikalabs/Bika-LIMS/wiki/Releases-life-cycle) to know how it works and pay special attention to section [Releases and Branches](https://github.com/bikalabs/Bika-LIMS/wiki/Releases-life-cycle#releases-and-branches) from the same document.
 
 ### Branches and Branch-per-feature (BPF) approach
 
