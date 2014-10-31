@@ -20,7 +20,7 @@ Bika LIMS project developers are committed with release early, release often (RE
 
 ### Branches and Branch-per-feature (BPF) approach
 
-Bika LIMS software development is based on Branch-per-feature approach. Before going further, please take your time to read thoroughly the [*Branch-per-feature post, Adam Dimirtuk's, 2012*](http://dymitruk.com/blog/2012/02/05/branch-per-feature/) and [*A pragmatic guide to the Branch Per Feature git branching strategy, Katherine Bailey, 2013*](https://www.acquia.com/blog/pragmatic-guide-branch-feature-git-branching-strategy) posts.
+Bika LIMS software development is based on Branch-per-feature approach. Before going further, please take your time to read thoroughly the [*A successful Git branching model, Vincent Driessen, 2010*](http://nvie.com/posts/a-successful-git-branching-model/), [*Branch-per-feature post, Adam Dimirtuk's, 2012*](http://dymitruk.com/blog/2012/02/05/branch-per-feature/) and [*A pragmatic guide to the Branch Per Feature git branching strategy, Katherine Bailey, 2013*](https://www.acquia.com/blog/pragmatic-guide-branch-feature-git-branching-strategy) posts.
 
 #### hotfix/next branch
 
