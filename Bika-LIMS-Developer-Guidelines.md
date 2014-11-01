@@ -26,48 +26,58 @@ BPF adheres to git-flow with additional constraints:
 
 1) Committing directly to any hotfix branch is not permitted.  All changes to hotfix branches are submitted as pull requests, and the complete test log (with no failures) must be included in the pull request text.
 
-2) Committing directly to the develop branch is permitted only in the case of trivial modifications. The distinction between trivial and important commits is a subjective one. When
+2) Committing directly to the develop branch is permitted only in the case of trivial modifications. The distinction between trivial and important commits is a subjective one. 
+
+When
 
 * Multiple files or functions are modified
-* The changes caused some refactoring not directly related to it
-* More than 100 lines are changed, even for simple modifications
-* You feel the need for code review, or have questions
+* The modification caused refactoring not directly related
+* More than 100 lines are changed, also for simple modifications
+* You favour a code review or have questions
 
 the commit is not trivial, please branch from develop.
 
-3) BPF branches may not be merged into develop until automated tests pass
+3) BPF branches are not be merged into develop until automated tests pass
 
-4) BPF branches written by a single coder must be reviewed by at least one other, and should not be merged into develop by the original coder
+4) BPF branches written by a single coder must be reviewed by at least one other and should not be merged into develop by the original coder
 
 #### hotfix/next branch
 
-Only bug fixes and very small enhancements are allowed to hotfix/next branch. This branch is only used for updates (minor releases) and is regularly merged to develop. If you want to fix a bug, create a fork from hotfix/next and fix the bug there. When finished, you can do a pull request to bikalabs' hotfix/next, including the JIRA's ID issue number, a deescription of the fix and the full log obtained after running the bika.lims Robot Tests. Remember also to update the CHANGELOG.txt. 
+Only bug fixes and very small enhancements are allowed in the hotfix/next branch. This branch is only used for updates (minor releases) and is regularly merged to develop. 
+
+If you need to fix a bug, create a fork from hotfix/next and fix the bug there. When finished, do a pull request to hotfix/next, including the [BIka Issue Tracker](https://jira.bikalabs.com), a description of the fix and the full  bika.lims Robot Test log after running it. 
+
+Remember also to update the CHANGELOG.txt. 
 
 If all goes well, the Bika LIMS source code maintainers will merge your pull request into hotfix/next.
 
 #### develop branch
 
-The develop branch is the base branch for new features and enhancements. In consequence, all branch-per-features should be created from develop.
+The develop branch is the base for new features and enhancements. All branches per features (BPFs) must be created from develop.
 
 ### Best practices
 
 Adapted from *[Kepler's project development guide](https://kepler-project.org/developers/reference/software-development-guidelines)*
 
-1. Try not to hinder other developers
-    - Make sure code compiles and passes all tests before committing it. 
-    - Try to minimize the impact to other developers. Use branch-per-features approach.
+**Try not to hinder other developers**
+* Make sure code compiles and passes all tests before committing
+* Minimise the impact on other developers, use the branch-per-features approach
 
-2. Commits should be neat, portable and documented:
-    - Indent the code using spaces instead of tabs, 4 spaces per tab.
-    - Try to use 80-characters per line at maximum
-    - Use appropriate, descriptive names for classes and variables
-    - Comment the classes, methods and whatever. Better to be in excess than in lack.
-    - Remove extraneous code that is not used
+**Commits should be neat, portable and documented**
+* Indent the code using spaces instead of tabs, 4 spaces per 'tab'
+* 80 Characters per line max
+* Use meaningful, descriptive names for classes and variables
+* Comment classes, methods and everything else. More is better
+* Remove stale code not used
 
-3. Communicate with other developers
-    - Use the IRC channel and dev lists
-    - Commit frequently, in small and logically related patches with good log messages
+**Communicate with other developers**
+* Use the IRC channel and dev lists
+* Commit frequently, in small and logically related patches with good log messages
 
-In addition, try to follow the [PEP-8 Style guide for Python Code](http://legacy.python.org/dev/peps/pep-0008/) in general.
+In addition, please follow the [PEP-8 Style guide for Python Code](http://legacy.python.org/dev/peps/pep-0008/) in general.
 
-We also recommend that people write short, to-the-point methods that encapsulate a very specific behavior, rather than long procedural functions. If your methods are longer that 30-40 lines of code, or if they have extensive conditional blocks or switch statements, they might be broken up into several methods. But this is very subjective. Related to this is the importance of factoring out common procedures into their own classes or methods; if you find yourself writing the same type of functionality multiple times, it's definitely time to refactor.
+We also expect coders to write short, to-the-point methods that encapsulate a very specific behaviour, rather than long procedural functions.
+
+If your methods are longer that 30-40 lines of code, or if they have extensive conditional blocks or switch statements, break them up into more methods. 
+
+Related and equally important, is factoring common procedures into their own classes or methods. When you find yourself writing the same type of functionality more than once, it is time to refactor.
