@@ -16,22 +16,22 @@ Please review the community channels for assistance on the [Community](https://g
 
 ### Releases life-cycle
 
-Bika LIMS project developers are committed to [release early, release often](http://en.wikipedia.org/wiki/Release_early,_release_often) to get better feedback from the user community and increase the quality of the system both from technical and functional view points. Please see [Release life-cycles](https://github.com/bikalabs/Bika-LIMS/wiki/Releases-life-cycle) for more details. Pay special attention to section [Releases and Branches](https://github.com/bikalabs/Bika-LIMS/wiki/Releases-life-cycle#releases-and-branches).
+Bika LIMS project developers are committed to [release early, release often (RERO)](http://en.wikipedia.org/wiki/Release_early,_release_often) to get better feedback from the user community and increase the quality of the system both from technical and functional perspectives. Please see [Release life-cycles](https://github.com/bikalabs/Bika-LIMS/wiki/Releases-life-cycle) for more details. Pay special attention to section [Releases and Branches](https://github.com/bikalabs/Bika-LIMS/wiki/Releases-life-cycle#releases-and-branches).
 
 ### Branches and Branch-per-feature (BPF) approach
 
-Bika LIMS software development is based on Branch-per-feature approach. Before going further, please take your time to read thoroughly the [*A successful Git branching model, Vincent Driessen, 2010*](http://nvie.com/posts/a-successful-git-branching-model/), [*Branch-per-feature post, Adam Dimirtuk's, 2012*](http://dymitruk.com/blog/2012/02/05/branch-per-feature/) and [*A pragmatic guide to the Branch Per Feature git branching strategy, Katherine Bailey, 2013*](https://www.acquia.com/blog/pragmatic-guide-branch-feature-git-branching-strategy) posts.
+Bika LIMS software development uses a Branch-per-feature approach. Before continuing, please read the [*A successful Git branching model (Vincent Driessen, 2010)*](http://nvie.com/posts/a-successful-git-branching-model/), [*Branch-per-feature (Adam Dimirtuk, 2012)*](http://dymitruk.com/blog/2012/02/05/branch-per-feature/) and [*A pragmatic guide to the Branch Per Feature git branching strategy (Katherine Bailey, 2013)*](https://www.acquia.com/blog/pragmatic-guide-branch-feature-git-branching-strategy).
 
-The sources adhere to git-flow with the following additional constraints:
+BPF adheres to git-flow with additional constraints:
 
-1) Committing directly to any hotfix branch is not permitted.  All changes to hotfix branches must be submitted as pull requests, and the complete test log (with no failures) should be included in the text of the pull request.
+1) Committing directly to any hotfix branch is not permitted.  All changes to hotfix branches are submitted as pull requests, and the complete test log (with no failures) must be included in the pull request text.
 
-2) Committing directly to the develop branch is permitted, but only in the case of trivial changes.  The distinction between trivial and non-trivial changes is a subjective one, but there are some guidelines:
+2) Committing directly to the develop branch is permitted only in the case of trivial modifications. The distinction between trivial and important commits is a subjective one. When
 
-    - Multiple files or functions are changed
-    - The changes caused some refactoring which was not directly related to the issue
-    - More than 100 lines are changed (even simple changes)
-    - You feel the need for code review, or have questions about your code
+* Multiple files or functions are changed
+* The changes caused some refactoring which was not directly related to the issue
+* More than 100 lines are changed (even simple changes)
+* You feel the need for code review, or have questions about your code
 
 In these cases, you will need to branch from develop.
 
