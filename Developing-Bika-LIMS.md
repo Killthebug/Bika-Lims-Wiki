@@ -2,7 +2,9 @@ You are here: [Home](https://github.com/bikalabs/Bika-LIMS/wiki) · Developing B
 ***
 ### How-tos, Tips and Examples
 
-- ##### [Configuring the development environment](https://github.com/bikalabs/Bika-LIMS/wiki/Configuring-a-Bika-LIMS-development-environment)
+#### [Configuring the development environment](https://github.com/bikalabs/Bika-LIMS/wiki/Configuring-a-Bika-LIMS-development-environment)
+
+Before beginning, you will need to install a some tools and create a development copy of the source.
 
 #### Import/Export tools
 
