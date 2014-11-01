@@ -25,9 +25,9 @@ You must edit `buildout.cfg`.  You will need to add or edit the "develop = " sta
 
 > Remember to run `bin/buildout` again.
 
-6) Customise Bika LIMS
+6) Next steps
 
-Join the bika-developers list at http://lists.sourceforge.net/lists/listinfo/bika-developers, and the IRC channel at irc.freenode.net/#bika immediately. We will be happy to help you acheive the highest code quality with your customisation project.
+- Join the bika-developers list at http://lists.sourceforge.net/lists/listinfo/bika-developers, and the IRC channel at irc.freenode.net/#bika immediately. We will be happy to help you acheive the highest code quality with your customisation project.
 
-### Read the excellent [Plone developer documentation](http://docs.plone.org/develop/index.html).
+- Read the excellent [Plone developer documentation](http://docs.plone.org/develop/index.html).
 
