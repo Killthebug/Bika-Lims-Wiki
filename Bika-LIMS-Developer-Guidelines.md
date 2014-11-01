@@ -45,7 +45,7 @@ the commit is not trivial, please branch from develop.
 
 Only bug fixes and very small enhancements are allowed in the hotfix/next branch. This branch is only used for updates (minor releases) and is regularly merged to develop. 
 
-If you need to fix a bug, create a fork from hotfix/next and fix the bug there. When finished, do a pull request to hotfix/next, including the [BIka Issue Tracker](https://jira.bikalabs.com), a description of the fix and the full  bika.lims Robot Test log after running it. 
+If you need to fix a bug, create a fork from hotfix/next and fix the bug there. When finished, do a pull request to hotfix/next, including the [Tracker](https://jira.bikalabs.com) ID, a description of the fix and the full  bika.lims Robot Test log after running it. 
 
 Remember also to update the CHANGELOG.txt. 
 
