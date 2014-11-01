@@ -24,9 +24,10 @@ Bika LIMS software development uses a Branch-per-feature approach. Before contin
 
 BPF adheres to git-flow with additional constraints:
 
-1) Committing directly to any hotfix branch is not permitted.  All changes to hotfix branches are submitted as pull requests, and the complete test log (with no failures) must be included in the pull request text.
+**Committing directly to hotfix branches is not permitted**
+All changes to hotfix branches are submitted as pull requests, and the complete test log (with no failures) must be included in the pull request text.
 
-2) Committing directly to the develop branch is permitted only in the case of trivial modifications. The distinction between trivial and important commits is a subjective one. 
+**Only of trivial modifications may be Committed directly to the develop branch**
 
 When
 
@@ -37,9 +38,10 @@ When
 
 the commit is not trivial, please branch from develop.
 
-3) BPF branches are not be merged into develop until automated tests pass
+**BPF branches are not be merged into develop until automated tests pass**
 
-4) BPF branches written by a single coder must be reviewed by at least one other and should not be merged into develop by the original coder
+**BPF branches by a single coder must be reviewed by at least one other**
+And should not be merged into develop by the original coder
 
 #### hotfix/next branch
 
