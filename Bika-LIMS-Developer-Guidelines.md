@@ -10,21 +10,34 @@ You are here: [Home](https://github.com/bikalabs/Bika-LIMS/wiki) · Bika LIMS De
 
 ### Introduction
 
-Because Bika LIMS is a collaborative project, adhering to consistent development rules. Code formatting, and naming conventions are especially important. Please review the guidelines for information about best practices.
-
 Software development conventions are important in a multi-developer projects and help developers read and understand each other's code. Please try to follow the guidelines described here. Your cooperation improves the effectiveness of the collaboration.
 
 Please review the community channels for assistance on the [Community](https://github.com/bikalabs/Bika-LIMS/wiki/Community) page if you haven't done so yet.
 
 ### Releases life-cycle
 
-Bika LIMS project developers are committed to [RERO (release early, release often)](http://en.wikipedia.org/wiki/Release_early,_release_often) to get better feedback from the user community to increase the quality of the system, both from technical and functional view points. Please see [Release life-cycles](https://github.com/bikalabs/Bika-LIMS/wiki/Releases-life-cycle) for how it functions. Pay special attention to section [Releases and Branches](https://github.com/bikalabs/Bika-LIMS/wiki/Releases-life-cycle#releases-and-branches).
+Bika LIMS project developers are committed to [release early, release often](http://en.wikipedia.org/wiki/Release_early,_release_often) to get better feedback from the user community and increase the quality of the system both from technical and functional view points. Please see [Release life-cycles](https://github.com/bikalabs/Bika-LIMS/wiki/Releases-life-cycle) for more details. Pay special attention to section [Releases and Branches](https://github.com/bikalabs/Bika-LIMS/wiki/Releases-life-cycle#releases-and-branches).
 
 ### Branches and Branch-per-feature (BPF) approach
 
 Bika LIMS software development is based on Branch-per-feature approach. Before going further, please take your time to read thoroughly the [*A successful Git branching model, Vincent Driessen, 2010*](http://nvie.com/posts/a-successful-git-branching-model/), [*Branch-per-feature post, Adam Dimirtuk's, 2012*](http://dymitruk.com/blog/2012/02/05/branch-per-feature/) and [*A pragmatic guide to the Branch Per Feature git branching strategy, Katherine Bailey, 2013*](https://www.acquia.com/blog/pragmatic-guide-branch-feature-git-branching-strategy) posts.
 
-**TO BE COMPLETED**
+The sources adhere to git-flow with the following additional constraints:
+
+1) Committing directly to any hotfix branch is not permitted.  All changes to hotfix branches must be submitted as pull requests, and the complete test log (with no failures) should be included in the text of the pull request.
+
+2) Committing directly to the develop branch is permitted, but only in the case of trivial changes.  The distinction between trivial and non-trivial changes is a subjective one, but there are some guidelines:
+
+    - Multiple files or functions are changed
+    - The changes caused some refactoring which was not directly related to the issue
+    - More than 100 lines are changed (even simple changes)
+    - You feel the need for code review, or have questions about your code
+
+In these cases, you will need to branch from develop.
+
+3) BPF branches may not be merged into develop until automated tests are written and passing.
+
+4) BPF branches written by one user must be reviewed by at least one other user, and should not be merged back into develop by the user who created the code.
 
 #### hotfix/next branch
 
@@ -35,8 +48,6 @@ If all goes well, the Bika LIMS source code maintainers will merge your pull req
 #### develop branch
 
 The develop branch is the base branch for new features and enhancements. In consequence, all branch-per-features should be created from develop.
-
-**TO BE COMPLETED**
 
 ### Best practices
 
