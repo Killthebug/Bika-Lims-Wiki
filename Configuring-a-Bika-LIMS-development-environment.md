@@ -2,11 +2,11 @@ Steps to configuring a Bika LIMS development environment
 
 1) Install Plone and Bika LIMS
 
-Follow the [Bika-LIMS installation instructions](https://github.com/bikalabs/Bika-LIMS/wiki/Bika-LIMS-Installation)
+Follow the [Bika-LIMS installation instructions](https://github.com/bikalabs/Bika-LIMS/wiki/Bika-LIMS-Installation).
 
 2) Install and configure git
 
-Follow these steps: [Github: Set Up Git](https://help.github.com/articles/set-up-git)
+Follow these steps: [Github: Set Up Git](https://help.github.com/articles/set-up-git).
 
 3) Fork and Clone the Bika-LIMS sources
 
@@ -29,6 +29,6 @@ All done!
 
 5) Next steps
 
-### Read the excellent [Plone developer documentation](http://docs.plone.org/develop/index.html)
+### Read the excellent [Plone developer documentation](http://docs.plone.org/develop/index.html).
 
 - Join the bika-developers list at http://lists.sourceforge.net/lists/listinfo/bika-developers, and the IRC channel at irc.freenode.net/#bika immediately. We will be happy to help you acheive the highest code quality with your customisation project.
