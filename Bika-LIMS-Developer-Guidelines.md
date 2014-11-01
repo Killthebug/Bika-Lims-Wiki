@@ -28,16 +28,16 @@ BPF adheres to git-flow with additional constraints:
 
 2) Committing directly to the develop branch is permitted only in the case of trivial modifications. The distinction between trivial and important commits is a subjective one. When
 
-* Multiple files or functions are changed
-* The changes caused some refactoring which was not directly related to the issue
-* More than 100 lines are changed (even simple changes)
-* You feel the need for code review, or have questions about your code
+* Multiple files or functions are modified
+* The changes caused some refactoring not directly related to it
+* More than 100 lines are changed, even for simple modifications
+* You feel the need for code review, or have questions
 
-In these cases, you will need to branch from develop.
+the commit is not trivial, please branch from develop.
 
-3) BPF branches may not be merged into develop until automated tests are written and passing.
+3) BPF branches may not be merged into develop until automated tests pass
 
-4) BPF branches written by one user must be reviewed by at least one other user, and should not be merged back into develop by the user who created the code.
+4) BPF branches written by a single coder must be reviewed by at least one other, and should not be merged into develop by the original coder
 
 #### hotfix/next branch
 
