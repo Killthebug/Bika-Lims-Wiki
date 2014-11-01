@@ -2,6 +2,8 @@ You are here: [Home](https://github.com/bikalabs/Bika-LIMS/wiki) · Developing B
 ***
 ### How-tos, Tips and Examples
 
+- ##### [Configuring the development environment](https://github.com/bikalabs/Bika-LIMS/wiki/Configuring-a-Bika-LIMS-development-environment)
+
 #### Import/Export tools
 
 - ##### [Creating an instrument import interface](https://github.com/bikalabs/Bika-LIMS/wiki/creating-an-instrument-import-interface)
