@@ -1,4 +1,4 @@
-You are here: [Home](https://github.com/bikalabs/Bika-LIMS/wiki) · Releases life-cycle
+You are here: [Home](https://github.com/bikalabs/Bika-LIMS/wiki) · Release cycle
 ***
 ### Table of Contents
 1. [Introduction](#introduction)
