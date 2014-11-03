@@ -1,6 +1,6 @@
 You are here: [Home](https://github.com/bikalabs/Bika-LIMS/wiki) · Developing Bika LIMS
 ***
-### How-tos, Tips and Examples
+### How-Tos, Tips and Examples
 
 #### [Configuring the development environment](https://github.com/bikalabs/Bika-LIMS/wiki/Configuring-a-Bika-LIMS-development-environment)
 
@@ -27,7 +27,7 @@ Before beginning, you will need to install a some tools and create a development
 
 - ##### [Translations and localisation](https://github.com/bikalabs/Bika-LIMS/wiki/Translations-and-localisation)
 
-    Bika uses zope.i18n and gettext to translate strings. This is the Plone standard, and the process is adapted from several plone addons.
+    Bika uses zope.i18n and gettext to translate strings. This is the Plone standard, and the process is adapted from several Plone add-ons.
 
 - ##### [External ID Server](https://github.com/bikalabs/Bika-LIMS/wiki/External-ID-server)
 
@@ -39,8 +39,8 @@ Before beginning, you will need to install a some tools and create a development
 
 - ##### [Top level Entity Relationship Diagram (ERD)](https://github.com/bikalabs/Bika-LIMS/wiki/Top-level-ERD)
 
-#### How To's
+#### How-Tos
 
-- ##### [Choos a WebBrowser to Test](https://github.com/bikalabs/Bika-LIMS/wiki/Choos-a-WebBrowser-to-Test)
+- ##### [Choice of Browser for testing](https://github.com/bikalabs/Bika-LIMS/wiki/Choos-a-WebBrowser-to-Test)
 
-   How to test with your prefered browser.
+   How to test with your preferred browser.
