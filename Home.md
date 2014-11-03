@@ -30,7 +30,7 @@ Plone deployment documentation for Ubuntu.
 
 - [Bika LIMS Developer Guidelines](https://github.com/bikalabs/Bika-LIMS/wiki/Bika-LIMS-Developer-Guidelines)
 
-Because Bika LIMS is a collaborative project, adhering to consistent development rules, code formatting, and naming conventions is especially important. Please review the guidelines for information about best practices.
+Because Bika LIMS is a collaborative project, adhering to consistent development rules, code formatting, naming conventions, branch and release management is very important. Please review the guidelines for information about best practices.
 
 - [Developing Bika LIMS](https://github.com/bikalabs/Bika-LIMS/wiki/Developing-Bika-LIMS)
 
