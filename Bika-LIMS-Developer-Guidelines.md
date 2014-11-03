@@ -57,7 +57,7 @@ If all goes well, the Bika LIMS source code maintainers will merge your pull req
 
 The develop branch is the base for new features and enhancements. All branches per features (BPFs) must be created from develop.
 
-### Best practices
+### Best Practice
 
 Adapted from *[Kepler's project development guide](https://kepler-project.org/developers/reference/software-development-guidelines)*
 
