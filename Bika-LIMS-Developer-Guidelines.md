@@ -14,7 +14,7 @@ Software development conventions are important in a multi-developer projects and
 
 Please review the community channels for assistance on the [Community](https://github.com/bikalabs/Bika-LIMS/wiki/Community) page if you haven't done so yet.
 
-### Releases life-cycle
+### Release Cycle
 
 Bika LIMS project developers are committed to [release early, release often (RERO)](http://en.wikipedia.org/wiki/Release_early,_release_often) to get better feedback from the user community and increase the quality of the system both from technical and functional perspectives. Please see [Release life-cycles](https://github.com/bikalabs/Bika-LIMS/wiki/Releases-life-cycle) for more details. Pay special attention to section [Releases and Branches](https://github.com/bikalabs/Bika-LIMS/wiki/Releases-life-cycle#releases-and-branches).
 
