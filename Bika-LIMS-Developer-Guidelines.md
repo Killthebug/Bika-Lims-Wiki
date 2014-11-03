@@ -2,7 +2,7 @@ You are here: [Home](https://github.com/bikalabs/Bika-LIMS/wiki) · Bika LIMS De
 ***
 ### Table of Contents
 1. [Introduction](#introduction)
-2. [Releases life-cycle](#releases-life-cycle)
+2. [Release Cycle](#releases-life-cycle)
 3. [Branches and Branch-per-feature (BPF) approach](#branches-and-branch-per-feature-bpf-approach)
 4. [Best practices](#best-practices)
 
