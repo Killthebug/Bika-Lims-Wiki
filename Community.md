@@ -1,5 +1,7 @@
 You are here: [Home](https://github.com/bikalabs/Bika-LIMS/wiki) · Community
 ***
+### The Bika Collective at www.Bikalabs.org
+Please follow Bika 'community' events and developments at www.bikalabs.org.
 
 ### Community help
 
