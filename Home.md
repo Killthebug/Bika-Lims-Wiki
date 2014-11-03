@@ -34,7 +34,7 @@ Because Bika LIMS is a collaborative project, adhering to consistent development
 
 - [Developing Bika LIMS](https://github.com/bikalabs/Bika-LIMS/wiki/Developing-Bika-LIMS)
 
-Information for all Bika LIMS developers.
+Import/Export tools, customisation of report templates, 
 
 - [Instrument interfacing](https://github.com/bikalabs/Bika-LIMS/wiki/creating-an-instrument-import-interface).
 
