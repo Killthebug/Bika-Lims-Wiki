@@ -144,6 +144,8 @@ Add `bika.lims` to the `eggs` section
         Products.PloneHotfix20130618
         bika.lims
 
+#### 3. Run buildout
+
 Run `buildout` from cmd **(** `⊞ Win` **>>** _type:_ `cmd` **>>** `↵ Enter` **)**
 
     cd C:\Plone43
@@ -173,7 +175,7 @@ Verify successful build from the output of the installer script, which should in
 
 > If you see the following error: `Error 5: Access is denied` Refer to: [Troubleshooting: B) Privileges](#7-troubleshooting)
 
-#### 3. Setting up Plone Services
+#### 4. Setting up Plone Services
 
 Run cmd as Administrator **(** `⊞ Win` **>>** _type:_ `cmd` **>>** `CTRL`+`⇧ Shift`+`↵ Enter` **)**
 
@@ -190,11 +192,14 @@ Install, Start and bring your newly created instance to the Foreground.  _this s
 If you see the following error: `OSError: cannot load library libcairo.so.2`
 Refer to: [Troubleshooting: A) Dependencies](#7-troubleshooting)
 
-If you see `INFO Zope Ready to handle requests` then the server is running.  Point your web browser at __http://localhost:8080__
+If you see `INFO Zope Ready to handle requests` then the server is running.
+
+Open a browser and go to http://localhost:8080/. Select "Add Plone Site", and ensure that the Bika LIMS option is checked, then submit the form.
 
 Congratulations!! you have a successful build of Bika LIMS on Windows.
 
 #### 4. Notes
+
 * If you are having trouble starting `bin\instance.exe fg` as follows:
 
     The program seems already to be running. If you believe not,
