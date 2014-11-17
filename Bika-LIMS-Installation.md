@@ -23,7 +23,7 @@ If you have any issues you should read the following pages carefully:
 
 The most commonly used OS for running Plone and Bika LIMS is Linux, although this process should be fairly similar for all systems on which Plone is supported.
 
-#### 1. Install the following system packages
+#### Install the following system packages
 
 You can paste the following command directly into a terminal:
 
@@ -31,13 +31,13 @@ You can paste the following command directly into a terminal:
 
 The version numbers of dependencies are known to be valid in Ubuntu 12.04, 14.04, and Debian Wheezy.  If you use a different distribution or version, you may need to find the versions of these packages which are provided with your system.
 
-#### 2. Download and Install Plone
+#### Download and Install Plone
 
 Download the latest stable release of the Plone Unified Installer from http://plone.org/products/plone/releases and unpack the file. The following installation command will be sufficient for most purposes:
 
     ./install.sh --target=/usr/local/Plone --build-python --static-lxml zeo
 
-#### 3. Add Bika LIMS to your buildout.cfg
+#### Add Bika LIMS to your buildout.cfg
 
 In your new Plone folder, you will see a folder named `zeocluster`.  Change directory into this folder, and edit `buildout.cfg`.  Find the section beginning with `eggs=`, and add `bika.lims` to the existing entries.
 
@@ -63,7 +63,7 @@ Verify successful build from the output of the installer script, which should in
 
 If the buildout finished successfully, an 'adminPassword.txt' will be created automatically inside the Plone instance folder. It contains the super-user credentials you'll need to login with.
 
-#### 4. Test run
+#### Test run
 
 To start Plone in debug mode, run this command:
 
@@ -71,11 +71,11 @@ To start Plone in debug mode, run this command:
 
 Note any error messages, and take corrective action if required. If no errors are encountered, you can press Control+C to exit.
 
-#### 5. Add a new Plone site
+#### Add a new Plone site
 
 Open a browser and go to http://localhost:8080/.  Select "Add Plone Site", ensure that the Bika LIMS option is checked, then submit the form.
 
-#### 6. Start working with Bika LIMS
+#### Start working with Bika LIMS
 
     bin/plonectl start
 
@@ -89,23 +89,23 @@ If a new release of the LIMS is made available, the following procedure will upg
 
 > Please read [Releases life-cycle](https://github.com/bikalabs/Bika-LIMS/wiki/Releases-life-cycle) documentation before upgrading your Bika LIMS instance.
 
-#### 1. Backup
+#### Backup
 
 Make a full backup of your instance before continuing:
 
     bin/snapshotbackup
 
-#### 2. Buildout
+#### Buildout
 
 Run buildout with the "-n" option, to retreive the latest version of Bika LIMS and it's dependencies.
 
     bin/buildout -n
 
-#### 3. Restart Plone
+#### Restart Plone
 
     bin/plonectl restart
 
-#### 3. Migrate
+#### Migrate
 
 Start Plone and login to your site as admin.  Go to site-setup, and click `Add-ons`.  Find Bika LIMS in the list of activated addons, and click the "bika.lims" upgrade button.
 
