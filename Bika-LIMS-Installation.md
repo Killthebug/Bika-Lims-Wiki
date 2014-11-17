@@ -171,9 +171,9 @@ Verify successful build from the output of the installer script, which should in
 
 > If the download is interrupted, simply run bin/buildout again.  The process will be resumed.
 
-> If you see the following error: `Error: Couldn't install: cffi 0.8.2` Refer to: [Troubleshooting: A) Dependencies](#7-troubleshooting)
+> If you see the following error: `Error: Couldn't install: cffi 0.8.2` Refer to: [Troubleshooting: A) Dependencies](#6-troubleshooting)
 
-> If you see the following error: `Error 5: Access is denied` Refer to: [Troubleshooting: B) Privileges](#7-troubleshooting)
+> If you see the following error: `Error 5: Access is denied` Refer to: [Troubleshooting: B) Privileges](#6-troubleshooting)
 
 #### 4. Setting up Plone Services
 
@@ -198,7 +198,7 @@ Open a browser and go to http://localhost:8080/. Select "Add Plone Site", and en
 
 Congratulations!! you have a successful build of Bika LIMS on Windows.
 
-#### 4. Notes
+#### 5. Notes
 
 * If you are having trouble starting `bin\instance.exe fg` as follows:
 
@@ -218,7 +218,7 @@ __OR__
     -Search for Plone 4.3
     -Try Starting or Stopping it along with your instance
 
-#### 5. Troubleshooting
+#### 6. Troubleshooting
 
 A) __Dependencies__
 You need to install some dependencies manually
