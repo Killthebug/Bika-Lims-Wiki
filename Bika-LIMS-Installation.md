@@ -5,7 +5,7 @@
 4. [Upgrading Bika LIMS](#upgrading-bika-lims)
 5. [Windows Installation Steps](#windows-installation-steps)
 6. [Extras](#extras)
-
+7. [Complete Buildout Configuration](#complete-buildout-configuration)
 ***
 
 ### Introduction
@@ -239,3 +239,97 @@ Finally, add raven 4.0.4 into [versions] section
         raven = 4.0.4
 
 Run bin/buildout, and restart Plone.
+
+7. Complete Buildout Configuration
+
+Following the instructions above, you should have a buildout that looks something like the one you see below.  This was taken from a Linux system running Plone 4.3.3:
+
+    [buildout]
+    extends =
+        base.cfg
+        versions.cfg
+    find-links +=
+        http://dist.plone.org/release/4.3.3-pending
+    
+    effective-user = bika
+    buildout-user = bika
+    need-sudo = no
+    
+    site-hostname = your.site.com
+    
+    varnish-port = 8080
+    client1-port = 8085
+    client2-port = 8086
+    zeoserver-port = 8089
+    
+    eggs =
+        Plone
+        Pillow
+        bika.lims
+    
+    develop =
+        src/bika.lims
+    
+    zcml =
+    var-dir=${buildout:directory}/var
+    backups-dir=${buildout:var-dir}
+    user=admin:adminsecret
+    deprecation-warnings = off
+    verbose-security = off
+    
+    parts =
+        zeoserver
+        client1
+        client2
+        backup
+        zopepy
+        unifiedinstaller
+        varnish
+        varnish-build
+    
+    [zeoserver]
+    <= zeoserver_base
+    recipe = plone.recipe.zeoserver
+    zeo-address = 127.0.0.1:${buildout:zeoserver-port}
+    
+    [client1]
+    <= client_base
+    recipe = plone.recipe.zope2instance
+    zeo-address = ${zeoserver:zeo-address}
+    http-address = ${buildout:client1-port}
+    
+    [client2]
+    <= client_base
+    recipe = plone.recipe.zope2instance
+    zeo-address = ${zeoserver:zeo-address}
+    http-address = ${buildout:client2-port}
+    
+    [varnish-build]
+    recipe = zc.recipe.cmmi
+    url = ${varnish:download-url}
+    
+    [varnish]
+    recipe = plone.recipe.varnish
+    daemon = ${buildout:directory}/parts/varnish-build/sbin/varnishd
+    bind = 127.0.0.1:${buildout:varnish-port}
+    balancer = round-robin
+    backends =
+        ${buildout:effective-user}:127.0.0.1:${buildout:client1-port}
+        ${buildout:effective-user}:127.0.0.1:${buildout:client2-port}
+    cache-size = 256M
+    mode = foreground
+    user = ${buildout:buildout-user}
+    first-byte-timeout = 300s
+    between-bytes-timeout = 300s
+    
+    [versions]
+    setuptools = 0.7.2
+    zc.buildout = 2.2.1
+    ZopeSkel = 2.21.2
+    Cheetah = 2.2.1
+    Products.DocFinderTab = 1.0.5
+    buildout.sanitycheck = 1.0b1
+    collective.recipe.backup = 2.17
+    plone.recipe.unifiedinstaller = 4.3.1
+    zopeskel.dexterity = 1.5.4.1
+    zopeskel.diazotheme = 1.1
