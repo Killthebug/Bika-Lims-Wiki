@@ -8,6 +8,7 @@
 
 ***
 ### Introduction
+
 This document details the installation steps for Bika LIMS version 3.1.
 
 ***
@@ -25,13 +26,13 @@ sudo apt-get install python-dev build-essential libffi-dev libpcre3-dev gcc auto
 
 #### 2. Install Plone
 
-Download the latest stable release of the Plone Unified Installer from http://plone.org/products/plone/releases and unpack the file.
+You should read the [Plone Installation Documentation](http://docs.plone.org/manage/installing/index.html).
 
-The basic command for installing a development environment in Linux:
+Download the latest stable release of the Plone Unified Installer from http://plone.org/products/plone/releases and unpack the file. The basic Plone installation command is:
 
     ./install.sh --target=/path/to/Plone --build-python --static-lxml zeo
 
-Refer to the [Plone Installation Documentation](http://docs.plone.org/manage/installing/index.html).
+This installation will be sufficient for testing, development and implementation.  To learn about installing a production Plone server please read the [Guide to deploying and installing Plone in production](http://docs.plone.org/manage/deploying/index.html).
 
 #### 3. Add Bika LIMS to your buildout.cfg
 
@@ -43,8 +44,6 @@ Find the section beginning with `eggs=`, and add `bika.lims` to the existing ent
         Plone
         Pillow
         bika.lims
-
-> Indentation in buildout.cfg is important, and should be kept uniform for all lines in the eggs section.
 
 Save the file, and then run bin/buildout again.  Buildout will download and install all remaining dependencies.
 
@@ -77,15 +76,13 @@ Verify successful build from the output of the installer script, which should in
     plone.jsonapi.core = 0.4
     *************** /PICKED VERSIONS ***************
 
-> If errors appear while buildout is installing dependencies, ignore them.
+> The "PICKED VERSIONS" block above indicates a successful buildout.  If errors appear while buildout is installing dependencies, you can safely ignore them if this message is displayed.
 
 If the buildout finished successfully, an 'adminPassword.txt' will have been created automatically inside the Plone instance folder. It contains the super-user credentials you'll need to create the Bika site.
 
 #### 4. Test run in foreground, noting error messages if any and taking corrective action if so:
 
-```bash
-bin/plonectl fg
-```
+    bin/plonectl fg
 
 #### 5. Add the Plone instance with Bika LIMS extension
 
@@ -93,9 +90,7 @@ Open a browser and go to http://localhost:8080/.  Select "Add Plone Site", and e
 
 #### 6. Start working with Bika LIMS
 
-```bash
-bin/plonectl start
-```
+    bin/plonectl start
 
 Open a browser and go to your Bika LIMS instance: http://localhost:8080/Plone
 
@@ -103,11 +98,9 @@ Open a browser and go to your Bika LIMS instance: http://localhost:8080/Plone
 ### Linux Installer Script
 For unix-like systems, you can download and run an installer script.  This should install the prerequisites, Plone and Bika LIMS in /home/bika and start the server in foreground on port 8080.  You can obtain and run the script by running the following commands:
 
-```bash
-wget -nc --no-check-certificate https://raw.githubusercontent.com/bikalabs/Bika-LIMS/develop/install.sh
-chmod +x install.sh
-sudo ./install.sh
-````
+    wget -nc --no-check-certificate https://raw.githubusercontent.com/bikalabs/Bika-LIMS/develop/install.sh
+    chmod +x install.sh
+    sudo ./install.sh
 
 ***
 ### Upgrading Bika LIMS
@@ -124,9 +117,7 @@ Stop Plone, and make a full backup of your instance before continuing.
 
 Run buildout with the "-n" option, to retreive the latest version of Bika LIMS and it's dependencies.
 
-```bash
-bin/buildout -n
-```
+    bin/buildout -n
 
 #### 3. Migrate
 
@@ -136,98 +127,93 @@ Start Plone and login to your site as the admin user.  Go to site-setup, and cli
 ### Windows Installation Steps
 
 #### 1. Download and Install Plone
-Currently Bika LIMS for Windows requires a .Plone 4.3.1 installation.
 
-* Download the Windows Installer from http://plone.org/products/plone/releases/4.3.1
-* Execute the installer and follow through the steps
+Download the latest version of the Plone 4.3.x Unified Installer from http://plone.org/products/plone/releases.  Execute the installer and follow through the steps.  For more information about installing Plone on Windows, visit: http://docs.plone.org/manage/installing/index.html
 
-For this guide we will assume the default location of `C:\Plone43`
-For more information visit: http://docs.plone.org/manage/installing/index.html
+> For this guide we will assume the default location of `C:\Plone43`
 
-#### 3. Installing Bika LIMS
-* Open `C:\Plone43\buildout.cfg` in a text editor
-* Add **bika.lims** to the **eggs**
-```
-eggs =
-    Plone
-    Pillow
-    Products.PloneHotfix20130618
-    bika.lims
-```
+#### 2. Installing Bika LIMS
 
-* Run __buildout__ from cmd **(** `⊞ Win` **>>** _type:_ `cmd` **>>** `↵ Enter` **)**
-```
-cd C:\Plone43
-bin\buildout.exe
-```
-* A __successful__ buildout should output:
-```
-Updating run-instance.
-Updating service.
-*************** PICKED VERSIONS ****************
-[versions]
-bika.lims = 3.0
-cairocffi = 0.5.4
-cairosvg = 1.0.7
-cssselect = 0.9.1
-gpw = 0.2
-magnitude = 0.9.3
-products.advancedquery = 3.0.3
-products.atextensions = 1.1
-pycparser = 2.10
-pyphen = 0.9.1
+Open `C:\Plone43\buildout.cfg` in a text editor
 
-*************** /PICKED VERSIONS ***************
-```
+Add `bika.lims` to the `eggs` section
 
-_If you see the following error:_ `Error: Couldn't install: cffi 0.8.2`
+    eggs =
+        Plone
+        Pillow
+        Products.PloneHotfix20130618
+        bika.lims
+
+Run `buildout` from cmd **(** `⊞ Win` **>>** _type:_ `cmd` **>>** `↵ Enter` **)**
+
+    cd C:\Plone43
+    bin\buildout.exe
+
+Verify successful build from the output of the installer script, which should include a list of found versions like this:
+
+    *************** PICKED VERSIONS ****************
+    [versions]
+    bika.lims = 3.0
+    cairocffi = 0.5.4
+    cairosvg = 1.0.7
+    cssselect = 0.9.1
+    gpw = 0.2
+    magnitude = 0.9.3
+    products.advancedquery = 3.0.3
+    products.atextensions = 1.1
+    pycparser = 2.10
+    pyphen = 0.9.1
+    *************** /PICKED VERSIONS ***************
+
+> The "PICKED VERSIONS" block above indicates a successful buildout.  If errors appear while buildout is installing dependencies, you can safely ignore them if this message is displayed.
+
+> If the download is interrupted, simply run bin/buildout again.  The process will be resumed.
+
+> If you see the following error: `Error: Couldn't install: cffi 0.8.2` Refer to: [Troubleshooting: A) Dependencies](#7-troubleshooting)
+
+> If you see the following error: `Error 5: Access is denied` Refer to: [Troubleshooting: B) Privileges](#7-troubleshooting)
+
+#### 3. Setting up Plone Services
+
+Run cmd as Administrator **(** `⊞ Win` **>>** _type:_ `cmd` **>>** `CTRL`+`⇧ Shift`+`↵ Enter` **)**
+
+Navigate to the Plone root directory
+
+    cd C:\Plone43
+
+Install, Start and bring your newly created instance to the Foreground.  _this should stop the default Plone 4.3 Service_
+
+    bin\instance.exe install
+    bin\instance.exe start
+    bin\instance.exe fg
+
+If you see the following error: `OSError: cannot load library libcairo.so.2`
 Refer to: [Troubleshooting: A) Dependencies](#7-troubleshooting)
 
-_If you see the following error:_ `Error 5: Access is denied`
-Refer to: [Troubleshooting: B) Privileges](#7-troubleshooting)
+If you see `INFO Zope Ready to handle requests` then the server is running.  Point your web browser at __http://localhost:8080__
 
-#### 4. Setting up Plone Services
-* Run cmd as Administrator **(** `⊞ Win` **>>** _type:_ `cmd` **>>** `CTRL`+`⇧ Shift`+`↵ Enter` **)**
-* Navigate to the Plone root directory
-```
-cd C:\Plone43
-```
-* Install, Start and bring your newly created instance to the Foreground
-_this should stop the default Plone 4.3 Service_
-```
-bin\instance.exe install
-bin\instance.exe start
-bin\instance.exe fg
-```
-_If you see the following error:_ `OSError: cannot load library libcairo.so.2`
-Refer to: [Troubleshooting: A) Dependencies](#7-troubleshooting)
+Congratulations!! you have a successful build of Bika LIMS on Windows.
 
-* If you see `INFO Zope Ready to handle requests` then the server is running
-* Point your web browser at __http://localhost:8080__
-Congradulations!! you have a successful build of Bika LIMS 3.0 on Plone 3.4.1
-You can now create a site
-
-#### 5. Notes
+#### 4. Notes
 * If you are having trouble starting `bin\instance.exe fg` as follows:
-```
-The program seems already to be running. If you believe not,
-check for dangling .pid and .lock files in var/.
-```
-* You can try the following steps:
-```
--Find the running process id by opening the .pid file within your instance's var/ directory.
--Open the Windows Task Manager and stop the running process with the above identifier.
--Delete all .pid and .lock files in your instance's var/ directory.
--Start your instance.
-```
-__OR__
-```
--Run services.msc
--Search for Plone 4.3
--Try Starting or Stopping it along with your instance
-```
 
-#### 7. Troubleshooting
+    The program seems already to be running. If you believe not,
+    check for dangling .pid and .lock files in var/.
+
+* You can try the following steps:
+
+    -Find the running process id by opening the .pid file within your instance's var/ directory.
+    -Open the Windows Task Manager and stop the running process with the above identifier.
+    -Delete all .pid and .lock files in your instance's var/ directory.
+    -Start your instance.
+
+__OR__
+
+    -Run services.msc
+    -Search for Plone 4.3
+    -Try Starting or Stopping it along with your instance
+
+#### 5. Troubleshooting
 
 A) __Dependencies__
 You need to install some dependencies manually
@@ -239,7 +225,6 @@ B) __Privileges__
 Open `Explorer` __>>__ Navigate to `C:\` __>>__ Right-Click on the `Plone43` directory __>>__ select `Properties`
 Select the `Security` Tab __>>__  Click `Edit`  __>>__ Check `Full Control` Allow for necessary User / Group
 Click  `Apply`
-
 
 ***
 ### Extras
@@ -261,20 +246,18 @@ Add raven to your buildout.cfg in the eggs= section
 
 Then add the following snippet to your [instance] section.  If you are using a ZEO configuration, add this to all [clientX] sections:
 
-```
-event-log-custom =
-    %import raven.contrib.zope
-    <logfile>
-      path ${buildout:directory}/var/client1/event.log
-      level INFO
-      max-size 5 MB
-      old-files 5
-    </logfile>
-    <sentry>
-      dsn http://90723864025d4520b084acee225ddb8a:f9f7dd0163a74fbeac4e24a5123b3d39@sentry.bikalabs.com/2
-      level ERROR
-    </sentry>
-```
+    event-log-custom =
+        %import raven.contrib.zope
+        <logfile>
+          path ${buildout:directory}/var/client1/event.log
+          level INFO
+          max-size 5 MB
+          old-files 5
+        </logfile>
+        <sentry>
+          dsn http://90723864025d4520b084acee225ddb8a:f9f7dd0163a74fbeac4e24a5123b3d39@sentry.bikalabs.com/2
+          level ERROR
+        </sentry>
 
 Add raven 4.0.4 into [versions] section
 
