@@ -1,7 +1,3 @@
-# Start and manage Plone with supervisor:
-
-***
-
 First install and start supervisor:
 
     sudo apt-get install supervisor
