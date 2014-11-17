@@ -4,7 +4,7 @@
 3. [Linux Installer Script](#linux-installer-script)
 4. [Upgrading Bika LIMS](#upgrading-bika-lims)
 5. [Windows Installation Steps](#windows-installation-steps)
-6. [Extras](#extras)
+6. [Enable Error Reporting](#enable-error-reporting)
 7. [Complete Buildout Configuration](#complete-buildout-configuration)
 
 ***
@@ -210,9 +210,9 @@ Click  `Apply`
 
 ***
 
-### Report errors directly to Bika Lab Systems:
+### Enable error reporting
 
-To help us find and fix errors faster, please consider adding the following snippet to your test instance's buildout:
+If you have problems that are hard to diagnose or reproduce, or if you just want to help us find and fix errors faster, please consider adding the following lines to your buildout's eggs= section.  It's the easiest way to contribute!
 
     eggs =
         ...
@@ -241,7 +241,7 @@ Finally, add raven 4.0.4 into [versions] section
 
 Run bin/buildout, and restart Plone.
 
-### 7. Complete Buildout Configuration
+### Complete Buildout Configuration
 
 Following the instructions above, you should have a buildout that looks something like the one you see below.  This was taken from a Linux system running Plone 4.3.3:
 
@@ -251,33 +251,33 @@ Following the instructions above, you should have a buildout that looks somethin
         versions.cfg
     find-links +=
         http://dist.plone.org/release/4.3.3-pending
-    
+
     effective-user = bika
     buildout-user = bika
     need-sudo = no
-    
+
     site-hostname = your.site.com
-    
+
     varnish-port = 8080
     client1-port = 8085
     client2-port = 8086
     zeoserver-port = 8089
-    
+
     eggs =
         Plone
         Pillow
         bika.lims
-    
+
     develop =
         src/bika.lims
-    
+
     zcml =
     var-dir=${buildout:directory}/var
     backups-dir=${buildout:var-dir}
     user=admin:adminsecret
     deprecation-warnings = off
     verbose-security = off
-    
+
     parts =
         zeoserver
         client1
@@ -287,28 +287,28 @@ Following the instructions above, you should have a buildout that looks somethin
         unifiedinstaller
         varnish
         varnish-build
-    
+
     [zeoserver]
     <= zeoserver_base
     recipe = plone.recipe.zeoserver
     zeo-address = 127.0.0.1:${buildout:zeoserver-port}
-    
+
     [client1]
     <= client_base
     recipe = plone.recipe.zope2instance
     zeo-address = ${zeoserver:zeo-address}
     http-address = ${buildout:client1-port}
-    
+
     [client2]
     <= client_base
     recipe = plone.recipe.zope2instance
     zeo-address = ${zeoserver:zeo-address}
     http-address = ${buildout:client2-port}
-    
+
     [varnish-build]
     recipe = zc.recipe.cmmi
     url = ${varnish:download-url}
-    
+
     [varnish]
     recipe = plone.recipe.varnish
     daemon = ${buildout:directory}/parts/varnish-build/sbin/varnishd
@@ -322,7 +322,7 @@ Following the instructions above, you should have a buildout that looks somethin
     user = ${buildout:buildout-user}
     first-byte-timeout = 300s
     between-bytes-timeout = 300s
-    
+
     [versions]
     setuptools = 0.7.2
     zc.buildout = 2.2.1
