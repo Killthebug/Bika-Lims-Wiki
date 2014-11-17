@@ -7,38 +7,38 @@
 6. [Extras](#extras)
 
 ***
+
 ### Introduction
 
-This document details the installation steps for Bika LIMS version 3.1.
+If you have any issues you should read the following pages carefully:
+
+- [Plone Installation Documentation](http://docs.plone.org/manage/installing/index.html).
+
+- [Guide to deploying and installing Plone in production](http://docs.plone.org/manage/deploying/index.html).
 
 ***
+
 ### Linux Installation Steps
 
-The process should be similar for all systems on which Plone is supported.
+The most commonly used OS for running Plone and Bika LIMS is Linux, although this process should be fairly similar for all systems on which Plone is supported.
 
-#### 1. Install the following required system packages
+#### 1. Install the following system packages
 
-```bash
-sudo apt-get install python-dev build-essential libffi-dev libpcre3-dev gcc autoconf libtool pkg-config zlib1g-dev git-core libssl-dev libexpat1-dev libxslt1.1 gnuplot libpcre3 libcairo2 libpango1.0-0 libgdk-pixbuf2.0-0
-```
+You can paste the following command directly into a terminal:
 
-> The version numbers of dependencies are valid for Ubuntu 14.04.  If you use a different distribution or version, you may need to find the versions of these packages which are provided with your system.
+    sudo apt-get install build-essential python-dev git-core libffi-dev libpcre3-dev gcc autoconf libtool pkg-config zlib1g-dev apt-get install libssl-dev libexpat1-dev libxslt1.1 gnuplot libpcre3 libcairo2 libpango1.0-0 libgdk-pixbuf2.0-0
 
-#### 2. Install Plone
+The version numbers of dependencies are known to be valid in Ubuntu 12.04, 14.04, and Debian Wheezy.  If you use a different distribution or version, you may need to find the versions of these packages which are provided with your system.
 
-You should read the [Plone Installation Documentation](http://docs.plone.org/manage/installing/index.html).
+#### 2. Download and Install Plone
 
-Download the latest stable release of the Plone Unified Installer from http://plone.org/products/plone/releases and unpack the file. The basic Plone installation command is:
+Download the latest stable release of the Plone Unified Installer from http://plone.org/products/plone/releases and unpack the file. The following installation command will be sufficient for most purposes:
 
-    ./install.sh --target=/path/to/Plone --build-python --static-lxml zeo
-
-This installation will be sufficient for testing, development and implementation.  To learn about installing a production Plone server please read the [Guide to deploying and installing Plone in production](http://docs.plone.org/manage/deploying/index.html).
+    ./install.sh --target=/usr/local/Plone --build-python --static-lxml zeo
 
 #### 3. Add Bika LIMS to your buildout.cfg
 
-In your new Plone folder, you will see an instance folder called either "zinstance" or "zeocluster".  Change directory into this folder, and edit `buildout.cfg`.
-
-Find the section beginning with `eggs=`, and add `bika.lims` to the existing entries.
+In your new Plone folder, you will see a folder named `zeocluster`.  Change directory into this folder, and edit `buildout.cfg`.  Find the section beginning with `eggs=`, and add `bika.lims` to the existing entries.
 
     eggs =
         Plone
@@ -47,46 +47,32 @@ Find the section beginning with `eggs=`, and add `bika.lims` to the existing ent
 
 Save the file, and then run bin/buildout again.  Buildout will download and install all remaining dependencies.
 
-> If the download is interrupted, simply run bin/buildout again.  The process will be resumed.
-
 Verify successful build from the output of the installer script, which should include a list of found versions like this:
 
     *************** PICKED VERSIONS ****************
     [versions]
     Babel = 1.3
-    CairoSVG = 1.0.7
-    Products.ATExtensions = 1.1
-    Products.AdvancedQuery = 3.0.3
-    PyYAML = 3.11
-    Pygments = 1.6
-    Pyphen = 0.9.1
-    Werkzeug = 0.9.4
-    argh = 0.24.1
-    bpython = 0.13
-    cairocffi = 0.5.3
-    cffi = 0.8.2
-    collective.progressbar = 0.5
-    collective.wtf = 1.0b9
-    cssselect = 0.9.1
-    gpw = 0.2
-    i18ndude = 3.3.3
-    magnitude = 0.9.3
-    pathtools = 0.1.2
-    plone.api = 1.1.0
+    ...
     plone.jsonapi.core = 0.4
     *************** /PICKED VERSIONS ***************
 
 > The "PICKED VERSIONS" block above indicates a successful buildout.  If errors appear while buildout is installing dependencies, you can safely ignore them if this message is displayed.
 
-If the buildout finished successfully, an 'adminPassword.txt' will have been created automatically inside the Plone instance folder. It contains the super-user credentials you'll need to create the Bika site.
+> If the downloads are interrupted, simply run bin/buildout again.  The process will be resumed.
 
-#### 4. Test run in foreground, noting error messages if any and taking corrective action if so:
+If the buildout finished successfully, an 'adminPassword.txt' will be created automatically inside the Plone instance folder. It contains the super-user credentials you'll need to login with.
+
+#### 4. Test run
+
+To start Plone in debug mode, run this command:
 
     bin/plonectl fg
 
-#### 5. Add the Plone instance with Bika LIMS extension
+Note any error messages, and take corrective action if required. If no errors are encountered, you can press Control+C to exit.
 
-Open a browser and go to http://localhost:8080/.  Select "Add Plone Site", and ensure that the Bika LIMS option is checked, then submit the form.
+#### 5. Add a new Plone site
+
+Open a browser and go to http://localhost:8080/.  Select "Add Plone Site", ensure that the Bika LIMS option is checked, then submit the form.
 
 #### 6. Start working with Bika LIMS
 
@@ -95,23 +81,18 @@ Open a browser and go to http://localhost:8080/.  Select "Add Plone Site", and e
 Open a browser and go to your Bika LIMS instance: http://localhost:8080/Plone
 
 ***
-### Linux Installer Script
-For unix-like systems, you can download and run an installer script.  This should install the prerequisites, Plone and Bika LIMS in /home/bika and start the server in foreground on port 8080.  You can obtain and run the script by running the following commands:
 
-    wget -nc --no-check-certificate https://raw.githubusercontent.com/bikalabs/Bika-LIMS/develop/install.sh
-    chmod +x install.sh
-    sudo ./install.sh
-
-***
 ### Upgrading Bika LIMS
-
-**Please, take a look at [Releases life-cycle](https://github.com/bikalabs/Bika-LIMS/wiki/Releases-life-cycle) documentation before upgrading your Bika LIMS instance.**
 
 If a new release of the LIMS is made available, the following procedure will upgrade your existing installation to use the new packages.
 
+> Please read [Releases life-cycle](https://github.com/bikalabs/Bika-LIMS/wiki/Releases-life-cycle) documentation before upgrading your Bika LIMS instance.
+
 #### 1. Backup
 
-Stop Plone, and make a full backup of your instance before continuing.
+Make a full backup of your instance before continuing:
+
+    bin/snapshotbackup
 
 #### 2. Buildout
 
@@ -119,20 +100,25 @@ Run buildout with the "-n" option, to retreive the latest version of Bika LIMS a
 
     bin/buildout -n
 
+#### 3. Restart Plone
+
+    bin/plonectl restart
+
 #### 3. Migrate
 
-Start Plone and login to your site as the admin user.  Go to site-setup, and click `Add-ons`.  Find Bika LIMS in the list of activated addons, and click the "bika.lims" upgrade button.
+Start Plone and login to your site as admin.  Go to site-setup, and click `Add-ons`.  Find Bika LIMS in the list of activated addons, and click the "bika.lims" upgrade button.
 
 ***
+
 ### Windows Installation Steps
 
 #### 1. Download and Install Plone
 
-Download the latest version of the Plone 4.3.x Unified Installer from http://plone.org/products/plone/releases.  Execute the installer and follow through the steps.  For more information about installing Plone on Windows, visit: http://docs.plone.org/manage/installing/index.html
+Download the latest version of the Plone 4.3 Unified Installer from http://plone.org/products/plone/releases.  Execute the installer and follow through the steps.
 
 > For this guide we will assume the default location of `C:\Plone43`
 
-#### 2. Installing Bika LIMS
+#### 2. Add Bika LIMS to your buildout.cfg
 
 Open `C:\Plone43\buildout.cfg` in a text editor
 
@@ -146,24 +132,17 @@ Add `bika.lims` to the `eggs` section
 
 #### 3. Run buildout
 
-Run `buildout` from cmd **(** `⊞ Win` **>>** _type:_ `cmd` **>>** `↵ Enter` **)**
+Save and close the file, start cmd as Administrator (Click start, type "cmd", and press CTRL+SHIFT+ENTER), and then run bin/buildout.  Buildout will download and install all remaining dependencies.
 
     cd C:\Plone43
-    bin\buildout.exe
+    bin\buildout
 
 Verify successful build from the output of the installer script, which should include a list of found versions like this:
 
     *************** PICKED VERSIONS ****************
     [versions]
     bika.lims = 3.0
-    cairocffi = 0.5.4
-    cairosvg = 1.0.7
-    cssselect = 0.9.1
-    gpw = 0.2
-    magnitude = 0.9.3
-    products.advancedquery = 3.0.3
-    products.atextensions = 1.1
-    pycparser = 2.10
+    ...
     pyphen = 0.9.1
     *************** /PICKED VERSIONS ***************
 
@@ -177,42 +156,39 @@ Verify successful build from the output of the installer script, which should in
 
 #### 4. Setting up Plone Services
 
-Run cmd as Administrator **(** `⊞ Win` **>>** _type:_ `cmd` **>>** `CTRL`+`⇧ Shift`+`↵ Enter` **)**
-
 Navigate to the Plone root directory
 
     cd C:\Plone43
 
-Install, Start and bring your newly created instance to the Foreground.  _this should stop the default Plone 4.3 Service_
+Plone and Windows do not always play well together.  Install, Start and bring your newly created instance to the Foreground  (this should stop the default Plone 4.3 Service)
 
     bin\instance.exe install
     bin\instance.exe start
     bin\instance.exe fg
 
-If you see the following error: `OSError: cannot load library libcairo.so.2`
-Refer to: [Troubleshooting: A) Dependencies](#7-troubleshooting)
+> If you see the following error: `OSError: cannot load library libcairo.so.2` Refer to: [Troubleshooting: A) Dependencies](#7-troubleshooting)
 
-If you see `INFO Zope Ready to handle requests` then the server is running.
+When you see `INFO Zope Ready to handle requests` the server is ready.
 
-Open a browser and go to http://localhost:8080/. Select "Add Plone Site", and ensure that the Bika LIMS option is checked, then submit the form.
+Open a browser and go to http://localhost:8080/. Select "Add Plone Site", ensure that the Bika LIMS option is checked, then submit the form.
 
 Congratulations!! you have a successful build of Bika LIMS on Windows.
 
 #### 5. Notes
 
-* If you are having trouble starting `bin\instance.exe fg` as follows:
+If you are having trouble starting `bin\instance.exe fg` as follows:
 
     The program seems already to be running. If you believe not,
     check for dangling .pid and .lock files in var/.
 
-* You can try the following steps:
+You can try the following steps:
 
     -Find the running process id by opening the .pid file within your instance's var/ directory.
     -Open the Windows Task Manager and stop the running process with the above identifier.
     -Delete all .pid and .lock files in your instance's var/ directory.
     -Start your instance.
 
-__OR__
+    __OR__
 
     -Run services.msc
     -Search for Plone 4.3
@@ -232,24 +208,16 @@ Select the `Security` Tab __>>__  Click `Edit`  __>>__ Check `Full Control` Allo
 Click  `Apply`
 
 ***
-### Extras
 
-#### Using apache to redirect http requests to Bika LIMS
-Set up a domain name for the LIMS site URL and add the Apache mapping noting the Zope server port used by the instance (default 8080).
-Follow the instructions here: https://github.com/bikalabs/Bika-LIMS/blob/3.01a/docs/APACHE.md
+### Report errors directly to Bika Lab Systems:
 
-#### Start with a completely fresh instance::
-Rename/move the Data.fs.* files in var/filestorage (after stopping instance).  Running buildout again will regenerate these files.
+To help us find and fix errors faster, please consider adding the following snippet to your test instance's buildout:
 
-#### Report errors directly to Bika Lab Systems:
-
-Add raven to your buildout.cfg in the eggs= section
-
-    eggs = 
+    eggs =
         ...
         raven
 
-Then add the following snippet to your [instance] section.  If you are using a ZEO configuration, add this to all [clientX] sections:
+Then, in all [client] or [instance] sections, insert this:
 
     event-log-custom =
         %import raven.contrib.zope
@@ -264,10 +232,60 @@ Then add the following snippet to your [instance] section.  If you are using a Z
           level ERROR
         </sentry>
 
-Add raven 4.0.4 into [versions] section
+Finally, add raven 4.0.4 into [versions] section
 
-    [versions] 
+    [versions]
         ...
         raven = 4.0.4
 
 Run bin/buildout, and restart Plone.
+
+### Start and manage Plone with supervisor:
+
+First install and start supervisor:
+
+    sudo apt-get install supervisor
+    /etc/init.d/supervisor start
+
+Then create and edit a new configuration file in /etc/supervisor/conf.d:
+
+    sudo vi /etc/supervisor/conf.d/bika.conf
+
+Insert the following contents into the file, and edit them to suit your needs:
+
+    [program:bika-zeoserver]
+    directory=/usr/local/Plone/zeocluster
+    command=/usr/local/Plone/zeocluster/bin/zeoserver fg
+    user=plone_daemon
+    redirect_stderr=true
+    stopwaitsecs=60
+    autostart=false
+    
+    [program:bika-client1]
+    directory=/usr/local/Plone/zeocluster
+    command=/usr/local/Plone/zeocluster/bin/client1 console
+    user=plone_daemon
+    redirect_stderr=true
+    stopwaitsecs=60
+    autostart=false
+    
+    [program:bika-client2]
+    directory=/usr/local/Plone/zeocluster
+    command=/usr/local/Plone/zeocluster/bin/client2 console
+    user=plone_daemon
+    redirect_stderr=true
+    stopwaitsecs=60
+    autostart=false
+
+After editing the config file, you need to run the following command:
+
+    sudo supervisorctl reread
+    sudo supervisorctl update
+
+Plone will now start with each reboot, and supervisor will restart Plone if anything goes wrong.
+
+> Be careful!  Supervisor takes control of the Plone processes, and you can no longer manipulate them directly.  Instead, you must always stop, start and restart Plone using supervisor:
+
+    sudo supervisorctl stop bika-zeoserver bika-client1 bika-client2
+    sudo supervisorctl start bika-zeoserver bika-client1 bika-client2
+    sudo supervisorctl restart bika-zeoserver bika-client1 bika-client2
