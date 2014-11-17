@@ -241,7 +241,7 @@ Finally, add raven 4.0.4 into [versions] section
 
 Run bin/buildout, and restart Plone.
 
-7. Complete Buildout Configuration
+### 7. Complete Buildout Configuration
 
 Following the instructions above, you should have a buildout that looks something like the one you see below.  This was taken from a Linux system running Plone 4.3.3:
 
