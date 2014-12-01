@@ -35,7 +35,9 @@ The version numbers of dependencies are known to be valid in Ubuntu 12.04, 14.04
 
 Download the latest stable release of the Plone Unified Installer from http://plone.org/products/plone/releases and unpack the file. The following installation command will be sufficient for most purposes:
 
-    ./install.sh --target=/usr/local/Plone --build-python --static-lxml zeo
+    ./install.sh --target=/usr/local/Plone --build-python zeo
+
+> If you receive an lxml error, you may need to include the `--static-lxml` flag in the above command.
 
 #### Add Bika LIMS to your buildout.cfg
 
