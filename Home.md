@@ -40,7 +40,7 @@ Import/Export tools, customisation of report templates, [Translations and locali
 
 The steps required to export analyses and import results.
 
-- [Releases life-cycle](https://github.com/bikalabs/Bika-LIMS/wiki/Releases-life-cycle)
+- [Release cycle](https://github.com/bikalabs/Bika-LIMS/wiki/Release-cycle)
 
 Bika LIMS project developers are committed to the [release early, release often](http://en.wikipedia.org/wiki/Release_early,_release_often) philosophy in order to get more feedback from the user community and thus increase the quality of the system, both from technical and functional standpoints.
 
