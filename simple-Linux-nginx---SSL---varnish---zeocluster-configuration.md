@@ -20,8 +20,7 @@ edit the following:
     /etc/supervisor/conf.d/plone.conf
 
 /etc/nginx/sites-enabled/test.com.conf
-======================================
-
+----------------------
     upstream plone {
         # varnish port, or port of zeoclient
         server localhost:8090;
@@ -64,8 +63,7 @@ edit the following:
     }
 
 /etc/nginx/proxy_params
-=======================
-
+----------------------
     proxy_set_header Host $host;
     proxy_set_header X-Real-IP $remote_addr;
     proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
@@ -82,8 +80,7 @@ edit the following:
     proxy_read_timeout 600;
 
 /etc/nginx/ssl/test.com/nginx.conf
-==================================
-
+----------------------
     ssl_certificate /etc/nginx/ssl/test.com/crt;
     ssl_certificate_key /etc/nginx/ssl/test.com/key;
     ssl_session_timeout 10m;
@@ -92,8 +89,7 @@ edit the following:
     ssl_prefer_server_ciphers on;
 
 /etc/varnish/default.vcl
-========================
-    backend zeoclient_1 {
+----------------------    backend zeoclient_1 {
         .host = "127.0.0.1";
         .port = "8085";
         .connect_timeout = 10s;
@@ -202,8 +198,7 @@ edit the following:
     }
 
 /etc/default/varnish
-====================
-
+----------------------
     START=yes
     NFILES=131072
     MEMLOCK=82000
@@ -230,8 +225,7 @@ edit the following:
                  -s ${VARNISH_STORAGE}"
 
 /etc/supervisor/conf.d/plone.conf
-=================================
-    [program:zeoserver]
+----------------------    [program:zeoserver]
     directory=/home/plone/test.com/zeocluster
     command=/home/plone/test.com/zeocluster/bin/zeoserver fg
     user=plone_daemon
