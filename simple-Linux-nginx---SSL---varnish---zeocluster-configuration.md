@@ -89,7 +89,9 @@ edit the following:
     ssl_prefer_server_ciphers on;
 
 /etc/varnish/default.vcl
-----------------------    backend zeoclient_1 {
+----------------------
+
+backend zeoclient_1 {
         .host = "127.0.0.1";
         .port = "8085";
         .connect_timeout = 10s;
