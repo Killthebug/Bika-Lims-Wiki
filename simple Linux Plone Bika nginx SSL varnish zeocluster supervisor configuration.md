@@ -265,5 +265,10 @@ edit the following:
     command=memmon -p client1=700MB -p client2=700MB
     events=TICK_60
 
+And now
+-------
+
+    sudo supervisorctl restart client1 client2
+
 
 
