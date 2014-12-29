@@ -5,7 +5,6 @@
 4. [Upgrading Bika LIMS](#upgrading-bika-lims)
 5. [Windows Installation Steps](#windows-installation-steps)
 6. [Enable Error Reporting](#enable-error-reporting)
-7. [Complete Buildout Configuration](#complete-buildout-configuration)
 
 ***
 
