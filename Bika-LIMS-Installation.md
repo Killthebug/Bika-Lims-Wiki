@@ -17,7 +17,7 @@ If you have any issues you should read the following pages carefully:
 
 - [Guide to deploying and installing Plone in production](http://docs.plone.org/manage/deploying/index.html).
 
-- [simple Linux Plone Bika nginx SSL varnish zeocluster Supervisor configuration](https://github.com/bikalabs/Bika-LIMS/wiki/simple-Linux-Plone-Bika-nginx-SSL-varnish-zeocluster-supervisor-configuration)
+- [Simple Linux Plone Bika nginx SSL varnish zeocluster Supervisor configuration](https://github.com/bikalabs/Bika-LIMS/wiki/simple-Linux-Plone-Bika-nginx-SSL-varnish-zeocluster-supervisor-configuration)
 ***
 
 ### Linux Installation Steps
