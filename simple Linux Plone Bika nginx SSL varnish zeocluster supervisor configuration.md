@@ -268,7 +268,16 @@ edit the following:
 And now
 -------
 
-    sudo supervisorctl restart client1 client2
+    sudo supervisorctl restart client2 stop
+
+or for a debug client
+
+    sudo supervisorctl stop client1
+    cd /home/plone/test.com/zeocluster
+    bin/plonectl client2 debug
+    sudo supervisorctl start client1
+
+
 
 
 
