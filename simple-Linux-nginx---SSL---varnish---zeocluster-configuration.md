@@ -2,11 +2,11 @@ Tested with Ubuntu and Debian.
 
 We want:
 
-    - nginx virtualhost ln port 80 for test.com
-    - ssl config
-    - varnish http cache and load balancer
-    - zeoclients
-    - regular buildout stuff
+- nginx virtualhost ln port 80 for test.com
+- ssl config
+- varnish http cache and load balancer
+- zeoclients
+- regular buildout stuff
 
 Install Plone, then `sudo apt-get install varnish nginx`.
 
