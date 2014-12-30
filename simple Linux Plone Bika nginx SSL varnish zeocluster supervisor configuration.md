@@ -63,6 +63,36 @@ edit the following:
         }
     }
 
+If you have a verified SSL certificate (non-self-signed) for test.com, you can either use the following:
+
+    # Varnish
+    upstream plone {
+        server localhost:8090;
+    }
+   
+    # http
+    server {
+        listen 80 default;
+    
+        # ALWAYS redirect to https!
+        rewrite ^(.*) https://$host/$1 redirect;
+    }
+    
+    # https
+    server {
+        listen 443 ssl;
+    
+        ssl_certificate      /etc/nginx/ssl/test.com.crt;
+        ssl_certificate_key  /etc/nginx/ssl/test.com.key;
+    
+        location / {
+            proxy_pass http://plone_backend/VirtualHostBase/https/test.com:443/Plone/VirtualHostRoot/;
+            # if there is no Plone site yet, use this
+            proxy_pass http://plone_backend/VirtualHostBase/https/test.com:443/VirtualHostRoot/;
+            include /etc/nginx/proxy_params;
+        }
+    }
+
 /etc/nginx/proxy_params
 ----------------------
 
