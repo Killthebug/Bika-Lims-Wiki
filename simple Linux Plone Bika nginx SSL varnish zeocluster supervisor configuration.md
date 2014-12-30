@@ -63,7 +63,7 @@ edit the following:
         }
     }
 
-If you have a verified SSL certificate (non-self-signed) for test.com, you can either use the following:
+If you have a verified SSL certificate (non-self-signed) for test.com, you can place the certificate and key at /etc/nginx/ssl and use the following configuration:
 
     # Varnish
     upstream plone {
