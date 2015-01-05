@@ -309,6 +309,11 @@ or for a debug client
     bin/plonectl client2 debug
     sudo supervisorctl start client1
 
+You can also start, stop, or restart the entire server:
+
+    sudo supervisorctl stop all
+    sudo supervisorctl start all
+    sudo supervisorctl restart all
 
 
 
