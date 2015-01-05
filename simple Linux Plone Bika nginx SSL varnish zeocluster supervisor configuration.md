@@ -1,16 +1,16 @@
-Tested with Ubuntu and Debian.
+This page documents the configuration of a basic production Plone site (test.com) in Debian or Ubuntu.
 
-We want:
+In order to have a correct and decently-performing Plone installation, we will need:
 
-- nginx virtualhost ln port 80 for test.com
-- ssl config
+- nginx on port 80 to handle incoming connections
+- ssl configuration
 - varnish http cache and load balancer
 - zeoclients
 - regular buildout stuff
 
-Install Plone, then `sudo apt-get install varnish nginx`.
+First, install Plone and Bika LIMS as normal, then `sudo apt-get install varnish nginx`.
 
-edit the following:
+You will need to edit the following files (careful to adjust the port numbers and site-name to fit your installation):
 
     /etc/nginx/sites-enabled/test.com.conf
     /etc/nginx/proxy_params
