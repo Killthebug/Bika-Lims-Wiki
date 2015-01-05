@@ -8,7 +8,9 @@ In order to have a correct and decently-performing Plone installation, we will n
 - zeoclients
 - regular buildout stuff
 
-First, install Plone and Bika LIMS as normal, then `sudo apt-get install varnish nginx`.
+First, install Plone and Bika LIMS as normal, then run:
+
+    sudo apt-get install varnish nginx
 
 You will need to edit the following files (careful to adjust the port numbers and site-name to fit your installation):
 
