@@ -14,6 +14,10 @@ Community help, distribution lists, IRC.
 
 There is no shortage of things to do!
 
+- [Supported Instrument Interfaces](https://github.com/bikalabs/Bika-LIMS/wiki/Supported-instrument-interfaces)
+
+List of instruments supported and to be developed soon.
+
 ***
 ### Hosting and Administration
 
