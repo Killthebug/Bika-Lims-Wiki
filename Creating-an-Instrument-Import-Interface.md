@@ -16,6 +16,8 @@ You are here: [Home](https://github.com/bikalabs/Bika-LIMS/wiki) · [Developing 
 
 The introduction of analyses results into Bika LIMS can be performed manually, but also automatically by using the results files generated directly by equipment or middleware software. An **instrument results file import interface** is a small part of code that parses and imports the results from those instrument-specific files into Bika LIMS. That prevents from results being entered manually by the user.
 
+Check the list of [instruments currently supported](https://github.com/bikalabs/Bika-LIMS/wiki/Supported-instrument-interfaces)
+
 ### File formats and structure
 
 The results file format and structure depends on each instrument, therefore each import interface must be developed specifically for each result file. Comma Separated Values (CSV) file format is one of the most common formats currently used, as well as Tab Separated Values (TSV) file format.
