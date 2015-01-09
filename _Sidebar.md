@@ -3,6 +3,7 @@
 * [Releases life-cycle](https://github.com/bikalabs/Bika-LIMS/wiki/Release-cycle)
 * [Community](https://github.com/bikalabs/Bika-LIMS/wiki/Community)
 * [Contribute](https://github.com/bikalabs/Bika-LIMS/wiki/Contribute)
+* [Supported Instrument Interfaces](https://github.com/bikalabs/Bika-LIMS/wiki/Supported-instrument-interfaces)
 * [Installing Bika LIMS](https://github.com/bikalabs/Bika-LIMS/wiki/Bika-LIMS-Installation)
 * [Connecting Bika LIMS](https://github.com/bikalabs/Bika-LIMS/wiki/BIKA-JSON-API)
 * [Bika LIMS Developer Guidelines](https://github.com/bikalabs/Bika-LIMS/wiki/Bika-LIMS-Developer-Guidelines)
