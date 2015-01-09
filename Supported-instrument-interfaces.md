@@ -2,7 +2,7 @@ You are here: [Home](https://github.com/bikalabs/Bika-LIMS/wiki) · User Documen
 ***
 ### Table of Contents
 1. [Introduction](#introduction)
-2. [Supported instruments on Bika LIMS 3.1.7](#supported-instruments-on-bika-lims-317)
+2. [Supported instruments on Bika LIMS 3.1.6](#supported-instruments-on-bika-lims-316)
 3. [In Scope Instruments](#in-scope-instruments)
 
 ***
@@ -11,7 +11,7 @@ You are here: [Home](https://github.com/bikalabs/Bika-LIMS/wiki) · User Documen
 
 The introduction of analyses results into Bika LIMS can be performed manually, but also automatically by using the results files generated directly by equipment or middleware software. An **instrument results file import interface** is a small part of code that parses and imports the results from those instrument-specific files into Bika LIMS. That prevents from results being entered manually by the user.
 
-### Supported instruments on Bika LIMS 3.1.7
+### Supported instruments on Bika LIMS 3.1.6
 
 - Agilent's Masshunter Quantitative. [interface](https://github.com/bikalabs/Bika-LIMS/blob/hotfix/3.1.7/bika/lims/exportimport/instruments/agilent/masshunter/quantitative.py) · [samples](https://github.com/bikalabs/Bika-LIMS/tree/hotfix/3.1.7/bika/lims/exportimport/instruments/agilent/masshunter/samples)
 - Alere PIMA Beads. [interface](https://github.com/bikalabs/Bika-LIMS/blob/hotfix/3.1.7/bika/lims/exportimport/instruments/alere/pima/beads.py) · [samples](https://github.com/bikalabs/Bika-LIMS/tree/hotfix/3.1.7/bika/lims/exportimport/instruments/alere/pima/samples)
