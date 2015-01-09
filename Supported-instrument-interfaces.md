@@ -2,7 +2,7 @@ You are here: [Home](https://github.com/bikalabs/Bika-LIMS/wiki) · User Documen
 ***
 ### Table of Contents
 1. [Introduction](#introduction)
-2. [Supported instruments by Bika LIMS 3.1.7](#supported-instruments-on-bika-lims-3.1.7)
+2. [Supported instruments on Bika LIMS 3.1.7](#supported-instruments-on-bika-lims-3.1.7)
 3. [In Scope Instruments](#in-scope-instruments)
 
 ***
