@@ -25,6 +25,7 @@ The introduction of analyses results into Bika LIMS can be performed manually, b
 ### In scope instruments
 - [Beckman Coulter Access 2](https://jira.bikalabs.com/browse/LIMS-1569)
 - [Roche Cobas Taqman 48](https://jira.bikalabs.com/browse/LIMS-1570)
+- [Bruker S1 Titan Handheld XRF](https://jira.bikalabs.com/browse/LIMS-1577)
 - [Sysmex XS-1000i](https://jira.bikalabs.com/browse/LIMS-1571)
 - [Sysmex XS-50i](https://jira.bikalabs.com/browse/LIMS-1572)
 - [Thermo Arena 20XT](https://jira.bikalabs.com/browse/LIMS-1575)
