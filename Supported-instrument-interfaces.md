@@ -23,12 +23,14 @@ The introduction of analyses results into Bika LIMS can be performed manually, b
 - Thermoscientific Gallery Ts9861. [interface](https://github.com/bikalabs/Bika-LIMS/blob/hotfix/3.1.7/bika/lims/exportimport/instruments/thermoscientific/gallery/Ts9861x.py) · [samples](https://github.com/bikalabs/Bika-LIMS/tree/hotfix/3.1.7/bika/lims/exportimport/instruments/thermoscientific/gallery/samples)
 
 ### In scope instruments
+- [Agilent 7700 ICP-MCS](https://jira.bikalabs.com/browse/LIMS-1588)
 - [Beckman Coulter Access 2](https://jira.bikalabs.com/browse/LIMS-1569)
 - [Roche Cobas Taqman 48](https://jira.bikalabs.com/browse/LIMS-1570)
 - [Bruker S1 Titan Handheld XRF](https://jira.bikalabs.com/browse/LIMS-1577)
 - [Sysmex XS-1000i](https://jira.bikalabs.com/browse/LIMS-1571)
 - [Sysmex XS-50i](https://jira.bikalabs.com/browse/LIMS-1572)
 - [Thermo Arena 20XT](https://jira.bikalabs.com/browse/LIMS-1575)
+- [Thermo iCAP 6200 ICP-AES Interface](https://jira.bikalabs.com/browse/LIMS-1589)
 - [Varion AA 240FS](https://jira.bikalabs.com/browse/LIMS-1433)
 
 **Want your instrument to be included here?**
