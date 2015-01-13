@@ -25,13 +25,13 @@ The introduction of analyses results into Bika LIMS can be performed manually, b
 ### In scope instruments
 - [Agilent 7700 ICP-MCS](https://jira.bikalabs.com/browse/LIMS-1588)
 - [Beckman Coulter Access 2](https://jira.bikalabs.com/browse/LIMS-1569)
-- BioDrop &micro;Lite
+- [BioDrop &micro;Lite](https://jira.bikalabs.com/browse/LIMS-1604)
 - [Bruker S1 Titan Handheld XRF](https://jira.bikalabs.com/browse/LIMS-1577)
-- Life technologies Qubit&reg;
+- [Life technologies Qubit&reg;](https://jira.bikalabs.com/browse/LIMS-1603)
 - [Roche Cobas Taqman 48](https://jira.bikalabs.com/browse/LIMS-1570)
 - [Sysmex XS-1000i](https://jira.bikalabs.com/browse/LIMS-1571)
 - [Sysmex XS-50i](https://jira.bikalabs.com/browse/LIMS-1572)
-- TESCAN TIMA
+- [TESCAN TIMA](https://jira.bikalabs.com/browse/LIMS-1605)
 - [Thermo Arena 20XT](https://jira.bikalabs.com/browse/LIMS-1575)
 - [Thermo iCAP 6200 ICP-AES Interface](https://jira.bikalabs.com/browse/LIMS-1589)
 - [Varion AA 240FS](https://jira.bikalabs.com/browse/LIMS-1433)
