@@ -17,7 +17,7 @@ or
 To know other possible browsers read [the table from Selenium keywords table](http://rtomac.github.io/robotframework-selenium2library/doc/Selenium2Library.html#Open%20Browser)
 
 
-## Google Chrome (In GNU/Linux)
+## Google Chrome and Chromium (In GNU/Linux)
 
 With GoogleChrome we may have some problems, consequently, a exception error will raise: _"WebDriverException: Message: 'ChromeDriver executable needs to be available in the path."_
 
@@ -25,7 +25,7 @@ The WebDriver is a tool designed to support automated testing of web apps.
 
 If GoogleChrome is going to be used to test BikaLims, then we have to follow these simple steps:
 
-1. Download the last ChromeDriver from [this google storage.](http://chromedriver.storage.googleapis.com/index.html)
+1. Download the last ChromeDriver from [this google storage.](http://chromedriver.storage.googleapis.com/index.html) (If you are using Chromium, you won't be able to use the latest version, download another.)
 2. Extract the executable and copy it to the expected location of Chrome's executable, for Linux systems is _/usr/bin/google-chrome_
 3. Change the executable permissions to allow Selenium to execute chromediver: `chmod 755 chromedriver`
 
