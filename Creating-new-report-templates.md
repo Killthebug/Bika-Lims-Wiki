@@ -23,11 +23,13 @@ buildout.cfg.
 
 Don't forget to always run buildout after changes to the buildout.cfg.  Also remember to keep the indentation in buildout.cfg consistent between lines.
 
-Now create your customization add-on in your src directory:
-
+Now, in a command prompt or shell window, change directory to the *src* folder of your Plone instance, and create your customization add-on:
+ 
     zopeskel plone customer.reports
 
-Change *customer.templates* to whatever you like.
+> You will probably need to type the full path to the `zopeskel` script.  This should be located in the *bin* folder of your Plone instance.
+
+> You can Change *customer.reports* to whatever you like.
 
 Answer the question for *Expert Mode* with *easy* and hit return on the following questions.
 
@@ -49,19 +51,17 @@ Now you have a new Plone add-on:
     ├── setup.cfg
     └── setup.py
 
+Add report templates to your addon
+----------------------------------
+
 Change into the directory *customer.reports/customer/reports* and add a new directory for your report templates.
 
     cd customer.reports/customer/reports
     mkdir templates
 
-Add some templates to the newly created directory.
+Add some templates to the newly created directory.  As a starting point you can copy the default template from the bika.lims repository.  You can browse directly to the default template by clicking [here](https://github.com/bikalabs/Bika-LIMS/tree/master/bika/lims/browser/analysisrequest/templates/reports).
 
-As a starting point you can copy the default template from 
-*bika.lims/bika/lims/browser/analysisrequest/templates/reports*.
-
-Next you have to register this directory to be found by bika.lims.
-
-Edit your configure.zcml file in the appropriate places:
+Next you have to register this directory to be found by Bika LIMS.  Edit your configure.zcml file in the appropriate places:
 
     <configure
         xmlns="http://namespaces.zope.org/zope"
@@ -79,8 +79,22 @@ Edit your configure.zcml file in the appropriate places:
        />
     </configure>
 
-In the plone:static directive you have to match the directory name to the one created in the previous step.
-*type* must be set to *reports* in order to get recognized by bika.lims as a report template resource.
-The *name* is solely for identifying your new report template in the pull-down on the publishing process.
+> In the plone:static directive you have to match the directory name to the one created in the previous step.
 
-Go back to your buildout.cfg, add the newly created add-on, run buildout and the new template will show up.
+> *type* must be set to *reports* in order to get recognized by bika.lims as a report template resource.
+
+> The *name* is solely for identifying your new report template in the pull-down on the publishing process.
+
+Install your addon using buildout
+---------------------------------
+
+Now, you need to tell Plone to use your newly created addon.  To do this, edit buildout.cfg:
+
+* Add "customer.reports" to the "eggs=" section.
+* Add "src/customer.reports" to the "develop=" section.
+
+Now, run "bin/buildout" again.  If this completes without errors, you should be able to install the new add-on in Plone.
+
+* If you already have a Plone site, you can browse to site-setup->addons, and activate the new addon.
+
+* If you are creating a new Plone site, you should select "Bika LIMS" and also select your new add-on, before clicking the "Add Plone Site" button.
