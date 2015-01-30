@@ -22,7 +22,7 @@ The introduction of analyses results into Bika LIMS can be performed manually, b
 - PANalytical Omnia Axios XRF. [interface](https://github.com/bikalabs/Bika-LIMS/blob/hotfix/3.1.7/bika/lims/exportimport/instruments/panalytical/omnia/__init__.py) · [samples](https://github.com/bikalabs/Bika-LIMS/tree/hotfix/3.1.7/bika/lims/exportimport/instruments/panalytical/omnia/samples)
 - Thermoscientific Gallery Ts9861. [interface](https://github.com/bikalabs/Bika-LIMS/blob/hotfix/3.1.7/bika/lims/exportimport/instruments/thermoscientific/gallery/Ts9861x.py) · [samples](https://github.com/bikalabs/Bika-LIMS/tree/hotfix/3.1.7/bika/lims/exportimport/instruments/thermoscientific/gallery/samples)
 
-### Coming up / under way
+### Coming up / Under way
 - [Agilent 7700 ICP-MCS](https://jira.bikalabs.com/browse/LIMS-1588)
 - [Beckman Coulter Access 2](https://jira.bikalabs.com/browse/LIMS-1569)
 - [BioDrop &micro;Lite](https://jira.bikalabs.com/browse/LIMS-1604)
