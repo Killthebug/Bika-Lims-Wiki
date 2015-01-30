@@ -3,7 +3,7 @@ You are here: [Home](https://github.com/bikalabs/Bika-LIMS/wiki) · User Documen
 ### Table of Contents
 1. [Introduction](#introduction)
 2. [Supported instruments on Bika LIMS 3.1.6](#supported-instruments-on-bika-lims-316)
-3. [Coming up / under way](#Coming-up-/-under-way)
+3. [Coming up / Under way](#Coming-up-/-under-way)
 
 ***
 
