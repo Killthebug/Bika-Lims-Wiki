@@ -33,7 +33,7 @@ The introduction of analyses results into Bika LIMS can be performed manually, b
 - [Sysmex XS-50i](https://jira.bikalabs.com/browse/LIMS-1572)
 - [TESCAN TIMA](https://jira.bikalabs.com/browse/LIMS-1605)
 - [Thermo Arena 20XT](https://jira.bikalabs.com/browse/LIMS-1575)
-- [Thermo iCAP 6200 ICP-AES Interface](https://jira.bikalabs.com/browse/LIMS-1589)
+- [Thermo iCAP 6200 ICP-AES](https://jira.bikalabs.com/browse/LIMS-1589)
 - [Varion AA 240FS](https://jira.bikalabs.com/browse/LIMS-1433)
 
 **Want your instrument to be included here?**
