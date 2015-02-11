@@ -1,6 +1,6 @@
 You are here: [Home](https://github.com/bikalabs/Bika-LIMS/wiki) · Community
 ***
-### The Bika Collective at [bikalims.org](http://www.bikalims.org)
+### The Bika Open Source LIMS Collective at [bikalims.org](http://www.bikalims.org)
 Please follow Bika 'community' events and developments at [www.bikalims.org](www.bikalims.org).
 
 ### Community help
