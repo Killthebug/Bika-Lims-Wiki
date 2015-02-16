@@ -1,4 +1,4 @@
-* [Bika LIMS User Manual](http://bika3.bikalabs.com/knowledge-centre/manual/bika-3-user-manual)
+* [Bika LIMS User Manual](http://demo.bikalabs.com/knowledge-centre/manual/bika-3-user-manual)
 * [Import Export Templates](https://github.com/bikalabs/Bika-LIMS/wiki/Import-Export-Templates)
 * [Releases life-cycle](https://github.com/bikalabs/Bika-LIMS/wiki/Release-cycle)
 * [Community](https://github.com/bikalabs/Bika-LIMS/wiki/Community)
