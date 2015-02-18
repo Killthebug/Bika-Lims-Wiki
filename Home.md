@@ -1,7 +1,7 @@
 
 ***
 <img alt="Google Summer of Code 2015" align="right" src="http://naralabs.com/images/gsoc2015.jpg">
-##### In 2015, **[Bika Open Source LIMS Collective](http://bikalims.org) mentors in the [Google Summer of Code 2015 program (GSoC 2015)](https://www.google-melange.com/gsoc/homepage/google/gsoc2015)**, a global program  that offers students stipends to write code for open source projects. 
+##### The **[Bika Open Source LIMS Collective](http://bikalims.org) mentors in the [2105 Google Summer of Code 2015 program, GSoC 2015](https://www.google-melange.com/gsoc/homepage/google/gsoc2015)**, a global program  that offers students stipends to write code for open source projects. 
 
 ##### If you are a student wishing to participate, please visit the **[Bika's GSoC 2015 Wiki Page](https://github.com/bikalabs/Bika-LIMS/wiki/GSoC-2015)**!
 
