@@ -1,3 +1,12 @@
+<img alt="Google Summer of Code 2015" align="right" src="http://naralabs.com/images/gsoc2015.jpg">
+
+***
+
+##### This year, **[Bika Open Source LIMS Collective](http://bikalims.org) is serving as a mentoring organization for [Google Summer of Code 2015 program (GSoC 2015)](https://www.google-melange.com/gsoc/homepage/google/gsoc2015)**, a global program that offers students stipends to write code for open source projects. 
+
+##### If you are a student wishing to participate, please visit the **[Bika's GSoC 2015 Wiki Page](https://github.com/bikalabs/Bika-LIMS/wiki/GSoC-2015)**
+
+***
 Bika LIMS is a high quality product that leverages the power and technical simplicity of Python programming language and the versatility and safety provided by Plone. It is a robust LIMS that can be adapted and implemented in any laboratory, from those of small size to large research and clinic laboratories.
 
 ### User documentation
