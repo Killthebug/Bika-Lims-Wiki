@@ -6,63 +6,29 @@
 ##### If you are a student wishing to participate, please visit the **[Bika's GSoC 2015 Wiki Page](https://github.com/bikalabs/Bika-LIMS/wiki/GSoC-2015)**!
 
 ***
+
 Bika LIMS is a high quality system that leverages the power and technical simplicity of the Python programming language and the versatility and security provided by Plone as a robust Laboratory Information Management System (LIMS) that can be adapted and implemented in any laboratory, from small to large research and hospital laboratories.
 
+### Current release
+**Bika LIMS 3.1.6** · 2014-12-17 · [Read more](https://github.com/bikalabs/Bika-LIMS/wiki/Changelog)
+
 ### User documentation
-
 - [Bika LIMS user manual](http://bika3.bikalabs.com/knowledge-centre/manual/bika-3-user-manual)
-
-The latest version of the user manual.
-
 - [Community resources](https://github.com/bikalabs/Bika-LIMS/wiki/Community)
-
-Community help, distribution lists, IRC.
-
 - [How to contribute](https://github.com/bikalabs/Bika-LIMS/wiki/Contribute)
-
-There is no shortage of things to do!
-
 - [Supported Instrument Interfaces](https://github.com/bikalabs/Bika-LIMS/wiki/Supported-instrument-interfaces)
 
-List of instruments supported and to be developed soon.
-
-***
 ### Hosting and Administration
-
 - [Installing Bika LIMS](https://github.com/bikalabs/Bika-LIMS/wiki/Bika-LIMS-Installation)
-
-Simple steps for installing Bika LIMS.
-
 - [Plone in production](http://docs.plone.org/manage/deploying/index.html)
 
-Plone deployment documentation for Ubuntu.
-
-***
 ### Development documentation
 
 - [Bika LIMS Developer Guidelines](https://github.com/bikalabs/Bika-LIMS/wiki/Bika-LIMS-Developer-Guidelines)
-
-Because Bika LIMS is a collaborative project, adhering to consistent development rules, code formatting, naming conventions, branch and release management is very important. Please review the guidelines for information about best practices.
-
 - [Developing Bika LIMS](https://github.com/bikalabs/Bika-LIMS/wiki/Developing-Bika-LIMS)
-
-Import/Export tools, customisation of report templates, [Translations and localisation](https://github.com/bikalabs/Bika-LIMS/wiki/Translations-and-localisation) 
-
 - [Instrument interfacing](https://github.com/bikalabs/Bika-LIMS/wiki/creating-an-instrument-import-interface).
-
-The steps required to export analyses and import results.
-
 - [Release cycle](https://github.com/bikalabs/Bika-LIMS/wiki/Release-cycle)
-
-Bika LIMS project developers are committed to the [release early, release often](http://en.wikipedia.org/wiki/Release_early,_release_often) philosophy in order to get more feedback from the user community and thus increase the quality of the system, both from technical and functional standpoints.
-
 - [Connecting Bika LIMS](https://github.com/bikalabs/Bika-LIMS/wiki/BIKA-JSON-API)
-
-Bika includes plone.jsonapi for creating, reading, updating, and deleting objects, as well as some utility methods. The JSON API is used internally for many AJAX requests, and also for implementing alternative interfaces.
-
-- Extending Bika LIMS
-
-Guides, manuals and tips on how to extend Bika LIMS.
 
 ***
 
