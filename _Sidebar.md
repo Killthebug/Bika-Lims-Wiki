@@ -6,6 +6,7 @@
 * [Community](https://github.com/bikalabs/Bika-LIMS/wiki/Community)
 * [How to Contribute](https://github.com/bikalabs/Bika-LIMS/wiki/Contribute)
 * [Supported Instruments](https://github.com/bikalabs/Bika-LIMS/wiki/Supported-instrument-interfaces)
+* [Results Import from Spreadsheet](https://github.com/bikalabs/Bika-LIMS/wiki/Results-import-from-spreadsheet)
 * [Import Export Templates](https://github.com/bikalabs/Bika-LIMS/wiki/Import-Export-Templates)
 
 **Hosting and Administration**
