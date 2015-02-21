@@ -20,6 +20,7 @@
 * [Developing Bika LIMS](https://github.com/bikalabs/Bika-LIMS/wiki/Developing-Bika-LIMS)
 * [Translations and localisation](https://github.com/bikalabs/Bika-LIMS/wiki/Translations-and-localisation)
 * [Instrument Interfacing](https://github.com/bikalabs/Bika-LIMS/wiki/creating-an-instrument-import-interface)
+* [Creating new Report Templates](https://github.com/bikalabs/Bika-LIMS/wiki/Creating-new-report-templates)
 * [Connecting Bika LIMS](https://github.com/bikalabs/Bika-LIMS/wiki/BIKA-JSON-API)
 
 **Professional Service Providers**
