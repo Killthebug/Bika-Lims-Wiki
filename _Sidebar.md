@@ -1,5 +1,6 @@
 **User Documentation**
 * [Bika LIMS User Manual](http://demo.bikalabs.com/knowledge-centre/manual/bika-3-user-manual)
+* [Releases Changelog](https://github.com/bikalabs/Bika-LIMS/wiki/Changelog)
 * [Community](https://github.com/bikalabs/Bika-LIMS/wiki/Community)
 * [How to Contribute](https://github.com/bikalabs/Bika-LIMS/wiki/Contribute)
 * [Supported Instrument Interfaces](https://github.com/bikalabs/Bika-LIMS/wiki/Supported-instrument-interfaces)
