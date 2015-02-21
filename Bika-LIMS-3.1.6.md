@@ -59,7 +59,7 @@ See [Installing Bika LIMS](https://github.com/bikalabs/Bika-LIMS/blob/0c606e0/IN
 - Setup data import improvements and fixes
 - Simplify installation with a custom Plone overview and add site
 
-## Download
+### Download
 - [Bika LIMS 3.1.6 at PyPI](https://pypi.python.org/pypi/bika.lims/3.1.6)
 - [Python egg (Python 2.6)](https://pypi.python.org/packages/2.6/b/bika.lims/bika.lims-3.1.6-py2.6.egg#md5=a46b3832c2bd13efd20cfac7de3604b8) ([md5](https://pypi.python.org/pypi?:action=show_md5&digest=a46b3832c2bd13efd20cfac7de3604b8))
 - [Python egg (Python 2.7)](https://pypi.python.org/packages/2.7/b/bika.lims/bika.lims-3.1.6-py2.7.egg#md5=135edc42993a798c6c19cc41376e2dcf) ([md5](https://pypi.python.org/pypi?:action=show_md5&digest=135edc42993a798c6c19cc41376e2dcf))
