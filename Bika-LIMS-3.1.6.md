@@ -16,7 +16,7 @@ Bika LIMS 3.1.6 is a minor release, and there is no need for further changes or 
 See [Installing Bika LIMS](https://github.com/bikalabs/Bika-LIMS/blob/0c606e0/INSTALL.rst) and/or [upgrading Bika LIMS](https://github.com/bikalabs/Bika-LIMS/blob/0c606e0/INSTALL.rst)
 
 ###After you update
-- Use the [users](http://lists.sourceforge.net/lists/listinfo/bika-users), [designers](https://groups.google.com/forum/?hl=en) and [developers](http://lists.sourceforge.net/lists/listinfo/bika-developers) lists or IRC (irc://freenode.net/#bika) if you have any question or feedback (free support),
+- Use the [users](http://lists.sourceforge.net/lists/listinfo/bika-users), [designers](https://groups.google.com/forum/?hl=en) and [developers](http://lists.sourceforge.net/lists/listinfo/bika-developers) lists or IRC ([irc://freenode.net/#bika](http://webchat.freenode.net?randomnick=1&channels=%23bika&uio=d4)) if you have any question or feedback (free support),
 - Please help us spread the word about Bika LIMS! Maybe you can write about the project on your blog, website, talk about Bika LIMS at conferences, or let your friends and colleagues know what is Bika LIMS. With your help we can grow the community!    
 - To improve Bika LIMS in your language consider [contributing to translations](https://www.transifex.com/projects/p/bika-lims/),
 - Log issues, feature requests, or bugs in the [Issue Tracker](http://jira.bikalabs.com/),
