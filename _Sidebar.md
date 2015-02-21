@@ -1,5 +1,7 @@
 [**GSoC 2015 Ideas list**](https://github.com/bikalabs/Bika-LIMS/wiki/GSoC-2015)
 
+[**Bika OS LIMS Collective**](http://www.bikalims.org)
+
 **User Documentation**
 * [Bika LIMS User Manual](http://demo.bikalabs.com/knowledge-centre/manual/bika-3-user-manual)
 * [Releases Changelog](https://github.com/bikalabs/Bika-LIMS/wiki/Changelog)
