@@ -17,17 +17,23 @@ Bika LIMS is a high quality system that leverages the power and technical simpli
 - [Community resources](https://github.com/bikalabs/Bika-LIMS/wiki/Community)
 - [How to contribute](https://github.com/bikalabs/Bika-LIMS/wiki/Contribute)
 - [Supported Instrument Interfaces](https://github.com/bikalabs/Bika-LIMS/wiki/Supported-instrument-interfaces)
+- [Results Import from Spreadsheet](https://github.com/bikalabs/Bika-LIMS/wiki/Results-import-from-spreadsheet)
 - [Import Export Templates](https://github.com/bikalabs/Bika-LIMS/wiki/Import-Export-Templates)
 
 ### Hosting and Administration
 - [Installing Bika LIMS](https://github.com/bikalabs/Bika-LIMS/wiki/Bika-LIMS-Installation)
 - [Plone in production](http://docs.plone.org/manage/deploying/index.html)
+- [Managing Plone and Bika with Supervisor](https://github.com/bikalabs/Bika-LIMS/wiki/Managing-Plone-and-Bika-LIMS-with-Supervisor)
+- [Linux + Plone + Bika + nginx + SSL + Varnish + Zeocluster + Supervisor](https://github.com/bikalabs/Bika-LIMS/wiki/simple-Linux-Plone-Bika-nginx-SSL-varnish-zeocluster-supervisor-configuration)
 
 ### Development documentation
 - [Release cycle](https://github.com/bikalabs/Bika-LIMS/wiki/Release-cycle)
 - [Bika LIMS Developer Guidelines](https://github.com/bikalabs/Bika-LIMS/wiki/Bika-LIMS-Developer-Guidelines)
 - [Developing Bika LIMS](https://github.com/bikalabs/Bika-LIMS/wiki/Developing-Bika-LIMS)
+- [Configuring a Bika LIMS development environment](https://github.com/bikalabs/Bika-LIMS/wiki/Configuring-a-Bika-LIMS-development-environment)
+- [Translations and localisation](https://github.com/bikalabs/Bika-LIMS/wiki/Translations-and-localisation)
 - [Instrument interfacing](https://github.com/bikalabs/Bika-LIMS/wiki/creating-an-instrument-import-interface).
+- [Creating new Report Templates](https://github.com/bikalabs/Bika-LIMS/wiki/Creating-new-report-templates)
 - [Connecting Bika LIMS](https://github.com/bikalabs/Bika-LIMS/wiki/BIKA-JSON-API)
 
 ***
