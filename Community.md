@@ -5,7 +5,7 @@ Please follow Bika 'community' events and developments at [www.bikalims.org](www
 
 ### Community help
 
-The members of the Bika project help everybody who needs assistance, through the Project distribution lists, the [issue tracker](http://github.com/bikalabs/Bika-LIMS/issues) or directly through the [IRC Channel](irc://freenode/bika). Everybody is welcome but you have to consider that the help provided is coming from other community members who are volunteering their time and effort to try to help you:
+The members of the Bika project help everybody who needs assistance, through the Project distribution lists, the [issue tracker](http://github.com/bikalabs/Bika-LIMS/issues) or directly through the [IRC Channel (irc://freenode/bika)](http://webchat.freenode.net?randomnick=1&channels=%23bika&uio=d4). Everybody is welcome but you have to consider that the help provided is coming from other community members who are volunteering their time and effort to try to help you:
 
 * Before looking for assistance on a particular problem first consult and check information in the documentation and/or issue tracker and attempt to resolve the problem yourself if possible.
 * If you use a distribution list, please use an understandable and appropriate title in the subject message.
