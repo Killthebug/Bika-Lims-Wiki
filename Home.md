@@ -17,17 +17,17 @@ Bika LIMS is a high quality system that leverages the power and technical simpli
 - [Community resources](https://github.com/bikalabs/Bika-LIMS/wiki/Community)
 - [How to contribute](https://github.com/bikalabs/Bika-LIMS/wiki/Contribute)
 - [Supported Instrument Interfaces](https://github.com/bikalabs/Bika-LIMS/wiki/Supported-instrument-interfaces)
+- [Import Export Templates](https://github.com/bikalabs/Bika-LIMS/wiki/Import-Export-Templates)
 
 ### Hosting and Administration
 - [Installing Bika LIMS](https://github.com/bikalabs/Bika-LIMS/wiki/Bika-LIMS-Installation)
 - [Plone in production](http://docs.plone.org/manage/deploying/index.html)
 
 ### Development documentation
-
+- [Release cycle](https://github.com/bikalabs/Bika-LIMS/wiki/Release-cycle)
 - [Bika LIMS Developer Guidelines](https://github.com/bikalabs/Bika-LIMS/wiki/Bika-LIMS-Developer-Guidelines)
 - [Developing Bika LIMS](https://github.com/bikalabs/Bika-LIMS/wiki/Developing-Bika-LIMS)
 - [Instrument interfacing](https://github.com/bikalabs/Bika-LIMS/wiki/creating-an-instrument-import-interface).
-- [Release cycle](https://github.com/bikalabs/Bika-LIMS/wiki/Release-cycle)
 - [Connecting Bika LIMS](https://github.com/bikalabs/Bika-LIMS/wiki/BIKA-JSON-API)
 
 ***
