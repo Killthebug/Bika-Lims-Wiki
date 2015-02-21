@@ -19,6 +19,6 @@
 * [Instrument Interfacing](https://github.com/bikalabs/Bika-LIMS/wiki/creating-an-instrument-import-interface)
 * [Connecting Bika LIMS](https://github.com/bikalabs/Bika-LIMS/wiki/BIKA-JSON-API)
 
-** Professional Services Providers**
+**Professional Service Providers**
 * [Bika Lab Systems](http://www.bikalabs.com)
 * [Naralabs](http://naralabs.com)
