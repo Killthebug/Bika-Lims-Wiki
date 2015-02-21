@@ -1,10 +1,17 @@
+User Documentation
 * [Bika LIMS User Manual](http://demo.bikalabs.com/knowledge-centre/manual/bika-3-user-manual)
-* [Import Export Templates](https://github.com/bikalabs/Bika-LIMS/wiki/Import-Export-Templates)
-* [Releases life-cycle](https://github.com/bikalabs/Bika-LIMS/wiki/Release-cycle)
 * [Community](https://github.com/bikalabs/Bika-LIMS/wiki/Community)
-* [Contribute](https://github.com/bikalabs/Bika-LIMS/wiki/Contribute)
+* [How to Contribute](https://github.com/bikalabs/Bika-LIMS/wiki/Contribute)
 * [Supported Instrument Interfaces](https://github.com/bikalabs/Bika-LIMS/wiki/Supported-instrument-interfaces)
+* [Import Export Templates](https://github.com/bikalabs/Bika-LIMS/wiki/Import-Export-Templates)
+
+Hosting and Administration
 * [Installing Bika LIMS](https://github.com/bikalabs/Bika-LIMS/wiki/Bika-LIMS-Installation)
-* [Connecting Bika LIMS](https://github.com/bikalabs/Bika-LIMS/wiki/BIKA-JSON-API)
-* [Bika LIMS Developer Guidelines](https://github.com/bikalabs/Bika-LIMS/wiki/Bika-LIMS-Developer-Guidelines)
+* [Plone in production](http://docs.plone.org/manage/deploying/index.html)
+
+Developer
+* [Release Cycle](https://github.com/bikalabs/Bika-LIMS/wiki/Release-cycle)
+* [Developer Guidelines](https://github.com/bikalabs/Bika-LIMS/wiki/Bika-LIMS-Developer-Guidelines)
 * [Developing Bika LIMS](https://github.com/bikalabs/Bika-LIMS/wiki/Developing-Bika-LIMS)
+* [Instrument Interfacing](https://github.com/bikalabs/Bika-LIMS/wiki/creating-an-instrument-import-interface)
+* [Connecting Bika LIMS](https://github.com/bikalabs/Bika-LIMS/wiki/BIKA-JSON-API)
