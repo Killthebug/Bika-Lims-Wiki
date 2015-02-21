@@ -55,3 +55,11 @@ See [Installing Bika LIMS](https://github.com/bikalabs/Bika-LIMS/blob/0c606e0/IN
 - JSONAPI update: always use field mutator if available
 - JSONAPI: Added 'remove' and 'getusers' methods.
 - Refactored ARSpecs, and added ResultsRange field to the AR
+
+
+### Download
+- [Bika LIMS 3.1.5 at PyPI](https://pypi.python.org/pypi/bika.lims/3.1.5)
+- [Python egg (Python 2.6)](https://pypi.python.org/packages/2.6/b/bika.lims/bika.lims-3.1.5-py2.6.egg#md5=a2be0c8692d527917c6dda9c0cfd01f0) ([md5](https://pypi.python.org/pypi?:action=show_md5&digest=a2be0c8692d527917c6dda9c0cfd01f0))
+- [Python egg (Python 2.7)](https://pypi.python.org/packages/2.7/b/bika.lims/bika.lims-3.1.5-py2.7.egg#md5=4fb000483abcb184944aee793b0163b5) ([md5](https://pypi.python.org/pypi?:action=show_md5&digest=4fb000483abcb184944aee793b0163b5))
+- [Source code (zip)](https://github.com/bikalabs/Bika-LIMS/archive/3.1.5.zip)
+- [Source code (tar.gz)](https://github.com/bikalabs/Bika-LIMS/archive/3.1.5.tar.gz)
