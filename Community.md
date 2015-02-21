@@ -5,7 +5,7 @@ Please follow Bika 'community' events and developments at [www.bikalims.org](www
 
 ### Community help
 
-The members of the Bika project help everybody who needs assistance, through the Project distribution lists, the [issue tracker](http://github.com/bikalabs/Bika-LIMS/issues) or directly through the [IRC Channel (irc://freenode/bika)](http://webchat.freenode.net?randomnick=1&channels=%23bika&uio=d4). Everybody is welcome but you have to consider that the help provided is coming from other community members who are volunteering their time and effort to try to help you:
+The members of the Bika project help everybody who needs assistance, through the Project distribution lists, the [issue tracker](http://github.com/bikalabs/Bika-LIMS/issues) or directly through the [IRC Channel (irc://freenode/#bika)](http://webchat.freenode.net?randomnick=1&channels=%23bika&uio=d4). Everybody is welcome but you have to consider that the help provided is coming from other community members who are volunteering their time and effort to try to help you:
 
 * Before looking for assistance on a particular problem first consult and check information in the documentation and/or issue tracker and attempt to resolve the problem yourself if possible.
 * If you use a distribution list, please use an understandable and appropriate title in the subject message.
@@ -18,7 +18,7 @@ The members of the Bika project help everybody who needs assistance, through the
 * [Developers](http://lists.sourceforge.net/lists/listinfo/bika-developers): Discussions of topics related to software development and architecture design of source code.
 * [Analysis and design](http://groups.google.com/forum/?hl=en#!forum/bika-design): Distribution list for the discussion of topics related to LIMS design and analysis, for example discussions about lab workflow depending on type of lab, requirement needs analysis, etc.
 * [Bika Health](http://groups.google.com/forum/?hl=en#!forum/bika-health): Specific distribution list for Bika LIMS 'Health' version.
-* [IRC Channel (irc://freenode/bika)](http://webchat.freenode.net?randomnick=1&channels=%23bika&uio=d4)
+* [IRC Channel (irc://freenode/#bika)](http://webchat.freenode.net?randomnick=1&channels=%23bika&uio=d4)
 
 ### Project repository and downloads
 
