@@ -16,6 +16,7 @@
 * [Release Cycle](https://github.com/bikalabs/Bika-LIMS/wiki/Release-cycle)
 * [Developer Guidelines](https://github.com/bikalabs/Bika-LIMS/wiki/Bika-LIMS-Developer-Guidelines)
 * [Developing Bika LIMS](https://github.com/bikalabs/Bika-LIMS/wiki/Developing-Bika-LIMS)
+* [Translations and localisation](https://github.com/bikalabs/Bika-LIMS/wiki/Translations-and-localisation)
 * [Instrument Interfacing](https://github.com/bikalabs/Bika-LIMS/wiki/creating-an-instrument-import-interface)
 * [Connecting Bika LIMS](https://github.com/bikalabs/Bika-LIMS/wiki/BIKA-JSON-API)
 
