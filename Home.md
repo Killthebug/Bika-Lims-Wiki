@@ -32,7 +32,7 @@ Bika LIMS is a high quality system that leverages the power and technical simpli
 
 ***
 
-### Service providers
+### Certified Professional Bika Service Providers
 
 **If you need assistance with your Bika LIMS implementation or professional advice.**
 
