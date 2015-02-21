@@ -12,6 +12,7 @@
 **Hosting and Administration**
 * [Installing Bika LIMS](https://github.com/bikalabs/Bika-LIMS/wiki/Bika-LIMS-Installation)
 * [Plone in production](http://docs.plone.org/manage/deploying/index.html)
+* [Managing Bika with Supervisor](https://github.com/bikalabs/Bika-LIMS/wiki/Managing-Plone-and-Bika-LIMS-with-Supervisor)
 
 **Developer**
 * [Release Cycle](https://github.com/bikalabs/Bika-LIMS/wiki/Release-cycle)
