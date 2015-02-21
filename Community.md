@@ -18,6 +18,7 @@ The members of the Bika project help everybody who needs assistance, through the
 * [Developers](http://lists.sourceforge.net/lists/listinfo/bika-developers): Discussions of topics related to software development and architecture design of source code.
 * [Analysis and design](http://groups.google.com/forum/?hl=en#!forum/bika-design): Distribution list for the discussion of topics related to LIMS design and analysis, for example discussions about lab workflow depending on type of lab, requirement needs analysis, etc.
 * [Bika Health](http://groups.google.com/forum/?hl=en#!forum/bika-health): Specific distribution list for Bika LIMS 'Health' version.
+* [IRC Channel (irc://freenode/bika)](http://webchat.freenode.net?randomnick=1&channels=%23bika&uio=d4)
 
 ### Project repository and downloads
 
