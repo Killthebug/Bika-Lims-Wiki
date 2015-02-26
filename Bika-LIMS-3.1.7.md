@@ -48,19 +48,19 @@ See [Installing Bika LIMS](https://github.com/bikalabs/Bika-LIMS/blob/0c606e0/IN
 - [LIMS-1605](https://jira.bikalabs.com/browse/LIMS-1605) Tescan TIMA
 
 **Fixes**
-- [LIMS-257](https://jira.bikalabs.com/browse/LIMS-257) Set Blank and Warning icons in Reference Sample main view
+- [LIMS-257](https://jira.bikalabs.com/browse/LIMS-257) Set Blank and warning icons in Reference Sample main view
 - [LIMS-1266](https://jira.bikalabs.com/browse/LIMS-1266) Sampling date format error
 - [LIMS-1423](https://jira.bikalabs.com/browse/LIMS-1423) Save details when Analysis Request workflow action kicked off
 - [LIMS-1428](https://jira.bikalabs.com/browse/LIMS-1428) Results capturing receiving samples with Sampling workflow enabled
 - [LIMS-1517](https://jira.bikalabs.com/browse/LIMS-1517) Storage field tag translation
 - [LIMS-1518](https://jira.bikalabs.com/browse/LIMS-1518) Storage Location table
 - [LIMS-1524](https://jira.bikalabs.com/browse/LIMS-1524) Populate invalidation email variables
-- [LIMS-1527](https://jira.bikalabs.com/browse/LIMS-1527) CC Contact on Analysis Request view (edit) offers all contacts in system
-- [LIMS-1540](https://jira.bikalabs.com/browse/LIMS-1540) When accent characters are used in a "Sample Type" name, it is not possible to create a new Analysis Request
+- [LIMS-1527](https://jira.bikalabs.com/browse/LIMS-1527) CC Contact on Analysis Request edit offers all contacts in system
+- [LIMS-1540](https://jira.bikalabs.com/browse/LIMS-1540) When accent characters are used in Sample Type title, it is not possible to create a new Analysis Request
 - [LIMS-1574](https://jira.bikalabs.com/browse/LIMS-1574) Fixed Analysis Request and Analysis attachments
 - [LIMS-1587](https://jira.bikalabs.com/browse/LIMS-1587) Better support for extension of custom sample labels
 - [LIMS-1594](https://jira.bikalabs.com/browse/LIMS-1594) Re-ordered tabs on Client home page
-- [LIMS-1614](https://jira.bikalabs.com/browse/LIMS-1614) Error when selecting Analysis Administration Tab after receiving a sample with Sampling Workflow enabled
+- [LIMS-1614](https://jira.bikalabs.com/browse/LIMS-1614) Error when selecting Analysis Administration tab after receiving a sample with Sampling workflow enabled
 - [LIMS-1617](https://jira.bikalabs.com/browse/LIMS-1617) Error with bin/test
 - [LIMS-1622](https://jira.bikalabs.com/browse/LIMS-1622) Version Check does not correctly check cache
 - [LIMS-1624](https://jira.bikalabs.com/browse/LIMS-1624) Import default test.xlsx fails
