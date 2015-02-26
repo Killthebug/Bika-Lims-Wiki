@@ -75,3 +75,5 @@ See [Installing Bika LIMS](https://github.com/bikalabs/Bika-LIMS/blob/0c606e0/IN
 - [Python egg (Python 2.7)](https://pypi.python.org/packages/2.7/b/bika.lims/bika.lims-3.1.6-py2.7.egg#md5=135edc42993a798c6c19cc41376e2dcf) ([md5](https://pypi.python.org/pypi?:action=show_md5&digest=135edc42993a798c6c19cc41376e2dcf))
 - [Source code (zip)](https://github.com/bikalabs/Bika-LIMS/archive/3.1.7.zip)
 - [Source code (tar.gz)](https://github.com/bikalabs/Bika-LIMS/archive/3.1.7.tar.gz)
+
+**[Installing Bika LIMS](https://github.com/bikalabs/Bika-LIMS/wiki/Bika-LIMS-Installation)**
