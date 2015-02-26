@@ -34,7 +34,7 @@ See [Installing Bika LIMS](https://github.com/bikalabs/Bika-LIMS/blob/0c606e0/IN
 - [LIMS-1365](https://jira.bikalabs.com/browse/LIMS-1365) Batch search parameters on Work sheets/Work sheets insides Batches
 - [LIMS-1520](https://jira.bikalabs.com/browse/LIMS-1520) Allow invalidation of verified Analysis Requests
 - [LIMS-1536](https://jira.bikalabs.com/browse/LIMS-1536) [Add] button to allow quick additions in reference widget
-- [LIMS-1539](https://jira.bikalabs.com/browse/LIMS-1539) Printable Worksheets. In both Analysis Request by row or column orientations
+- [LIMS-1539](https://jira.bikalabs.com/browse/LIMS-1539) Printable Worksheets. Analysis Request by row or column
 - [LIMS-1623](https://jira.bikalabs.com/browse/LIMS-1623) Implement bika-frontpage as a BrowserView
 
 **New Instrument interfaces**
@@ -51,7 +51,7 @@ See [Installing Bika LIMS](https://github.com/bikalabs/Bika-LIMS/blob/0c606e0/IN
 - [LIMS-257](https://jira.bikalabs.com/browse/LIMS-257) Set Blank and Warning icons in Reference Sample main view
 - [LIMS-1266](https://jira.bikalabs.com/browse/LIMS-1266) Sampling date format error
 - [LIMS-1423](https://jira.bikalabs.com/browse/LIMS-1423) Save details when Analysis Request workflow action kicked off
-- [LIMS-1428](https://jira.bikalabs.com/browse/LIMS-1428) Results capturing after receiving a sample with Sampling Workflow enabled
+- [LIMS-1428](https://jira.bikalabs.com/browse/LIMS-1428) Results capturing receiving samples with Sampling workflow enabled
 - [LIMS-1517](https://jira.bikalabs.com/browse/LIMS-1517) Storage field tag translation
 - [LIMS-1518](https://jira.bikalabs.com/browse/LIMS-1518) Storage Location table
 - [LIMS-1524](https://jira.bikalabs.com/browse/LIMS-1524) Populate invalidation email variables
