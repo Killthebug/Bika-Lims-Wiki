@@ -2,7 +2,7 @@ You are here: [Home](https://github.com/bikalabs/Bika-LIMS/wiki) · [Changelog](
 ***
 ## ·········· Draft ··········································##
 
-Bika LIMS 3.1.7 is a new [minor release](https://github.com/bikalabs/Bika-LIMS/wiki/Release-cycle). Small features and enhancements, new instrument interfaces, printable worksheets and bugs reported in 3.1.6 are included.
+Bika LIMS 3.1.7 is a new [minor release](https://github.com/bikalabs/Bika-LIMS/wiki/Release-cycle). Small features and enhancements, new instrument interfaces, printable worksheets are included, and bugs reported in 3.1.6 fixed.
 
 **37 tickets have been closed!**
 
@@ -10,7 +10,7 @@ Bika LIMS 3.1.7 is a new [minor release](https://github.com/bikalabs/Bika-LIMS/w
 
 **····8<··········· lemoene, hack here!!! ················**
 
-[Jordi](http://github.com/xispa), [Campbell](http://github.com/rockfruit), [Pau](http://github.com/espurna), [Alex](https://github.com/zylinx), and all other code contributors, testers, feature requesters and providers of the enthusiasm that keeps everybody fired up.  Sponsorship came from [De Bortoli Wines](http://www.debortoli.com.au/), [DEOHS University of Washington](http://deohs.washington.edu/), [SANBI](http://www.sanbi.ac.za/), Oshana and Alpha health labs in Namibia, [Lab San Martin](http://www.laboratoriosanmartin.com/), and off course individual [Naralabs](http://naralabs.com/) and [Bika Lab Systems](http://bikalabs.com/) team members who continue to contribute massively on their own accounts.
+[Jordi](http://github.com/xispa), [Campbell](http://github.com/rockfruit), [Pau](http://github.com/espurna), [Alex](https://github.com/zylinx), and all other code contributors, testers, feature requesters and providers of the enthusiasm that keeps everybody fired up.  Sponsorship came from [De Bortoli Wines](http://www.debortoli.com.au/), [DEOHS University of Washington](http://deohs.washington.edu/), [SANBI](http://www.sanbi.ac.za/), Oshana medical lab in Namibia, [Lab San Martin](http://www.laboratoriosanmartin.com/), and off course individual [Naralabs](http://naralabs.com/) and [Bika Lab Systems](http://bikalabs.com/) team members who continue to contribute massively on their own accounts.
 
 **····8<··················································**
 
@@ -30,43 +30,43 @@ See [Installing Bika LIMS](https://github.com/bikalabs/Bika-LIMS/blob/0c606e0/IN
 
 ### List of 37 tickets closed in Bika LIMS 3.1.7
 
-- [LIMS-1570](https://jira.bikalabs.com/browse/LIMS-1570) Instrument interface Roche Cobas Taqman 48
-- [LIMS-1520](https://jira.bikalabs.com/browse/LIMS-1520) Allow to invalidate verified ARs
-- [LIMS-1690](https://jira.bikalabs.com/browse/LIMS-1690) Typo. Instrument page
-- [LIMS-1688](https://jira.bikalabs.com/browse/LIMS-1688) After AR invalidation, ARs list throws an error
-- [LIMS-1569](https://jira.bikalabs.com/browse/LIMS-1569) Instrument interface Beckman Coulter Access 2
-- [LIMS-1689](https://jira.bikalabs.com/browse/LIMS-1689) Error while creating a new invoice batch
+- [LIMS-257](https://jira.bikalabs.com/browse/LIMS-257) Set Blank and Warning icons in Reference Sample main view
+- [LIMS-1199](https://jira.bikalabs.com/browse/LIMS-1199) Worksheet totals in WS lists
 - [LIMS-1266](https://jira.bikalabs.com/browse/LIMS-1266) Sampling date format error
 - [LIMS-1365](https://jira.bikalabs.com/browse/LIMS-1365) Batch search parameters on Work sheets/Work sheets insides Batches
-- [LIMS-1428](https://jira.bikalabs.com/browse/LIMS-1428) After receiving a sample with Sampling Workflow enable is not possible to input results
-- [LIMS-1540](https://jira.bikalabs.com/browse/LIMS-1540) When accent characters are used in a "Sample Type" name, it is not possible to create a new AR
-- [LIMS-1617](https://jira.bikalabs.com/browse/LIMS-1617) Error with bin/test
-- [LIMS-1571](https://jira.bikalabs.com/browse/LIMS-1571) Instrument interface Sysmex XS-1000i
-- [LIMS-1574](https://jira.bikalabs.com/browse/LIMS-1574) Fixed AR and Analysis attachments
-- [LIMS-1670](https://jira.bikalabs.com/browse/LIMS-1670) Fixed windows incompatibility in TAL (referencewidget.pt)
-- [LIMS-1687](https://jira.bikalabs.com/browse/LIMS-1687) Added option to select landing page for clients in configuration registry
-- [LIMS-1594](https://jira.bikalabs.com/browse/LIMS-1594) Re-ordered tabs on Client home page
-- [LIMS-1520](https://jira.bikalabs.com/browse/LIMS-1520) Allow to invalidate verified ARs
-- [LIMS-1539](https://jira.bikalabs.com/browse/LIMS-1539) Printable Worksheets. In both AR by row or column orientations
-- [LIMS-1199](https://jira.bikalabs.com/browse/LIMS-1199) Worksheet totals in WS lists
-- [LIMS-257](https://jira.bikalabs.com/browse/LIMS-257) Set Blank and Warning icons in Reference Sample main view
-- [LIMS-1636](https://jira.bikalabs.com/browse/LIMS-1636) Batch Sample View crash
-- [LIMS-1524](https://jira.bikalabs.com/browse/LIMS-1524) Invalidate email does not have variables populated
-- [LIMS-1572](https://jira.bikalabs.com/browse/LIMS-1572) Instrument interface Sysmex XS-500i
-- [LIMS-1575](https://jira.bikalabs.com/browse/LIMS-1575) Thermo Arena 20XT
 - [LIMS-1423](https://jira.bikalabs.com/browse/LIMS-1423) Save details when AR workflow action kicked off
-- [LIMS-1624](https://jira.bikalabs.com/browse/LIMS-1624) Import default test.xlsx fails
-- [LIMS-1614](https://jira.bikalabs.com/browse/LIMS-1614) Error when selecting Analysis Administration Tab after receiving a sample with Sampling Workflow enabled
-- [LIMS-1605](https://jira.bikalabs.com/browse/LIMS-1605) Tescan TIMA interface
-- [LIMS-1604](https://jira.bikalabs.com/browse/LIMS-1604) BioDrop uLite interface
-- [LIMS-1603](https://jira.bikalabs.com/browse/LIMS-1603) Life Technologies Qubit interface
+- [LIMS-1428](https://jira.bikalabs.com/browse/LIMS-1428) After receiving a sample with Sampling Workflow enable is not possible to input results
 - [LIMS-1517](https://jira.bikalabs.com/browse/LIMS-1517) Storage field tag untranslated?
 - [LIMS-1518](https://jira.bikalabs.com/browse/LIMS-1518) Storage Location table
+- [LIMS-1520](https://jira.bikalabs.com/browse/LIMS-1520) Allow to invalidate verified ARs
+- [LIMS-1520](https://jira.bikalabs.com/browse/LIMS-1520) Allow to invalidate verified ARs
+- [LIMS-1524](https://jira.bikalabs.com/browse/LIMS-1524) Invalidate email does not have variables populated
 - [LIMS-1527](https://jira.bikalabs.com/browse/LIMS-1527) CC Contact on AR view (edit) offers all contacts in system
 - [LIMS-1536](https://jira.bikalabs.com/browse/LIMS-1536) Add button [Add], to alow quickly addings in referencewidget
+- [LIMS-1539](https://jira.bikalabs.com/browse/LIMS-1539) Printable Worksheets. In both AR by row or column orientations
+- [LIMS-1540](https://jira.bikalabs.com/browse/LIMS-1540) When accent characters are used in a "Sample Type" name, it is not possible to create a new AR
+- [LIMS-1569](https://jira.bikalabs.com/browse/LIMS-1569) Instrument interface Beckman Coulter Access 2
+- [LIMS-1570](https://jira.bikalabs.com/browse/LIMS-1570) Instrument interface Roche Cobas Taqman 48
+- [LIMS-1571](https://jira.bikalabs.com/browse/LIMS-1571) Instrument interface Sysmex XS-1000i
+- [LIMS-1572](https://jira.bikalabs.com/browse/LIMS-1572) Instrument interface Sysmex XS-500i
+- [LIMS-1574](https://jira.bikalabs.com/browse/LIMS-1574) Fixed AR and Analysis attachments
+- [LIMS-1575](https://jira.bikalabs.com/browse/LIMS-1575) Thermo Arena 20XT
 - [LIMS-1587](https://jira.bikalabs.com/browse/LIMS-1587) Better support for extension of custom sample labels
+- [LIMS-1594](https://jira.bikalabs.com/browse/LIMS-1594) Re-ordered tabs on Client home page
+- [LIMS-1603](https://jira.bikalabs.com/browse/LIMS-1603) Life Technologies Qubit interface
+- [LIMS-1604](https://jira.bikalabs.com/browse/LIMS-1604) BioDrop uLite interface
+- [LIMS-1605](https://jira.bikalabs.com/browse/LIMS-1605) Tescan TIMA interface
+- [LIMS-1614](https://jira.bikalabs.com/browse/LIMS-1614) Error when selecting Analysis Administration Tab after receiving a sample with Sampling Workflow enabled
+- [LIMS-1617](https://jira.bikalabs.com/browse/LIMS-1617) Error with bin/test
 - [LIMS-1622](https://jira.bikalabs.com/browse/LIMS-1622) Version Check does not correctly check cache
 - [LIMS-1623](https://jira.bikalabs.com/browse/LIMS-1623) Implement bika-frontpage as a BrowserView
+- [LIMS-1624](https://jira.bikalabs.com/browse/LIMS-1624) Import default test.xlsx fails
+- [LIMS-1636](https://jira.bikalabs.com/browse/LIMS-1636) Batch Sample View crash
+- [LIMS-1670](https://jira.bikalabs.com/browse/LIMS-1670) Fixed windows incompatibility in TAL (referencewidget.pt)
+- [LIMS-1687](https://jira.bikalabs.com/browse/LIMS-1687) Added option to select landing page for clients in configuration registry
+- [LIMS-1688](https://jira.bikalabs.com/browse/LIMS-1688) After AR invalidation, ARs list throws an error
+- [LIMS-1689](https://jira.bikalabs.com/browse/LIMS-1689) Error while creating a new invoice batch
+- [LIMS-1690](https://jira.bikalabs.com/browse/LIMS-1690) Typo. Instrument page
 
 ### Download
 - [Bika LIMS 3.1.7 at PyPI](https://pypi.python.org/pypi/bika.lims/3.1.7)
