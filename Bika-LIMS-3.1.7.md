@@ -2,7 +2,7 @@ You are here: [Home](https://github.com/bikalabs/Bika-LIMS/wiki) · [Changelog](
 ***
 ## ·········· Draft ··········································##
 
-Bika LIMS 3.1.7 is a new [minor release](https://github.com/bikalabs/Bika-LIMS/wiki/Release-cycle). Small features and enhancements, new instrument interfaces and bugs reported in 3.1.6 are included.
+Bika LIMS 3.1.7 is a new [minor release](https://github.com/bikalabs/Bika-LIMS/wiki/Release-cycle). Small features and enhancements, new instrument interfaces, printable worksheets and bugs reported in 3.1.6 are included.
 
 **37 tickets have been closed!**
 
