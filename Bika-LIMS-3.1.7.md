@@ -9,7 +9,7 @@ Bika LIMS 3.1.7 is a new [minor release](https://github.com/bikalabs/Bika-LIMS/w
 
 [Jordi](http://github.com/xispa), [Campbell](http://github.com/rockfruit), [Pau](http://github.com/espurna), [Alex](https://github.com/zylinx), and all other code contributors, testers, feature requesters and providers of the enthusiasm that keeps everybody fired up.
 
-**Viva Open Source LIMS, Viva! [Amandla Awethu! Power to the people!](http://en.wikipedia.org/wiki/Amandla_(power))**
+**Viva Open Source LIMS, Viva! [Amandla Awethu!](http://en.wikipedia.org/wiki/Amandla_(power)) Power to the people!**
 
 Sponsorship was provided by [De Bortoli Wines](http://www.debortoli.com.au/), [DEOHS University of Washington](http://deohs.washington.edu/), [SANBI](http://www.sanbi.ac.za/), [Lab San Martin](http://www.laboratoriosanmartin.com/), and off course individual [Naralabs](http://naralabs.com/) and [Bika Lab Systems](http://bikalabs.com/) team members who continue to contribute massively on their own accounts.
 
