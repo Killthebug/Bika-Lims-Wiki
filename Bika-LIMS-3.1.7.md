@@ -15,9 +15,9 @@ Sponsorship was provided by [De Bortoli Wines](http://www.debortoli.com.au/), [D
 
 ###Update instructions
 
-Bika LIMS 3.1.7 is a minor release, and there is no need for further changes or modifications elsewhere in the Bika LIMS instance. If your instance to be updated has been customised, please review whether the customisations are affected by the update by checking the [CHANGELOG.txt file published with the release](https://raw.githubusercontent.com/bikalabs/Bika-LIMS/3.1.7/CHANGELOG.txt).
+Bika LIMS 3.1.7 is a minor release, and there is no need for further changes or modifications elsewhere in the Bika LIMS instance. If your instance to be updated has been customised, please review whether the customisations are affected by the update by checking the [CHANGELOG.txt file published with the release](https://raw.githubusercontent.com/bikalabs/Bika-LIMS/3.1.7/docs/CHANGELOG.txt).
 
-See [Installing Bika LIMS](https://github.com/bikalabs/Bika-LIMS/blob/0c606e0/INSTALL.rst) and/or [upgrading Bika LIMS](https://github.com/bikalabs/Bika-LIMS/blob/0c606e0/INSTALL.rst)
+See [Installing Bika LIMS](https://github.com/bikalabs/Bika-LIMS/blob/3.1.7/docs/INSTALL.rst) and/or [upgrading Bika LIMS](https://github.com/bikalabs/Bika-LIMS/blob/3.1.7/docs/INSTALL.rst)
 
 ###After your upgrade
 - Use the [users](http://lists.sourceforge.net/lists/listinfo/bika-users), [designers](https://groups.google.com/forum/?hl=en) and [developers](http://lists.sourceforge.net/lists/listinfo/bika-developers) lists or IRC ([irc://freenode.net/#bika](http://webchat.freenode.net?randomnick=1&channels=%23bika&uio=d4)) if you have any question or feedback (free support),
@@ -73,8 +73,7 @@ See [Installing Bika LIMS](https://github.com/bikalabs/Bika-LIMS/blob/0c606e0/IN
 
 ### Download
 - [Bika LIMS 3.1.7 at PyPI](https://pypi.python.org/pypi/bika.lims/3.1.7)
-- [Python egg (Python 2.6)](https://pypi.python.org/packages/2.6/b/bika.lims/bika.lims-3.1.6-py2.6.egg#md5=a46b3832c2bd13efd20cfac7de3604b8) ([md5](https://pypi.python.org/pypi?:action=show_md5&digest=a46b3832c2bd13efd20cfac7de3604b8))
-- [Python egg (Python 2.7)](https://pypi.python.org/packages/2.7/b/bika.lims/bika.lims-3.1.6-py2.7.egg#md5=135edc42993a798c6c19cc41376e2dcf) ([md5](https://pypi.python.org/pypi?:action=show_md5&digest=135edc42993a798c6c19cc41376e2dcf))
+- [Python egg (Python 2.7)](https://pypi.python.org/packages/2.7/b/bika.lims/bika.lims-3.1.7.0-py2.7.egg#md5=673819497a4e20e836ddc5c8250552fa) ([md5](https://pypi.python.org/pypi?:action=show_md5&digest=673819497a4e20e836ddc5c8250552fa))
 - [Source code (zip)](https://github.com/bikalabs/Bika-LIMS/archive/3.1.7.zip)
 - [Source code (tar.gz)](https://github.com/bikalabs/Bika-LIMS/archive/3.1.7.tar.gz)
 
