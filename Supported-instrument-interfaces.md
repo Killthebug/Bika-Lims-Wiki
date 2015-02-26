@@ -2,7 +2,9 @@ You are here: [Home](https://github.com/bikalabs/Bika-LIMS/wiki) · User Documen
 ***
 ### Table of Contents
 1. [Introduction](#introduction)
-2. [Supported instruments on Bika LIMS 3.1.6](#supported-instruments-on-bika-lims-316)
+2. [Supported instruments](#supported-instruments)
+  1. [Bika LIMS 3.1.7]()
+  2. [Bika LIMS 3.1.6]()
 3. [Coming up / Under way](#Coming-up-/-under-way)
 
 ***
@@ -11,7 +13,24 @@ You are here: [Home](https://github.com/bikalabs/Bika-LIMS/wiki) · User Documen
 
 The introduction of analyses results into Bika LIMS can be performed manually, but also automatically by using the results files generated directly by equipment or middleware software. An **instrument results file import interface** is a small part of code that parses and imports the results from those instrument-specific files into Bika LIMS. That prevents from results being entered manually by the user.
 
-### Supported instruments on Bika LIMS 3.1.6
+### Supported instruments
+#### **Bika LIMS 3.1.7**
+released on 2015-02-26 · [Read more](https://github.com/bikalabs/Bika-LIMS/wiki/Bika-LIMS-3.1.7)
+
+Supported instruments in Bika LIMS 3.1.6 and:
+
+- [Beckman Coulter Access 2](https://jira.bikalabs.com/browse/LIMS-1569)
+- [BioDrop &micro;Lite](https://jira.bikalabs.com/browse/LIMS-1604)
+- [Life technologies Qubit&reg;](https://jira.bikalabs.com/browse/LIMS-1603)
+- [Roche Cobas Taqman 48](https://jira.bikalabs.com/browse/LIMS-1570)
+- [Sysmex XS-1000i](https://jira.bikalabs.com/browse/LIMS-1571)
+- [Sysmex XS-50i](https://jira.bikalabs.com/browse/LIMS-1572)
+- [TESCAN TIMA](https://jira.bikalabs.com/browse/LIMS-1605)
+- [Thermo Arena 20XT](https://jira.bikalabs.com/browse/LIMS-1575)
+
+
+#### **Bika LIMS 3.1.6**
+released on 2014-12-17 · [Read more](https://github.com/bikalabs/Bika-LIMS/wiki/Bika-LIMS-3.1.6)
 
 - Agilent's Masshunter Quantitative. [interface](https://github.com/bikalabs/Bika-LIMS/blob/hotfix/3.1.7/bika/lims/exportimport/instruments/agilent/masshunter/quantitative.py) · [samples](https://github.com/bikalabs/Bika-LIMS/tree/hotfix/3.1.7/bika/lims/exportimport/instruments/agilent/masshunter/samples)
 - Alere PIMA Beads. [interface](https://github.com/bikalabs/Bika-LIMS/blob/hotfix/3.1.7/bika/lims/exportimport/instruments/alere/pima/beads.py) · [samples](https://github.com/bikalabs/Bika-LIMS/tree/hotfix/3.1.7/bika/lims/exportimport/instruments/alere/pima/samples)
@@ -24,15 +43,7 @@ The introduction of analyses results into Bika LIMS can be performed manually, b
 
 ### Coming up / Under way
 - [Agilent 7700 ICP-MCS](https://jira.bikalabs.com/browse/LIMS-1588)
-- [Beckman Coulter Access 2](https://jira.bikalabs.com/browse/LIMS-1569)
-- [BioDrop &micro;Lite](https://jira.bikalabs.com/browse/LIMS-1604)
 - [Bruker S1 Titan Handheld XRF](https://jira.bikalabs.com/browse/LIMS-1577)
-- [Life technologies Qubit&reg;](https://jira.bikalabs.com/browse/LIMS-1603)
-- [Roche Cobas Taqman 48](https://jira.bikalabs.com/browse/LIMS-1570)
-- [Sysmex XS-1000i](https://jira.bikalabs.com/browse/LIMS-1571)
-- [Sysmex XS-50i](https://jira.bikalabs.com/browse/LIMS-1572)
-- [TESCAN TIMA](https://jira.bikalabs.com/browse/LIMS-1605)
-- [Thermo Arena 20XT](https://jira.bikalabs.com/browse/LIMS-1575)
 - [Thermo iCAP 6200 ICP-AES](https://jira.bikalabs.com/browse/LIMS-1589)
 - [Varion AA 240FS](https://jira.bikalabs.com/browse/LIMS-1433)
 
