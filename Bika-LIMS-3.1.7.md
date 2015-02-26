@@ -2,15 +2,17 @@ You are here: [Home](https://github.com/bikalabs/Bika-LIMS/wiki) · [Changelog](
 ***
 ## ·········· Draft ··········································##
 
-Bika LIMS 3.1.7 is a new [minor release](https://github.com/bikalabs/Bika-LIMS/wiki/Release-cycle). Small features and enhancements, new instrument interfaces, printable worksheets are included, and bugs reported in 3.1.6 fixed.
+Bika LIMS 3.1.7 is a new [minor release](https://github.com/bikalabs/Bika-LIMS/wiki/Release-cycle). Small features and enhancements, new instrument interfaces, printable worksheets and more improvements are included, and bugs reported in 3.1.6 fixed.
 
-**37 tickets have been closed!**
+**36 tickets have been closed!**
 
 ###Thank you
 
 **····8<··········· lemoene, hack here!!! ················**
 
 [Jordi](http://github.com/xispa), [Campbell](http://github.com/rockfruit), [Pau](http://github.com/espurna), [Alex](https://github.com/zylinx), and all other code contributors, testers, feature requesters and providers of the enthusiasm that keeps everybody fired up.  Sponsorship came from [De Bortoli Wines](http://www.debortoli.com.au/), [DEOHS University of Washington](http://deohs.washington.edu/), [SANBI](http://www.sanbi.ac.za/), Oshana medical lab in Namibia, [Lab San Martin](http://www.laboratoriosanmartin.com/), and off course individual [Naralabs](http://naralabs.com/) and [Bika Lab Systems](http://bikalabs.com/) team members who continue to contribute massively on their own accounts.
+
+Viva Open Source LIMS! Viva! [Amandla Awethu! Power to the people!](http://en.wikipedia.org/wiki/Amandla_(power))
 
 **····8<··················································**
 
@@ -38,7 +40,6 @@ See [Installing Bika LIMS](https://github.com/bikalabs/Bika-LIMS/blob/0c606e0/IN
 - [LIMS-1428](https://jira.bikalabs.com/browse/LIMS-1428) After receiving a sample with Sampling Workflow enable is not possible to input results
 - [LIMS-1517](https://jira.bikalabs.com/browse/LIMS-1517) Storage field tag untranslated?
 - [LIMS-1518](https://jira.bikalabs.com/browse/LIMS-1518) Storage Location table
-- [LIMS-1520](https://jira.bikalabs.com/browse/LIMS-1520) Allow to invalidate verified ARs
 - [LIMS-1520](https://jira.bikalabs.com/browse/LIMS-1520) Allow to invalidate verified ARs
 - [LIMS-1524](https://jira.bikalabs.com/browse/LIMS-1524) Invalidate email does not have variables populated
 - [LIMS-1527](https://jira.bikalabs.com/browse/LIMS-1527) CC Contact on AR view (edit) offers all contacts in system
