@@ -2,17 +2,15 @@ You are here: [Home](https://github.com/bikalabs/Bika-LIMS/wiki) · [Changelog](
 ***
 ## ·········· Draft ··········································##
 
-Bika LIMS 3.1.7 is a new [minor release](https://github.com/bikalabs/Bika-LIMS/wiki/Release-cycle). Small features and enhancements, new instrument interfaces, printable worksheets and more improvements are included, and bugs reported in 3.1.6 fixed.
+Bika LIMS 3.1.7 is a new [minor release](https://github.com/bikalabs/Bika-LIMS/wiki/Release-cycle). Small features and enhancements, new instrument interfaces, printable worksheets and more improvements are included, specifically to Batch management, and bugs reported in 3.1.6 fixed.
 
 **36 tickets have been closed!**
 
 ###Thank you
 
-**····8<··········· lemoene, hack here!!! ················**
-
 [Jordi](http://github.com/xispa), [Campbell](http://github.com/rockfruit), [Pau](http://github.com/espurna), [Alex](https://github.com/zylinx), and all other code contributors, testers, feature requesters and providers of the enthusiasm that keeps everybody fired up.  Sponsorship came from [De Bortoli Wines](http://www.debortoli.com.au/), [DEOHS University of Washington](http://deohs.washington.edu/), [SANBI](http://www.sanbi.ac.za/), Oshana medical lab in Namibia, [Lab San Martin](http://www.laboratoriosanmartin.com/), and off course individual [Naralabs](http://naralabs.com/) and [Bika Lab Systems](http://bikalabs.com/) team members who continue to contribute massively on their own accounts.
 
-Viva Open Source LIMS! Viva! [Amandla Awethu! Power to the people!](http://en.wikipedia.org/wiki/Amandla_(power))
+Viva Open Source LIMS, Viva! [Amandla Awethu! Power to the people!](http://en.wikipedia.org/wiki/Amandla_(power))
 
 **····8<··················································**
 
@@ -22,15 +20,15 @@ Bika LIMS 3.1.7 is a minor release, and there is no need for further changes or 
 
 See [Installing Bika LIMS](https://github.com/bikalabs/Bika-LIMS/blob/0c606e0/INSTALL.rst) and/or [upgrading Bika LIMS](https://github.com/bikalabs/Bika-LIMS/blob/0c606e0/INSTALL.rst)
 
-###After you update
+###After your upgrade
 - Use the [users](http://lists.sourceforge.net/lists/listinfo/bika-users), [designers](https://groups.google.com/forum/?hl=en) and [developers](http://lists.sourceforge.net/lists/listinfo/bika-developers) lists or IRC ([irc://freenode.net/#bika](http://webchat.freenode.net?randomnick=1&channels=%23bika&uio=d4)) if you have any question or feedback (free support),
-- Please help us spread the word about Bika LIMS! Maybe you can write about the project on your blog, website, talk about Bika LIMS at conferences, or let your friends and colleagues know what is Bika LIMS. With your help we can grow the community!    
+- Please help us spread the word about Bika LIMS! Maybe you can write about the project on your blog, website, talk about Bika LIMS at conferences, or let your friends and colleagues know this feature rich FOSS LIMS. With your help we can grow the community!    
 - To improve Bika LIMS in your language consider [contributing to translations](https://www.transifex.com/projects/p/bika-lims/),
 - Log issues, feature requests, or bugs in the [Issue Tracker](http://jira.bikalabs.com/),
 - Enable your Bika LIMS instance to [report bugs to us automatically](https://github.com/bikalabs/Bika-LIMS/blob/0c606e0/INSTALL.rst#log-errors-to-sentrybikalabscom).
-- Contact any of the [Certified Professional Bika Service Providers](http://www.bikalims.org/support-and-service-provision) for any enquiry or to learn more about making the most of Bika LIMS.
+- Contact any of the [Certified Professional Bika Service Providers](http://www.bikalims.org/support-and-service-provision) with any specific questions or to learn more about making the most of Bika LIMS.
 
-### List of 37 tickets closed in Bika LIMS 3.1.7
+### List of 36 tickets closed in Bika LIMS 3.1.7
 
 - [LIMS-257](https://jira.bikalabs.com/browse/LIMS-257) Set Blank and Warning icons in Reference Sample main view
 - [LIMS-1199](https://jira.bikalabs.com/browse/LIMS-1199) Worksheet totals in WS lists
@@ -54,9 +52,9 @@ See [Installing Bika LIMS](https://github.com/bikalabs/Bika-LIMS/blob/0c606e0/IN
 - [LIMS-1575](https://jira.bikalabs.com/browse/LIMS-1575) Thermo Arena 20XT
 - [LIMS-1587](https://jira.bikalabs.com/browse/LIMS-1587) Better support for extension of custom sample labels
 - [LIMS-1594](https://jira.bikalabs.com/browse/LIMS-1594) Re-ordered tabs on Client home page
-- [LIMS-1603](https://jira.bikalabs.com/browse/LIMS-1603) Life Technologies Qubit interface
-- [LIMS-1604](https://jira.bikalabs.com/browse/LIMS-1604) BioDrop uLite interface
-- [LIMS-1605](https://jira.bikalabs.com/browse/LIMS-1605) Tescan TIMA interface
+- [LIMS-1603](https://jira.bikalabs.com/browse/LIMS-1603) Instrument interface Life Technologies Qubit interface
+- [LIMS-1604](https://jira.bikalabs.com/browse/LIMS-1604) Instrument interface BioDrop uLite interface
+- [LIMS-1605](https://jira.bikalabs.com/browse/LIMS-1605) Instrument interface Tescan TIMA interface
 - [LIMS-1614](https://jira.bikalabs.com/browse/LIMS-1614) Error when selecting Analysis Administration Tab after receiving a sample with Sampling Workflow enabled
 - [LIMS-1617](https://jira.bikalabs.com/browse/LIMS-1617) Error with bin/test
 - [LIMS-1622](https://jira.bikalabs.com/browse/LIMS-1622) Version Check does not correctly check cache
