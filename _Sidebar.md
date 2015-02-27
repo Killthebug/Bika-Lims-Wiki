@@ -5,8 +5,9 @@
 [**Bika OS LIMS Collective**](http://www.bikalims.org)
 
 **User Documentation**
-* [Bika LIMS User Manual](http://demo.bikalabs.com/knowledge-centre/manual/bika-3-user-manual)
-* [Releases Changelog](https://github.com/bikalabs/Bika-LIMS/wiki/Changelog)
+* [Introduction to Bika Health](http://demo.bikalabs.com/knowledge-centre/manual/bika-3-user-manual/introduction-to-bika-health)
+* [Bika Health top level ERD](https://github.com/bikalabs/bika.health/wiki/Top-level-ERD)
+* [Bika LIMS documentation](http://github.com/bikalabs/Bika-LIMS/wiki)
 * [Community](https://github.com/bikalabs/Bika-LIMS/wiki/Community)
 * [How to Contribute](https://github.com/bikalabs/Bika-LIMS/wiki/Contribute)
 * [Supported Instruments](https://github.com/bikalabs/Bika-LIMS/wiki/Supported-instrument-interfaces)
@@ -14,7 +15,7 @@
 * [Import Export Templates](https://github.com/bikalabs/Bika-LIMS/wiki/Import-Export-Templates)
 
 **Hosting and Administration**
-* [Installing Bika LIMS](https://github.com/bikalabs/Bika-LIMS/wiki/Bika-LIMS-Installation)
+* [Installing Bika Health](https://github.com/bikalabs/bika.health/wiki/Installing-Bika-Health-Extension)
 * [Plone in production](http://docs.plone.org/manage/deploying/index.html)
 * [Managing Bika with Supervisor](https://github.com/bikalabs/Bika-LIMS/wiki/Managing-Plone-and-Bika-LIMS-with-Supervisor)
 
