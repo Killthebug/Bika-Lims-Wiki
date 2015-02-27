@@ -13,9 +13,9 @@ Bika LIMS is a high quality system that leverages the power and technical simpli
 **Bika LIMS 3.1.7** · 2015-02-26 · [Read more](https://github.com/bikalabs/Bika-LIMS/wiki/Bika-LIMS-3.1.7)
 
 ### User documentation
-- [Bika LIMS user manual](http://bika3.bikalabs.com/knowledge-centre/manual/bika-3-user-manual)
+- [Bika LIMS user manual](http://demo.bikalabs.com/knowledge-centre/manual/bika-3-user-manual)
 - [Community resources](https://github.com/bikalabs/Bika-LIMS/wiki/Community)
-- [How to contribute](https://github.com/bikalabs/Bika-LIMS/wiki/Contribute)
+- [How to contribute](http://www.bikalims.org/contribute)
 - [Supported Instrument Interfaces](https://github.com/bikalabs/Bika-LIMS/wiki/Supported-instrument-interfaces)
 - [Results Import from Spreadsheet](https://github.com/bikalabs/Bika-LIMS/wiki/Results-import-from-spreadsheet)
 - [Import Export Templates](https://github.com/bikalabs/Bika-LIMS/wiki/Import-Export-Templates)
