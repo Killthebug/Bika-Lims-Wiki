@@ -24,7 +24,7 @@ Supported instruments in Bika LIMS 3.1.6 and:
 - [Life technologies Qubit&reg;](https://jira.bikalabs.com/browse/LIMS-1603)
 - [Roche Cobas Taqman 48](https://jira.bikalabs.com/browse/LIMS-1570)
 - [Sysmex XS-1000i](https://jira.bikalabs.com/browse/LIMS-1571)
-- [Sysmex XS-50i](https://jira.bikalabs.com/browse/LIMS-1572)
+- [Sysmex XS-500i](https://jira.bikalabs.com/browse/LIMS-1572)
 - [TESCAN TIMA](https://jira.bikalabs.com/browse/LIMS-1605)
 - [Thermo Arena 20XT](https://jira.bikalabs.com/browse/LIMS-1575)
 
