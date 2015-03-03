@@ -32,7 +32,7 @@ Bika LIMS is a high quality system that leverages the power and technical simpli
 - [Developing Bika LIMS](https://github.com/bikalabs/Bika-LIMS/wiki/Developing-Bika-LIMS)
 - [Configuring a Bika LIMS development environment](https://github.com/bikalabs/Bika-LIMS/wiki/Configuring-a-Bika-LIMS-development-environment)
 - [Translations and localisation](https://github.com/bikalabs/Bika-LIMS/wiki/Translations-and-localisation)
-- [Instrument interfacing](https://github.com/bikalabs/Bika-LIMS/wiki/creating-an-instrument-import-interface).
+- [Instrument interfacing](https://github.com/bikalabs/Bika-LIMS/wiki/creating-an-instrument-import-interface)
 - [Creating new Report Templates](https://github.com/bikalabs/Bika-LIMS/wiki/Creating-new-report-templates)
 - [Connecting Bika LIMS](https://github.com/bikalabs/Bika-LIMS/wiki/BIKA-JSON-API)
 
