@@ -3,8 +3,6 @@ You are here: [Home](https://github.com/bikalabs/Bika-LIMS/wiki) · [GSoC 2015](
 
 ### Summary
 
-**Description**
-
 Bika LIMS uses Plone's native and powerful object-oriented database ZODB as default Database Management System and provides a JSON-API to integrate the system with others, mainly ERPs.
 
 Some peers use relational databases such as PostgreSQL and labs would find Bika LIMS easier to integrate if it supported SQL databases. Lab managers also prefer data in tabular format they can access with their SQL query tools of choice.
