@@ -46,6 +46,7 @@ The lab clerk will check the products received in the lab against the pending or
 The hard part here is that the products usually come packed in boxes of different number of units, so there should be a way to easily recalculate the number of individual units of product in the inventory when the lab clerk receives an order.
 
 **d) Storage management**
+
 When the lab clerk receives the products/reagents and labels them, there should be some way to classify and store them to well-identified (and registered in Bika LIMS) places (shelves, cabinets, fridges, etc.).
 
 **e) Stock control for reagents and products, including reference samples; min/max alerts and imbalance adjustment, 1th a month, etc.**
