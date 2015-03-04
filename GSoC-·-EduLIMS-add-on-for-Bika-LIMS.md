@@ -3,8 +3,6 @@ You are here: [Home](https://github.com/bikalabs/Bika-LIMS/wiki) · [GSoC 2015](
 
 ### Summary
 
-**Description**
-
 A Bika add-on specifically for educational centers, private or public, such as high schools, colleges, universities and technology centers.
 EduLIMS focuses on activity tracking and evaluation of trainees, in the use LIMS itself and at the same time, learn the basics of a lab workflow, including procedures, QA/QC, instrument management, etc. 
 
