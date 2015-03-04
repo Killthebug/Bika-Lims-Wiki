@@ -63,7 +63,7 @@ Every product might have an expiry date. There should be a mechanism to easily r
 
 **h) Stock monitoring through analyses tracking**
 
-A hard one too. A lab analysis/test may require the use of a well-defined amount of reagent/product. The idea is to set the amount of reagent/product at Method or Analysis Service (Bika LIMS objects) level and every time a result is set for that analysis, the system will update the available amount of product in the inventory. Yea.. this is very tricky and maybe we can omit this functionality.
+A hard one too. A lab analysis/test may require the use of a well-defined amount of reagent/product. The idea is to set the amount of reagent/product at Method or Analysis Service (Bika LIMS objects) level and every time a result is set for that analysis, the system will update the available amount of product in the inventory. Yea.. this is one is very tricky!
 
 **i) Inventory reports**
 
