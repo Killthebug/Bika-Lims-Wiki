@@ -31,7 +31,7 @@ access to all electronic records but without the possibility to edit them. Clien
 Analysis Requests and manage their own contacts but can not see most of the steps of the analysis 
 workflow.
 
-While these roles allow to fullfil most of any lab workflow requirements, doesn't fit well with a 
+While these roles allow to fullfil most of any lab workflow requirements, don't fit well with a 
 training center requirements. This is mainly because in an educational environment, the main 
 purpose is the students to learn how the LIMS and lab Quality Assessment and Quality Control 
 works, as well as perform a pre­defined use cases to learn how a typical lab workflow is. This 
