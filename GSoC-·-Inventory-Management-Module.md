@@ -1,9 +1,23 @@
 You are here: [Home](https://github.com/bikalabs/Bika-LIMS/wiki) · [GSoC 2015](https://github.com/bikalabs/Bika-LIMS/wiki/GSoC-2015) · Inventory Management Module
 ***
 
-## ID03. Inventory management module
-
 ### Summary
+
+**Description**
+
+While Bika LIMS already has the basics for Product and Sample References management, as well as some simple Supply Orders functionality, this module has been neglected for too long.
+
+The basics are:
+
+- Supplier orders
+- Stock reception and storage. Labeling
+- Container structure for sub-products
+- Storage management
+- Stock control for reagents and products, including reference samples; min/max alerts and imbalance adjustment, 1th a month, etc.
+- Batch controls, removal of defective batches
+- Expiry control, alerts and product auto-removal
+- Stock monitoring through analyses tracking
+- Inventory reports
 
 **Expected results**: Functional and integrated Bika Inventory Management
 
