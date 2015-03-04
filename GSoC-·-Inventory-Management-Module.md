@@ -3,8 +3,6 @@ You are here: [Home](https://github.com/bikalabs/Bika-LIMS/wiki) · [GSoC 2015](
 
 ### Summary
 
-**Description**
-
 While Bika LIMS already has the basics for Product and Sample References management, as well as some simple Supply Orders functionality, this module has been neglected for too long.
 
 The basics are:
