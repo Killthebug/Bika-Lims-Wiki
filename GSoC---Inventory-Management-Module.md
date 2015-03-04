@@ -1,7 +1,7 @@
 You are here: [Home](https://github.com/bikalabs/Bika-LIMS/wiki) · [GSoC 2015](https://github.com/bikalabs/Bika-LIMS/wiki/GSoC-2015) · Inventory Management Module
 ***
 
-## Inventory management module
+## ID03. Inventory management module
 
 ### Summary
 
