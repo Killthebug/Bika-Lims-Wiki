@@ -1,6 +1,6 @@
 [**Home**](http://github.com/bikalabs/Bika-LIMS/wiki)
 
-[**GSoC 2015 Ideas list**](http://github.com/bikalabs/Bika-LIMS/wiki/GSoC-2015)
+[**GSoC 2015 Ideas list**](https://github.com/bikalabs/Bika-LIMS/wiki/GSoC-2015#ideas-list)
 
 [**Bika OS LIMS Collective**](http://www.bikalims.org)
 
