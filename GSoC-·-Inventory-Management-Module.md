@@ -27,7 +27,7 @@ The basics are:
 
 ***
 
-### Detailed information
+### Functional overview
 
 Bika LIMS is a Laboratory Information Management System and although in some cases the inventory and existences control (stock) of lab products and reagents used in the lab are managed by an external application (ERP), we think that a full-inventory management module inside the system will bring much more flexibility and capabilities to the system.
 
