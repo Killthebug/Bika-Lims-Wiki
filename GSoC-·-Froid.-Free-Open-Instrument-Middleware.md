@@ -35,3 +35,35 @@ The main objectives are:
 ## Functional overview
 
 TODO
+
+```
+
+From Froid's perspective, I'd expect to see pluggable inputs and outputs, and a core machine to route and translate between these too.  RS232 inputs/outputs, and the storage/LIMS/ERP in use should be part of this set of handlers.
+
+
+ A set of generic/example input/outputs should be created during the first round, which should be simple enough to allow the set of plugins to grow immediately they are seen by capable developers.  The simplicity of the core allows more time for additional items, and allows these features to stand in singular, easily-readable code.
+
+- Configuration/command line management
+- Verbose control of logging/debug for plugin/translator development
+- Translators for some common use-cases, eg; file-drops, manual CSV im/exports
+- Web and/or command-line management interface.
+- abstractions for dealing with serial data
+
+At least from my own opinion, a great emphasis should be placed on code simplicity, for the purpose of easing the developers' task who will be adding modules.
+
+Outside of high level specs, I remember Jordi sent a very well thought out email but I can't seem to find it now.. @xispa, do you remember/have that somewhere?
+
+
+
+
+Not sure if the below information about supported instruments and creating an instrument interface is relevant
+
+
+Instrument Interfaces
+https://github.com/bikalabs/Bika-LIMS/wiki/Supported-instrument-interfaces
+
+
+Creating an Instrument Import Interface
+https://github.com/bikalabs/Bika-LIMS/wiki/creating-an-instrument-import-interface
+
+```
