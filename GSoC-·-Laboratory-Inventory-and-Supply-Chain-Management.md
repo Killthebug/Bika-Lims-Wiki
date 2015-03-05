@@ -7,7 +7,7 @@ This document is used to establish the scope of the project and a common underst
 
 Document Convention: Note the page is written in the present tense describing the requirement as if it is there already.
 
-Background
+### Background
 While Bika LIMS already has the basics for Product and Sample References management, as well as some simple Supply Order functionality, this module has been neglected for too long.
 In most cases the inventory management of lab products and reagents are managed by an external application (ERP) using Bika's JSON API, a Bika module will add better customised functionality, suitable for resource limited settings too, yet sophisticated enough to deal with best of breed requirements.
 
@@ -22,8 +22,8 @@ In most cases the inventory management of lab products and reagents are managed 
 ***
 
 
-###Database
-##Inventory categories
+# Database
+## Inventory categories
 These should types of  inventory items should are managed:
 Reagents
 Reference Samples
@@ -37,11 +37,11 @@ Lab coats, safety glasses, shoes
 First aid kit,  fire extinguishers
 Cleaning materials
 Canteen
-##IIs. Inventory Items
+## IIs. Inventory Items
 At the bottom of the DB pyramid lives the Inventory items, the individual entities the system manages 
 IIs often arrive batches of say 10 items, and this is resolved via a Batch Container and its individual Items.
 See Storage management: The storage locations are managed at hierarchical addresses, e.g. a shelve position, in a fridge or cabinet, in a room,  is a container with Inventory Items (IIs) in it.
-##Inventory Item attributes
+## Inventory Item attributes
 Include but not limited to
 Title, description, supplier, ordered by, date received, date opened, CAS number, location, expiry date, lab ID, supplier catalogue  ID, hazard rating, quantity, toxicity, health effects, first aid SOP, storage conditions, disposal SOP, spill-handling procedures, Material Safety Data Sheets (MSDS), relevant images, PDF and other files. Disposal date.
 
