@@ -21,7 +21,7 @@ With this in mind, the following are the modules to be implemented:
 **Mentors**: [J. Puiggené](http://github.com/xispa), [C. McKellar-Basset](http://github.com/rockfruit)
 ***
 
-### Detailed information
+### Functional overview
 
 Bika LIMS has strong security policies that apply depending on the user's role: Lab Manager, 
 Analyst, Lab Clerk, Sampler, Preserver, Regulatory Inspector and Client. These are common roles 
