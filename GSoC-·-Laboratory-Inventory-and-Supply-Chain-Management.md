@@ -85,3 +85,26 @@ Printable stock taking sheets, including barcodes for the item and storage locat
 A layout optimised for data capturing on tablets with barcode scanners
 **Phase II**
 Use some of the popular statistical stock taking formulas & methods, e.g.  Random selection, ABS & VED analysis etc.
+## Storage management
+This function is shared with biobanking's Sample inventory management, which can go quite a distance...
+When the lab clerk receives the shipments, they are stored at barcoded storage locations. 
+The storage locations are managed at hierarchical addresses, e.g. 
+an Inventory Item is stored
+in a container
+in a shelve position, 
+in a fridge or cabinet, 
+in a room. 
+Storage conditions for the location, e.g. 4 deg C, must match that of its the item's specification.
+The storage locations should be searchable for empty spaces.
+**Phase II**
+Graphical presentation of freezer drawers with shelve positions linked to the items in there.
+Consolidation and optimisation of available space.
+## Reporting
+The inventory data are used to create regulations related reports, e.g. regarding hazardous air pollutant (HAP) and volatile organic compound (VOC) usage data.
+Most of all, it offers real-time inventory data of actual or estimated stock levels, keeping track of where inventory items are and how much available, 
+The LIMS generates reports listing inventory items by location, vendor, name, catalogue number and custom fields, 
+Others report Amount of II used the last month or selected period, expenses forecast, How long stocks will cover lab requirement, Inventory valuation, Future demand estimates, etc.
+# Regulations
+Good Laboratory Practice (GLP) and Food and Drug Administration (FDA) Guidelines, including 21 CFR Part 11 requirements prescribe: An audit trail for every data change including the date/time stamp, what was modified, and who made the modifications. 
+Phase II
+Bika's Plone versioned document management is used to manage audits, preventative and corrective actions
