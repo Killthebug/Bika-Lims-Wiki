@@ -1,21 +1,15 @@
 You are here: [Home](https://github.com/bikalabs/Bika-LIMS/wiki) · [GSoC 2015](https://github.com/bikalabs/Bika-LIMS/wiki/GSoC-2015) · Inventory Management Module
 ***
 
-### Summary
+### Purpose of this document
 
-While Bika LIMS already has the basics for Product and Sample References management, as well as some simple Supply Orders functionality, this module has been neglected for too long.
+This document is used to establish the scope of the project and a common understanding for coders in the 2015 Google Summer of Code to build there proposal around. 
 
-The basics are:
+Document Convention: Note the page is written in the present tense describing the requirement as if it is there already.
 
-- Supplier orders
-- Stock reception and storage. Labeling
-- Container structure for sub-products
-- Storage management
-- Stock control for reagents and products, including reference samples; min/max alerts and imbalance adjustment, 1th a month, etc.
-- Batch controls, removal of defective batches
-- Expiry control, alerts and product auto-removal
-- Stock monitoring through analyses tracking
-- Inventory reports
+Background
+While Bika LIMS already has the basics for Product and Sample References management, as well as some simple Supply Order functionality, this module has been neglected for too long.
+In most cases the inventory management of lab products and reagents are managed by an external application (ERP) using Bika's JSON API, a Bika module will add better customised functionality, suitable for resource limited settings too, yet sophisticated enough to deal with best of breed requirements.
 
 **Expected results**: Functional and integrated Bika Inventory Management
 
@@ -27,9 +21,29 @@ The basics are:
 
 ***
 
-### Functional overview
 
-Bika LIMS is a Laboratory Information Management System and although in some cases the inventory and existences control (stock) of lab products and reagents used in the lab are managed by an external application (ERP), we think that a full-inventory management module inside the system will bring much more flexibility and capabilities to the system.
+###Database
+##Inventory categories
+These should types of  inventory items should are managed:
+Reagents
+Reference Samples
+Sampling containers
+Sampling Kits
+Analysis Kits
+Kit components
+Sampling containers – bottles, filters, zip-locks, etc.
+Printer consumables – Ink, labels
+Lab coats, safety glasses, shoes
+First aid kit,  fire extinguishers
+Cleaning materials
+Canteen
+##IIs. Inventory Items
+At the bottom of the DB pyramid lives the Inventory items, the individual entities the system manages 
+IIs often arrive batches of say 10 items, and this is resolved via a Batch Container and its individual Items.
+See Storage management: The storage locations are managed at hierarchical addresses, e.g. a shelve position, in a fridge or cabinet, in a room,  is a container with Inventory Items (IIs) in it.
+##Inventory Item attributes
+Include but not limited to
+Title, description, supplier, ordered by, date received, date opened, CAS number, location, expiry date, lab ID, supplier catalogue  ID, hazard rating, quantity, toxicity, health effects, first aid SOP, storage conditions, disposal SOP, spill-handling procedures, Material Safety Data Sheets (MSDS), relevant images, PDF and other files. Disposal date.
 
 The following are a summary of the objectives we'd like to achieve:
 
