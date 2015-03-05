@@ -45,7 +45,19 @@ See Storage management: The storage locations are managed at hierarchical addres
 Include but not limited to
 Title, description, supplier, ordered by, date received, date opened, CAS number, location, expiry date, lab ID, supplier catalogue  ID, hazard rating, quantity, toxicity, health effects, first aid SOP, storage conditions, disposal SOP, spill-handling procedures, Material Safety Data Sheets (MSDS), relevant images, PDF and other files. Disposal date.
 
-The following are a summary of the objectives we'd like to achieve:
+# Workflow
+## Suppliers and Purchases
+Ordering Inventory Items are done integrated with Bika's current Suppliers structure, authorised users create purchase orders, POs, in the UI. 
+Orders are printed or emailed with status Pending, followed by e.g. Dispatched, Received, Stored. 
+Courier details and links to online tracking in the order online is a must have.
+**Phase II**
+Approved suppliers and their contracts
+Vendor catalogue integration
+## Receipt and storage. Labeling
+When new stock Shipment arrives, lab clerks check it in against pending orders, print barcodes labels, capture data such as expiration date, batch and item IDs. Vendor supplied labelling scanned in tracked to each individual container.
+**Phase II**
+Incomplete orders
+Returned orders
 
 **a) Supplier Orders**
 
