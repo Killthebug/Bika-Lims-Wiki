@@ -15,11 +15,12 @@ Froid is a working title. Propose your own! Thus far other candidates are: Omar 
 The main objectives are:
 
 - The software will be well documented and easy to maintain to encourage LIMS developers and instrument manufacturers to add interfaces to the system
+- plugin interfaces should be as simple as possible to create, and to read.
 - Resolve serial RS232 communications with laboratory instruments
-- Froid must communicate bi-directionally with LIMS using a singular easy to understand file format,  converting them to and from all possible instrument communication protocols.
-- For better load balancing, Froid must be free-standing to allow for it to be deployed on its own hardware in high volume labs
+- Froid must communicate bi-directionally with LIMS using a singular easy to understand file format, converting them to and from all possible instrument communication protocols.
+- For better load balancing, and to allow more flexible deployment, Froid must be free-standing to allow for it to be deployed on its own hardware in high volume labs
 - Froid's management and maintenance interface is to be web based for easy remote access
-- The Froid format must be defined as broadly as possible, to include imagery and data blobs, and with enough redundancy to take care of future interface developments
+- The Froid internal data format must be defined as broadly as possible, to include imagery and data blobs, and with enough redundancy to take care of future interface developments
 - Communication between FROID and the LIMS itself must be in line with standards-compliant secure communication protocols offering comprehensive data encryption.
 
 **Expected results**: Free standing instrument server that can be maintained and integrated easily
