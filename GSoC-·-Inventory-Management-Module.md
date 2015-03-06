@@ -30,45 +30,47 @@ In most cases the inventory management of lab products and reagents are managed 
 
 ###Entities
 
-####Product Category
+**Product Category**
 
 Lab clerk and Lab manager can create Product categories based on their needs. Examples of product categories: Reference Samples, Sampling Containers, Sampling Kits, Analysis Kits, Kit components, Sampling Kits, Analysis Kits, Kit components, Sampling containers, Printer consumables, etc.
 
-####Product
+
+**Product**
 
 The Product entity represents an item that can be purchased to a supplier (vendor) at any time. The lab maintains a catalogue of products and every product includes (but not limited to) the following attributes: title, description, category, supplier, CAS number, supplier catalogue ID, hazard rating, quantity, toxicity, health effects, first aid SOP, storage conditions, disposal SOP, spill-handling procedures, Material Safety Data Sheets (MSDS), relevant images, PDF and other files.
 
 A Product must be assigned to a Product Category.
 
-####Product Item
+
+**Product Item**
 
 The product/inventory items are the individual entities the system manages. The product item represents a physical item of a Product purchased to a Supplier. A product/inventory item inherits all the attributes from a Product entity plus the following: order id, date received, date opened, location, expiry date, lab ID, disposal date.
 
 Product items often arrives batches of say 10 items, and this is resolved via a Batch Container/Shipping package and its individual items.
 
-####Supplier
+
+**Supplier**
 
 Already exists in Bika LIMS. A Supplier can have 0 or more Products assigned. A Product can only be assigned to one Supplier.
 
-####Purchase Order
+
+**Purchase Order**
 
 A Purchase Order is an element that represents a list of products (and quantities) to be purchased to a Supplier. Only lab managers and lab clerks can create orders. An order must to be assigned to a Supplier and once created, its default status is 'Pending' (of reception).
+
 
 ###Functional description
 
 The following are a summary of the objectives we'd like to achieve:
 
-####a) Purchase Orders
+**a) Purchase Orders**
 
 Ordering Product Items are done integrated with Bika's current Suppliers structure, authorised users create purchase orders in the UI. Orders are printed and/or emailed to the supplier upon creation. The Orders can be printed and/or emailed at any time and its status (Pending, Dispatched, Received, Stored) will be displayed as well.
 
 
-####b) Products reception and storage. Labelling
+**b) Products reception and storage. Labelling**
 When new stock Shipment arrives, lab clerks check it in against pending orders, print barcodes labels, capture data such as expiration date, batch and item IDs. Vendor supplied labelling scanned in tracked to each
 individual container. Upon reception, the Purchase Order status is transitioned from "Pending" or "Dispatched" to "Received".
-
-####c) Container structure for sub-products
-
 
 **c) Container structure for sub-products**
 
