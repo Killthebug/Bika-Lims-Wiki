@@ -1,4 +1,4 @@
-You are here: [Home](https://github.com/bikalabs/Bika-LIMS/wiki) · [GSoC 2015](https://github.com/bikalabs/Bika-LIMS/wiki/GSoC-2015) · Inventory Management Module
+You are here: [Home](https://github.com/bikalabs/Bika-LIMS/wiki) · [GSoC 2015](https://github.com/bikalabs/Bika-LIMS/wiki/GSoC-2015) · Inventory Management Module and Supply Chain Management
 ***
 
 ### Summary
@@ -16,19 +16,59 @@ In most cases the inventory management of lab products and reagents are managed 
 
 ***
 
-###Functional description
+###Purpose of this document
 
-Bika LIMS is a Laboratory Information Management System and although in some cases the inventory and existences control (stock) of lab products and reagents used in the lab are managed by an external application (ERP), we think that a full-inventory management module inside the system will bring much more flexibility and capabilities to the system.
+This document is used to establish the scope of the project and a common understanding for coders in the 2015 Google Summer of Code to build there proposal around.
+
+###Convention
+Note the page is written in the present tense describing the requirement as if it is there already.
+
+###Background
+While Bika LIMS already has the basics for Product and Sample References management, as well as some simple Supply Order functionality, this module has been neglected for too long.
+
+In most cases the inventory management of lab products and reagents are managed by an external application (ERP) using Bika's JSON API, a Bika module will add better customised functionality, suitable for resource limited settings too, yet sophisticated enough to deal with best of breed requirements.
+
+###Entities
+
+####Product Category
+
+Lab clerk and Lab manager can create Product categories based on their needs. Examples of product categories: Reference Samples, Sampling Containers, Sampling Kits, Analysis Kits, Kit components, Sampling Kits, Analysis Kits, Kit components, Sampling containers, Printer consumables, etc.
+
+####Product
+
+The Product entity represents an item that can be purchased to a supplier (vendor) at any time. The lab maintains a catalogue of products and every product includes (but not limited to) the following attributes: title, description, category, supplier, CAS number, supplier catalogue ID, hazard rating, quantity, toxicity, health effects, first aid SOP, storage conditions, disposal SOP, spill-handling procedures, Material Safety Data Sheets (MSDS), relevant images, PDF and other files.
+
+A Product must be assigned to a Product Category.
+
+####Product Item
+
+The product/inventory items are the individual entities the system manages. The product item represents a physical item of a Product purchased to a Supplier. A product/inventory item inherits all the attributes from a Product entity plus the following: order id, date received, date opened, location, expiry date, lab ID, disposal date.
+
+Product items often arrives batches of say 10 items, and this is resolved via a Batch Container/Shipping package and its individual items.
+
+####Supplier
+
+Already exists in Bika LIMS. A Supplier can have 0 or more Products assigned. A Product can only be assigned to one Supplier.
+
+####Purchase Order
+
+A Purchase Order is an element that represents a list of products (and quantities) to be purchased to a Supplier. Only lab managers and lab clerks can create orders. An order must to be assigned to a Supplier and once created, its default status is 'Pending' (of reception).
+
+###Functional description
 
 The following are a summary of the objectives we'd like to achieve:
 
-**a) Supplier Orders**
+####a) Purchase Orders
 
-Right now, Bika LIMS allows to set-up Suppliers and Products, but we'd like to add the functionality of creating product orders. The lab manager or clerk would be able to register orders of products/reagents/whatever to a supplier. This order could be printed and eventually sent directly to the supplier contact via email. By default, after creating an order, its status should be 'pending'.
+Ordering Product Items are done integrated with Bika's current Suppliers structure, authorised users create purchase orders in the UI. Orders are printed and/or emailed to the supplier upon creation. The Orders can be printed and/or emailed at any time and its status (Pending, Dispatched, Received, Stored) will be displayed as well.
 
-**b) Products reception and storage. Labelling**
 
-The lab clerk will check the products received in the lab against the pending orders. The clerk should be able to receive the order (the status will change to 'received'), create the labels (barcodes) for the products and add them in the lab inventory.
+####b) Products reception and storage. Labelling
+When new stock Shipment arrives, lab clerks check it in against pending orders, print barcodes labels, capture data such as expiration date, batch and item IDs. Vendor supplied labelling scanned in tracked to each
+individual container. Upon reception, the Purchase Order status is transitioned from "Pending" or "Dispatched" to "Received".
+
+####c) Container structure for sub-products
+
 
 **c) Container structure for sub-products**
 
