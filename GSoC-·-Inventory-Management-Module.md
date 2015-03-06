@@ -37,7 +37,7 @@ Lab clerk and Lab manager can create Product categories based on their needs. Ex
 
 **Product**
 
-The Product entity represents an item that can be purchased to a supplier (vendor) at any time. The lab maintains a catalogue of products and every product includes (but not limited to) the following attributes: title, description, category, supplier, CAS number, supplier catalogue ID, hazard rating, quantity, toxicity, health effects, first aid SOP, storage conditions, disposal SOP, spill-handling procedures, Material Safety Data Sheets (MSDS), relevant images, PDF and other files.
+The Product entity represents an item that can be purchased to a supplier (vendor) at any time. The lab maintains a catalogue of products and each product includes (but not limited to) the following attributes: title, description, category, supplier, CAS number, supplier catalogue ID, hazard rating, quantity, toxicity, health effects, first aid SOP, storage conditions, disposal SOP, spill-handling procedures, Material Safety Data Sheets (MSDS), relevant images, PDF and other files.
 
 A Product must be assigned to a Product Category.
 
