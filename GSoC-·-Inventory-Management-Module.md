@@ -32,7 +32,7 @@ In most cases the inventory management of lab products and reagents are managed 
 
 **Product Category**
 
-Lab clerk and Lab manager can create Product categories based on their needs. Examples of product categories: Sampling Containers, Sampling Kits, Analysis Kits, Kit components, Sampling Kits, Analysis Kits, Kit components, Sampling containers, Printer consumables, etc.
+Lab clerk and Lab manager can create Product categories based on their needs. Examples of product categories: Sampling Containers, Sampling Kits, Analysis Kits, Kit components, Sampling Kits, Analysis Kits, Kit components, Printer consumables, etc.
 
 
 **Product**
