@@ -122,10 +122,29 @@ Lab manager can set a batch as deffective and list all analyses that involved a 
 
 *Further development*: Disposal, empty and expired reagents are disposed of by SOP, kept in the system.
 
-**g) Stock monitoring through analyses tracking**
+**g) Physical stock taking**
 
-A hard one too. A lab analysis/test may require the use of a well-defined amount of reagent/product. The idea is to set the amount of reagent/product at Method or Analysis Service (Bika LIMS objects) level and every time a result is set for that analysis, the system will update the available amount of product in the inventory. Yea.. this is one is very tricky!
+For maintaining accurate stock levels, the LIMS offers:
+
+- Printable stock taking sheets, including barcodes for the item and storage location.
+- A layout optimised for data capturing on tablets with barcode scanners
+
+*Further development*: Use some of the popular statistical stock taking formulas & methods, e.g. Random selection, ABS & VED analysis etc.
 
 **i) Inventory reports**
 
-Number/amount of product/s used the last month, expenses forcast, etc.
+The inventory data are used to create regulations related reports, e.g. regarding hazardous air pollutant (HAP) and volatile organic compound (VOC) usage data.
+
+Most of all, it offers real-time inventory data of actual or estimated stock levels, keeping track of where inventory items are and how much available.
+
+The LIMS generates reports listing inventory items by location, vendor, name, catalogue number and custom fields.
+
+Other reports: Amount of Product Items used the last month or selected period, expenses forecast, How long stocks will cover lab requirement, Inventory valuation, Future demand estimates, etc.
+
+**j) Regulations**
+
+Good Laboratory Practice (GLP) and Food and Drug Administration (FDA) Guidelines, including 21 CFR Part 11 requirements prescribe: An audit trail for every data change including the date/time stamp, what was modified,
+and who made the modifications.
+
+*Further development*: Bika's Plone versioned document management is used to manage audits, preventive and corrective actions.
+
