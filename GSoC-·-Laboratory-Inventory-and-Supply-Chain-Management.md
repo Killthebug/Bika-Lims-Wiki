@@ -1,6 +1,10 @@
 You are here: [Home](https://github.com/bikalabs/Bika-LIMS/wiki) · [GSoC 2015](https://github.com/bikalabs/Bika-LIMS/wiki/GSoC-2015) · Inventory Management Module
 ***
 
+## Table of Contents
+1. [soon](#purpose-of-this-document)
+
+
 ### Purpose of this document
 
 This document is used to establish the scope of the project and a common understanding for coders in the 2015 Google Summer of Code to build there proposal around. 
