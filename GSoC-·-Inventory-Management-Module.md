@@ -44,7 +44,7 @@ A Product must be assigned to a Product Category.
 
 **Product Item**
 
-The product/inventory items are the individual entities the system manages. The product item represents a physical item of a Product purchased to a Supplier. A product/inventory item inherits all the attributes from a Product entity plus the following: order id, date received, date opened, location, expiry date, lab ID, disposal date.
+The product/inventory items are the individual entities the system manages. The product item represents a physical item of a Product purchased to a Supplier. A product/inventory item inherits all the attributes from a Product entity plus the following: order id, date received, date opened, location, expiry date, lab ID, disposal date, batch id.
 
 Product items often arrives batches of say 10 items, and this is resolved via a Batch Container/Shipping package and its individual items.
 
@@ -60,11 +60,11 @@ A Purchase Order is an element that represents a list of products (and quantitie
 
 ###Functional description
 
-The following are a summary of the objectives we'd like to achieve:
-
 **a) Purchase Orders**
 
 Ordering Product Items are done integrated with Bika's current Suppliers structure, authorised users create purchase orders in the UI. Orders are printed and/or emailed to the supplier upon creation. The Orders can be printed and/or emailed at any time and its status (Pending, Dispatched, Received, Stored) will be displayed as well.
+
+*Further development*: Approved supplied and their contracts. Vendor catalogue integration.
 
 
 **b) Products reception and storage. Labelling**
@@ -72,8 +72,9 @@ Ordering Product Items are done integrated with Bika's current Suppliers structu
 When new stock Shipment arrives, lab clerks check it in against pending orders, print barcodes labels, capture data such as expiration date, batch and item IDs. Vendor supplied labelling scanned in tracked to each
 individual container. Upon reception, the Purchase Order status is transitioned from "Pending" or "Dispatched" to "Received", the appropriate Product Items are created, and therefore, the products stock from the inventory updated.
 
-Products usually come packed in containers with different number of units, so there should be a way to easily recalculate the number of individual units of product when the lab clerk receives an order.
+Products usually come packed in containers with different number of units, so the system automatically recalculates the number of individual units of product when the lab clerk receives an order.
 
+If the stock shipment doesn't contain some of the products ordered or some of them are defective, the lab clerk can create a new order with the missing/defective items, print and/or email the supplier. The new order will refer to the previous one for tracking purposes.
 
 **c) Storage management**
 
@@ -87,22 +88,41 @@ When the lab clerk receives the shipments, they are stored at barcoded storage l
 
 Storage conditions for the location, e.g. 4 deg C, must match that of its the item's specification. The storage locations should be searchable for empty spaces.
 
-*Further developments*: Graphical presentation of freezer drawers with shelve positions linked to the items in there. Consolidation and optimisation of available space.
+*Further development*: Graphical presentation of freezer drawers with shelve positions linked to the items in there. Consolidation and optimisation of available space.
 
+**e) Stock control**
 
-**e) Stock control for reagents and products, including reference samples; min/max alerts and imbalance adjustment, 1th a month, etc.**
+e.1) Dynamic Record keeping and manual reconcilliation
 
-The stock control must allow the lab manager to do imbalance adjustment of products manually. Adding a "minimum number of units" for product would be nice, cause then we could add a portlet displaying the products for which a new supplier order must be created.
+The quantity of chemical used, e.g. titration volumes, are used to maintain reagent stock levels, allowing for spillage. Nevertheless, the lab manager can do an imbalance adjustment/reconcilliation of products manually. 
 
-**f) Batch controls, removal of defective batches**
+e.2) Minimum stock level alerts
 
-Imagine the lab receives a batch of 100 units of product A and starts to use them for analyses. A week later, the supplier calls the lab to notify that batch of product A was defective (i.e. vials have traces of oil inside): the lab cannot be sure that the results obtained by using any of the product A are correct and is forced to invalidate all the analyses performed. So, the lab manager has to know which analyses have been performed by using products coming from that batch. The number of batch must be linked with the identifier of the product and at the same time, the system should provide a mechanism to list (and eventually retract) all analyses in which that product was used.
+Each Product is set up with a minimum stock level at which a re-order alert is raised for lab clerks and lab managers. It is also known as 'Re-ordering level'. It is a point at which order for supply of material should be made.
 
-**g) Expiry control, alerts and product auto-removal**
+Reordering level is calculated with the formula:
 
-Every product might have an expiry date. There should be a mechanism to easily remove the expired products from the inventory and detect (and eventually retract) analyses for which an expired product was used. A portlet displaying the products that will expire in the following month or so would be nice too.
+    Re-order level = max rate of consumption x max lead time
 
-**h) Stock monitoring through analyses tracking**
+The alert, be it by email or on-line (portlet) offers an easy hyper-linked re-order workflow.
+
+**f) Expiry alerts and product cancellation**
+
+Most reagents and reference material have expiry dates. Lab clerk sets the expiry dates to Product Items upon reception of the purchase order. A similar alert as for low stock level is raised, based on configurable period before expiry, in the next month say.
+
+These expired Product Items are immediately cancelled on expiry and not offered in the look-ups.
+
+*Further development*: Stock loss alerts, detection and reporting.
+
+**f) Batch control**
+
+Lab clerk sets the supplier's batch id to Product Items upon reception of the purchase order. Product Items can be searched per batch id.
+
+Lab manager can set a batch as deffective and list all analyses that involved a Product Item from a deffective batch. All the analysis results go into quarantine. Moreover, the defective Product Items are immediately cancelled and not offered in the look-ups.
+
+*Further development*: Disposal, empty and expired reagents are disposed of by SOP, kept in the system.
+
+**g) Stock monitoring through analyses tracking**
 
 A hard one too. A lab analysis/test may require the use of a well-defined amount of reagent/product. The idea is to set the amount of reagent/product at Method or Analysis Service (Bika LIMS objects) level and every time a result is set for that analysis, the system will update the available amount of product in the inventory. Yea.. this is one is very tricky!
 
