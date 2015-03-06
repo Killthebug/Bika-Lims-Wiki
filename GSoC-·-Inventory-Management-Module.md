@@ -58,7 +58,6 @@ Already exists in Bika LIMS. A Supplier can have 0 or more Products assigned. A 
 
 A Purchase Order is an element that represents a list of products (and quantities) to be purchased to a Supplier. Only lab managers and lab clerks can create orders. An order must to be assigned to a Supplier and once created, its default status is 'Pending' (of reception).
 
-
 ###Functional description
 
 The following are a summary of the objectives we'd like to achieve:
@@ -69,16 +68,27 @@ Ordering Product Items are done integrated with Bika's current Suppliers structu
 
 
 **b) Products reception and storage. Labelling**
+
 When new stock Shipment arrives, lab clerks check it in against pending orders, print barcodes labels, capture data such as expiration date, batch and item IDs. Vendor supplied labelling scanned in tracked to each
-individual container. Upon reception, the Purchase Order status is transitioned from "Pending" or "Dispatched" to "Received".
+individual container. Upon reception, the Purchase Order status is transitioned from "Pending" or "Dispatched" to "Received", the appropriate Product Items are created, and therefore, the products stock from the inventory updated.
 
-**c) Container structure for sub-products**
+Products usually come packed in containers with different number of units, so there should be a way to easily recalculate the number of individual units of product when the lab clerk receives an order.
 
-The hard part here is that the products usually come packed in boxes of different number of units, so there should be a way to easily recalculate the number of individual units of product in the inventory when the lab clerk receives an order.
 
-**d) Storage management**
+**c) Storage management**
 
-When the lab clerk receives the products/reagents and labels them, there should be some way to classify and store them to well-identified (and registered in Bika LIMS) places (shelves, cabinets, fridges, etc.).
+When the lab clerk receives the shipments, they are stored at barcoded storage locations. The storage locations are managed at hierarchical addresses, e.g.
+
+    a Product Item is stored
+    in a container
+    in a shelve position,
+    in a fridge or cabinet,
+    in a room.
+
+Storage conditions for the location, e.g. 4 deg C, must match that of its the item's specification. The storage locations should be searchable for empty spaces.
+
+*Further developments*: Graphical presentation of freezer drawers with shelve positions linked to the items in there. Consolidation and optimisation of available space.
+
 
 **e) Stock control for reagents and products, including reference samples; min/max alerts and imbalance adjustment, 1th a month, etc.**
 
