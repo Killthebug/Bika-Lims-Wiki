@@ -1,13 +1,8 @@
 You are here: [Home](https://github.com/bikalabs/Bika-LIMS/wiki) · [GSoC 2015](https://github.com/bikalabs/Bika-LIMS/wiki/GSoC-2015) · Inventory Management Module
 ***
 
-### Purpose of this document
+### Summary
 
-This document is used to establish the scope of the project and a common understanding for coders in the 2015 Google Summer of Code to build there proposal around.
-
-Document Convention: Note the page is written in the present tense describing the requirement as if it is there already.
-
-Background
 While Bika LIMS already has the basics for Product and Sample References management, as well as some simple Supply Order functionality, this module has been neglected for too long.
 In most cases the inventory management of lab products and reagents are managed by an external application (ERP) using Bika's JSON API, a Bika module will add better customised functionality, suitable for resource limited settings too, yet sophisticated enough to deal with best of breed requirements.
 
