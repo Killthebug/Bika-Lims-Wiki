@@ -118,7 +118,7 @@ These expired Product Items are immediately cancelled on expiry and not offered 
 
 Lab clerk sets the supplier's batch id to Product Items upon reception of the purchase order. Product Items can be searched per batch id.
 
-Lab manager can set a batch as deffective and list all analyses that involved a Product Item from a deffective batch. All the analysis results go into quarantine. Moreover, the defective Product Items are immediately cancelled and not offered in the look-ups.
+Lab manager can set a batch as defective and list all analyses that involved a Product Item from a defective batch. All the analysis results go into quarantine. Moreover, the defective Product Items are immediately cancelled and not offered in the look-ups.
 
 *Further development*: Disposal, empty and expired reagents are disposed of by SOP, kept in the system.
 
