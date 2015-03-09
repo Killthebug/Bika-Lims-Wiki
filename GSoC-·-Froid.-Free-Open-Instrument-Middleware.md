@@ -6,7 +6,7 @@ You are here: [Home](https://github.com/bikalabs/Bika-LIMS/wiki) · [GSoC 2015](
 
 The Open Instrument Middleware is an idea of a free-standing instrument server to easily interface any laboratory instrument to any laboratory software. 
   
-Once established, **Froid will be vendor neutral to attract as many interfaces possible**, all open sourced on the AGLP for protection. The current Bika LIMS interface module was designed with this in mind and can be used as a basis.
+Once established, **Froid will be vendor neutral to attract as many interfaces possible**, all open sourced on the AGPL for protection. The current Bika LIMS interface module was designed with this in mind and can be used as a basis.
 
 See the initial top level design at [Froid. Free Open Instrument Middleware. Fluffy and dated Functional Specification](https://drive.google.com/file/d/0B-ZQviPheiU-NkpHelZFeU5iTXc/view?usp=sharing)
 
