@@ -13,8 +13,8 @@
 
 ### Friday, March 13, 2015
 
-| Session       | Topic                                                   | Status/URL |
-|---------------|:--------------------------------------------------------|:-----------| 
+| Session       | Topic                                                   | Status |
+|---------------|:--------------------------------------------------------|:-------| 
 | 14:30 - 14:45 | Introduction. Bika LIMS project and team
 | 15:00 - 16:00 | [ID06. SQL-back-end for Bika LIMS](https://github.com/bikalabs/Bika-LIMS/wiki/GSoC-%C2%B7-SQL-back-end-for-Bika-LIMS) | |
 | 16:10 - 17:10 | [ID07. EduLIMS add-on for Bika LIMS](https://github.com/bikalabs/Bika-LIMS/wiki/GSoC-%C2%B7-EduLIMS-add-on-for-Bika-LIMS) | |
