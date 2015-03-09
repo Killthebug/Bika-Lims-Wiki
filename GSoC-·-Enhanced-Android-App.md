@@ -5,7 +5,7 @@ You are here: [Home](https://github.com/bikalabs/Bika-LIMS/wiki) · [GSoC 2015](
 
 Bika LIMS has some lab forms running on Android for labs without enough desk space for bigger hardware. There is also demand for a standalone app to use in remote sampling locations, e.g. health care, which can then be synced with on-line servers when the app gets in range. 
 
-It should capture sampling point / patient details, take photos and GPS coordinates, record field analyses
+It should capture sampling point / patient details, take photos and GPS coordinates, and record results for field analyses.
 
 With this in mind, the following are the modules to be implemented:
 
