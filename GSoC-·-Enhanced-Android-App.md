@@ -15,7 +15,7 @@ With this in mind, the following are the modules to be implemented:
 - Search via bar-code scanning
 - More on-line functionality
 
-In future, this app will be detached from Bika LIMS, so code design should take this into account allowing adapters to be registered for item listings, schema discovery, create, update, and delete methods.  Bika labs must provide a set of these adapters for bika.* packages.
+In future, this app will be detached from Bika LIMS, so code design should take this into account allowing adapters to be registered for item listings, schema discovery, create, update, and delete methods.  Bika labs must provide a set of these adapters for bikalabs/bika.* packages.
 
 **Expected results**: A functional app to capture remote data and sync it with Bika servers.
 
