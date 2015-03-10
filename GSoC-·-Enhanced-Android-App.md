@@ -51,7 +51,7 @@ Native Android is the best fit. And it needs a name - working title is [**Samp**
 
 Samp resolves data capturing in remote locations where connectivity is not guaranteed, server syncing when in reach. Some sampling areas in health care, geochemistry and environmental management are really remote.
 
-The complexity brought about by adding Patients and their data will see that addressed in a follow-up project after initial LIMS requirements are fulfilled. See Health Samp the paragraph.
+The complexity brought about by adding Patients and their data will see that addressed in a follow-up project after initial LIMS requirements are fulfilled. See [Health Samp](https://github.com/bikalabs/Bika-LIMS/wiki/GSoC-%C2%B7-Enhanced-Android-App#phase-ii-health-samp) the paragraph.
 
 Samp thus applies in disciplines like Water Quality and Environmental Management, Geological and other Surveys at first, for capturing sampling and field results for samples of water, soil, air, drill cores etc.
 
@@ -93,9 +93,17 @@ Samp captures GPS Coords, including Elevation & Map Projection, of where samples
 
 Samp allows authorised users to capture field analysis results, e.g. Water temperature, pH, turbidity, Conductivity, etc. and Kit results where applicable, as well as free text remarks.
 
+Field analysis Worksheets for 10" devices will be handy.
+
+Users authorised to do so, should also be able to add Sampling Points, Samples and ARs in the field. This functionality already exists in the current Bika App running on the [Motorola Xoom](http://en.wikipedia.org/wiki/Motorola_Xoom).
+
+
 **e) Server upload**
 
 Only by authorised users - designated sampler and device only. When the sampler returns to base, he/she'll have all the captured data on the device. Samp connects and load the data to the server and is done.
+
+The data is automatically deleted from the device after a configurable period of time after a successful upload or download.
+
 
 ***
 
@@ -118,6 +126,8 @@ Patient Privacy needs to be protected at all times as prescribed by ISO 15189 an
 **b) Patient IDs**
 
 Patients who lost their IDs can be identified, if not from alternative IDs such as drivers licenses, from images on the device DB: head and shoulder photos, but also of unique features such as tattoos, ethnic markings and scars.
+
+These patients can be re-issued with (temporary) barcoded IDs. Users with sufficient authorisation, should also be able to create new Patients.
 
 **c) Field results. Symptoms**
 
