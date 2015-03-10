@@ -98,6 +98,8 @@ The quantity of chemical used, e.g. titration volumes, are used to maintain reag
 
 A Lab Technician or Lab Manager sets the Product Item (or Product Items) - or reagent(s) - taken for the analysis on results capture. The allowed Product(s) and units are defined at Analysis Service or Method level and a picklist of available Product Items is shown in the results entry form for its selection. Note the user assigns a specific Product Item to a test/analysis: he/she assigns a physical purchased product to be used on that analysis. As an example, if the Analysis Service or Method requires 10ml of "Acetone" (Product), the picklist on results entry will get populated with the available "Product Items" that fit with "Acetone", so the user assigns a physical purchased product (a Product Item) to that analysis (a "Bottle of 50ml of Acetone", with ID xxxx, Batch ID yyyy and expiration date YYYY-MM-DD that was ordered in the Order ZZZZ and received on YYYY-MM-DD).
 
+This Analysis - Product Item relation is required for pushing all the analysis to quarantine in case of a defective batch. See f) Batch Control for detailed information.
+
 A Lab Technician or Lab Manager can enter the amount of ProductItem (say a reagent) used on results capture in accordance with the values set at Analysis Service or Method level. Note here the user enters the amount/volume of a selected Product Item: i.e. if the product is a bottle of 50ml of acetone and only 10ml are required for that Analysis Service, the remaining amount of acetone for that specific Product Item will decrease to 40ml, but this will not cause any effect to the Inventory unless the consumption of the total volume/amount of reactive for that Product Item.
 
 e.2) Minimum stock level alerts
