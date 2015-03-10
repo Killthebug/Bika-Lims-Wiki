@@ -100,7 +100,7 @@ A Lab Technician or Lab Manager sets the Product Item (or Product Items) - or re
 
 This Analysis - Product Item relation is required for pushing all the analysis to quarantine in case of a defective batch. See f) Batch Control for detailed information.
 
-A Lab Technician or Lab Manager can enter the amount of ProductItem (say a reagent) used on results capture in accordance with the values set at Analysis Service or Method level. Note here the user enters the amount/volume of a selected Product Item: i.e. if the product is a bottle of 50ml of acetone and only 10ml are required for that Analysis Service, the remaining amount of acetone for that specific Product Item will decrease to 40ml, but this will not cause any effect to the Inventory unless the consumption of the total volume/amount of reactive for that Product Item.
+A Lab Technician or Lab Manager can enter the amount of ProductItem (say a reagent) used on results capture in accordance with the values set at Analysis Service or Method level. Note here the user enters the amount/volume of a selected Product Item: i.e. if the product is a bottle of 50ml of acetone and only 10ml are required for that Analysis Service, the remaining amount of acetone for that specific Product Item will decrease to 40ml, but this will not cause any effect to the Inventory unless the consumption of the total volume/amount of reagent.
 
 e.2) Minimum stock level alerts
 
