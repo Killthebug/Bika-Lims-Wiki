@@ -41,7 +41,7 @@ It is live and will morph as more user and technical feedback are incorporated.
 
 Note the page is written in the present tense describing the requirement as if it is there already. 
 
-**Lower priority items are designated as Phase II and III**.
+**Lower priority items are designated as [Phase II](https://github.com/bikalabs/Bika-LIMS/wiki/GSoC-%C2%B7-Enhanced-Android-App#phase-ii-health-samp) and [III](https://github.com/bikalabs/Bika-LIMS/wiki/GSoC-%C2%B7-Enhanced-Android-App#phase-iii-phantasies)**.
 
 ### Background
 
