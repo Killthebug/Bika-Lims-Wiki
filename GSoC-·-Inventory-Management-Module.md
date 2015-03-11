@@ -60,23 +60,25 @@ A Purchase Order is an element that represents a list of products (and quantitie
 
 ###Functional description
 
-**a) Purchase Orders**
+####a) Purchase Orders
 
 Ordering Product Items are done integrated with Bika's current Suppliers structure, authorised users create purchase orders in the UI. Orders are printed and/or emailed to the supplier upon creation. The Orders can be printed and/or emailed at any time and its status (Pending, Dispatched, Received, Stored) will be displayed as well.
 
-*Further development*: Approved supplied and their contracts. Vendor catalogue integration.
+> **Further development**: Approved supplied and their contracts. Vendor catalogue integration.
 
 
-**b) Products reception and storage. Labelling**
+####b) Products reception and storage. Labelling
 
 When new stock Shipment arrives, lab clerks check it in against pending orders, print barcodes labels, capture data such as expiration date, batch and item IDs. Vendor supplied labelling scanned in tracked to each
-individual container. Upon reception, the Purchase Order status is transitioned from "Pending" or "Dispatched" to "Received", the appropriate Product Items are created, and therefore, the products stock from the inventory updated.
+individual container. 
+
+As requested by [ISO/IEC 17025](http://en.wikipedia.org/wiki/ISO/IEC_17025), each product must have a physical and technical evaluation before reception. The user must fill a form with the questions the lab has defined previously in Bika Setup. Upon reception, the Purchase Order status is transitioned from "Pending" or "Dispatched" to "Received", the appropriate Product Items are created, and therefore, the products stock from the inventory updated.
 
 Products usually come packed in containers with different number of units, so the system automatically recalculates the number of individual units of product when the lab clerk receives an order.
 
 If the stock shipment doesn't contain some of the products ordered or some of them are defective, the lab clerk can create a new order with the missing/defective items, print and/or email the supplier. The new order will refer to the previous one for tracking purposes.
 
-**c) Storage management**
+####c) Storage management
 
 When the lab clerk receives the shipments, they are stored at barcoded storage locations. The storage locations are managed at hierarchical addresses, e.g.
 
@@ -88,11 +90,12 @@ When the lab clerk receives the shipments, they are stored at barcoded storage l
 
 Storage conditions for the location, e.g. 4 deg C, must match that of its the item's specification. The storage locations should be searchable for empty spaces.
 
-*Further development*: Graphical presentation of freezer drawers with shelve positions linked to the items in there. Consolidation and optimisation of available space.
+> **Further development**: Graphical presentation of freezer drawers with shelve positions linked to the items in there. Consolidation and optimisation of available space.
 
-**e) Stock control**
 
-e.1) Dynamic Record keeping and manual reconcilliation
+####d) Stock control
+
+**d.1) Dynamic Record keeping and manual reconcilliation**
 
 The quantity of chemical used, e.g. titration volumes, are used to maintain reagent stock levels, allowing for spillage. Nevertheless, the lab manager can do an imbalance adjustment/reconcilliation of products manually. 
 
@@ -102,7 +105,11 @@ This Analysis - Product Item relation is required for pushing all the analysis t
 
 A Lab Technician or Lab Manager can enter the amount of ProductItem (say a reagent) used on results capture in accordance with the values set at Analysis Service or Method level. Note here the user enters the amount/volume of a selected Product Item: i.e. if the product is a bottle of 50ml of acetone and only 10ml are required for that Analysis Service, the remaining amount of acetone for that specific Product Item will decrease to 40ml, but this will not cause any effect to the Inventory unless the consumption of the total volume/amount of reagent.
 
-e.2) Minimum stock level alerts
+> **Further development**
+>
+> The procedure described above can also include a section for "lab made reagents/solutions". The stock control functionality will be the same as with Analysis Services, but instead of doing an analysis a lab reagent is prepared. The product description should contain all the needed materials/chemicals for its preparation. This way the stock control will work too for these items. Consider to create a new "Product type" to distinguish between purchased items and lab prepared materials. This new product type should be hierarchically below "Product type" as it will depend from purchased materials. Once the product is prepared the system should print its label, and make it available for selection (to use in Analysis Services or other reagent preparation) with all the expiration, traceability, ect. stuff that applies. To make it even more beautiful inside the product details there should be a space for instructions or preparation method.
+
+**d.2) Minimum stock level alerts**
 
 Each Product is set up with a minimum stock level at which a re-order alert is raised for lab clerks and lab managers. It is also known as 'Re-ordering level'. It is a point at which order for supply of material should be made.
 
@@ -112,32 +119,33 @@ Reordering level is calculated with the formula:
 
 The alert, be it by email or on-line (portlet) offers an easy hyper-linked re-order workflow.
 
-**f) Expiry alerts and product cancellation**
+####e) Expiry alerts and product cancellation**
 
 Most reagents and reference material have expiry dates. Lab clerk sets the expiry dates to Product Items upon reception of the purchase order. A similar alert as for low stock level is raised, based on configurable period before expiry, in the next month say.
 
 These expired Product Items are immediately cancelled on expiry and not offered in the look-ups.
 
-*Further development*: Stock loss alerts, detection and reporting.
+> **Further development**: Stock loss alerts, detection and reporting.
 
-**f) Batch control**
+####f) Batch control
 
 Lab clerk sets the supplier's batch id to Product Items upon reception of the purchase order. Product Items can be searched per batch id.
 
 Lab manager can set a batch as defective and list all analyses that involved a Product Item from a defective batch. All the analysis results go into quarantine. Moreover, the defective Product Items are immediately cancelled and not offered in the look-ups.
 
-*Further development*: Disposal, empty and expired reagents are disposed of by SOP, kept in the system.
+> **Further development**: Disposal, empty and expired reagents are disposed of by SOP, kept in the system.
 
-**g) Physical stock taking**
+
+####g) Physical stock taking
 
 For maintaining accurate stock levels, the LIMS offers:
 
 - Printable stock taking sheets, including barcodes for the item and storage location.
 - A layout optimised for data capturing on tablets with barcode scanners
 
-*Further development*: Use some of the popular statistical stock taking formulas & methods, e.g. Random selection, ABS & VED analysis etc.
+> **Further development**: Use some of the popular statistical stock taking formulas & methods, e.g. Random selection, ABS & VED analysis etc.
 
-**i) Inventory reports**
+####h) Inventory reports
 
 The inventory data are used to create regulations related reports, e.g. regarding hazardous air pollutant (HAP) and volatile organic compound (VOC) usage data.
 
@@ -147,10 +155,9 @@ The LIMS generates reports listing inventory items by location, vendor, name, ca
 
 Other reports: Amount of Product Items used the last month or selected period, expenses forecast, How long stocks will cover lab requirement, Inventory valuation, Future demand estimates, etc.
 
-**j) Regulations**
+####i) Regulations
 
 Good Laboratory Practice (GLP) and Food and Drug Administration (FDA) Guidelines, including 21 CFR Part 11 requirements prescribe: An audit trail for every data change including the date/time stamp, what was modified,
 and who made the modifications.
 
-*Further development*: Bika's Plone versioned document management is used to manage audits, preventive and corrective actions.
-
+> **Further development**: Bika's Plone versioned document management is used to manage audits, preventive and corrective actions.
