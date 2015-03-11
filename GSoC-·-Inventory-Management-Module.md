@@ -21,7 +21,7 @@ In most cases the inventory management of lab products and reagents are managed 
 This document is used to establish the scope of the project and a common understanding for coders in the 2015 Google Summer of Code to build there proposal around.
 
 ###Convention
-Note the page is written in the present tense describing the requirement as if it is there already.
+Note the page is written in the present tense describing the requirement as if it is there already. Lower priority items are designated as **Phase II**.
 
 ###Background
 While Bika LIMS already has the basics for Product and Sample References management, as well as some simple Supply Order functionality, this module has been neglected for too long.
@@ -64,7 +64,9 @@ A Purchase Order is an element that represents a list of products (and quantitie
 
 Ordering Product Items are done integrated with Bika's current Suppliers structure, authorised users create purchase orders in the UI. Orders are printed and/or emailed to the supplier upon creation. The Orders can be printed and/or emailed at any time and its status (Pending, Dispatched, Received, Stored) will be displayed as well.
 
-> **Further development**: Approved supplied and their contracts. Vendor catalogue integration.
+> **Phase II**
+>
+> Approved supplied and their contracts. Vendor catalogue integration.
 
 
 ####b) Products reception and storage. Labelling
@@ -84,13 +86,15 @@ When the lab clerk receives the shipments, they are stored at barcoded storage l
 
     a Product Item is stored
     in a container
-    in a shelve position,
+    in a shelf position,
     in a fridge or cabinet,
     in a room.
 
-Storage conditions for the location, e.g. 4 deg C, must match that of its the item's specification. The storage locations should be searchable for empty spaces.
+Storage conditions for the location, e.g. 4 deg C, must match that of its the item's specification. The storage locations should be searchable for available and adjoining space.
 
-> **Further development**: Graphical presentation of freezer drawers with shelve positions linked to the items in there. Consolidation and optimisation of available space.
+> **Phase II**
+>
+> 2D Graphical presentation of freezer shelves with shelf positions linked to the items stored, and available positions indicated. Consolidation and optimisation of storage locations - 'de-fragmentation' of storage space.
 
 
 ####d) Stock control
@@ -105,11 +109,11 @@ This Analysis - Product Item relation is required for pushing all the analysis t
 
 A Lab Technician or Lab Manager can enter the amount of ProductItem (say a reagent) used on results capture in accordance with the values set at Analysis Service or Method level. Note here the user enters the amount/volume of a selected Product Item: i.e. if the product is a bottle of 50ml of acetone and only 10ml are required for that Analysis Service, the remaining amount of acetone for that specific Product Item will decrease to 40ml, but this will not cause any effect to the Inventory unless the consumption of the total volume/amount of reagent.
 
-> **Further development**
+> **Phase II**
 >
 > The procedure described above can also include a section for "lab made reagents/solutions". The stock control functionality will be the same as with Analysis Services, but instead of doing an analysis a lab reagent is prepared. The product description should contain all the needed materials/chemicals for its preparation. This way the stock control will work too for these items. Consider to create a new "Product type" to distinguish between purchased items and lab prepared materials. This new product type should be hierarchically below "Product type" as it will depend from purchased materials. Once the product is prepared the system should print its label, and make it available for selection (to use in Analysis Services or other reagent preparation) with all the expiration, traceability, ect. stuff that applies. To make it even more beautiful inside the product details there should be a space for instructions or preparation method.
 
-**d.2) Minimum stock level alerts**
+**d.2) Low stock level alerts**
 
 Each Product is set up with a minimum stock level at which a re-order alert is raised for lab clerks and lab managers. It is also known as 'Re-ordering level'. It is a point at which order for supply of material should be made.
 
@@ -123,41 +127,57 @@ The alert, be it by email or on-line (portlet) offers an easy hyper-linked re-or
 
 Most reagents and reference material have expiry dates. Lab clerk sets the expiry dates to Product Items upon reception of the purchase order. A similar alert as for low stock level is raised, based on configurable period before expiry, in the next month say.
 
-These expired Product Items are immediately cancelled on expiry and not offered in the look-ups.
+These expired Product Items are immediately cancelled on expiry and not offered in the look-ups for selection.
 
-> **Further development**: Stock loss alerts, detection and reporting.
+> **Phase II**
+>
+> Stock loss alerts, detection and reporting.
 
-####f) Batch control
+####f) Batch control. Defective Batches
 
 Lab clerk sets the supplier's batch id to Product Items upon reception of the purchase order. Product Items can be searched per batch id.
 
-Lab manager can set a batch as defective and list all analyses that involved a Product Item from a defective batch. All the analysis results go into quarantine. Moreover, the defective Product Items are immediately cancelled and not offered in the look-ups.
+On the Worksheets and Analysis Requests where results are captured, the reagents/Product Items' batch numbers are captured too. Lab manager can set a batch as defective and list all analyses that involved a Product Item from a defective batch. Through their standard QC procedures, the lab might find that some reagent batches are defective and will decommission them. 
 
-> **Further development**: Disposal, empty and expired reagents are disposed of by SOP, kept in the system.
+These defective batches are immediately taken out of stock, and not offered in LIMS look-ups for selection any further and alerts raised to all analysts and lab managers.
 
+All analysis results that involved a defective batch of Product Items go into quarantine for retesting. Verified and Published results are invalidated as per standard Bika invalidation workflow.
+
+If the decommissioning of the defect products or batches, results in minimum stock levels being breached, the replenishment alert and workflow kick off.
+
+> **Phase II**
+>
+> Disposal, empty and expired reagents are disposed of by SOP, kept in the system.
 
 ####g) Physical stock taking
 
 For maintaining accurate stock levels, the LIMS offers:
 
-- Printable stock taking sheets, including barcodes for the item and storage location.
-- A layout optimised for data capturing on tablets with barcode scanners
+- Printable stock taking sheets, including barcodes for the Product Items and their expected storage locations.
+- A layout optimised for data capturing on tablets through barcode scanning.
 
-> **Further development**: Use some of the popular statistical stock taking formulas & methods, e.g. Random selection, ABS & VED analysis etc.
+> **Phase II**
+>
+> Use some of the popular statistical stock taking formulas & methods, e.g. Random selection, ABS & VED analysis etc.
 
 ####h) Inventory reports
 
-The inventory data are used to create regulations related reports, e.g. regarding hazardous air pollutant (HAP) and volatile organic compound (VOC) usage data.
+Most of all Bika Inventory management offers real-time inventory data of inventory stock levels, keeping track of where inventory items are and how much of it is available.
 
-Most of all, it offers real-time inventory data of actual or estimated stock levels, keeping track of where inventory items are and how much available.
+Most of all Bika Inventory management offers real-time inventory data of inventory stock levels, keeping track of where inventory items are and how much of it is available.
 
 The LIMS generates reports listing inventory items by location, vendor, name, catalogue number and custom fields.
 
 Other reports: Amount of Product Items used the last month or selected period, expenses forecast, How long stocks will cover lab requirement, Inventory valuation, Future demand estimates, etc.
 
+> **Phase II**
+>
+> The inventory data could be used to create regulations related reports, e.g. regarding hazardous air pollutant (HAP) and volatile organic compound (VOC) usage data.
+
 ####i) Regulations
 
-Good Laboratory Practice (GLP) and Food and Drug Administration (FDA) Guidelines, including 21 CFR Part 11 requirements prescribe: An audit trail for every data change including the date/time stamp, what was modified,
-and who made the modifications.
+Good Laboratory Practice (GLP) and Food and Drug Administration (FDA) Guidelines, including 21 CFR Part 11 requirements prescribe are adhered to: audit trails for every data change including the date/time stamp, what was modified, and user name are captured.
 
-> **Further development**: Bika's Plone versioned document management is used to manage audits, preventive and corrective actions.
+> **Phase II**
+> 
+> Bika's Plone versioned document management is used to manage audits, preventive and corrective actions.
