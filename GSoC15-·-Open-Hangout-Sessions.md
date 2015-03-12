@@ -1,6 +1,6 @@
 ***
 ## IMPORTANT NOTICE
-Due to the lack of connectivity, all sessions have been moved to IRC.
+**Due to connectivity issues, all sessions have been moved to IRC.
 *** 
 
 
