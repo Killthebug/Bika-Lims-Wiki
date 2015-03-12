@@ -2,7 +2,7 @@
 
 | Session       | Topic                                                   | Status/URL |
 |---------------|:--------------------------------------------------------|:-----------| 
-| 14:30 - 14:45 | Introduction. Bika LIMS project and team |  |
+| 14:30 - 14:45 | Introduction. Bika LIMS project and team | **[Open](https://plus.google.com/hangouts/_/gt32zgylbebbzzjpfcpkcnz2pia)** |
 | 15:00 - 16:00 | [ID03. Inventory Management Module](https://github.com/bikalabs/Bika-LIMS/wiki/GSoC-%C2%B7-Inventory-Management-Module) | |
 | 16:10 - 17:10 | [ID01. Froid. Free Open Instrument Middleware](https://github.com/bikalabs/Bika-LIMS/wiki/GSoC-%C2%B7-Froid.-Free-Open-Instrument-Middleware) | |
 | 17:20 - 18:20 | [ID02. Enhanced Android App](https://github.com/bikalabs/Bika-LIMS/wiki/GSoC-%C2%B7-Enhanced-Android-App) | |
