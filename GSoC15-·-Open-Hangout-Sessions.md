@@ -30,5 +30,3 @@
 **Timezone: UTC+00:00**
 
 ***
-
-If you miss a particular slot, don't be dismayed!  The sessions are more open and free-form than the above may make them seem.  Feel free to come join in the discussion.
