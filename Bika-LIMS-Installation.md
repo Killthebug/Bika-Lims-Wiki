@@ -50,6 +50,8 @@ In your new Plone folder, you will see a folder named `zeocluster`.  Change dire
 
 Save the file, and then run bin/buildout again.  Buildout will download and install all remaining dependencies.
 
+> In buildout.cfg, each line should have the same indentation as the one preceding it.  Mixing tabs and spaces may also cause errors.
+
 Verify successful build from the output of the installer script, which should include a list of found versions like this:
 
     *************** PICKED VERSIONS ****************
