@@ -31,8 +31,8 @@ You must edit `buildout.cfg`.  You will need to add or edit the "develop = " sta
 
 5) Start the ZEO server
 
-cd Plone/zeocluster
-bin/zeoserver start
+    cd Plone/zeocluster
+    bin/zeoserver start
 
 > This needs to be done once only - there is no need to re-start the zeoserver unless you have made changes to the data files on disk (eg, replaced the contents of the var/ folder, or restored from a backup)
 
@@ -40,8 +40,8 @@ bin/zeoserver start
 
 During development, you should be starting Plone in debug/foreground mode, with the following commands:
 
-cd Plone/zeocluster
-bin/client1 fg
+    cd Plone/zeocluster
+    bin/client1 fg
 
 7) Next steps
 
