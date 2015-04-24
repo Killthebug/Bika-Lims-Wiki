@@ -290,6 +290,7 @@ If no errors are shown simply start the zeocluster server and clients
 
 Point your browser to http://localhost:8080 and install your Bika site.
 
+***
 
 ### Enable error reporting
 
