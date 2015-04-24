@@ -4,7 +4,8 @@
 3. [Linux Installer Script](#linux-installer-script)
 4. [Upgrading Bika LIMS](#upgrading-bika-lims)
 5. [Windows Installation Steps](#windows-installation-steps)
-6. [Enable Error Reporting](#enable-error-reporting)
+6. [OS X Yosemite Installation Steps](#os-x-yosemite-installation-steps)
+7. [Enable Error Reporting](#enable-error-reporting)
 
 ***
 
@@ -213,6 +214,82 @@ Select the `Security` Tab __>>__  Click `Edit`  __>>__ Check `Full Control` Allo
 Click  `Apply`
 
 ***
+
+### OS X Yosemite Installation Steps
+
+We need homebrew for install some dependencies, open a terminal and install brew with this command:
+
+    ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
+After the installation of brew we need to install some packages, so:
+
+    brew install Caskroom/cask/xquartz
+    brew install cairo pango gdk-pixbuf libxml2 libffi
+
+Download and install Plone 4.3.3 OSX installer from official Plone repository (https://launchpad.net/plone/4.3/4.3.3/+download/Plone-4.3.3-64.dmg) because the 4.3.4 doesn’t have the OsX package, compiling from source give lot of error during compilation and i want to keep the system as clean as possible. Install Plone with zeocluster option, then open a terminal and 
+
+    cd /Applications/Plone/zeocluster
+    nano buildout.cfg
+
+replace
+```
+extends =
+    base.cfg
+    versions.cfg
+#    http://dist.plone.org/release/4.3.3-xxxxxxx/versions.cfg
+
+
+# If you change your Plone version, you'll also need to update
+# the repository link below.
+find-links +=
+    http://dist.plone.org/release/4.3.3-xxxxx
+```
+with
+```
+extends =
+    base.cfg
+#    versions.cfg
+    http://dist.plone.org/release/4.3.4/versions.cfg
+
+
+# If you change your Plone version, you'll also need to update
+# the repository link below.
+find-links +=
+    http://dist.plone.org/release/4.3.4
+```
+then
+
+    ./bin/buildout
+
+This will upgrade your Plone to the last stable version, it take some time depending on your connection and system.
+
+Edit again buildout.cfg
+
+    nano buildout.cfg
+
+and replace
+```
+eggs =
+    Plone
+    Pillow
+```
+with
+```
+eggs =
+    Plone
+    Pillow
+    bika.health (or bika.lims it depend on your choice)
+```
+then
+
+    ./bin/buildout
+
+If no errors are shown simply start the zeocluster server and clients
+
+    ./bin/plonectl start
+
+Point your browser to http://localhost:8080 and install your Bika site.
+
 
 ### Enable error reporting
 
