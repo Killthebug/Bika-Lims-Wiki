@@ -189,13 +189,13 @@ Response:
 
 The batching machine has returned only the first ten results.
 
-#### Example: get Sample Partitions linked to an AR
+#### Example: get Sample Partitions inside a Sample
 
 Request:
 
     http://localhost:8080/Plone/@@API/read
         ?portal_type=SamplePartition
-        &path=/Plone/clients/client-1/<sample_id>
+        &path=/Plone/clients/client-3/AP-0001
         &include_fields=getPhysicalPath
 
 Response:
