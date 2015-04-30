@@ -189,6 +189,29 @@ Response:
 
 The batching machine has returned only the first ten results.
 
+#### Example: get Sample Partitions linked to an AR
+
+Request:
+
+    http://localhost:8080/Plone/@@API/read
+        ?portal_type=SamplePartition
+        &path=/Plone/clients/client-1/<sample_id>
+        &include_fields=getPhysicalPath
+
+Response:
+
+    {
+      ...,
+      "total_objects":3,
+      "first_object_nr":0,
+      "last_object_nr":3,
+      "objects":[
+        {"path":"/Plone/clients/client-3/AP-0001/AP-0001-P1"},
+        {"path":"/Plone/clients/client-3/AP-0001/AP-0001-P2"},
+        {"path":"/Plone/clients/client-3/AP-0001/AP-0001-P3"}
+      ],
+    }
+
 #### Querying Analysis Requests
 
 When the query specifies a portal_type of AnalysisRequest, the response is modified to include all the Analyses contained in the AR, in a field called 'Analyses'.  This includes rejected/retested analyses, and their results.  The Analyses field is populated if 'Analyses' is included in the include_fields parameter, or if the include_fields parameter is not supplied.
