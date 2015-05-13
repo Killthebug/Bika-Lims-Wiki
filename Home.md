@@ -25,6 +25,7 @@ Bika LIMS is a high quality system that leverages the power and technical simpli
 - [Plone in production](http://docs.plone.org/manage/deploying/index.html)
 - [Managing Plone and Bika with Supervisor](https://github.com/bikalabs/Bika-LIMS/wiki/Managing-Plone-and-Bika-LIMS-with-Supervisor)
 - [Linux + Plone + Bika + nginx + SSL + Varnish + Zeocluster + Supervisor](https://github.com/bikalabs/Bika-LIMS/wiki/simple-Linux-Plone-Bika-nginx-SSL-varnish-zeocluster-supervisor-configuration)
+- [Managing Plone and Bika with Ansible](https://github.com/bikalabs/bika.ansible-playbook)
 
 ### Development documentation
 - [Release cycle](https://github.com/bikalabs/Bika-LIMS/wiki/Release-cycle)
