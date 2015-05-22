@@ -42,6 +42,7 @@ released on 2014-12-17 · [Read more](https://github.com/bikalabs/Bika-LIMS/wiki
 - Thermoscientific Gallery Ts9861. [interface](https://github.com/bikalabs/Bika-LIMS/blob/hotfix/3.1.7/bika/lims/exportimport/instruments/thermoscientific/gallery/Ts9861x.py) · [samples](https://github.com/bikalabs/Bika-LIMS/tree/hotfix/3.1.7/bika/lims/exportimport/instruments/thermoscientific/gallery/samples)
 
 ### Coming up / Under way
+- [Agilent 6140 UHPLC-LCMS](https://jira.bikalabs.com/browse/HEALTH-259)
 - [Agilent 7700 ICP-MCS](https://jira.bikalabs.com/browse/LIMS-1588)
 - [BD FACSCalibur](https://jira.bikalabs.com/browse/HEALTH-235)
 - [Becton Dickinson MGIT 960](https://jira.bikalabs.com/browse/HEALTH-234)
