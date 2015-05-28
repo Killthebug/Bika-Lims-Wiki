@@ -67,25 +67,26 @@ See [Installing Bika LIMS](https://github.com/bikalabs/Bika-LIMS/blob/3.1.8/docs
 
 **Fixes**
 
-- [LIMS-1697](https://jira.bikalabs.com/browse/LIMS-1697): Error updating bika.lims 317 to 318 via quickinstaller
-- [LIMS-1820](https://jira.bikalabs.com/browse/LIMS-1820): QC Graphs DateTime's X-Axis not well sorted
-- [LIMS-1522](https://jira.bikalabs.com/browse/LIMS-1522): Site Error adding display columns to sorted AR list
-- [LIMS-1770](https://jira.bikalabs.com/browse/LIMS-1770): FIAStar import 'no header'
-- [LIMS-1710](https://jira.bikalabs.com/browse/LIMS-1710): UnicodeEncode error while creating an Invoice from AR view
-- [LIMS-1634](https://jira.bikalabs.com/browse/LIMS-1634): AR Import fields (ClientRef, ClientSid) not importing correctly
 - [LIMS-1474](https://jira.bikalabs.com/browse/LIMS-1474): Disposed date is not shown in Sample View
-- [LIMS-1754](https://jira.bikalabs.com/browse/LIMS-1754): Easy install for LIMS' add-ons was not possible
-- [LIMS-1741](https://jira.bikalabs.com/browse/LIMS-1741): Fixed unwanted overlay when trying to save supply order
-- [LIMS-1748](https://jira.bikalabs.com/browse/LIMS-1748): Error in adding supply order when a product has no price
-- [LIMS-1745](https://jira.bikalabs.com/browse/LIMS-1745): Retracted analyses in duplicates
+- [LIMS-1507](https://jira.bikalabs.com/browse/LIMS-1507): No exception on SMTPServerDisconnect when publishing AR results.
+- [LIMS-1522](https://jira.bikalabs.com/browse/LIMS-1522): Site Error adding display columns to sorted AR list
+- [LIMS-1634](https://jira.bikalabs.com/browse/LIMS-1634): AR Import fields (ClientRef, ClientSid) not importing correctly
+- [LIMS-1696](https://jira.bikalabs.com/browse/LIMS-1696): Decimal mark conversion is not working with "<0,002" results type
+- [LIMS-1697](https://jira.bikalabs.com/browse/LIMS-1697): Error updating bika.lims 317 to 318 via quickinstaller
+- [LIMS-1710](https://jira.bikalabs.com/browse/LIMS-1710): UnicodeEncode error while creating an Invoice from AR view
+- [LIMS-1724](https://jira.bikalabs.com/browse/LIMS-1724): Fixed missing start and end dates on reports
+- [LIMS-1729](https://jira.bikalabs.com/browse/LIMS-1729): Analysis Specification not applied to Sample when Selected
+- [LIMS-1737](https://jira.bikalabs.com/browse/LIMS-1737): Error when adding pricelists of lab products with no volume and unit
 - [LIMS-1738](https://jira.bikalabs.com/browse/LIMS-1738): Regression. 'NoneType' object has no attribute 'getResultsRangeDict'
 - [LIMS-1739](https://jira.bikalabs.com/browse/LIMS-1739): Error with results interpretation field of an AR lacking departments
-- [LIMS-1740](https://jira.bikalabs.com/browse/LIMS-1740): Error when trying to view any Sample
-- [LIMS-1724](https://jira.bikalabs.com/browse/LIMS-1724): Fixed missing start and end dates on reports
-- [LIMS-1737](https://jira.bikalabs.com/browse/LIMS-1737): Error when adding pricelists of lab products with no volume and unit
-- [LIMS-1696](https://jira.bikalabs.com/browse/LIMS-1696): Decimal mark conversion is not working with "<0,002" results type
-- [LIMS-1729](https://jira.bikalabs.com/browse/LIMS-1729): Analysis Specification Not applying to Sample when Selected
-- [LIMS-1507](https://jira.bikalabs.com/browse/LIMS-1507): Do not cause exception on SMTPServerDisconnect when publishing AR results.
+- [LIMS-1740](https://jira.bikalabs.com/browse/LIMS-1740): Error when trying to view a Sample
+- [LIMS-1741](https://jira.bikalabs.com/browse/LIMS-1741): Fixed unwanted overlay when trying to save supply order
+- [LIMS-1745](https://jira.bikalabs.com/browse/LIMS-1745): Retracted analyses in duplicates
+- [LIMS-1748](https://jira.bikalabs.com/browse/LIMS-1748): Error in adding supply order when a product has no price
+- [LIMS-1754](https://jira.bikalabs.com/browse/LIMS-1754): Easy install for LIMS' add-ons was not possible
+- [LIMS-1770](https://jira.bikalabs.com/browse/LIMS-1770): FIAStar import 'no header'
+- [LIMS-1820](https://jira.bikalabs.com/browse/LIMS-1820): QC Graphs DateTime's X-Axis not well sorted
+
 
 ### Download
 - [Bika LIMS 3.1.8 at PyPI](https://pypi.python.org/pypi/bika.lims/3.1.8)
