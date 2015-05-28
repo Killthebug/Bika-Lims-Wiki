@@ -11,6 +11,7 @@ Bika LIMS 3.1.8 is a new [minor release](https://github.com/bikalabs/Bika-LIMS/w
 
 Sponsorship was provided by [Equigerminal](http://equigerminal.org/), [DEOHS University of Washington](http://deohs.washington.edu/), [SANBI](http://www.sanbi.ac.za/), [Lab San Martin](http://www.laboratoriosanmartin.com/), and off course individual [Naralabs](http://naralabs.com/) and [Bika Lab Systems](http://bikalabs.com/) team members who continue to contribute massively on their own accounts.
 
+And one final thank-you to the man who makes it all possible, and yet neglects to mention himself above: [lemoene](https://www.linkedin.com/in/lemoene)! :tangerine:
 
 ###Before your update
 
