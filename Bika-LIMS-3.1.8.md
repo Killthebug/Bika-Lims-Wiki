@@ -37,23 +37,25 @@ See [Installing Bika LIMS](https://github.com/bikalabs/Bika-LIMS/blob/3.1.8/docs
 ### Tickets closed
 
 **Improvements**
-- [LIMS-280](https://jira.bikalabs.com/browse/LIMS-280): System IDs starting from a specific value
-- [LIMS-1819](https://jira.bikalabs.com/browse/LIMS-1819): Bika LIMS in footer, not Bika Lab Systems
-- [LIMS-1808](https://jira.bikalabs.com/browse/LIMS-1808): Uncertainty calculation on DL
-- [LIMS-1705](https://jira.bikalabs.com/browse/LIMS-1705): Invoices. Currency unit overcooked
-- [LIMS-1507](https://jira.bikalabs.com/browse/LIMS-1507): Bika must notify why is not possible to publish an AR
-- [LIMS-1811](https://jira.bikalabs.com/browse/LIMS-1811): Refactor AR Add form Javascript, and related code.
-- [LIMS-1812](https://jira.bikalabs.com/browse/LIMS-1812): Use asynchronous requests for expanding categories in listings
-- [WINE-44](https://jira.bikalabs.com/browse/WINE-44): Sample stickers uses Partition ID only if ShowPartitions option is enabled
-- [LIMS-1779](https://jira.bikalabs.com/browse/LIMS-1779): Results report new fields and improvements
-- [LIMS-1775](https://jira.bikalabs.com/browse/LIMS-1775): Allow to select LDL or UDL defaults in results with readonly mode
-- [LIMS-1769](https://jira.bikalabs.com/browse/LIMS-1769): Allow to use LDL and UDL in calculations.
-- [LIMS-1700](https://jira.bikalabs.com/browse/LIMS-1700): Lower and Upper Detection Limits (LDL/UDL). Allow manual input
-- [LIMS-1379](https://jira.bikalabs.com/browse/LIMS-1379): Allow manual uncertainty value input
-- [LIMS-1324](https://jira.bikalabs.com/browse/LIMS-1324): Allow to hide analyses in results reports
-- [LIMS-1629](https://jira.bikalabs.com/browse/LIMS-1629): Pdf reports should split analysis results in different pages according to the lab department
-- [LIMS-1628](https://jira.bikalabs.com/browse/LIMS-1628): There should be a results interpretation field per lab department
+
+[LIMS-280](https://jira.bikalabs.com/browse/LIMS-280)	System IDs starting from a specified value
+[LIMS-1324](https://jira.bikalabs.com/browse/LIMS-1324)	Hide analyses in results reports
+[LIMS-1379](https://jira.bikalabs.com/browse/LIMS-1379)	Manual uncertainty value input
+[LIMS-1507](https://jira.bikalabs.com/browse/LIMS-1507)	Reasons for non publication notification
+[LIMS-1628](https://jira.bikalabs.com/browse/LIMS-1628)	Results interpretation field per lab department
+[LIMS-1629](https://jira.bikalabs.com/browse/LIMS-1629)	Results reports pagination per lab department
+[LIMS-1700](https://jira.bikalabs.com/browse/LIMS-1700)	Lower and Upper Detection Limits (LDL/UDL). Manual input
+[LIMS-1705](https://jira.bikalabs.com/browse/LIMS-1705)	Invoices. Currency unit overcooked
+[LIMS-1769](https://jira.bikalabs.com/browse/LIMS-1769)	Use LDL and UDL in calculations.
+[LIMS-1775](https://jira.bikalabs.com/browse/LIMS-1775)	Select LDL or UDL defaults in results with readonly mode
+[LIMS-1779](https://jira.bikalabs.com/browse/LIMS-1779)	Results report new fields and improvements
+[LIMS-1808](https://jira.bikalabs.com/browse/LIMS-1808)	Uncertainty calculation on DL
+[LIMS-1811](https://jira.bikalabs.com/browse/LIMS-1811)	Refactor AR Add form Javascript and related code
+[LIMS-1812](https://jira.bikalabs.com/browse/LIMS-1812)	Use asynchronous requests for expanding categories in listings
+[LIMS-1819](https://jira.bikalabs.com/browse/LIMS-1819)	Bika LIMS in footer, not Bika Lab Systems
+[WINE-44](https://jira.bikalabs.com/browse/WINE-44)	Partition ID on Sample stickers only if ShowPartitions option is enabled
 - Some new ID Generator's features, as the possibility to set the separator char
+
 
 **New Instrument Interfaces**
 
