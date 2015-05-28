@@ -65,6 +65,12 @@ See [Installing Bika LIMS](https://github.com/bikalabs/Bika-LIMS/blob/3.1.8/docs
 - [LIMS-1772](https://jira.bikalabs.com/browse/LIMS-1772): Instrument. VetScan VS2
 - [LIMS-1805](https://jira.bikalabs.com/browse/LIMS-1805): Instrument Interface. Horiba JY ICP
 
+- [LIMS-1771](https://jira.bikalabs.com/browse/LIMS-1771) Scil Vet abc Plus
+- [LIMS-1772](https://jira.bikalabs.com/browse/LIMS-1772) VetScan VS2
+- [LIMS-1773](https://jira.bikalabs.com/browse/LIMS-1773) Thermo Fisher ELISA Spectrophotometer
+- [LIMS-1805](https://jira.bikalabs.com/browse/LIMS-1805) Horiba JY ICP
+- [LIMS-1806](https://jira.bikalabs.com/browse/LIMS-1806) AQ2. Seal Analytical
+
 **Fixes**
 
 - [LIMS-1697](https://jira.bikalabs.com/browse/LIMS-1697): Error updating bika.lims 317 to 318 via quickinstaller
