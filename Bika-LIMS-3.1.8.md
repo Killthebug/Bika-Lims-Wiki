@@ -7,7 +7,7 @@ Bika LIMS 3.1.8 is a new [minor release](https://github.com/bikalabs/Bika-LIMS/w
 
 ###Thank you
 
-[Jordi](http://github.com/xispa), [Campbell](http://github.com/rockfruit), [Pau](http://github.com/espurna), [Alex](https://github.com/zylinx), [Jayadeep](https://github.com/jayadeepk), [Aman](https://github.com/Ammy2), [Chandan](https://github.com/chandan5), [AbHiram](https://github.com/abhi12ravi) all other code contributors, testers, feature requesters and providers of the enthusiasm that keeps everybody fired up.
+[Jordi](http://github.com/xispa), [Campbell](http://github.com/rockfruit), [Pau](http://github.com/espurna), [Alex](https://github.com/zylinx), [Jayadeep](https://github.com/jayadeepk), [Aman](https://github.com/Ammy2), [Chandan](https://github.com/chandan5), [Abhiram](https://github.com/abhi12ravi) all other code contributors, testers, feature requesters and providers of the enthusiasm that keeps everybody fired up.
 
 Sponsorship was provided by [Equigerminal](http://equigerminal.org/), [DEOHS University of Washington](http://deohs.washington.edu/), [SANBI](http://www.sanbi.ac.za/), [Lab San Martin](http://www.laboratoriosanmartin.com/), and off course individual [Naralabs](http://naralabs.com/) and [Bika Lab Systems](http://bikalabs.com/) team members who continue to contribute massively on their own accounts.
 
