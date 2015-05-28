@@ -16,7 +16,7 @@ Sponsorship was provided by [Equigerminal](http://equigerminal.org/), [DEOHS Uni
 
 ![](https://raw.githubusercontent.com/bikalabs/Bika-LIMS/hotfix/3.1.8/bika/lims/browser/images/warning.png)  **Be sure to verify all pending/open Analysis Requests before the update**
 
-This new release includes new functionalities regarding to Detection Limits (LDL and UDL), as well as Uncertainties management. After the upgrade, the user will not be able to set manually the detection limits in results for previously created analyses. You can change this behavoir enabling "Display a Detection Limit selector" and/or "Allow Manual Detection Limit input" options from inside Analysis Service edit view, but these changes will not take any effect to previously created analyses.
+This new release includes new functionalities regarding to Detection Limits (LDL and UDL), as well as Uncertainties management. After the upgrade, the user will not be able to set manually the detection limits in results for previously created analyses. You can change this behavoir enabling "Display a Detection Limit selector" and/or "Allow Manual Detection Limit input" options from inside Analysis Service edit view, but these changes will not take any effect on previously created analyses.
 
 ![](https://raw.githubusercontent.com/bikalabs/Bika-LIMS/hotfix/3.1.8/bika/lims/browser/images/warning.png) **Remember to [make a backup](http://docs.plone.org/manage/deploying/backup.html)**
 
