@@ -23,7 +23,7 @@ You can change this behaviour by enabling "Display a Detection Limit selector" a
 
 ![](https://raw.githubusercontent.com/bikalabs/Bika-LIMS/hotfix/3.1.8/bika/lims/browser/images/warning.png) **Remember to [make a backup](http://docs.plone.org/manage/deploying/backup.html)**
 
-###upgrade instructions
+###Upgrade instructions
 
 Bika LIMS 3.1.8 is a minor release, and there is no need for further changes or modifications elsewhere in the Bika LIMS instance. If your instance to be updated has been customised, please review whether the customisations are affected by the upgrade through the [CHANGELOG.txt file published with the release](https://raw.githubusercontent.com/bikalabs/Bika-LIMS/3.1.8/docs/CHANGELOG.txt).
 
