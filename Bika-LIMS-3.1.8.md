@@ -13,27 +13,29 @@ Sponsorship was provided by [Equigerminal](http://equigerminal.org/), [DEOHS Uni
 
 And one final thank-you to the man who makes it all possible: [lemoene](https://www.linkedin.com/in/lemoene)! :tangerine:
 
-###Before your update
+###Before your upgrade
 
-![](https://raw.githubusercontent.com/bikalabs/Bika-LIMS/hotfix/3.1.8/bika/lims/browser/images/warning.png)  **Be sure to verify all pending/open Analysis Requests before the update**
+![](https://raw.githubusercontent.com/bikalabs/Bika-LIMS/hotfix/3.1.8/bika/lims/browser/images/warning.png)  **Be sure to verify all pending Analysis Requests**
 
-This new release includes new functionalities regarding to Detection Limits (LDL and UDL), as well as Uncertainties management. After the upgrade, the user will not be able to set manually the detection limits in results for previously created analyses. You can change this behavoir enabling "Display a Detection Limit selector" and/or "Allow Manual Detection Limit input" options from inside Analysis Service edit view, but these changes will not take any effect on previously created analyses.
+This new release includes new functionality regarding Detection Limits (LDL and UDL), as well as Uncertainty management. After the upgrade, the user will not be able to manually set the detection limits in results for previously created analyses. 
+
+You can change this behaviour by enabling "Display a Detection Limit selector" and/or "Allow Manual Detection Limit input" options in Analysis Service edit tabs, but these changes will not take any effect on previously created analyses.
 
 ![](https://raw.githubusercontent.com/bikalabs/Bika-LIMS/hotfix/3.1.8/bika/lims/browser/images/warning.png) **Remember to [make a backup](http://docs.plone.org/manage/deploying/backup.html)**
 
-###Update instructions
+###upgrade instructions
 
-Bika LIMS 3.1.8 is a minor release, and there is no need for further changes or modifications elsewhere in the Bika LIMS instance. If your instance to be updated has been customised, please review whether the customisations are affected by the update by checking the [CHANGELOG.txt file published with the release](https://raw.githubusercontent.com/bikalabs/Bika-LIMS/3.1.8/docs/CHANGELOG.txt).
+Bika LIMS 3.1.8 is a minor release, and there is no need for further changes or modifications elsewhere in the Bika LIMS instance. If your instance to be updated has been customised, please review whether the customisations are affected by the upgrade through the [CHANGELOG.txt file published with the release](https://raw.githubusercontent.com/bikalabs/Bika-LIMS/3.1.8/docs/CHANGELOG.txt).
 
 See [Installing Bika LIMS](https://github.com/bikalabs/Bika-LIMS/blob/3.1.8/docs/INSTALL.rst) and/or [upgrading Bika LIMS](https://github.com/bikalabs/Bika-LIMS/blob/3.1.8/docs/INSTALL.rst)
 
-###After your update
+###After your upgrade
 - Use the [users](http://lists.sourceforge.net/lists/listinfo/bika-users), [designers](https://groups.google.com/forum/?hl=en) and [developers](http://lists.sourceforge.net/lists/listinfo/bika-developers) lists or IRC ([irc://freenode.net/#bika](http://webchat.freenode.net?randomnick=1&channels=%23bika&uio=d4)) if you have any question or feedback (free support),
 - Please help us spread the word about Bika LIMS! Maybe you can write about the project on your blog, website, talk about Bika LIMS at conferences, or let your friends and colleagues know this feature rich FOSS LIMS. With your help we can grow the community!    
 - To improve Bika LIMS in your language consider [contributing to translations](https://www.transifex.com/projects/p/bika-lims/),
 - Log issues, feature requests, or bugs in the [Issue Tracker](http://jira.bikalabs.com/),
 - Enable your Bika LIMS instance to [report bugs to us automatically](https://github.com/bikalabs/Bika-LIMS/blob/0c606e0/INSTALL.rst#log-errors-to-sentrybikalabscom).
-- Contact any of the [Certified Professional Bika Service Providers](http://www.bikalims.org/support-and-service-provision) with any specific questions or to learn more about making the most of Bika LIMS.
+- Contact any of the [Certified Professional Bika Service Providers](http://www.bikalims.org/support-and-service-provision) with specific questions or to learn more about making the most of Bika LIMS.
 
 ### Tickets closed
 
