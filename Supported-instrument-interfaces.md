@@ -3,8 +3,9 @@ You are here: [Home](https://github.com/bikalabs/Bika-LIMS/wiki) · User Documen
 ### Table of Contents
 1. [Introduction](#introduction)
 2. [Supported instruments](#supported-instruments)
-  1. [Bika LIMS 3.1.7]()
-  2. [Bika LIMS 3.1.6]()
+  1. [Bika LIMS 3.1.8]()
+  2. [Bika LIMS 3.1.7]()
+  3. [Bika LIMS 3.1.6]()
 3. [Coming up / Under way](#Coming-up-/-under-way)
 
 ***
