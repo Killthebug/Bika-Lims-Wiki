@@ -91,6 +91,7 @@ See [Installing Bika LIMS](https://github.com/bikalabs/Bika-LIMS/blob/3.1.8/docs
 
 ### Download
 - [Bika LIMS 3.1.8 at PyPI](https://pypi.python.org/pypi/bika.lims/3.1.8)
-- [Python egg (Python 2.7)](https://pypi.python.org/packages/2.7/b/bika.lims/bika.lims-3.1.8.0-py2.7.egg#md5=673819497a4e20e836ddc5c8250552fa) ([md5](https://pypi.python.org/pypi?:action=show_md5&digest=673819497a4e20e836ddc5c8250552fa))
+- [Python egg (Python 2.7)](https://pypi.python.org/packages/2.7/b/bika.lims/bika.lims-3.1.8-py2.7.egg) ([md5](https://pypi.python.org/pypi?:action=show_md5&digest=b50f2d2b8176e9124317f02e0a3a77bd))
+- [Python egg (Python 2.6)](https://pypi.python.org/packages/2.6/b/bika.lims/bika.lims-3.1.8-py2.6.egg) ([md5](https://pypi.python.org/pypi?:action=show_md5&digest=76c92ac3ccbfa8ce0c2149a29c2614da))
 - [Source code (zip)](https://github.com/bikalabs/Bika-LIMS/archive/3.1.8.zip)
 - [Source code (tar.gz)](https://github.com/bikalabs/Bika-LIMS/archive/3.1.8.tar.gz)
