@@ -14,6 +14,17 @@ You are here: [Home](https://github.com/bikalabs/Bika-LIMS/wiki) · User Documen
 The introduction of analyses results into Bika LIMS can be performed manually, but also automatically by using the results files generated directly by equipment or middleware software. An **instrument results file import interface** is a small part of code that parses and imports the results from those instrument-specific files into Bika LIMS. That prevents from results being entered manually by the user.
 
 ### Supported instruments
+#### **Bika LIMS 3.1.8**
+released on 2015-06-03 · [Read more](https://github.com/bikalabs/Bika-LIMS/wiki/Bika-LIMS-3.1.8)
+
+Supported instruments in Bika LIMS 3.1.7 and:
+
+- [Horiba JY ICP](https://jira.bikalabs.com/browse/LIMS-1805)
+- [Seal Analytical AQ2](https://jira.bikalabs.com/browse/LIMS-1806)
+- [Scil Vet abc Plus](https://jira.bikalabs.com/browse/LIMS-1771)
+- [Thermo Multiskan™ GO Microplate Spectrophotometer](https://jira.bikalabs.com/browse/LIMS-1773)
+- [VetScan VS2](https://jira.bikalabs.com/browse/LIMS-1772)
+
 #### **Bika LIMS 3.1.7**
 released on 2015-02-26 · [Read more](https://github.com/bikalabs/Bika-LIMS/wiki/Bika-LIMS-3.1.7)
 
@@ -47,17 +58,12 @@ released on 2014-12-17 · [Read more](https://github.com/bikalabs/Bika-LIMS/wiki
 - [BD FACSCalibur](https://jira.bikalabs.com/browse/HEALTH-235)
 - [Becton Dickinson MGIT 960](https://jira.bikalabs.com/browse/HEALTH-234)
 - [Bruker S1 Titan Handheld XRF](https://jira.bikalabs.com/browse/LIMS-1577)
-- [Horiba JY ICP](https://jira.bikalabs.com/browse/LIMS-1805)
 - [Roche Cobas C 111](https://jira.bikalabs.com/browse/HEALTH-236)
 - [Roche Cobas C 311](https://jira.bikalabs.com/browse/HEALTH-237)
 - [Roche Cobas E 411](https://jira.bikalabs.com/browse/HEALTH-238)
-- [Scil Vet abc Plus](https://jira.bikalabs.com/browse/LIMS-1771)
-- [Seal Analytical AQ2](https://jira.bikalabs.com/browse/LIMS-1806)
 - [Thermo iCAP 6200 ICP-AES](https://jira.bikalabs.com/browse/LIMS-1589)
-- [Thermo Multiskan™ GO Microplate Spectrophotometer](https://jira.bikalabs.com/browse/LIMS-1773)
 - [Thermo Scientific Phadia 100](https://jira.bikalabs.com/browse/HEALTH-229)
 - [Varion AA 240FS](https://jira.bikalabs.com/browse/LIMS-1433)
-- [VetScan VS2](https://jira.bikalabs.com/browse/LIMS-1772)
 
 **Want your instrument to be included here?**
 
