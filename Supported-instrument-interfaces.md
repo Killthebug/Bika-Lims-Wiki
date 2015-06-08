@@ -63,7 +63,7 @@ _Items checked have been already developed and will be published in the next rel
 - [ ] [Becton Dickinson MGIT 960](https://jira.bikalabs.com/browse/HEALTH-234)
 - [ ] [Bruker S1 Titan Handheld XRF](https://jira.bikalabs.com/browse/LIMS-1577)
 - [x] [Eltra CS-2000](https://jira.bikalabs.com/browse/LIMS-1818)
-- [ ] [Rigaku Supermini200 WDXRF](https://jira.bikalabs.com/browse/LIMS-1817)
+- [x] [Rigaku Supermini200 WDXRF](https://jira.bikalabs.com/browse/LIMS-1817)
 - [ ] [Roche Cobas C 111](https://jira.bikalabs.com/browse/HEALTH-236)
 - [ ] [Roche Cobas C 311](https://jira.bikalabs.com/browse/HEALTH-237)
 - [ ] [Roche Cobas E 411](https://jira.bikalabs.com/browse/HEALTH-238)
