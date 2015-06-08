@@ -20,38 +20,38 @@ released on 2015-06-03 · [Read more](https://github.com/bikalabs/Bika-LIMS/wiki
 
 Supported instruments in Bika LIMS 3.1.7 and:
 
-- [Horiba JY ICP](https://jira.bikalabs.com/browse/LIMS-1805)
-- [Seal Analytical AQ2](https://jira.bikalabs.com/browse/LIMS-1806)
-- [Scil Vet abc Plus](https://jira.bikalabs.com/browse/LIMS-1771)
-- [Thermo Multiskan™ GO Microplate Spectrophotometer](https://jira.bikalabs.com/browse/LIMS-1773)
-- [VetScan VS2](https://jira.bikalabs.com/browse/LIMS-1772)
+- [x] [Horiba JY ICP](https://jira.bikalabs.com/browse/LIMS-1805)
+- [x] [Seal Analytical AQ2](https://jira.bikalabs.com/browse/LIMS-1806)
+- [x] [Scil Vet abc Plus](https://jira.bikalabs.com/browse/LIMS-1771)
+- [x] [Thermo Multiskan™ GO Microplate Spectrophotometer](https://jira.bikalabs.com/browse/LIMS-1773)
+- [x] [VetScan VS2](https://jira.bikalabs.com/browse/LIMS-1772)
 
 #### **Bika LIMS 3.1.7**
 released on 2015-02-26 · [Read more](https://github.com/bikalabs/Bika-LIMS/wiki/Bika-LIMS-3.1.7)
 
 Supported instruments in Bika LIMS 3.1.6 and:
 
-- [Beckman Coulter Access 2](https://jira.bikalabs.com/browse/LIMS-1569)
-- [BioDrop &micro;Lite](https://jira.bikalabs.com/browse/LIMS-1604)
-- [Life technologies Qubit&reg;](https://jira.bikalabs.com/browse/LIMS-1603)
-- [Roche Cobas Taqman 48](https://jira.bikalabs.com/browse/LIMS-1570)
-- [Sysmex XS-1000i](https://jira.bikalabs.com/browse/LIMS-1571)
-- [Sysmex XS-500i](https://jira.bikalabs.com/browse/LIMS-1572)
-- [TESCAN TIMA](https://jira.bikalabs.com/browse/LIMS-1605)
-- [Thermo Arena 20XT](https://jira.bikalabs.com/browse/LIMS-1575)
+- [x] [Beckman Coulter Access 2](https://jira.bikalabs.com/browse/LIMS-1569)
+- [x] [BioDrop &micro;Lite](https://jira.bikalabs.com/browse/LIMS-1604)
+- [x] [Life technologies Qubit&reg;](https://jira.bikalabs.com/browse/LIMS-1603)
+- [x] [Roche Cobas Taqman 48](https://jira.bikalabs.com/browse/LIMS-1570)
+- [x] [Sysmex XS-1000i](https://jira.bikalabs.com/browse/LIMS-1571)
+- [x] [Sysmex XS-500i](https://jira.bikalabs.com/browse/LIMS-1572)
+- [x] [TESCAN TIMA](https://jira.bikalabs.com/browse/LIMS-1605)
+- [x] [Thermo Arena 20XT](https://jira.bikalabs.com/browse/LIMS-1575)
 
 
 #### **Bika LIMS 3.1.6**
 released on 2014-12-17 · [Read more](https://github.com/bikalabs/Bika-LIMS/wiki/Bika-LIMS-3.1.6)
 
-- Agilent's Masshunter Quantitative. [interface](https://github.com/bikalabs/Bika-LIMS/blob/hotfix/3.1.7/bika/lims/exportimport/instruments/agilent/masshunter/quantitative.py) · [samples](https://github.com/bikalabs/Bika-LIMS/tree/hotfix/3.1.7/bika/lims/exportimport/instruments/agilent/masshunter/samples)
-- Alere PIMA Beads. [interface](https://github.com/bikalabs/Bika-LIMS/blob/hotfix/3.1.7/bika/lims/exportimport/instruments/alere/pima/beads.py) · [samples](https://github.com/bikalabs/Bika-LIMS/tree/hotfix/3.1.7/bika/lims/exportimport/instruments/alere/pima/samples)
-- Alere PIMA CD4. [interface](https://github.com/bikalabs/Bika-LIMS/blob/hotfix/3.1.7/bika/lims/exportimport/instruments/alere/pima/cd4.py) · [samples](https://github.com/bikalabs/Bika-LIMS/tree/hotfix/3.1.7/bika/lims/exportimport/instruments/alere/pima/samples)
-- FOSS Fiastar. [interface](https://github.com/bikalabs/Bika-LIMS/blob/hotfix/3.1.7/bika/lims/exportimport/instruments/foss/fiastar/fiastar.py) · [samples](https://github.com/bikalabs/Bika-LIMS/tree/hotfix/3.1.7/bika/lims/exportimport/instruments/foss/fiastar)
-- FOSS Winescan FT120. [interface](https://github.com/bikalabs/Bika-LIMS/blob/hotfix/3.1.7/bika/lims/exportimport/instruments/foss/winescan/ft120.py) · [samples](https://github.com/bikalabs/Bika-LIMS/tree/hotfix/3.1.7/bika/lims/exportimport/instruments/foss/winescan/samples)
-- FOSS Winescan Auto. [interface](https://github.com/bikalabs/Bika-LIMS/blob/hotfix/3.1.7/bika/lims/exportimport/instruments/foss/winescan/__init__.py) · [samples](https://github.com/bikalabs/Bika-LIMS/tree/hotfix/3.1.7/bika/lims/exportimport/instruments/foss/winescan/samples)
-- PANalytical Omnia Axios XRF. [interface](https://github.com/bikalabs/Bika-LIMS/blob/hotfix/3.1.7/bika/lims/exportimport/instruments/panalytical/omnia/__init__.py) · [samples](https://github.com/bikalabs/Bika-LIMS/tree/hotfix/3.1.7/bika/lims/exportimport/instruments/panalytical/omnia/samples)
-- Thermoscientific Gallery Ts9861. [interface](https://github.com/bikalabs/Bika-LIMS/blob/hotfix/3.1.7/bika/lims/exportimport/instruments/thermoscientific/gallery/Ts9861x.py) · [samples](https://github.com/bikalabs/Bika-LIMS/tree/hotfix/3.1.7/bika/lims/exportimport/instruments/thermoscientific/gallery/samples)
+- [x] Agilent's Masshunter Quantitative. [interface](https://github.com/bikalabs/Bika-LIMS/blob/hotfix/3.1.7/bika/lims/exportimport/instruments/agilent/masshunter/quantitative.py) · [samples](https://github.com/bikalabs/Bika-LIMS/tree/hotfix/3.1.7/bika/lims/exportimport/instruments/agilent/masshunter/samples)
+- [x] Alere PIMA Beads. [interface](https://github.com/bikalabs/Bika-LIMS/blob/hotfix/3.1.7/bika/lims/exportimport/instruments/alere/pima/beads.py) · [samples](https://github.com/bikalabs/Bika-LIMS/tree/hotfix/3.1.7/bika/lims/exportimport/instruments/alere/pima/samples)
+- [x] Alere PIMA CD4. [interface](https://github.com/bikalabs/Bika-LIMS/blob/hotfix/3.1.7/bika/lims/exportimport/instruments/alere/pima/cd4.py) · [samples](https://github.com/bikalabs/Bika-LIMS/tree/hotfix/3.1.7/bika/lims/exportimport/instruments/alere/pima/samples)
+- [x] FOSS Fiastar. [interface](https://github.com/bikalabs/Bika-LIMS/blob/hotfix/3.1.7/bika/lims/exportimport/instruments/foss/fiastar/fiastar.py) · [samples](https://github.com/bikalabs/Bika-LIMS/tree/hotfix/3.1.7/bika/lims/exportimport/instruments/foss/fiastar)
+- [x] FOSS Winescan FT120. [interface](https://github.com/bikalabs/Bika-LIMS/blob/hotfix/3.1.7/bika/lims/exportimport/instruments/foss/winescan/ft120.py) · [samples](https://github.com/bikalabs/Bika-LIMS/tree/hotfix/3.1.7/bika/lims/exportimport/instruments/foss/winescan/samples)
+- [x] FOSS Winescan Auto. [interface](https://github.com/bikalabs/Bika-LIMS/blob/hotfix/3.1.7/bika/lims/exportimport/instruments/foss/winescan/__init__.py) · [samples](https://github.com/bikalabs/Bika-LIMS/tree/hotfix/3.1.7/bika/lims/exportimport/instruments/foss/winescan/samples)
+- [x] PANalytical Omnia Axios XRF. [interface](https://github.com/bikalabs/Bika-LIMS/blob/hotfix/3.1.7/bika/lims/exportimport/instruments/panalytical/omnia/__init__.py) · [samples](https://github.com/bikalabs/Bika-LIMS/tree/hotfix/3.1.7/bika/lims/exportimport/instruments/panalytical/omnia/samples)
+- [x] Thermoscientific Gallery Ts9861. [interface](https://github.com/bikalabs/Bika-LIMS/blob/hotfix/3.1.7/bika/lims/exportimport/instruments/thermoscientific/gallery/Ts9861x.py) · [samples](https://github.com/bikalabs/Bika-LIMS/tree/hotfix/3.1.7/bika/lims/exportimport/instruments/thermoscientific/gallery/samples)
 
 ### Coming up / Under way
 
