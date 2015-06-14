@@ -32,7 +32,7 @@ In most cases the inventory management of lab products and reagents are managed 
 
 **Product Category**
 
-Lab clerk and Lab manager can create Product categories based on their needs. Examples of product categories: Sampling Containers, Sampling Kits, Analysis Kits, Kit components, Sampling Kits, Analysis Kits, Kit components, Printer consumables, etc.
+Lab clerk and Lab manager can create Product categories based on their needs. Examples of product categories: Sampling Containers, Sampling Kits, Analysis Kits, Kit components, Printer consumables, etc.
 
 
 **Product**
@@ -161,8 +161,6 @@ For maintaining accurate stock levels, the LIMS offers:
 > Use some of the popular statistical stock taking formulas & methods, e.g. Random selection, ABS & VED analysis etc.
 
 ####h) Inventory reports
-
-Most of all Bika Inventory management offers real-time inventory data of inventory stock levels, keeping track of where inventory items are and how much of it is available.
 
 Most of all Bika Inventory management offers real-time inventory data of inventory stock levels, keeping track of where inventory items are and how much of it is available.
 
