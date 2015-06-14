@@ -15,6 +15,25 @@ You are here: [Home](https://github.com/bikalabs/Bika-LIMS/wiki) · User Documen
 The introduction of analyses results into Bika LIMS can be performed manually, but also automatically by using the results files generated directly by equipment or middleware software. An **instrument results file import interface** is a small part of code that parses and imports the results from those instrument-specific files into Bika LIMS. That prevents from results being entered manually by the user.
 
 ### Supported instruments
+### Coming up / Under way
+
+_Items checked have been already developed and will be published in the next release_
+
+- [ ] [Agilent 6140 UHPLC-LCMS](https://jira.bikalabs.com/browse/HEALTH-259)
+- [ ] [Agilent 7700 ICP-MCS](https://jira.bikalabs.com/browse/LIMS-1588)
+- [ ] [BD FACSCalibur](https://jira.bikalabs.com/browse/HEALTH-235)
+- [ ] [Becton Dickinson MGIT 960](https://jira.bikalabs.com/browse/HEALTH-234)
+- [ ] [Bruker S1 Titan Handheld XRF](https://jira.bikalabs.com/browse/LIMS-1577)
+- [x] [Eltra CS-2000](https://jira.bikalabs.com/browse/LIMS-1818)
+- [x] [Rigaku Supermini200 WDXRF](https://jira.bikalabs.com/browse/LIMS-1817)
+- [ ] [Roche Cobas C 111](https://jira.bikalabs.com/browse/HEALTH-236)
+- [ ] [Roche Cobas C 311](https://jira.bikalabs.com/browse/HEALTH-237)
+- [ ] [Roche Cobas E 411](https://jira.bikalabs.com/browse/HEALTH-238)
+- [ ] [Thermo iCAP 6200 ICP-AES](https://jira.bikalabs.com/browse/LIMS-1589)
+- [ ] [Thermo Scientific Phadia 100](https://jira.bikalabs.com/browse/HEALTH-229)
+- [ ] [Varion AA 240FS](https://jira.bikalabs.com/browse/LIMS-1433)
+
+
 #### **Bika LIMS 3.1.8**
 released on 2015-06-03 · [Read more](https://github.com/bikalabs/Bika-LIMS/wiki/Bika-LIMS-3.1.8)
 
@@ -52,24 +71,6 @@ released on 2014-12-17 · [Read more](https://github.com/bikalabs/Bika-LIMS/wiki
 - [x] FOSS Winescan Auto. [interface](https://github.com/bikalabs/Bika-LIMS/blob/hotfix/3.1.7/bika/lims/exportimport/instruments/foss/winescan/__init__.py) · [samples](https://github.com/bikalabs/Bika-LIMS/tree/hotfix/3.1.7/bika/lims/exportimport/instruments/foss/winescan/samples)
 - [x] PANalytical Omnia Axios XRF. [interface](https://github.com/bikalabs/Bika-LIMS/blob/hotfix/3.1.7/bika/lims/exportimport/instruments/panalytical/omnia/__init__.py) · [samples](https://github.com/bikalabs/Bika-LIMS/tree/hotfix/3.1.7/bika/lims/exportimport/instruments/panalytical/omnia/samples)
 - [x] Thermoscientific Gallery Ts9861. [interface](https://github.com/bikalabs/Bika-LIMS/blob/hotfix/3.1.7/bika/lims/exportimport/instruments/thermoscientific/gallery/Ts9861x.py) · [samples](https://github.com/bikalabs/Bika-LIMS/tree/hotfix/3.1.7/bika/lims/exportimport/instruments/thermoscientific/gallery/samples)
-
-### Coming up / Under way
-
-_Items checked have been already developed and will be published in the next release_
-
-- [ ] [Agilent 6140 UHPLC-LCMS](https://jira.bikalabs.com/browse/HEALTH-259)
-- [ ] [Agilent 7700 ICP-MCS](https://jira.bikalabs.com/browse/LIMS-1588)
-- [ ] [BD FACSCalibur](https://jira.bikalabs.com/browse/HEALTH-235)
-- [ ] [Becton Dickinson MGIT 960](https://jira.bikalabs.com/browse/HEALTH-234)
-- [ ] [Bruker S1 Titan Handheld XRF](https://jira.bikalabs.com/browse/LIMS-1577)
-- [x] [Eltra CS-2000](https://jira.bikalabs.com/browse/LIMS-1818)
-- [x] [Rigaku Supermini200 WDXRF](https://jira.bikalabs.com/browse/LIMS-1817)
-- [ ] [Roche Cobas C 111](https://jira.bikalabs.com/browse/HEALTH-236)
-- [ ] [Roche Cobas C 311](https://jira.bikalabs.com/browse/HEALTH-237)
-- [ ] [Roche Cobas E 411](https://jira.bikalabs.com/browse/HEALTH-238)
-- [ ] [Thermo iCAP 6200 ICP-AES](https://jira.bikalabs.com/browse/LIMS-1589)
-- [ ] [Thermo Scientific Phadia 100](https://jira.bikalabs.com/browse/HEALTH-229)
-- [ ] [Varion AA 240FS](https://jira.bikalabs.com/browse/LIMS-1433)
 
 
 **Want your instrument to be included here?**
