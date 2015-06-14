@@ -3,9 +3,10 @@ You are here: [Home](https://github.com/bikalabs/Bika-LIMS/wiki) · User Documen
 ### Table of Contents
 1. [Introduction](#introduction)
 2. [Supported instruments](#supported-instruments)
-  1. [Bika LIMS 3.1.8](https://github.com/bikalabs/Bika-LIMS/wiki/Supported-instrument-interfaces#bika-lims-318)
-  2. [Bika LIMS 3.1.7](https://github.com/bikalabs/Bika-LIMS/wiki/Supported-instrument-interfaces#bika-lims-317)
-  3. [Bika LIMS 3.1.6](https://github.com/bikalabs/Bika-LIMS/wiki/Supported-instrument-interfaces#bika-lims-316)
+  1. [Coming up / Under way](#Coming-up-/-under-way)
+  2. [Bika LIMS 3.1.8](https://github.com/bikalabs/Bika-LIMS/wiki/Supported-instrument-interfaces#bika-lims-318)
+  3. [Bika LIMS 3.1.7](https://github.com/bikalabs/Bika-LIMS/wiki/Supported-instrument-interfaces#bika-lims-317)
+  4. [Bika LIMS 3.1.6](https://github.com/bikalabs/Bika-LIMS/wiki/Supported-instrument-interfaces#bika-lims-316)
 
 ***
 
