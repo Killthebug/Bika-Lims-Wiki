@@ -51,9 +51,9 @@ A training session will allow the trainnees practice with the system without the
 - The trainer can assign generic records not linked to any session to be available in a specific training session. The modification of these records in a training session will not cause any effect to the 'generic' ones.
 - A trainer can close a training session. Closed training sessions cannot be accessed by any of the assigned trainees.
 
-**b) Traineers activity tracking and reporting**
+**b) Trainer activity tracking and reporting**
 
-Every action done by a traineer in a training session is recorded for further evaluation. Trainer can track at runtime the activity of any participant from a training session. Also, trainees can generate an activity report for the whole training session.
+Every action done by a trainer in a training session is recorded for further evaluation. Trainer can track at runtime the activity of any participant from a training session. Also, trainees can generate an activity report for the whole training session.
 
 **c) Training use­-case**
 
