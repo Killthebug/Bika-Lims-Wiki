@@ -15,7 +15,7 @@ You are here: [Home](https://github.com/bikalabs/Bika-LIMS/wiki) · User Documen
 The introduction of analyses results into Bika LIMS can be performed manually, but also automatically by using the results files generated directly by equipment or middleware software. An **instrument results file import interface** is a small part of code that parses and imports the results from those instrument-specific files into Bika LIMS. That prevents from results being entered manually by the user.
 
 ### Supported instruments
-### Coming up / Under way
+#### Coming up / Under way
 
 _Items checked have been already developed and will be published in the next release_
 
