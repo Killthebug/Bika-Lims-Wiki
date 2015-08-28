@@ -11,13 +11,16 @@
 
 ### Introduction
 
-If you have any issues you should read the following pages carefully:
+Before beginning this process you should read the following documentation:
 
 - [Plone Installation Documentation](http://docs.plone.org/manage/installing/index.html).
+
+If you have any issues you should read the following pages carefully:
 
 - [Guide to deploying and installing Plone in production](http://docs.plone.org/manage/deploying/index.html).
 
 - [Simple Linux Plone Bika nginx SSL varnish zeocluster Supervisor configuration](https://github.com/bikalabs/Bika-LIMS/wiki/simple-Linux-Plone-Bika-nginx-SSL-varnish-zeocluster-supervisor-configuration)
+
 ***
 
 ### Linux Installation Steps
@@ -30,7 +33,7 @@ You can paste the following command directly into a terminal:
 
     sudo apt-get install build-essential python-dev git-core libffi-dev libpcre3-dev gcc autoconf libtool pkg-config zlib1g-dev libssl-dev libexpat1-dev libxslt1.1 gnuplot libpcre3 libcairo2 libpango1.0-0 libgdk-pixbuf2.0-0
 
-The version numbers of dependencies are known to be valid in Ubuntu 12.04, 14.04, and Debian Wheezy.  If you use a different distribution or version, you may need to find the versions of these packages which are provided with your system.
+The version numbers of dependencies are known to be valid in Ubuntu 12.04, 14.04, and Debian Wheezy.  If you use a different distribution or version, you may need to find the versions of these packages which are provided with your system.  The packages may also have slightly different names in different distributions.
 
 #### Download and Install Plone
 
@@ -39,6 +42,8 @@ Download the latest stable release of the Plone Unified Installer from http://pl
     ./install.sh --target=/usr/local/Plone --build-python zeo
 
 > If you receive an lxml error, you may need to include the `--static-lxml` flag in the above command.
+
+> If you are installing for a production system, you should run the above command as root.  This will create additional users `plone_buildout` and `plone_daemon`, to add an extra layer of security to the installation.  If you do this, you will need to run buildout related commands as the plone_buildout user, and you will need to run Plone as the plone_daemon user.  For demo and testing instances, you can run the installation as a normal user.
 
 #### Add Bika LIMS to your buildout.cfg
 
@@ -49,9 +54,13 @@ In your new Plone folder, you will see a folder named `zeocluster`.  Change dire
         Pillow
         bika.lims
 
-Save the file, and then run bin/buildout again.  Buildout will download and install all remaining dependencies.
-
 > In buildout.cfg, each line should have the same indentation as the one preceding it.  Mixing tabs and spaces may also cause errors.
+
+Save the file, and then run `bin/buildout`.  Buildout will download and install all remaining dependencies.
+
+> If you created a root installation, you will need to run buildout like this:
+
+    sudo -u plone_buildout bin/buildout
 
 Verify successful build from the output of the installer script, which should include a list of found versions like this:
 
@@ -62,7 +71,7 @@ Verify successful build from the output of the installer script, which should in
     plone.jsonapi.core = 0.4
     *************** /PICKED VERSIONS ***************
 
-> The "PICKED VERSIONS" block above indicates a successful buildout.  If errors appear while buildout is installing dependencies, you can safely ignore them if this message is displayed.
+> The "PICKED VERSIONS" block above indicates a successful buildout.  If warnings appear while buildout is installing dependencies, you can safely ignore them if this message is displayed.
 
 > If the downloads are interrupted, simply run bin/buildout again.  The process will be resumed.
 
@@ -70,9 +79,18 @@ If the buildout finished successfully, an 'adminPassword.txt' will be created au
 
 #### Test run
 
-To start Plone in debug mode, run this command:
+First, you will need to start the zeoserver (this is the database process).
 
-    bin/plonectl fg
+    bin/zeoserver start
+
+To start a Plone client debug mode, run this command:
+
+    bin/client1 fg
+
+If you installed Plone using a root installation, you will need to use the following commands instead:
+
+    sudo -u plone_daemon bin/zeoserver start
+    sudo -u plone_daemon bin/client1 fg
 
 Note any error messages, and take corrective action if required. If no errors are encountered, you can press Control+C to exit.
 
@@ -81,8 +99,6 @@ Note any error messages, and take corrective action if required. If no errors ar
 Open a browser and go to http://localhost:8080/.  Select "Add Plone Site", ensure that the Bika LIMS option is checked, then submit the form.
 
 #### Start working with Bika LIMS
-
-    bin/plonectl start
 
 Open a browser and go to your Bika LIMS instance: http://localhost:8080/Plone
 
