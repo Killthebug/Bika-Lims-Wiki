@@ -1,61 +1,100 @@
 You are here: [Home](https://github.com/bikalabs/Bika-LIMS/wiki) · Bika LIMS Developer Guidelines
+
 ***
+
 ### Table of Contents
+
 1. [Introduction](#introduction)
-2. [Release Cycle](#releases-life-cycle)
-3. [Branches and Branch-per-feature (BPF) approach](#branches-and-branch-per-feature-bpf-approach)
-4. [Best practices](#best-practices)
+1. [Bika LIMS approach to BPF development](#bika-lims-approach-to-bpf-development)
+1. [The master branch](#the-master-branch)
+1. [The develop branch](#the-develop-branch)
+1. [Pull requests](#pull-requests)
+1. [long-life feature branches](#long-life-feature-branches)
+1. [Project code](#project-code)
+1. [Best practices](#best-practices)
 
 ***
 
 ### Introduction
 
-Software development conventions are important in a multi-developer projects and help developers read and understand each other's code. Please try to follow the guidelines described here. Your cooperation improves the effectiveness of the collaboration.
+Software development conventions are important in a multi-developer project and help developers read and understand each other's code. Please try to follow the guidelines described here. Your cooperation improves the effectiveness of the collaboration.  Please review the community channels for assistance on the [Community](https://github.com/bikalabs/Bika-LIMS/wiki/Community) page if you haven't done so yet.
 
-Please review the community channels for assistance on the [Community](https://github.com/bikalabs/Bika-LIMS/wiki/Community) page if you haven't done so yet.
+Required reading:
 
-### Release Cycle
+- [PEP8](https://www.python.org/dev/peps/pep-0008/)
+- [Developing for Plone](http://docs.plone.org/develop/index.html)
 
-Bika LIMS project developers are committed to [release early, release often (RERO)](http://en.wikipedia.org/wiki/Release_early,_release_often) to get better feedback from the user community and increase the quality of the system both from technical and functional perspectives. Please see [Release Cycles](https://github.com/bikalabs/Bika-LIMS/wiki/Release-cycle) for more details. Pay special attention to section [Releases and Branches](https://github.com/bikalabs/Bika-LIMS/wiki/Releases-life-cycle#releases-and-branches).
+To get a better understanding of the git branching methods, you should also read the following:
 
-### Branches and Branch-per-feature (BPF) approach
+- [A successful Git branching model (Vincent Driessen, 2010)](http://nvie.com/posts/a-successful-git-branching-model/)
+- [Branch-per-feature (Adam Dimirtuk, 2012)](http://dymitruk.com/blog/2012/02/05/branch-per-feature/)
+- [A pragmatic guide to the Branch Per Feature git branching strategy (Katherine Bailey, 2013)](https://www.acquia.com/blog/pragmatic-guide-branch-feature-git-branching-strategy)
 
-Bika LIMS software development uses a Branch-per-feature approach. Before continuing, please read the [*A successful Git branching model (Vincent Driessen, 2010)*](http://nvie.com/posts/a-successful-git-branching-model/), [*Branch-per-feature (Adam Dimirtuk, 2012)*](http://dymitruk.com/blog/2012/02/05/branch-per-feature/) and [*A pragmatic guide to the Branch Per Feature git branching strategy (Katherine Bailey, 2013)*](https://www.acquia.com/blog/pragmatic-guide-branch-feature-git-branching-strategy).
+### Bika LIMS approach to BPF development
 
-BPF adheres to git-flow with additional constraints:
+Bika LIMS is a client/community-driven project, and new functionalities are developed based on the requirements of different clients, at different times and with different schedule constraints.  There is no 'in-house' development (product-approach), so the challenge is creating a structure to merge all the different features into releases without affecting or breaking the work already done by others.
 
-**Committing directly to hotfix branches is not permitted**
-All changes to hotfix branches are submitted as pull requests, and the complete test log (with no failures) must be included in the pull request text.
+We follow a simple approach to the Branch-Per-Feature (BPF) workflow, and in order to maintain a relaxed atmosphere, there are a few important rules that enable us to work without stepping on each other's toes, or setting ourselves up for problems in future.
 
-**Only of trivial modifications may be Committed directly to the develop branch**
+#### The master branch
 
-When
+The master branch will always have the most stable version of the latest release.
 
-* Multiple files or functions are modified
-* The modification caused refactoring not directly related
-* More than 100 lines are changed, also for simple modifications
-* You favour a code review or have questions
+All bugfixes should be done against this branch, using pull requests.
 
-the commit is not trivial, please branch from develop.
+Periodically, a hotfix is released based on the current master branch, and this should be able to apply to all instances without fear of additional features or changes being present in the code.
 
-**BPF branches are not be merged into develop until automated tests pass**
+#### The develop branch
 
-**BPF branches by a single coder must be reviewed by at least one other**
-And should not be merged into develop by the original coder
+New features, improvements, and refactoring must be done against the develop branch, using pull requests.
 
-#### hotfix/next branch
+The develop branch represents the next feature release, and so pull requests must be of high quality before being merged.
 
-Only bug fixes and very small enhancements are allowed in the hotfix/next branch. This branch is only used for updates (minor releases) and is regularly merged to develop. 
+If a bug is discovered while working on a feature branch, the bug must be fixed in master branch, via pull request.  Because there is a delay between creation of the bugfix pull request, and it's acceptance into master, it's okay to cherry-pick the bugfix commits from the pull request into your current BPF branch.
 
-If you need to fix a bug, create a fork from hotfix/next and fix the bug there. When finished, do a pull request to hotfix/next, including the [Tracker](https://jira.bikalabs.com) ID, a description of the fix and the full  bika.lims Robot Test log after running it. 
+#### Pull Requests
 
-Remember also to update the CHANGELOG.txt. 
+- Pull requests must be associated with a Jira ticket, and the ticket number must be included in the commit log.  While it may seem pointless to create a jira ticket for a one-liner or other trivial change, it helps us to keep organised, and to communicate to non-coders the changes that are taking place.
 
-If all goes well, the Bika LIMS source code maintainers will merge your pull request into hotfix/next.
+- Each pull request must be for a well-defined feature or bugfix, ideally a relation one-to-one with a Jira ticket.  Pull requests that address multiple bugfixes or features must always be declined.  This includes one-line changes and seemingly "trivial" fixes; these should be separated into distinct pull requests.
 
-#### develop branch
+- Whitespace and formatting changes may be included in any pull request, but these changes should always be contained in their own discrete commits; no other changes should be included in these commits.
 
-The develop branch is the base for new features and enhancements. All branches per features (BPFs) must be created from develop.
+- Pull requests must not be submitted without unit-tests, and may not be merged until all tests pass.  To prevent the reviewer from being required to run or fix tests, the log from all relevant tests should be included in the pull request.
+
+- Pull requests must be merged by a different person than the primary coder.
+
+- Committing directly to the master or develop branches is absolutely not permitted.
+
+- Pull requests with only a part of the bugfix or feature completed may not be merged, and you should never submit a pull request if you know that there is any reason that it will not work.
+  
+- Always be sure to create or edit the upgrade step if required, and test your code after upgrading from a previous version.
+
+- Remember also to update the CHANGELOG.txt.
+
+- If feature branch: always do a `git merge merge -no-ff develop` to your feature-branch before a pull request.
+
+- If bugfix branch: always do a `git merge -no-ff master` to your bugfix branch before a pull request.
+
+#### long-life feature branches
+
+Architectural and project-wide changes - these are the things that may cause the worst impact.  Discuss them previously in the list and once a plan is agreed upon, tag them with arch/ prefix and don't expect them to be accepted soon.
+
+Don't base your current development on them unless you want your work to fall into the world of orphans.
+
+During development of these branches, periodically integrate the develop branch to prevent them from diverging too far.
+
+If you are working on one of these branches, use of the [git rerere](http://git-scm.com/docs/git-rerere) extension can be invaluable.
+
+#### Project code
+
+During development for a specific client or project, it's best to fork the bika.lims repository to allow flexible development.
+
+All client work should be submitted back to the main repository via pull request as soon as it is baked, unless it is sensitive, incompatible, or it doesn't make sense to have for all clients.
+
+As mentioned previously, all bugs that are discovered during this work should be fixed in the main respository's master branch, via a pull request.
+
+All work that isn't intended to be merged back into the main repository should be created in a separate extension package, included using buildout.  A template for such a package is available at https://github.com/bikalabs/bika.custom
 
 ### Best Practice
 
@@ -80,6 +119,6 @@ In addition, please follow the [PEP-8 Style guide for Python Code](http://legacy
 
 We also expect coders to write short, to-the-point methods that encapsulate a very specific behaviour, rather than long procedural functions.
 
-If your methods are longer that 30-40 lines of code, or if they have extensive conditional blocks or switch statements, break them up into more methods. 
+If your methods are longer that 30-40 lines of code, or if they have extensive conditional blocks or switch statements, break them up into more methods.
 
 Related and equally important, is factoring common procedures into their own classes or methods. When you find yourself writing the same type of functionality more than once, it is time to refactor.
