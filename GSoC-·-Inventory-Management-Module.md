@@ -37,14 +37,14 @@ Lab clerk and Lab manager can create Product categories based on their needs. Ex
 
 **Product**
 
-The Product entity represents an item that can be purchased to a supplier (vendor) at any time. The lab maintains a catalogue of products and each product includes (but not limited to) the following attributes: title, description, category, supplier, CAS number, supplier catalogue ID, hazard rating, quantity, toxicity, health effects, first aid SOP, storage conditions, disposal SOP, spill-handling procedures, Material Safety Data Sheets (MSDS), relevant images, PDF and other files.
+The Product entity represents an item that can be purchased from a supplier (vendor) at any time. The lab maintains a catalogue of products and each product includes (but not limited to) the following attributes: title, description, category, supplier, CAS number, supplier catalogue ID, hazard rating, quantity, toxicity, health effects, first aid SOP, storage conditions, disposal SOP, spill-handling procedures, Material Safety Data Sheets (MSDS), relevant images, PDF and other files.
 
 A Product must be assigned to a Product Category.
 
 
 **Product Item**
 
-The product/inventory items are the individual entities the system manages. The product item represents a physical item of a Product purchased to a Supplier. A product/inventory item inherits all the attributes from a Product entity plus the following: order id, date received, date opened, location, expiry date, lab ID, disposal date, batch id.
+The product/inventory items are the individual entities the system manages. The product item represents a physical item of a Product purchased from a Supplier. A product/inventory item inherits all the attributes from a Product entity plus the following: order id, date received, date opened, location, expiry date, lab ID, disposal date, batch id.
 
 Product items often arrives batches of say 10 items, and this is resolved via a Batch Container/Shipping package and its individual items.
 
@@ -56,7 +56,7 @@ Already exists in Bika LIMS. A Supplier can have 0 or more Products assigned. A 
 
 **Purchase Order**
 
-A Purchase Order is an element that represents a list of products (and quantities) to be purchased to a Supplier. Only lab managers and lab clerks can create orders. An order must to be assigned to a Supplier and once created, its default status is 'Pending' (of reception).
+A Purchase Order is an element that represents a list of products (and quantities) to be purchased from a Supplier. Only lab managers and lab clerks can create orders. An order must be assigned to a Supplier and once created, its default status is 'Pending' reception.
 
 ###Functional description
 
@@ -68,7 +68,7 @@ Ordering Product Items are done integrated with Bika's current Suppliers structu
 
 > **Phase II**
 >
-> Approved supplied and their contracts. Vendor catalogue integration.
+> Approved suppliers and their contacts. Vendor catalogue integration.
 
 
 ####b) Products reception and storage. Labelling
@@ -115,7 +115,7 @@ A Lab Technician or Lab Manager sets the Product Item (or Product Items) - or re
 
 This Analysis - Product Item relation is required for pushing all the analysis to quarantine in case of a defective batch. See f) Batch Control for detailed information.
 
-A Lab Technician or Lab Manager can enter the amount of ProductItem (say a reagent) used on results capture in accordance with the values set at Analysis Service or Method level. Note here the user enters the amount/volume of a selected Product Item: i.e. if the product is a bottle of 50ml of acetone and only 10ml are required for that Analysis Service, the remaining amount of acetone for that specific Product Item will decrease to 40ml, but this will not cause any effect to the Inventory unless the consumption of the total volume/amount of reagent.
+A Lab Technician or Lab Manager can enter the amount of Product Item, say a reagent, used on results capture in accordance with the values set at Analysis Service or Method level. Note here the user enters the amount/volume of a selected Product Item: i.e. if the product is a bottle of 50ml of acetone and only 10ml are required for that Analysis Service, the remaining amount of acetone for that specific Product Item will decrease to 40ml, but this will not cause any effect to the Inventory unless the consumption of the total volume/amount of reagent.
 
 > **Phase II**
 >
