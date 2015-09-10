@@ -107,11 +107,13 @@ Storage conditions for the location, e.g. 4 deg C, must match that of its the it
 
 **Status: [Open](https://jira.bikalabs.com/browse/LIMS-1840)**
 
-**d.1) Dynamic Record keeping and manual reconcilliation**
+**d.1) Dynamic Record keeping**
 
 The quantity of chemical used, e.g. titration volumes, are used to maintain reagent stock levels, allowing for spillage. Nevertheless, the lab manager can do an imbalance adjustment/reconcilliation of products manually. 
 
-A Lab Technician or Lab Manager sets the Product Item (or Product Items) - or reagent(s) - taken for the analysis on results capture. The allowed Product(s) and units are defined at Analysis Service or Method level and a picklist of available Product Items is shown in the results entry form for its selection. Note the user assigns a specific Product Item to a test/analysis: he/she assigns a physical purchased product to be used on that analysis. As an example, if the Analysis Service or Method requires 10ml of "Acetone" (Product), the picklist on results entry will get populated with the available "Product Items" that fit with "Acetone", so the user assigns a physical purchased product (a Product Item) to that analysis (a "Bottle of 50ml of Acetone", with ID xxxx, Batch ID yyyy and expiration date YYYY-MM-DD that was ordered in the Order ZZZZ and received on YYYY-MM-DD).
+A Lab Technician or Lab Manager sets the Product Item (or Product Items) - or reagent(s) - taken for the analysis on results capture. The allowed Product(s) and units are defined at Analysis Service or Method level and a picklist of available Product Items is shown in the results entry form for its selection. Note the user assigns a specific Product Item to a test/analysis: he/she assigns a physical purchased product to be used on that analysis. 
+
+For example, if the Analysis Service or Method requires 10ml of "Acetone" (Product), the picklist on results entry will get populated with the available "Product Items" that fit with "Acetone", so the user assigns a physical purchased product (a Product Item) to that analysis (a "Bottle of 50ml of Acetone", with ID xxxx, Batch ID yyyy and expiration date YYYY-MM-DD that was ordered in the Order ZZZZ and received on YYYY-MM-DD).
 
 This Analysis - Product Item relation is required for pushing all the analysis to quarantine in case of a defective batch. See f) Batch Control for detailed information.
 
@@ -119,7 +121,9 @@ A Lab Technician or Lab Manager can enter the amount of Product Item, say a reag
 
 > **Phase II**
 >
-> The procedure described above can also include a section for "lab made reagents/solutions". The stock control functionality will be the same as with Analysis Services, but instead of doing an analysis a lab reagent is prepared. The product description should contain all the needed materials/chemicals for its preparation. This way the stock control will work too for these items. Consider to create a new "Product type" to distinguish between purchased items and lab prepared materials. This new product type should be hierarchically below "Product type" as it will depend from purchased materials. Once the product is prepared the system should print its label, and make it available for selection (to use in Analysis Services or other reagent preparation) with all the expiration, traceability, ect. stuff that applies. To make it even more beautiful inside the product details there should be a space for instructions or preparation method.
+> The procedure described above can also include a section for "lab made reagents/solutions". The stock control functionality will be the same as with Analysis Services, but instead of doing an analysis a lab reagent is prepared. The product description should contain all the needed materials/chemicals for its preparation. This way the stock control will work too for these items. 
+
+Consider to create a new "Product type" to distinguish between purchased items and lab prepared materials. This new product type should be hierarchically below "Product type" as it will depend from purchased materials. Once the product is prepared the system should print its label, and make it available for selection (to use in Analysis Services or other reagent preparation) with all the expiration, traceability, ect. stuff that applies. To make it even more beautiful inside the product details there should be a space for instructions or preparation method.
 
 **d.2) Low stock level alerts**
 
@@ -161,7 +165,7 @@ If the decommissioning of the defect products or batches, results in minimum sto
 >
 > Disposal, empty and expired reagents are disposed of by SOP, kept in the system.
 
-####g) Physical stock taking
+####g) Physical stock taking. Manual reconciliation
 
 **Status: [Open](https://jira.bikalabs.com/browse/LIMS-1843)**
 
@@ -169,6 +173,8 @@ For maintaining accurate stock levels, the LIMS offers:
 
 - Printable stock taking sheets, including barcodes for the Product Items and their expected storage locations.
 - A layout optimised for data capturing on tablets through barcode scanning.
+
+Data captured during stock taking are used to adjust inventory levels, and a reconciliation report of these adjustments made available.
 
 > **Phase II**
 >
