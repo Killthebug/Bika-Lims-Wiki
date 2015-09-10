@@ -62,6 +62,8 @@ A Purchase Order is an element that represents a list of products (and quantitie
 
 ####a) Purchase Orders
 
+**Status: [Resolved](https://jira.bikalabs.com/browse/LIMS-1837)**
+
 Ordering Product Items are done integrated with Bika's current Suppliers structure, authorised users create purchase orders in the UI. Orders are printed and/or emailed to the supplier upon creation. The Orders can be printed and/or emailed at any time and its status (Pending, Dispatched, Received, Stored) will be displayed as well.
 
 > **Phase II**
@@ -70,6 +72,8 @@ Ordering Product Items are done integrated with Bika's current Suppliers structu
 
 
 ####b) Products reception and storage. Labelling
+
+**Status: [Resolved](https://jira.bikalabs.com/browse/LIMS-1838)**
 
 When new stock Shipment arrives, lab clerks check it in against pending orders, print barcodes labels, capture data such as expiration date, batch and item IDs. Vendor supplied labelling scanned in tracked to each
 individual container. 
@@ -81,6 +85,8 @@ Products usually come packed in containers with different number of units, so th
 If the stock shipment doesn't contain some of the products ordered or some of them are defective, the lab clerk can create a new order with the missing/defective items, print and/or email the supplier. The new order will refer to the previous one for tracking purposes.
 
 ####c) Storage management
+
+**Status: [Resolved](https://jira.bikalabs.com/browse/LIMS-1839)**
 
 When the lab clerk receives the shipments, they are stored at barcoded storage locations. The storage locations are managed at hierarchical addresses, e.g.
 
@@ -98,6 +104,8 @@ Storage conditions for the location, e.g. 4 deg C, must match that of its the it
 
 
 ####d) Stock control
+
+**Status: [Open](https://jira.bikalabs.com/browse/LIMS-1840)**
 
 **d.1) Dynamic Record keeping and manual reconcilliation**
 
@@ -125,6 +133,8 @@ The alert, be it by email or on-line (portlet) offers an easy hyper-linked re-or
 
 ####e) Expiry alerts and product cancellation**
 
+**Status: [Open](https://jira.bikalabs.com/browse/LIMS-1841)**
+
 Most reagents and reference material have expiry dates. Lab clerk sets the expiry dates to Product Items upon reception of the purchase order. A similar alert as for low stock level is raised, based on configurable period before expiry, in the next month say.
 
 These expired Product Items are immediately cancelled on expiry and not offered in the look-ups for selection.
@@ -134,6 +144,8 @@ These expired Product Items are immediately cancelled on expiry and not offered 
 > Stock loss alerts, detection and reporting.
 
 ####f) Batch control. Defective Batches
+
+**Status: [Resolved](https://jira.bikalabs.com/browse/LIMS-1842)**
 
 Lab clerk sets the supplier's batch id to Product Items upon reception of the purchase order. Product Items can be searched per batch id.
 
@@ -151,6 +163,8 @@ If the decommissioning of the defect products or batches, results in minimum sto
 
 ####g) Physical stock taking
 
+**Status: [Open](https://jira.bikalabs.com/browse/LIMS-1843)**
+
 For maintaining accurate stock levels, the LIMS offers:
 
 - Printable stock taking sheets, including barcodes for the Product Items and their expected storage locations.
@@ -161,6 +175,8 @@ For maintaining accurate stock levels, the LIMS offers:
 > Use some of the popular statistical stock taking formulas & methods, e.g. Random selection, ABS & VED analysis etc.
 
 ####h) Inventory reports
+
+**Status: [Open](https://jira.bikalabs.com/browse/LIMS-1844)**
 
 Most of all Bika Inventory management offers real-time inventory data of inventory stock levels, keeping track of where inventory items are and how much of it is available.
 
@@ -174,7 +190,10 @@ Other reports: Amount of Product Items used the last month or selected period, e
 
 ####i) Regulations
 
+**Status: [Open](https://jira.bikalabs.com/browse/LIMS-1845)**
+
 Good Laboratory Practice (GLP) and Food and Drug Administration (FDA) Guidelines, including 21 CFR Part 11 requirements prescribe are adhered to: audit trails for every data change including the date/time stamp, what was modified, and user name are captured.
+
 
 > **Phase II**
 > 
