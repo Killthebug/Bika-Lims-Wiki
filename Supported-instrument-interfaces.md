@@ -27,7 +27,6 @@ _Items checked have been already developed and will be published in the next rel
 - [ ] [COBAS AmpliPrep](https://jira.bikalabs.com/browse/HEALTH-309)
 - [x] [Eltra CS-2000](https://jira.bikalabs.com/browse/LIMS-1818)
 - [ ] [GeneXpert](https://jira.bikalabs.com/browse/HEALTH-308)
-- [ ] [HORIBA JY 2000 2 ICP](https://jira.bikalabs.com/browse/LIMS-1805)
 - [ ] [NucliSens EasyQ Analyzer](https://jira.bikalabs.com/browse/HEALTH-310)
 - [x] [Rigaku Supermini200 WDXRF](https://jira.bikalabs.com/browse/LIMS-1817)
 - [ ] [Roche Cobas C 111](https://jira.bikalabs.com/browse/HEALTH-236)
