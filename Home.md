@@ -3,6 +3,8 @@ Bika LIMS is a high quality system that leverages the power and technical simpli
 ### Current release
 **Bika LIMS 3.1.8** · 2015-06-03 · [Read more](https://github.com/bikalabs/Bika-LIMS/wiki/Bika-LIMS-3.1.8)
 
+######![Info](https://raw.githubusercontent.com/bikalabs/Bika-LIMS/3.1.8/bika/lims/browser/images/info.png) **Bika LIMS 3.1.9** will debut on October 8th.
+
 ### User documentation
 - [Bika LIMS user manual](http://demo.bikalabs.com/knowledge-centre/manual/bika-3-user-manual)
 - [Community resources](https://github.com/bikalabs/Bika-LIMS/wiki/Community)
