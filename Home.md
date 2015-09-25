@@ -36,10 +36,10 @@ Bika LIMS is a high quality system that leverages the power and technical simpli
 
 **If you need assistance with your Bika LIMS implementation or professional advice.**
 
-**[Bika Lab Systems](http://bikalabs.com)**
+####[![Bika Lab Systems](http://naralabs.com/images/bikalabs_120.jpg)](http://bikalabs.com)
 
 Bika Lab Systems was established in 2002 (incorporated 2005), identifying a need for affordable and easy to use information systems and instrument interfaces for small and medium size laboratories, functional out of the box and customisable to requirements. Bika Lab Systems co-ordinates the Bika open source LIMS project, and is committed to keeping the Bika LIMS code freely available and maintaining effective organisational support.
 
-**[Naralabs](http://naralabs.com)**
+####[![Naralabs](http://naralabs.com/images/naralabs_120.png)](http://naralabs.com)
 
 Naralabs is a company based on Barcelona (Spain), specialized in Laboratory Information Management Systems (LIMS) and offers professional technology services and engineering, such as consulting, implementation, training, system maintenance and technical support.
