@@ -13,7 +13,7 @@ Some of the new functionalities included in BL319 are Sampling Rounds management
 
 [GSoC functionalities](https://jira.bikalabs.com/issues/?jql=labels%20%3D%20GSoC-15) haven't been included in this release. Will be in the next release after some, hint hint, burnishing, testing and maturation. We'll make a bigger whooha again then. 
 
-**Fifty tickets have been closed!**
+**[Fifty tickets have been closed!](https://github.com/bikalabs/Bika-LIMS/wiki/Bika-LIMS-3.1.9#tickets-closed)**
 
 ###Thank you
 
