@@ -7,6 +7,7 @@ You are here: [Home](https://github.com/bikalabs/Bika-LIMS/wiki) · User Documen
   2. [Bika LIMS 3.1.8](https://github.com/bikalabs/Bika-LIMS/wiki/Supported-instrument-interfaces#bika-lims-318)
   3. [Bika LIMS 3.1.7](https://github.com/bikalabs/Bika-LIMS/wiki/Supported-instrument-interfaces#bika-lims-317)
   4. [Bika LIMS 3.1.6](https://github.com/bikalabs/Bika-LIMS/wiki/Supported-instrument-interfaces#bika-lims-316)
+3. [Want your instrument to be supported?](#want-your-instrument-to-be-included-here)
 
 ***
 
