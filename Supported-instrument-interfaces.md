@@ -91,6 +91,6 @@ released on 2014-12-17 · [Read more](https://github.com/bikalabs/Bika-LIMS/wiki
 - [x] Thermoscientific Gallery Ts9861
 
 
-**Want your instrument to be included here?**
+#### Want your instrument to be included here?
 
 [Code your own instrument interface](https://github.com/bikalabs/Bika-LIMS/wiki/creating-an-instrument-import-interface) and [share it](https://github.com/bikalabs/Bika-LIMS/wiki/Bika-LIMS-Developer-Guidelines), [add it to the tracker](https://jira.bikalabs.com/browse/LIMS-1573) or [select the feature/enhancement you want to achieve and become a sponsor](https://jira.bikalabs.com/issues/?jql=project%20in%20%28HEALTH%2C%20LIMS%29%20AND%20status%20in%20%28Open%2C%20Reopened%29%20AND%20%20type%20in%20%28Improvement%2C%20%22New%20Feature%22%29%20AND%20%28fixversion%20is%20EMPTY%29%20ORDER%20BY%20Rank%20ASC%2C%20priority%20DESC%2C%20updated%20DESC).
