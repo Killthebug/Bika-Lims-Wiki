@@ -17,7 +17,9 @@ The introduction of analyses results into Bika LIMS can be performed manually, b
 ### Supported instruments
 #### Coming up / Under way
 
-_Items checked have been already developed and will be published in the next release_
+_Items checked have been already developed and will be published in the next release_. 
+
+[Detailed list and status in the tracker](https://jira.bikalabs.com/issues/?jql=labels%20%3D%20instrument)
 
 - [ ] [Agilent 6140 UHPLC-LCMS](https://jira.bikalabs.com/browse/HEALTH-259)
 - [ ] [Agilent 7700 ICP-MCS](https://jira.bikalabs.com/browse/LIMS-1588)
@@ -27,12 +29,14 @@ _Items checked have been already developed and will be published in the next rel
 - [ ] [BD FACSCalibur Cell Analyzer/FACSLink](https://jira.bikalabs.com/browse/HEALTH-235)
 - [ ] [Becton Dickinson MGIT 960](https://jira.bikalabs.com/browse/HEALTH-234)
 - [ ] [BIO-RAD ELISA Microplate Reader](https://jira.bikalabs.com/browse/HEALTH-316)
+- [ ] [BIOBASE Semi-auto Biochemistry Analyzer](https://jira.bikalabs.com/browse/LIMS-2055)
 - [ ] [BioTek ELx800 Absorbance Reader](https://jira.bikalabs.com/browse/HEALTH-315)
 - [ ] [Bruker S1 Titan Handheld XRF](https://jira.bikalabs.com/browse/LIMS-1577)
 - [ ] [COBAS AmpliPrep](https://jira.bikalabs.com/browse/HEALTH-309)
 - [x] [Eltra CS-2000](https://jira.bikalabs.com/browse/LIMS-1818)
 - [ ] [GeneXpert](https://jira.bikalabs.com/browse/HEALTH-308)
 - [ ] [NucliSens EasyQ Analyzer](https://jira.bikalabs.com/browse/HEALTH-310)
+- [ ] [Rayto Rt-7600 Auto Hematology Analyzer](https://jira.bikalabs.com/browse/LIMS-2054)
 - [x] [Rigaku Supermini200 WDXRF](https://jira.bikalabs.com/browse/LIMS-1817)
 - [ ] [Roche Cobas C 111](https://jira.bikalabs.com/browse/HEALTH-236)
 - [ ] [Roche Cobas C 311](https://jira.bikalabs.com/browse/HEALTH-237)
