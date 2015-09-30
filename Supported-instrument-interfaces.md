@@ -90,6 +90,7 @@ released on 2014-12-17 · [Read more](https://github.com/bikalabs/Bika-LIMS/wiki
 - [x] PANalytical Omnia Axios XRF
 - [x] Thermoscientific Gallery Ts9861
 
+***
 
 #### Want your instrument to be included here?
 
