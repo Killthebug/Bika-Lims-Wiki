@@ -45,6 +45,8 @@ See [Installing Bika LIMS](https://github.com/bikalabs/Bika-LIMS/blob/3.1.9/docs
 - Enable your Bika LIMS instance to [report bugs to us automatically](https://github.com/bikalabs/Bika-LIMS/blob/0c606e0/INSTALL.rst#log-errors-to-sentrybikalabscom).
 - Contact any of the [Certified Professional Bika Service Providers](http://www.bikalims.org/support-and-service-provision) with specific questions or to learn more about making the most of Bika LIMS.
 
+***
+
 ### Tickets closed
 **Improvements**
 
