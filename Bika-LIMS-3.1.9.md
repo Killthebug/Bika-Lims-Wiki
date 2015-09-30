@@ -5,7 +5,9 @@ You are here: [Home](https://github.com/bikalabs/Bika-LIMS/wiki) · [Changelog](
 
 ***
 
-**Bika LIMS 3.1.9 (aka BL319) is the new current stable release of Bika LIMS**. BL319 includes a lot of new features and beautiful improvements, as well as bug-fixes that have been submitted since 3.1.8 was released. 
+**Bika LIMS 3.1.9 (aka BL319) is the new current stable release of Bika LIMS**. 
+
+BL319 includes a lot of new features and beautiful improvements, as well as bug-fixes that have been submitted since 3.1.8 was released. 
 
 Some of the new functionalities included in BL319 are Sampling Rounds management, a new Dashboard for Lab Managers and Administrators, improved previews for results reports, new instrument import interfaces, stickers improvements, pricing per analysis profiles, transposed view for worksheets and much more. 
 
