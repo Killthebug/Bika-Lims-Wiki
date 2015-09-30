@@ -21,6 +21,8 @@ _Items checked have been already developed and will be published in the next rel
 
 - [ ] [Agilent 6140 UHPLC-LCMS](https://jira.bikalabs.com/browse/HEALTH-259)
 - [ ] [Agilent 7700 ICP-MCS](https://jira.bikalabs.com/browse/LIMS-1588)
+- [ ] [Agilent 7900 ICP-MCS](https://jira.bikalabs.com/browse/LIMS-1918)
+- [ ] [Agilent 8800 Triple Quadrupole ICP-MS](https://jira.bikalabs.com/browse/LIMS-1919)
 - [ ] [Applied Biosystems 3130/3130xl Genetic Analyzer](https://jira.bikalabs.com/browse/HEALTH-323)
 - [ ] [BD FACSCalibur](https://jira.bikalabs.com/browse/HEALTH-235)
 - [ ] [BD FACSLink](https://jira.bikalabs.com/browse/HEALTH-235)
@@ -42,7 +44,7 @@ _Items checked have been already developed and will be published in the next rel
 - [ ] [Sysmex XT1800i](https://jira.bikalabs.com/browse/HEALTH-318)
 - [ ] [Sysmex XT2000i](https://jira.bikalabs.com/browse/HEALTH-318)
 - [ ] [Sysmex XT4000i](https://jira.bikalabs.com/browse/HEALTH-318)
-- [ ] [Thermo iCAP 6200 ICP-AES](https://jira.bikalabs.com/browse/LIMS-1589)
+- [ ] [Thermo iCAP 6200 ICP-OES Analyzer](https://jira.bikalabs.com/browse/LIMS-1589)
 - [ ] [Thermo Scientific Phadia 100](https://jira.bikalabs.com/browse/HEALTH-229)
 - [ ] [Varion AA 240FS](https://jira.bikalabs.com/browse/LIMS-1433)
 
