@@ -33,7 +33,6 @@ _Items checked have been already developed and will be published in the next rel
 - [ ] [BIOBASE Semi-auto Biochemistry Analyzer](https://jira.bikalabs.com/browse/LIMS-2055)
 - [ ] [BioTek ELx800 Absorbance Reader](https://jira.bikalabs.com/browse/HEALTH-315)
 - [ ] [Bruker S1 Titan Handheld XRF](https://jira.bikalabs.com/browse/LIMS-1577)
-- [ ] [COBAS AmpliPrep](https://jira.bikalabs.com/browse/HEALTH-309)
 - [x] [Eltra CS-2000](https://jira.bikalabs.com/browse/LIMS-1818)
 - [ ] [GeneXpert](https://jira.bikalabs.com/browse/HEALTH-308)
 - [ ] [NucliSens EasyQ Analyzer](https://jira.bikalabs.com/browse/HEALTH-310)
