@@ -25,15 +25,15 @@ Sponsorship was provided by [Equigerminal](http://equigerminal.org/), [Metron Ge
 
 ###Before your upgrade
 
-![](https://raw.githubusercontent.com/bikalabs/Bika-LIMS/3.1.9/bika/lims/browser/images/warning.png)  **From versions prior to 3.1.8**
+![](https://raw.githubusercontent.com/bikalabs/Bika-LIMS/3.1.9/bika/lims/browser/images/warning.png)  **From versions prior to 3.1.8.2**
 
-If your version is prior to 3.1.8, read the ["Before your upgrade" from BL318 announcement](https://github.com/bikalabs/Bika-LIMS/wiki/Bika-LIMS-3.1.8#before-your-upgrade) first!.
+If your version is prior to 3.1.8.2, read the ["Before your upgrade" from BL318 announcement](https://github.com/bikalabs/Bika-LIMS/wiki/Bika-LIMS-3.1.8#before-your-upgrade) first!.
 
 ![](https://raw.githubusercontent.com/bikalabs/Bika-LIMS/3.1.9/bika/lims/browser/images/warning.png) **Remember to [make a backup](http://docs.plone.org/manage/deploying/backup.html)**
 
 ###Upgrade instructions
 
-There is no need for further changes or modifications elsewhere in the Bika LIMS instance. If your instance to be updated has been customised, please review whether the customisations are affected by the upgrade through the [CHANGELOG.txt file published with the release](https://raw.githubusercontent.com/bikalabs/Bika-LIMS/3.1.9/docs/CHANGELOG.txt).
+There is no need for further changes or modifications elsewhere in the Bika LIMS instance. If your instance to be updated has been customized, please review whether the customizations are affected by the upgrade through the [CHANGELOG.txt file published with the release](https://raw.githubusercontent.com/bikalabs/Bika-LIMS/3.1.9/docs/CHANGELOG.txt).
 
 See [Installing Bika LIMS](https://github.com/bikalabs/Bika-LIMS/blob/3.1.9/docs/INSTALL.rst) and/or [upgrading Bika LIMS](https://github.com/bikalabs/Bika-LIMS/blob/3.1.9/docs/INSTALL.rst)
 
@@ -46,6 +46,19 @@ See [Installing Bika LIMS](https://github.com/bikalabs/Bika-LIMS/blob/3.1.9/docs
 - Contact any of the [Certified Professional Bika Service Providers](http://www.bikalims.org/support-and-service-provision) with specific questions or to learn more about making the most of Bika LIMS.
 
 ***
+
+### F.A.Q
+- Portlets error:
+
+They are supposed to be solved in LIMS 3.1.8.2. So If you have this error trace, probably you are using a new Plone version (4.3.6 or 4.3.7) with an old BikaLIMS version (< 3.1.8.2)
+
+- The upgrade step is taking several minutes to finish:
+
+This upgrade step will take some minutes because all Departments, Analysis Request Templates and Analysis Request Templates will be re-indexed to portal_catalog.
+
+- Dashboard or other functionalities aren't working as expected:
+
+Remember that this new feature have lots of new JavaScript functionalities, maybe a Ctrl+F5 will be needed.
 
 ### Tickets closed
 **Improvements**
@@ -115,3 +128,10 @@ See [Installing Bika LIMS](https://github.com/bikalabs/Bika-LIMS/blob/3.1.9/docs
 - [Python egg (Python 2.6)](https://pypi.python.org/packages/2.6/b/bika.lims/bika.lims-3.1.9-py2.6.egg) ([md5](https://pypi.python.org/pypi?:action=show_md5&digest=76c92ac3ccbfa8ce0c2149a29c2614da))
 - [Source code (zip)](https://github.com/bikalabs/Bika-LIMS/archive/3.1.9.zip)
 - [Source code (tar.gz)](https://github.com/bikalabs/Bika-LIMS/archive/3.1.9.tar.gz)
+***
+
+***
+
+***
+
+***
