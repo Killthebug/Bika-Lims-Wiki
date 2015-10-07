@@ -94,6 +94,9 @@ Remember that this new feature have lots of new JavaScript functionalities, mayb
 
 **Fixes**
 
+- [LIMS-2049](https://jira.bikalabs.com/browse/LIMS-2049): Displaying lists doesn't work as expected in 319
+- [LIMS-1875](https://jira.bikalabs.com/browse/LIMS-1875): Able to deactivate instruments and reference samples without logging in
+- [LIMS-2049](https://jira.bikalabs.com/browse/LIMS-2049): Displaying lists doesn't work as expected in 319
 - [LIMS-1908](https://jira.bikalabs.com/browse/LIMS-1908): Navigation tree order
 - [LIMS-1965](https://jira.bikalabs.com/browse/LIMS-1965): Modified default navtree order for new installations
 - [LIMS-1987](https://jira.bikalabs.com/browse/LIMS-1987): AR Invoice tab should not be shown if pricing is toggled off
