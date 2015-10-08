@@ -124,14 +124,7 @@ Remember that this new feature have lots of new JavaScript functionalities, mayb
 
 ### Download
 - [Bika LIMS 3.1.9 at PyPI](https://pypi.python.org/pypi/bika.lims/3.1.9)
-- [Python egg (Python 2.7)](https://pypi.python.org/packages/2.7/b/bika.lims/bika.lims-3.1.9-py2.7.egg) ([md5](https://pypi.python.org/pypi?:action=show_md5&digest=b50f2d2b8176e9124317f02e0a3a77bd))
-- [Python egg (Python 2.6)](https://pypi.python.org/packages/2.6/b/bika.lims/bika.lims-3.1.9-py2.6.egg) ([md5](https://pypi.python.org/pypi?:action=show_md5&digest=76c92ac3ccbfa8ce0c2149a29c2614da))
+- [Python egg (Python 2.7)](https://pypi.python.org/packages/2.7/b/bika.lims/bika.lims-3.1.9-py2.7.egg#md5=a24a5e025bca2767a48df017a4e31952) ([md5](https://pypi.python.org/pypi?:action=show_md5&digest=a24a5e025bca2767a48df017a4e31952))
 - [Source code (zip)](https://github.com/bikalabs/Bika-LIMS/archive/3.1.9.zip)
 - [Source code (tar.gz)](https://github.com/bikalabs/Bika-LIMS/archive/3.1.9.tar.gz)
-***
 
-***
-
-***
-
-***
