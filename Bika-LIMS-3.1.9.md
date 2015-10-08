@@ -91,6 +91,7 @@ Remember that this new feature have lots of new JavaScript functionalities, mayb
 
 **Fixes**
 
+- [LIMS-2068](https://jira.bikalabs.com/browse/LIMS-2068): Urgent. Analysis Catgories don't expand
 - [LIMS-2049](https://jira.bikalabs.com/browse/LIMS-2049): Displaying lists doesn't work as expected in 319
 - [LIMS-1875](https://jira.bikalabs.com/browse/LIMS-1875): Able to deactivate instruments and reference samples without logging in
 - [LIMS-2049](https://jira.bikalabs.com/browse/LIMS-2049): Displaying lists doesn't work as expected in 319
