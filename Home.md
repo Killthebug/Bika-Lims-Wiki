@@ -1,9 +1,7 @@
 Bika LIMS is a high quality system that leverages the power and technical simplicity of the Python programming language and the versatility and security provided by Plone as a robust Laboratory Information Management System (LIMS) that can be adapted and implemented in any laboratory, from small to large research and hospital laboratories.
 
 ### Current release
-**Bika LIMS 3.1.8** · 2015-06-03 · [Read more](https://github.com/bikalabs/Bika-LIMS/wiki/Bika-LIMS-3.1.8)
-
-######![Info](https://raw.githubusercontent.com/bikalabs/Bika-LIMS/3.1.8/bika/lims/browser/images/info.png) **Bika LIMS 3.1.9** will debut on October 8th.
+**Bika LIMS 3.1.9** · 2015-10-08 · [Read more](https://github.com/bikalabs/Bika-LIMS/wiki/Bika-LIMS-3.1.9)
 
 ### User documentation
 - [Bika LIMS user manual](http://demo.bikalabs.com/knowledge-centre/manual/bika-3-user-manual)
