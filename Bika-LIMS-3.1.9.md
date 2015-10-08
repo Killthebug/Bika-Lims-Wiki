@@ -1,9 +1,6 @@
 You are here: [Home](https://github.com/bikalabs/Bika-LIMS/wiki) · [Changelog](https://github.com/bikalabs/Bika-LIMS/wiki/changelog) · Bika LIMS 3.1.9
 ***
 
-##Bika LIMS 3.1.9 will debut on October 8th
-
-***
 
 **Bika LIMS 3.1.9 (aka BL319) is the new current stable release of Bika LIMS**. 
 
