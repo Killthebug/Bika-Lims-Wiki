@@ -9,7 +9,7 @@
 
 ***
 
-#### ![info](https://raw.githubusercontent.com/bikalabs/Bika-LIMS/3.1.9/bika/lims/browser/images/info_big.png)    Bika LIMS doesn't work with Plone 5.x., use Plone 4.3.x instead.
+##### ![info](https://raw.githubusercontent.com/bikalabs/Bika-LIMS/3.1.9/bika/lims/browser/images/info.png)    Bika LIMS doesn't work with Plone 5.x., use Plone 4.3.x instead.
 
 ***
 
