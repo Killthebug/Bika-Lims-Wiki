@@ -41,7 +41,7 @@ The version numbers of dependencies are known to be valid in Ubuntu 12.04, 14.04
 
 #### Download and Install Plone
 
-Download the latest stable release of the Plone Unified Installer from http://plone.org/products/plone/releases and unpack the file. The following installation command will be sufficient for most purposes:
+Download the latest stable release (4.3.x series) of the Plone Unified Installer from http://plone.org/products/plone/releases and unpack the file. The following installation command will be sufficient for most purposes:
 
     ./install.sh --target=/usr/local/Plone --build-python zeo
 
