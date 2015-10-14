@@ -9,6 +9,10 @@
 
 ***
 
+#### ![info](https://raw.githubusercontent.com/bikalabs/Bika-LIMS/3.1.9/bika/lims/browser/images/info_big.png)    Bika LIMS doesn't work with Plone 5.x., use Plone 4.3.x instead.
+
+***
+
 ### Introduction
 
 Before beginning this process you should read the following documentation:
