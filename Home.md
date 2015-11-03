@@ -1,6 +1,6 @@
 <img alt="Bika Health Workflow Diagram" align="right" width="300" src="https://raw.githubusercontent.com/bikalabs/Bika-LIMS/3.1.9/bika/lims/skins/bika/workflow-diagram.png">
 
-Bika LIMS is a high quality system that leverages the power and technical simplicity of the Python programming language and the versatility and security provided by Plone as a robust Laboratory Information Management System (LIMS) that can be adapted and implemented in any laboratory, from small to large research and hospital laboratories.
+**Bika LIMS** is a high quality system that leverages the power and technical simplicity of the Python programming language and the versatility and security provided by Plone as a robust Laboratory Information Management System (LIMS) that can be adapted and implemented in any laboratory, from small to large research and hospital laboratories.
 
 ### Current release
 **Bika LIMS 3.1.9** · 2015-10-08 · [Read more](https://github.com/bikalabs/Bika-LIMS/wiki/Bika-LIMS-3.1.9)
