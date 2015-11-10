@@ -98,3 +98,265 @@ Now, run "bin/buildout" again.  If this completes without errors, you should be 
 * If you already have a Plone site, you can browse to site-setup->addons, and activate the new addon.
 
 * If you are creating a new Plone site, you should select "Bika LIMS" and also select your new add-on, before clicking the "Add Plone Site" button.
+
+Fields reference
+----------------
+```
+client_order_num:''
+managers:{
+    dict:{
+        labcontact-1:{
+            departments:''
+            signature:''
+        }
+    }
+    ids:[]
+}
+member_discount:''
+sample:{
+    sample_type:{
+        url:''
+        id:''
+        title:''
+    }
+    remarks:''
+    id:''
+    url:''
+    sample_point:{
+    }
+    client_sampleid:''
+    sampler:{
+    }
+}
+laboratory:{
+    accreditation_body:''
+    accreditation_logo:''
+    title:''
+    url:''
+    logo:''
+    address:''
+}
+id:''
+categorized_analyses:{
+    Lab Analyses:{
+        Aguas. Caracteres físico-químicos:[]
+        Aguas. Agentes para el tratamiento de potabilización:[]
+        Aguas. Caracteres microbiológicos:[]
+        Metales:[]
+    }
+}
+qcanalyses:[]
+points_of_capture:[]
+reporter:{
+    username:''
+    fullname:''
+    email:''
+    signature:''
+}
+categorized_qcanalyses:{
+    c:{
+        Lab Analyses:{
+            Metales:[]
+        }
+    }
+    b:{
+        Lab Analyses:{
+            Metales:[]
+        }
+    }
+}
+specifications:{
+    url:''
+    id:''
+    resultsrange:{
+        pH:{
+            hidemin:''
+            rangecomment:''
+            hidemax:''
+        }
+        Ni:{
+            hidemin:''
+            rangecomment:''
+            min:''
+            hidemax:''
+        }
+        Conduct_25:{
+            hidemin:''
+            rangecomment:''
+            min:''
+            hidemax:''
+            error:''
+        }
+        Color_A436:{
+            hidemin:''
+            rangecomment:''
+            min:''
+            hidemax:''
+            error:''
+        }
+        Cl_total:{
+            hidemin:''
+            rangecomment:''
+            min:''
+            hidemax:''
+            error:''
+        }
+        Pb:{
+            hidemin:''
+            rangecomment:''
+            min:''
+            hidemax:''
+        }
+        Cl_libre:{
+            hidemin:''
+            rangecomment:''
+            min:''
+            hidemax:''
+            error:''
+        }
+        Ecoli:{
+            hidemin:''
+            rangecomment:''
+            min:''
+            max:''
+            hidemax:''
+            error:''
+        }
+        NH3-N:{
+            hidemin:''
+            rangecomment:''
+            min:''
+            hidemax:''
+        }
+        Enterococos:{
+            hidemin:''
+            rangecomment:''
+            min:''
+            max:''
+            hidemax:''
+            error:''
+        }
+        Cl_combinado:{
+            hidemin:''
+            rangecomment:''
+            min:''
+            hidemax:''
+            error:''
+        }
+        Fe:{
+            hidemin:''
+            rangecomment:''
+            min:''
+            hidemax:''
+        }
+        Color_A525:{
+            hidemin:''
+            rangecomment:''
+            min:''
+            hidemax:''
+            error:''
+        }
+        Coliformes_totales:{
+            hidemin:''
+            rangecomment:''
+            min:''
+            max:''
+            hidemax:''
+            error:''
+        }
+        Cr:{
+            hidemin:''
+            rangecomment:''
+            min:''
+            hidemax:''
+        }
+        Aerobios_22:{
+            hidemin:''
+            rangecomment:''
+            min:''
+            hidemax:''
+        }
+        Cperfringens:{
+            hidemin:''
+            rangecomment:''
+            min:''
+            max:''
+            hidemax:''
+            error:''
+        }
+        Aerobios_36:{
+            hidemin:''
+            rangecomment:''
+            min:''
+            hidemax:''
+        }
+        Cu:{
+            hidemin:''
+            rangecomment:''
+            min:''
+            hidemax:''
+        }
+        Color_A620:{
+            hidemin:''
+            rangecomment:''
+            min:''
+            hidemax:''
+            error:''
+        }
+    }
+    title:''
+}
+client:{
+    fax:''
+    name:''
+    url:''
+    phone:''
+    address:''
+    id:''
+}
+department_analyses:{
+    99dd3fde33b14ee8a0b195df38270c64:{
+        Lab Analyses:{
+            Metales:[]
+        }
+    }
+    b6f56330851b4e0cac89a95401ad6c78:{
+        Lab Analyses:{
+            Aguas. Caracteres físico-químicos:[]
+            Aguas. Agentes para el tratamiento de potabilización:[]
+            Aguas. Caracteres microbiológicos:[]
+        }
+    }
+}
+resultsinterpretationdepts:{
+    :{
+        uid:''
+        richtext:''
+    }
+    Microbiología:{
+        uid:''
+        richtext:''
+    }
+    Química:{
+        uid:''
+        richtext:''
+    }
+}
+portal:{
+    url:''
+}
+remarks:''
+analyses:[]
+categories:[]
+client_reference:''
+footer:''
+url:''
+client_sampleid:''
+batch:{
+}
+contact:{
+    fullname:''
+    email:''
+}
+resultsinterpretation:''
+```
