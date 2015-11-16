@@ -12,6 +12,8 @@ There are only a few simple steps required.
 Create the add-on
 -----------------
 
+> You can use an existing extension package to create your reports.  If you have already modified [bika.custom](https://github.com/bikalabs/bika.custom) or created an extension in some other way, you can skip this step and continue with [Add report templates to your addon](add-report-templates-to-your-addon)
+
 If you don't have ZopeSkel already installed, add the following list of eggs to your
 buildout.cfg.
 
