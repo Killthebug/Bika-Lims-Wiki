@@ -44,16 +44,22 @@ Let's suppose Calcium has been defined as:
 During the Alkalinity results' introduction process the system makes some changes by itself:
 
 1. If the user introduces a result between the min/max Uncertainty, the system will display the uncertainty value automatically in the uncertainty box. The result won't change its value during the results' introduction even if the _Calculate precision from uncertainties_ check-box has been enabled.
+![Example 1](https://github.com/Espurna/wiki-pictures/blob/master/unsertainty/p1.png)
+![Example 2](https://github.com/Espurna/wiki-pictures/blob/master/unsertainty/p2.png)
+![Example 3](https://github.com/Espurna/wiki-pictures/blob/master/unsertainty/p3.png)
 2. If the user introduces a value bigger than the min/max uncertainty, the uncertainty value won't be displayed.
+![Example 4](https://github.com/Espurna/wiki-pictures/blob/master/unsertainty/p4.png)
 3. Since the _allow manual uncertainty_ value input is enabled for this service, we can introduce a different uncertainty.
 
 During the Calcium results' introduction process, nothing happens.
-
+![Example 5](https://github.com/Espurna/wiki-pictures/blob/master/unsertainty/p5.png)
 After the results' introduction process we can submit for verification the results and the system works like that:
 
 * Alkalinity:
   If the results was contained between the uncertainty values, then the result will display the result and the uncertainty rounded.
+![Example 8](https://github.com/Espurna/wiki-pictures/blob/master/unsertainty/p8.png)
   If the result was bigger than the uncertainty range, than the result will be rounded by the precision as number of decimals.
+![Example 9](https://github.com/Espurna/wiki-pictures/blob/master/unsertainty/p9.png)
 
 * Calcium:
   The result will be rounded using the precision as number of decimals.
