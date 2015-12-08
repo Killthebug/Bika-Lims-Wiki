@@ -327,7 +327,7 @@ Then, in all [client] or [instance] sections, insert this:
           old-files 5
         </logfile>
         <sentry>
-          dsn http://90723864025d4520b084acee225ddb8a:f9f7dd0163a74fbeac4e24a5123b3d39@sentry.bikalabs.com/2
+          dsn http://ffa1dbda4858459a99a80065947bc666:8989999123e54cf0acdd8dca79899872@sentry.bikalabs.com/2
           level ERROR
         </sentry>
 
