@@ -5,7 +5,7 @@ You are here: [Home](https://github.com/bikalabs/Bika-LIMS/wiki) · Bika LIMS De
 ### Table of Contents
 
 1. [Introduction](#introduction)
-1. [Bika LIMS approach to BPF development](#bika-lims-approach-to-bpf-development)
+1. [Bika LIMS approach to branches and pull requests](#bika-lims-approach-to-branches-and-pull-requests)
 1. [The master branch](#the-master-branch)
 1. [The develop branch](#the-develop-branch)
 1. [Pull requests](#pull-requests)
@@ -17,44 +17,42 @@ You are here: [Home](https://github.com/bikalabs/Bika-LIMS/wiki) · Bika LIMS De
 
 ### Introduction
 
-Software development conventions are important in a multi-developer project and help developers read and understand each other's code. Please try to follow the guidelines described here. Your cooperation improves the effectiveness of the collaboration.  Please review the community channels for assistance on the [Community](https://github.com/bikalabs/Bika-LIMS/wiki/Community) page if you haven't done so yet.
+Software development conventions are important in a multi-developer project and help developers read and understand each other's code.
 
-Required reading:
+Bika LIMS is a client/community-driven project, and new functionalities are developed based on the requirements of different clients, at different times and with different schedule constraints.  There is no 'in-house' development (product-driven approach), so the challenge is to create a structure to review, merge and release all the different features and bugfixes without affecting or breaking the work already done by others.
+
+If we do this right, it becomes much easier for us all to work together.
+
+Helpful reading:
 
 - [PEP8](https://www.python.org/dev/peps/pep-0008/)
 - [Developing for Plone](http://docs.plone.org/develop/index.html)
 
-To get a better understanding of the git branching methods, you should also read the following:
+To get a better understanding of the git branching methods we use, you could also read the following:
 
 - [A successful Git branching model (Vincent Driessen, 2010)](http://nvie.com/posts/a-successful-git-branching-model/)
 - [Branch-per-feature (Adam Dimirtuk, 2012)](http://dymitruk.com/blog/2012/02/05/branch-per-feature/)
 - [A pragmatic guide to the Branch Per Feature git branching strategy (Katherine Bailey, 2013)](https://www.acquia.com/blog/pragmatic-guide-branch-feature-git-branching-strategy)
 
-### Bika LIMS approach to BPF development
+If you are new to Git, good luck and welcome to the journey.
 
-Bika LIMS is a client/community-driven project, and new functionalities are developed based on the requirements of different clients, at different times and with different schedule constraints.  There is no 'in-house' development (product-approach), so the challenge is creating a structure to merge all the different features into releases without affecting or breaking the work already done by others.
+### Bika LIMS approach to branches and pull requests.
 
-We follow a simple approach to the Branch-Per-Feature (BPF) workflow, and in order to maintain a relaxed atmosphere, there are a few important rules that enable us to work without stepping on each other's toes, or setting ourselves up for problems in future.
+We follow a simple approach to the Branch-Per-Feature (BPF) workflow, and in order to maintain a relaxed atmosphere there are a few important rules that we follow.
 
 #### The master branch
 
-The master branch will always have the most stable version of the latest release.
-
-All bugfixes should be done against this branch, using pull requests.
-
-Periodically, a hotfix is released based on the current master branch, and this should be able to apply to all instances without fear of additional features or changes being present in the code.
+The master branch will always have the most stable version of the latest release, and all bugfixes must be done against this branch.  Periodically, a hotfix release is made from the master branch, and this must be trusted not to cause problems with running systems.
 
 #### The develop branch
 
-New features, improvements, and refactoring must be done against the develop branch, using pull requests.
+New features, non-trivial improvements, and refactoring must be done against the develop branch.  The develop branch represents the next feature release, and so pull requests must be of high quality before being merged.
 
-The develop branch represents the next feature release, and so pull requests must be of high quality before being merged.
-
-If a bug is discovered while working on a feature branch, the bug must be fixed in master branch, via pull request.  Because there is a delay between creation of the bugfix pull request, and it's acceptance into master, it's okay to cherry-pick the bugfix commits from the pull request into your current BPF branch.
+If a bug is discovered while working on a feature branch, the bug should be fixed in the master branch.  Because there is a delay between creation of the bugfix pull request and it's acceptance into master, it's okay to cherry-pick the bugfix commits from the pull request into your current feature branch.
 
 #### Pull Requests
 
-- Pull requests must be associated with a Jira ticket, and the ticket number must be included in the commit log.  While it may seem pointless to create a jira ticket for a one-liner or other trivial change, it helps us to keep organised, and to communicate to non-coders the changes that are taking place.
+- Pull requests must be associated with a Jira ticket, and the ticket number must be included in the commit log.  While it may seem pointless to create a Jira ticket for a one-liner or other trivial change, it helps us to keep organised, and to communicate to non-coders the changes that are taking place.
 
 - Each pull request must be for a well-defined feature or bugfix, ideally a relation one-to-one with a Jira ticket.  Pull requests that address multiple bugfixes or features must always be declined.  This includes one-line changes and seemingly "trivial" fixes; these should be separated into distinct pull requests.
 
