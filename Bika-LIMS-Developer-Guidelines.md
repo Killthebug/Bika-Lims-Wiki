@@ -36,6 +36,8 @@ To get a better understanding of the git branching methods we use, you could als
 
 If you are new to Git, good luck and welcome to the journey.
 
+***
+
 ### Bika LIMS approach to branches and pull requests.
 
 We follow a simple approach to the Branch-Per-Feature (BPF) workflow, and in order to maintain a relaxed atmosphere there are a few important rules that we follow.
@@ -74,7 +76,7 @@ If a bug is discovered while working on a feature branch, the bug should be fixe
 
 - If bugfix branch: always do a `git merge -no-ff master` to your bugfix branch before a pull request.
 
-#### long-life feature branches
+#### Long-life feature branches
 
 Architectural and project-wide changes - these are the things that may cause the worst impact.  Discuss them previously in the list and once a plan is agreed upon, tag them with arch/ prefix and don't expect them to be accepted soon.
 
@@ -84,15 +86,27 @@ During development of these branches, periodically integrate the develop branch 
 
 If you are working on one of these branches, use of the [git rerere](http://git-scm.com/docs/git-rerere) extension can be invaluable.
 
-#### Project code
+***
 
-During development for a specific client or project, it's best to fork the bika.lims repository to allow flexible development.
+### Project-specific code and development
+
+During development for a specific client or project, it's best to fork the bika.lims repository to allow flexible development. We usually setup two different instances (production and test) in client-specific projects, so the best approach is to create two different branches in the project-specific repos: `master` (always synchronised with the production instance) and `wip`, (synchronised with the test instance). From now onwards in this section, when we talk about `origin/master` we'll refer to the project-specific `master`, and `upstream/master` for the project official's master.
+
+#### Project-specific branches
+
+- `origin/master`: always synchronised with project's production instance. Although it can sporadically receive PRs for fixing blocker bugs, in must cases it will only be updated upon project's manager acceptance after his/her review of new functionalities developed in `origin/wip`. Direct pushes are not allowed. After the branch is created for the first time, it will never track the upstream repos again, but will be replaced by `origin/wip` upon acceptance regularly.
+
+- `origin/wip`: this is the project's working branch. `upstream/master` is regularly merged into this branch to guarantee the compatibility with upstream. Accepts any kind of Pull Request, but always following the bpf procedure explained before in this document. Direct pushes are not allowed.
+
+#### Project-specific development guidelines
 
 All client work should be submitted back to the main repository via pull request as soon as it is baked, unless it is sensitive, incompatible, or it doesn't make sense to have for all clients.
 
-As mentioned previously, all bugs that are discovered during this work should be fixed in the main respository's master branch, via a pull request.
+As mentioned previously, all bugs that are discovered during this work should be fixed in the main respository's master branch (unless project-specific bug), via a pull request.
 
 All work that isn't intended to be merged back into the main repository should be created in a separate extension package, included using buildout.  A template for such a package is available at https://github.com/bikalabs/bika.custom
+
+***
 
 ### Best Practice
 
