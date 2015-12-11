@@ -8,6 +8,7 @@ A high quality system that leverages the power and technical simplicity of the P
 **Bika LIMS 3.1.9** · 2015-10-08 · [Read more](https://github.com/bikalabs/Bika-LIMS/wiki/Bika-LIMS-3.1.9)
 
 ### User documentation
+- [Frequently Asked Questions](https://github.com/bikalabs/bika.lims/wiki/Frequently-Asked-Questions)
 - [Bika LIMS user manual](http://demo.bikalabs.com/knowledge-centre/manual/bika-3-user-manual)
 - [Community resources](https://github.com/bikalabs/Bika-LIMS/wiki/Community)
 - [How to contribute](http://www.bikalims.org/contribute)
