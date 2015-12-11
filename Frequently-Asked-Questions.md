@@ -1,7 +1,7 @@
 You are here: [Home](https://github.com/bikalabs/Bika-LIMS/wiki) · Frequently Asked Questions
 ***
 
-**[Can Bika LIMS be installed in Windows?](#introduction)**
+**[Can Bika LIMS be installed in Windows?](#can-bika-lims-be-installed-in-windows)**
 
 ***
 
