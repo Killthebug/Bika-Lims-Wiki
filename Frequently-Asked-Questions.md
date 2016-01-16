@@ -12,4 +12,6 @@ Plone recently stopped building the Unified Installer for Windows in favour of a
 Unless someone is really interested in integrating Bika into the Windows ways of doing things (i.e. server
 roles, IIS config, whatever), Bika LIMS can be installed in a single well-maintained Virtual Machine.
 
-Get help in users/developer lists for Windows-specific questions could be harder because most of the developers behind the scenes use GNU/Linux instead of Windows
+Getting help on users/developer lists for Windows-specific questions could be harder because most of the developers behind the scenes use GNU/Linux instead of Windows.
+
+Bika Windows users are participating [bika-win@googlegroups.com](bika-win@googlegroups.com). Post to [bika-win@googlegroups.com](mailto:bika-win@googlegroups.com).
