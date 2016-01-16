@@ -15,3 +15,5 @@ roles, IIS config, whatever), Bika LIMS can be installed in a single well-mainta
 Getting help on users/developer lists for Windows-specific questions could be harder because most of the developers behind the scenes use GNU/Linux instead of Windows.
 
 Bika Windows users are participating [bika-win@googlegroups.com](bika-win@googlegroups.com). Post to [bika-win@googlegroups.com](mailto:bika-win@googlegroups.com).
+
+Please also Google using the error messages you get, many have been dealt with before.
