@@ -2,7 +2,7 @@ Steps to configuring a Bika LIMS development environment
 
 1) Install Plone and Bika LIMS
 
-Follow the [Bika-LIMS installation instructions](https://github.com/bikalabs/Bika-LIMS/wiki/Bika-LIMS-Installation).  When installing for development or testing, it is not necessary to do a root mode installation.
+Follow the [Bika-LIMS installation instructions](https://github.com/bikalabs/bika.lims/wiki/Bika-LIMS-Installation).  When installing for development or testing, it is not necessary to do a root mode installation.
 
 > Although installing a standalone instance is quite sufficient for development purposes, a zeocluster is the preferred method.  The zeocluster method, used by most developers, is more flexible and reduces future confusion.
 
@@ -23,7 +23,7 @@ Follow the instructions at [Github: Fork A Repo](https://help.github.com/article
 You must edit `buildout.cfg`.  You will need to add or edit the "develop = " statement in the [buildout] section, to include the folder that contains the forked source.
 
     develop =
-        src/Bika-LIMS
+        src/bika.lims
 
 > Remember to run `bin/buildout` again.
 
