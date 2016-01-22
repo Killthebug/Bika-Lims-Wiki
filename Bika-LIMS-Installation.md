@@ -134,7 +134,7 @@ Start Plone and login to your site as admin.  Go to site-setup, and click `Add-o
 
 ### Windows Installation Steps
 
-## Please reconsider, and use Linux
+### _Please reconsider, and use Linux_
 
 Plone recently stopped building the Unified Installer for Windows in favour of a VirtualBox/Vagrant setup. Unless someone is really interested in integrating Bika into the Windows ways of doing things (i.e. server roles, IIS config, whatever), Bika LIMS can be installed in a single well-maintained Virtual Machine.
 
