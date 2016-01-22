@@ -134,6 +134,12 @@ Start Plone and login to your site as admin.  Go to site-setup, and click `Add-o
 
 ### Windows Installation Steps
 
+**Please reconsider, and use Linux:** Plone recently stopped building the Unified Installer for Windows in favour of a VirtualBox/Vagrant setup. Unless someone is really interested in integrating Bika into the Windows ways of doing things (i.e. server roles, IIS config, whatever), Bika LIMS can be installed in a single well-maintained Virtual Machine.
+
+Getting help on users/developer lists for Windows-specific questions could be harder because most of the developers behind the scenes use GNU/Linux instead of Windows.
+
+Bika Windows users are participating bika-win@googlegroups.com. Post to bika-win@googlegroups.com. Please also Google using the error messages you get, many have been dealt with before.
+
 #### 1. Download and Install Plone
 
 Download the latest version of the Plone 4.3 Unified Installer from http://plone.org/products/plone/releases.  Execute the installer and follow through the steps.
