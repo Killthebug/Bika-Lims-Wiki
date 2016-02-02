@@ -31,7 +31,11 @@ The most commonly used OS for running Plone and Bika LIMS is Linux, although thi
 
 You can paste the following command directly into a terminal:
 
+For Ubuntu :
     sudo apt-get install build-essential python-dev git-core libffi-dev libpcre3-dev gcc autoconf libtool pkg-config zlib1g-dev libssl-dev libexpat1-dev libxslt1.1 gnuplot libpcre3 libcairo2 libpango1.0-0 libgdk-pixbuf2.0-0
+
+For Fedor :
+    sudo dnf install
 
 The version numbers of dependencies are known to be valid in Ubuntu 12.04, 14.04, and Debian Wheezy.  If you use a different distribution or version, you may need to find the versions of these packages which are provided with your system.  The packages may also have slightly different names in different distributions.
 
